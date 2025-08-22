@@ -1,0 +1,334 @@
+{
+  "id": "M05L03",
+  "title": "Monte‑Carlo‑Simulation: Verteilungen, Korrelationen & Risikokennzahlen",
+  "reading_time_min": 22,
+  "prerequisites": [
+    "M05L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Typische Verteilungen (Normal, Lognormal, Triangular, PERT) und Kennzahlen (Mittel, StdAbw, Quantile)."
+    },
+    {
+      "level": "Understand",
+      "text": "Warum Simulation? Nichtlinearitäten, Interaktionen und Korrelationen erfassen."
+    },
+    {
+      "level": "Apply",
+      "text": "Eingabe‑Verteilungen wählen, einfache Korrelationen abbilden, Ergebnisse interpretieren (Histogramm, P5/P50/P95, VaR)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Unsichere Input‑→Output‑Relationen erklären; Sensitivität innerhalb der Simulation (Partial Correlation) einordnen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Monte‑Carlo‑Simulation bildet **viele Zufallspfade** ab. Statt 3 Szenarien erhältst du **eine ganze Verteilung** für NPV/Ergebnis.\nWir nutzen einfache, praxisnahe Verteilungen und vermeiden Rechen‑Überlast (Cognitive Load): erst ein Treiber, dann mehrere."
+    },
+    {
+      "type": "concept",
+      "title": "Verteilungen & Auswahl",
+      "text": "- **Triangular(a, m, b)**: Minimum, Modus, Maximum; häufig für Schätzungen.  E[X]=(a+m+b)/3.  \n- **PERT (Beta‑PERT)**: wie Triangular, aber glatter; E[X]=(a+4m+b)/6.  \n- **Normal(μ,σ)**: symmetrisch; **Lognormal** für strikt positive Größen (Preis, Menge).  \n- **Korrelation ρ**: z. B. Preis und Menge negativ korreliert.",
+      "explanation": "\n\n**Decision-Hints:**\n- Break-even, wenn Gewinn=0: x_BE = K_fix/(p−k_v).\n- Zielgewinn mit (K_fix+G)/(p−k_v) berechnen."
+    },
+    {
+      "type": "derivation",
+      "title": "Simulation – Ablauf (Pseudocode)",
+      "steps": [
+        "Für t=1..N:",
+        "  Ziehe Inputs (z. B. Preis ~ Triangular).",
+        "  Berechne Cashflows & NPV.",
+        "  Speichere Ergebnis.",
+        "Am Ende: Mittel, StdAbw, Quantile (P5, P50, P95), VaR."
+      ],
+      "comment": "N wächst, bis Kennzahlen stabil (Gesetz der großen Zahlen)."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII‑Histogramm",
+      "ascii": "Häufigkeit\n|      █\n|    ████\n|  ███████\n| ██████████\n+-----------------→ NPV\n    P5  P50   P95",
+      "caption": "Verteilung zeigt Chance/Risiko – nicht nur einen Punkt.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Verteilung zeigt Chance/Risiko – nicht nur einen Punkt.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Triangular für Preis & Menge",
+      "text": "Preis ~ Tri(80, 95, 120); Menge ~ Tri(3,5k, 4,0k, 4,6k); vK=60 fix; Fix=180k; i≈0 (ein Jahr).  \nE[Preis]=(80+95+120)/3=98,3; E[Menge]=(3500+4000+4600)/3≈4,033.  \nE[Gewinn]≈ (98,3−60)·4033 − 180k ≈ **−24k** (nur Erwartung; mit Korrelation/Asymmetrie kann P50 abweichen).",
+      "steps": [
+        "Preis ~ Tri(80, 95, 120); Menge ~ Tri(3,5k, 4,0k, 4,6k); vK=60 fix; Fix=180k; i≈0 (ein Jahr",
+        "E[Preis]=(80+95+120)/3=98,3; E[Menge]=(3500+4000+4600)/3≈4,",
+        "E[Gewinn]≈ (98,3−60)·4033 − 180k ≈ **−24k** (nur Erwartung; mit Korrelation/Asymmetrie kann P50 abweichen"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Quantile & VaR",
+      "text": "Nach 10,000 Läufen: Mittel +8k; P5 −12k; P50 +6k; P95 +28k.  \n**VaR95** (einperiodig, Verlustsicht) = max(0, −P5) = 12k. → 5%-Risiko eines Verlusts ≥12k.",
+      "steps": [
+        "Nach 10,000 Läufen: Mittel +8k; P5 −12k; P50 +6k; P95 +28k",
+        "VaR95** (einperiodig, Verlustsicht) = max(0, −P5) = 12k. → 5%-Risiko eines Verlusts ≥12k"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Einfache Korrelation",
+      "text": "Setze Preis und Menge mit ρ=−0,4 in Beziehung (qualitativ):  \na) Was passiert mit der Streuung des Gewinns?  b) Warum?",
+      "solution": [
+        "Streuung steigt.",
+        "Ungünstige Kombinationen (hoch/gering) treten gemeinsam häufiger auf."
+      ],
+      "steps": [
+        "Setze Preis und Menge mit ρ=−0,4 in Beziehung (qualitativ):",
+        "a) Was passiert mit der Streuung des Gewinns?  b) Warum?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "E[X] Triangular(10, 20, 40)",
+          "hint": "(10+20+40)/3",
+          "solution": "≈23,33",
+          "check": {
+            "type": "approx",
+            "expected": 23.333,
+            "tolerance": 0.05,
+            "expr": "23.33"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "E[X] PERT(10, 20, 40)",
+          "hint": "(10+4·20+40)/6",
+          "solution": "≈21,67",
+          "check": {
+            "type": "approx",
+            "expected": 21.667,
+            "tolerance": 0.05,
+            "expr": "21.67"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Interpretation P5",
+          "hint": "5% quantil",
+          "solution": "nur 5% liegen darunter",
+          "check": {
+            "type": "string_contains",
+            "expected": "5%"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – 3‑Treiber‑Simulation (Preis, Menge, Kosten)",
+          "context": "Preis ~ Tri(85, 95, 115), Menge ~ Tri(3,8k, 4,2k, 4,8k), vK ~ PERT(50, 58, 70), Fix=200k, i≈0.",
+          "subtasks": [
+            {
+              "text": "Berechne Erwartungswerte als grobe Näherung."
+            },
+            {
+              "text": "Diskutiere, ob E[Gewinn] positiv ist."
+            },
+            {
+              "text": "Skizziere, welche Quantile ein Manager sehen sollte (P5/P50/P95)."
+            }
+          ],
+          "hints": [
+            "E[Preis]=98,33; E[Menge]=4,267; E[vK]= (50+4·58+70)/6=58,67.",
+            "E[Gewinn]≈(98,33−58,67)·4267−200k≈−25k (grob).",
+            "Quantile listen."
+          ],
+          "solutions": [
+            "−25k (grob)",
+            "Verteilungsansicht nötig",
+            "Kennzahlen gewählt"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Triangular",
+                "PERT",
+                "Quantile"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "−25k (grob)",
+            "Verteilungsansicht nötig",
+            "Kennzahlen gewählt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Normalverteilung für strikt positive Größen genutzt (neg. Werte möglich!).",
+        "Unrealistische, unabhängige Treiber trotz bekannter Korrelation.",
+        "„Mittelwertfalle“: Entscheidungen nur nach E[NPV] ohne Risikokennzahlen."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "E[X] Triangular(a,m,b) =",
+          "options": [
+            "(a+b)/2",
+            "(a+m+b)/3",
+            "(m)"
+          ],
+          "answer_index": 1,
+          "rationale": "Definition.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "VaR95 misst einen Quantilverlust (5‑Perzentil).",
+          "answer": true,
+          "rationale": "Konvention.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konvention.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Verteilung für Laufzeit/Preis > 0?",
+          "options": [
+            "Normal",
+            "Lognormal",
+            "Symmetrisch"
+          ],
+          "answer_index": 1,
+          "rationale": "Strikt positiv.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Strikt positiv.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du wählst sinnvolle Input‑Verteilungen, interpretierst Histogramme/Quantile und leitest VaR ab."
+    },
+    {
+      "type": "outlook",
+      "text": "Zum Abschluss: **Risikosteuerung & Reporting** – von Kennzahlen zu Maßnahmen."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}
