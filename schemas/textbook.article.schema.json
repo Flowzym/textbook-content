@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Textbook Article",
+  "type": "object",
+  "required": [
+    "chapterId",
+    "sectionId",
+    "title",
+    "body_html",
+    "headings",
+    "meta"
+  ],
+  "properties": {
+    "chapterId": {
+      "type": "string"
+    },
+    "sectionId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body_html": {
+      "type": "string"
+    },
+    "headings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "level"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "reading_time_min": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "sha256": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
