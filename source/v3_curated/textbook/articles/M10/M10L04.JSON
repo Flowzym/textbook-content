@@ -1,0 +1,282 @@
+{
+  "id": "M10L04",
+  "title": "Lehrtext – Grundlagen: Experimente & Uplift – Bayes‑A/B, Sequentielles Testen, Heterogenität & ROI (Break-even)",
+  "reading_time_min": 110,
+  "prerequisites": [
+    "M10L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Bayesianische A/B‑Logik, Stopping‑Regeln, Fehlerrisiken; Uplift‑Denken."
+    },
+    {
+      "level": "Apply",
+      "text": "Sequentielle Auswertung (Posterior, P(B>A)); ROI‑Schwellen und Entscheidungsregeln definieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Heterogene Effekte (Segmente) identifizieren; Hierarchie/Pooling für Filial‑/Kanaltests."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Experimente sind Goldstandard. Bayesianische A/B‑Tests erlauben **laufende** Entscheidungen (‚stopping‘) und\nberichten direkt **P(B>A)**. In der Praxis sind Effekte oft **heterogen** – **Uplift**‑Denken fokussiert auf **Zusatz‑Wirkung** in Segmenten."
+    },
+    {
+      "type": "concept",
+      "title": "Bayes‑A/B & Sequentiell",
+      "text": "- **Posterior je Variante** (z. B. Beta‑Binomial für Conversion).  \n- **Entscheidungsregel**: Starte/stoppe wenn P(B>A) > Schwelle (z. B. 0,95) **und** erwarteter Lift×Marge > Kosten.  \n- **Sequentielles Testen**: Daten laufend aktualisieren; Bayes benötigt kein fixes n, aber **vorab definierte** Regeln.",
+      "explanation": "\n\n**Decision-Hints:**\n- Break-even, wenn Gewinn=0: x_BE = K_fix/(p−k_v).\n- Zielgewinn mit (K_fix+G)/(p−k_v) berechnen."
+    },
+    {
+      "type": "derivation",
+      "title": "Uplift‑Denken",
+      "steps": [
+        "1) Segmentiere Kunden/Filialen nach Merkmalen (z. B. Stammkunde, Region).",
+        "2) Schätze segmentweise Effekte oder nutze Uplift‑Modelle (Treatment×Features).",
+        "3) Allokiere Budget auf Segmente mit höchstem **erwarteten** Uplift/ROI.",
+        "4) Pooling/Hilfsinformationen per Hierarchie stabilisieren (wenig Daten je Segment)."
+      ],
+      "comment": "Ziel ist **optimale Allokation**, nicht nur Durchschnittseffekt."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Entscheidungsregel",
+      "ascii": "P(B>A) ^\n       |        Accept B\n    1,0|---------|\n       |         |\n    0,5|   Test  |  Stop for A\n       |         |\n    0,0+---------+-----------> erwarteter Mehrgewinn\n                 0",
+      "caption": "Starte B nur, wenn **Wahrscheinlichkeit** und **Wertbeitrag** stimmen.",
+      "alt_text": "ASCII-Visual: Starte B nur, wenn **Wahrscheinlichkeit** und **Wertbeitrag** stimmen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Bayes‑A/B (Conversion)",
+      "text": "Prior Beta(1,1). A: 60/1,000; B: 72/1,000. Posterior: A~Beta(61,941), B~Beta(73,929).  \nMonte‑Carlo (gedanklich): P(B>A)≈0,93. Erwarteter Mehrumsatz pro 1,000 Besuche bei DB‑Rate 30% und Ticket € 50?  \nLift≈(B−A)≈0,012 → 12 Käufe, Umsatz € 600,- DB≈€ 180,- Entscheidung nahe an Schwelle 0,95 → **weitertesten**.",
+      "steps": [
+        "Prior Beta(1,1). A: 60/1,000; B: 72/1,000. Posterior: A~Beta(61,941), B~Beta(73,",
+        "Monte‑Carlo (gedanklich): P(B>A)≈0,93. Erwarteter Mehrumsatz pro 1,000 Besuche bei DB‑Rate 30% und Ticket € 50?",
+        "Lift≈(B−A)≈0,012 → 12 Käufe, Umsatz € 600,- DB≈€ 180,- Entscheidung nahe an Schwelle 0,95 → **weitertesten"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Uplift‑Segmentierung",
+      "text": "a) Welches Segment profitiert? b) Wie gehst du bei kleinen Segmenten vor?",
+      "solution": [
+        "Vergleiche P(B>A) und erwarteten Mehrgewinn je Segment.",
+        "Hierarchisch poolen; Segmentierung nur, wenn stabil."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Was bedeutet P(B>A)=0,97?",
+          "hint": "97% posterior‑Wahrscheinlichkeit, dass B besser ist",
+          "solution": "direkte Entscheidungsgröße",
+          "check": {
+            "type": "string_contains",
+            "expected": "97"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Warum ROI‑Schwelle zusätzlich?",
+          "hint": "Effekt muss auch wirtschaftlich lohnen",
+          "solution": "Wertbeitrag berücksichtigen",
+          "check": {
+            "type": "string_contains",
+            "expected": "ROI"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Sequentielles Testen erfordert…",
+          "hint": "vorab Regeln, Logging, Max‑Dauer",
+          "solution": "Governance",
+          "check": {
+            "type": "string_contains",
+            "expected": "Regeln"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Experiment planen",
+          "context": "Online‑Test B vs. A. Ziel: P(B>A)>0,95 **und** erwarteter Mehrgewinn ≥ € 1,- pro Woche.",
+          "subtasks": [
+            {
+              "text": "Definiere Priors und Datenerfassung."
+            },
+            {
+              "text": "Lege Stopping‑Regel & Max‑Dauer fest."
+            },
+            {
+              "text": "Plane Segment‑Analysen (nur wenn N groß genug)."
+            }
+          ],
+          "hints": [
+            "Beta(1,1) als uninformativ oder Erfahrungsprior.",
+            "Stop, wenn beide Kriterien erfüllt.",
+            "Pooling/Hierarchie bei kleinen N."
+          ],
+          "solutions": [
+            "Regeln klar",
+            "Kriterien messbar",
+            "Segment‑Plan robust"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Stopping",
+                "P(B>A)",
+                "Segment"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Regeln klar",
+            "Kriterien messbar",
+            "Segment‑Plan robust"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Nur P(B>A) ohne Wertbeitrag (ROI) betrachtet.",
+        "Segmentierung ohne Power → Zufallsrauschen.",
+        "Sequentielle Regeln nachträglich angepasst (‚p‑Hacking‘ analogue)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bayes‑A/B berichtet…",
+          "options": [
+            "p‑Wert",
+            "P(B>A)",
+            "nur Mittelwert"
+          ],
+          "answer_index": 1,
+          "rationale": "Direkte Entscheidungsgröße.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Direkte Entscheidungsgröße.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Hierarchische Modelle helfen bei kleinen Segmenten.",
+          "answer": true,
+          "rationale": "Pooling/Shrinkage.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Pooling/Shrinkage.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Uplift‑Ziel ist…",
+          "options": [
+            "Gesamteffekt maximieren",
+            "Durchschnitt ignorieren",
+            "Budget minimieren"
+          ],
+          "answer_index": 0,
+          "rationale": "Optimale Allokation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optimale Allokation.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du triffst experimentelle Entscheidungen bayesianisch, beachtest Wertbeitrag und gehst mit Heterogenität robust um."
+    },
+    {
+      "type": "outlook",
+      "text": "Optional: **M11 – Zeitreihen‑Kausalinferenz Advanced** (synthetische Kontrolle, Panel‑BSTS, Interferenzen)."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

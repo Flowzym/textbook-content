@@ -1,0 +1,281 @@
+{
+  "id": "M12L04",
+  "title": "Lehrtext – Grundlagen: Instrumentalvariablen & Causal‑ML – 2SLS, DMLIV/DeepIV & LATE (Rabatt/Skonto)",
+  "reading_time_min": 112,
+  "prerequisites": [
+    "M12L02",
+    "M10L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "IV‑Annahmen: Relevanz, Exogenität, Exclusion Restriction; LATE‑Interpretation."
+    },
+    {
+      "level": "Apply",
+      "text": "2SLS skizzieren; DMLIV/DeepIV für heterogene Effekte einsetzen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Instrumentqualität prüfen; Sensitivitäten & F‑Stat, Over‑ID‑Tests."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Wenn wichtige Confounder fehlen (z. B. Preis durch unvermessene Nachfrage beeinflusst), hilft **Instrumentalvariablen‑Analyse (IV)**.\nModerne Varianten (DMLIV, DeepIV) kombinieren IV mit ML für heterogene Effekte."
+    },
+    {
+      "type": "concept",
+      "title": "Annahmen & Begriffe",
+      "text": "- **Relevanz**: Z korreliert mit Treatment T.  \n- **Exogenität**: Z beeinflusst Outcome Y nur über T (Exclusion).  \n- **Monotonie** (für LATE): keine ‚Defiers‘.  \n- **LATE**: Effekt für ‚Complier‘, die auf Z reagieren.",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "2SLS & DMLIV",
+      "steps": [
+        "1) **1. Stufe**: T̂ = f(Z,X) (z. B. Regression/ML).",
+        "2) **2. Stufe**: Y auf T̂ (und X) → Effekt. Robuste SE/Cluster.",
+        "3) **DMLIV**: Orthogonalisierte Momente + ML in beiden Stufen; CATE via *local IV* möglich.",
+        "4) **DeepIV**: Netze für T|Z,X und Y|T,X mit Simulation/Integral‑Schritt."
+      ],
+      "comment": "Instrumentqualität zentral: schwache IV → verzerrt/instabil."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – IV‑Pfad",
+      "ascii": "Z ──► T ──► Y\n \\          ▲\n  \\______X__|   (X: Controls)",
+      "caption": "Z wirkt auf Y nur über T; X kontrolliert bekannte Confounder.",
+      "alt_text": "ASCII-Visual: Z wirkt auf Y nur über T; X kontrolliert bekannte Confounder. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Preis‑IV (Kosten‑Shock)",
+      "text": "Z=exogener Lieferkosten‑Shock; T=Preis; Y=Absatz. 2SLS ergibt Preis‑Elastizität −1,3 (SE 0,4). \nF‑Stat 1. Stufe = 18 → IV stark genug (Daumenregel >10).",
+      "steps": [
+        "Z=exogener Lieferkosten‑Shock; T=Preis; Y=Absatz. 2SLS ergibt Preis‑Elastizität −1,3 (SE 0,",
+        "F‑Stat 1. Stufe = 18 → IV stark genug (Daumenregel >"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – LATE & Heterogenität",
+      "text": "Wie interpretierst du IV‑Effekte bei Teilgruppen?",
+      "solution": [
+        "LATE für Complier der jeweiligen Gruppe; DMLIV/DeepIV liefern CATE‑Schätzungen je X."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Welche Annahme verletzt, wenn Z direkt Y beeinflusst?",
+          "hint": "Exclusion Restriction",
+          "solution": "ungültiges Instrument",
+          "check": {
+            "type": "string_contains",
+            "expected": "Exclusion"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Schwaches Instrument erkennen…",
+          "hint": "F‑Stat 1. Stufe",
+          "solution": "<10 kritisch",
+          "check": {
+            "type": "string_contains",
+            "expected": "F"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "LATE bezieht sich auf…",
+          "hint": "Complier",
+          "solution": "nicht gesamte Population",
+          "check": {
+            "type": "string_contains",
+            "expected": "Complier"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – DMLIV‑Skizze",
+          "context": "Preiswirkung unter Endogenität, Instrument: Budget‑Knappheit (exogen).",
+          "subtasks": [
+            {
+              "text": "Spezifiziere 1./2. Stufe mit ML (GBM/Netz)."
+            },
+            {
+              "text": "Prüfe Relevanz/Exclusion argumentativ & per Tests."
+            },
+            {
+              "text": "Berichte CATE für Segmente (z. B. Region)."
+            }
+          ],
+          "hints": [
+            "Cross‑Fitting und orthogonale Momente.",
+            "Over‑ID/Placebos falls mehrere Z.",
+            "CATE‑Plots/Tabellen."
+          ],
+          "solutions": [
+            "Stufen sauber",
+            "IV geprüft",
+            "CATE berichtet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "2SLS",
+                "DMLIV",
+                "LATE"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Stufen sauber",
+            "IV geprüft",
+            "CATE berichtet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Schwache IV ignoriert (F<10).",
+        "Exclusion nicht plausibel (z. B. Z wirkt direkt auf Y).",
+        "IV‑Effekt als ATE fehlinterpretiert (statt LATE)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Daumenregel für schwache IV (1. Stufe):",
+          "options": [
+            "F<4 ok",
+            "F>10 gut",
+            "F spielt keine Rolle"
+          ],
+          "answer_index": 1,
+          "rationale": "Relevanz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Relevanz.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "IV‑Effekt ist i. d. R. ein LATE.",
+          "answer": true,
+          "rationale": "Complier‑bezogen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Complier‑bezogen.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "DeepIV kombiniert…",
+          "options": [
+            "IV & tiefe Netze",
+            "nur Netze",
+            "nur IV"
+          ],
+          "answer_index": 0,
+          "rationale": "Hybride Methode.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Hybride Methode.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du setzt IV/2SLS und moderne DMLIV/DeepIV verantwortlich ein und interpretierst LATE korrekt."
+    },
+    {
+      "type": "outlook",
+      "text": "Optional: **M13 – Robust Policy Learning & Fairness** (Konfidenzbänder für Policies, Constraints)."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

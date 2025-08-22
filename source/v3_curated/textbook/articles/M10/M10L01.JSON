@@ -1,0 +1,314 @@
+{
+  "id": "M10L01",
+  "title": "Lehrtext – Grundlagen: Kausaleffekte I – Grundideen, Counterfactual & DiD (Difference‑in‑Differences) (Rabatt/Skonto)",
+  "reading_time_min": 96,
+  "prerequisites": [
+    "M08L04",
+    "M09L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: Kausalität vs. Korrelation, Counterfactual, Treatment/Control, Confounder, Parallel‑Trends."
+    },
+    {
+      "level": "Understand",
+      "text": "DiD‑Logik erklären; Voraussetzungen und typische Verletzungen erkennen."
+    },
+    {
+      "level": "Apply",
+      "text": "Einfache DiD‑Schätzung auf Paneldaten (Vor/Nach; Gruppe) durchführen und interpretieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Robustheitschecks (Placebo‑Tests, Vortrend‑Plots) planen und dokumentieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "In Controlling & Marketing möchten wir wissen: **Wirkt** eine Maßnahme (Promo, Preisänderung, Schulung)?\nKorrelation reicht nicht – wir brauchen **kausale** Effekte im Vergleich zu einem **Gegenfaktum** (Counterfactual):\nWas wäre **ohne** Maßnahme passiert? Difference‑in‑Differences (DiD) liefert eine einfache, oft sehr brauchbare Antwort."
+    },
+    {
+      "type": "concept",
+      "title": "Kausalitäts‑Vokabular",
+      "text": "- **Treatment** (Behandlung): Maßnahme, die nur einen Teil der Einheiten/Stützpunkte betrifft (z. B. Filialen).  \n- **Control** (Kontrollgruppe): ähnliche Einheiten ohne Maßnahme.  \n- **Counterfactual**: hypothetischer Verlauf ohne Maßnahme.  \n- **Confounder**: Drittvariable, die sowohl Maßnahme als auch Ergebnis beeinflusst (z. B. Lage, Größe).  \n- **Parallel‑Trends‑Annahme** (DiD): Ohne Maßnahme hätten **beide Gruppen** im **gleichen Trend** weitergemacht.",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "DiD – Herleitung Schritt für Schritt",
+      "steps": [
+        "1) Messe Outcome (z. B. Umsatz) in t=0 (vorher) und t=1 (nachher) für Treatment (T) und Control (C).",
+        "2) Berechne Differenzen innerhalb der Gruppen: ΔT = T₁−T₀; ΔC = C₁−C₀.",
+        "3) **DiD‑Schätzer**: τ̂ = ΔT − ΔC. Das subtrahiert gemeinsame Trends, die beide Gruppen betreffen.",
+        "4) Variante als Regression: y = β₀ + β₁·Post + β₂·Treat + **τ**·(Post×Treat) + ε; τ ist der DiD‑Effekt."
+      ],
+      "comment": "Die Annahme ‚Parallel‑Trends‘ ist zentral – belege sie mit Vorperioden."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Parallel‑Trends",
+      "ascii": "y ^\n  |   / (T ohne Maßnahme: paralleler Trend)\n  |  /\n  | /   ↑ Behandlung\n  |/____|________________> t\n     0   1",
+      "caption": "Wenn Trends vor t=0 ähnlich verlaufen, ist DiD plausibler.",
+      "alt_text": "ASCII-Visual: Wenn Trends vor t=0 ähnlich verlaufen, ist DiD plausibler. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Promo in ausgewählten Filialen",
+      "text": "Vorperiode: Umsatz Treatment T₀=100, Control C₀=95. Nachperiode: T₁=125, C₁=110.  \nΔT=+25, ΔC=+15 ⇒ τ̂=25−15=**+10**. **Interpretation**: +10 Umsatzpunkte **kausaler** Promo‑Effekt (unter Parallel‑Trends).",
+      "steps": [
+        "Vorperiode: Umsatz Treatment T₀=100, Control C₀=95. Nachperiode: T₁=125, C₁=",
+        "ΔT=+25, ΔC=+15 → τ̂=25−15=**+10**. **Interpretation**: +10 Umsatzpunkte **kausaler** Promo‑Effekt (unter Parallel‑Trends"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Verletzung Parallel‑Trends",
+      "text": "Control liegt in Innenstadt, Treatment am Stadtrand; vor der Promo wuchs Innenstadt schneller.  \na) Problem? b) Milderung?",
+      "solution": [
+        "Annahme verletzt (Trends ungleich) → verzerrte τ̂.",
+        "Matching auf ähnliche Filialen, Trends vorab prüfen, zusätzliche Kontrollen/Fixed Effects."
+      ],
+      "steps": [
+        "Control liegt in Innenstadt, Treatment am Stadtrand; vor der Promo wuchs Innenstadt schneller",
+        "a) Problem? b) Milderung?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Formel des DiD‑Schätzers τ̂?",
+          "hint": "ΔT − ΔC",
+          "solution": "τ̂ = (T₁−T₀) − (C₁−C₀)",
+          "check": {
+            "type": "string_contains",
+            "expected": "Δ"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wozu Control‑Gruppe?",
+          "hint": "Counterfactual annähern",
+          "solution": "gemeinsame Schocks herausrechnen",
+          "check": {
+            "type": "string_contains",
+            "expected": "Counterfactual"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Was prüfst du für Parallel‑Trends?",
+          "hint": "Vorperiodenverläufe",
+          "solution": "ähnliche Steigungen",
+          "check": {
+            "type": "string_contains",
+            "expected": "Vor"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Schulungseffekt auf Produktivität",
+          "context": "20 Standorte, 10 geschult (Treatment). Daten je Standort für Quartal −1 und 0.",
+          "subtasks": [
+            {
+              "text": "Berechne τ̂ und interpretiere in % der Ausgangsleistung."
+            },
+            {
+              "text": "Zeige Vortrend‑Plot (Skizze)."
+            },
+            {
+              "text": "Formuliere 2 Risiken (z. B. Saisoneffekte, Auswahlbias)."
+            }
+          ],
+          "hints": [
+            "τ̂ in Einheiten/Prozent.",
+            "ASCII‑Skizze reicht.",
+            "Bias‑Quellen benennen."
+          ],
+          "solutions": [
+            "Rechnung korrekt",
+            "Plot vorhanden",
+            "Risiken benannt"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "DiD",
+                "Vortrend",
+                "Bias"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Rechnung korrekt",
+            "Plot vorhanden",
+            "Risiken benannt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Parallel‑Trends nicht geprüft.",
+        "Treatment und Control unähnlich (Auswahl nach Performance).",
+        "Nur Mittelwerte betrachtet, keine Heterogenitäten (Größe, Lage)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "DiD braucht v. a. die Annahme…",
+          "options": [
+            "SUTVA",
+            "Parallel‑Trends",
+            "Normalverteilung"
+          ],
+          "answer_index": 1,
+          "rationale": "Kernannahme.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kernannahme.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Ohne Control ist DiD nicht anwendbar.",
+          "answer": true,
+          "rationale": "Es braucht Vergleichsgruppe.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Es braucht Vergleichsgruppe.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "In der Regressionsform ist der DiD‑Effekt…",
+          "options": [
+            "β₁",
+            "β₂",
+            "Koeffizient von Post×Treat"
+          ],
+          "answer_index": 2,
+          "rationale": "Interaktionsterm.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Interaktionsterm.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst DiD erklären, berechnen und kritisch prüfen – mit Fokus auf Vortrends und Confounder."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Bayesianische Grundlagen** – Priors, Posterior, Credible Intervals für Forecast & Kausalfragen."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

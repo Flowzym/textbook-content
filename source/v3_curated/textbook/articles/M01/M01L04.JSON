@@ -1,0 +1,261 @@
+{
+  "id": "M01L04",
+  "title": "Lehrtext – Grundlagen: Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (Rabatt/Skonto)",
+  "reading_time_min": 20,
+  "prerequisites": [
+    "M01L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriff Gleichung/Ungleichung, Äquivalenzumformungen, Lösungsmenge."
+    },
+    {
+      "level": "Understand",
+      "text": "Text in Gleichungen übersetzen (Kosten, Erlöse, Break-Even)."
+    },
+    {
+      "level": "Apply",
+      "text": "Einfache lineare Gleichungen/Systems lösen; Ungleichungen und Bereiche darstellen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren (Plausibilität, Einheiten) und Sensitivität prüfen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Gleichungen sind das Bindeglied zwischen **Text** und **Zahl**. In der Kostenrechnung beschreiben sie\nFixkosten, variable Stückkosten, Preise und Mengen. Ziel: sicher **aufstellen**, **lösen** und **interpretieren**."
+    },
+    {
+      "type": "concept",
+      "title": "Grundideen",
+      "text": "- **Äquivalenzumformungen**: auf beiden Seiten dasselbe tun (addieren/subtrahieren/multiplizieren/dividieren, mit Einschränkungen bei Ungleichungen).  \n- **Ungleichungen**: Richtung kehrt sich bei Multiplikation/Division mit **negativen** Zahlen um.  \n- **Lineare Funktion**: y=a·x+b (a Steigung, b Achsenabschnitt).",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "Schrittweise Lösung",
+      "steps": [
+        "1) Text in Variablen übersetzen (z. B. x=Stückzahl).",
+        "2) Gleichungen aufstellen (Erlös=Preis·Menge; Kosten=Fix+Variabel·Menge).",
+        "3) Lösen: Umformen nach x; bei Systemen addieren/substituieren.",
+        "4) Ungleichungen: Bereichslösungen angeben; ggf. Intervallnotation."
+      ],
+      "comment": "Einheiten mitführen (€, Stk.) erhöht die Trefferquote."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Break-Even",
+      "ascii": "€ ^\n  |  Erlös:  /\n  |         /\n  |        /\n  |  Kosten/___\n  |      /\n  +-----------------> Menge\n         → Schnitt = Break-Even",
+      "caption": "Schnittpunkt von Kosten und Erlös = Gewinnschwelle.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Schnittpunkt von Kosten und Erlös = Gewinnschwelle.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Break-Even",
+      "text": "Fixkosten € 12,000, variable Kosten € 8/Stk., Preis € 14/Stk.  \nGewinn=0 ⇒ Erlös = Kosten ⇒ 14x = 12,000 + 8x ⇒ 6x = 12,000 ⇒ x = 2,000 Stk.",
+      "steps": [
+        "Fixkosten € 12,000, variable Kosten € 8/Stk., Preis € 14/Stk",
+        "Gewinn=0 → Erlös = Kosten → 14x = 12,000 + 8x → 6x = 12,000 → x = 2,000 Stk"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – System lösen",
+      "text": "x+y=110 (Stunden), 2x+3y=280 (Kosten in Einheiten).",
+      "solution": [
+        "Multipliziere erste Gleichung mit −2 und addiere: (−2x−2y)+(2x+3y)=−220+280 ⇒ y=60, x=50."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Löse: 3x−7=2x+5",
+          "hint": "alles mit x links",
+          "solution": "x=12",
+          "check": {
+            "type": "numeric",
+            "expected": 12
+          },
+          "covers_outcomes": [
+            0,
+            1,
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Ungleichung: 5−2x ≥ 11",
+          "hint": "−2x≥6 → x≤−3",
+          "solution": "x≤−3",
+          "check": {
+            "type": "string_contains",
+            "expected": "x≤"
+          },
+          "covers_outcomes": [
+            0,
+            1,
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Stelle y nach x frei: y−0,2x=1,5",
+          "hint": "umformen",
+          "solution": "y=1,5+0,2x",
+          "check": {
+            "type": "string_contains",
+            "expected": "0,2x"
+          },
+          "covers_outcomes": [
+            0,
+            1,
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Gewinnziel",
+          "context": "Preis € 20/Stk., var. Kosten € 12/Stk., Fixkosten € 15,- Zielgewinn € 9,-",
+          "subtasks": [
+            {
+              "text": "Stelle Gleichung auf (Erlös−Kosten=Ziel)."
+            },
+            {
+              "text": "Berechne notwendige Menge."
+            },
+            {
+              "text": "Was passiert, wenn Preis auf € 19,- sinkt?"
+            }
+          ],
+          "hints": [
+            "(20x)−(15000+12x)=9000.",
+            "x=3000.",
+            "Neue Menge höher; Sensitivität diskutieren."
+          ],
+          "solutions": [
+            "Gleichung korrekt",
+            "Menge korrekt",
+            "Sensitivität betrachtet"
+          ],
+          "checks": [
+            {
+              "type": "numeric_range",
+              "min": 0,
+              "max": 100000
+            }
+          ],
+          "covers_outcomes": [
+            0,
+            1,
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Gleichung korrekt",
+            "Menge korrekt",
+            "Sensitivität betrachtet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Ungleichungsrichtung beim Multiplizieren mit negativem Faktor nicht umgedreht.",
+        "Einheiten vergessen → unrealistische Ergebnisse.",
+        "Zu früh gerundet → kumulierte Fehler."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei Multiplikation mit −3 wird ‚≤' zu…",
+          "options": [
+            "≥",
+            "≤",
+            ">"
+          ],
+          "answer_index": 0,
+          "rationale": "Richtung dreht sich um.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Richtung dreht sich um.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Break-Even liegt beim Schnitt von Kosten- und Erlöskurve.",
+          "answer": true,
+          "rationale": "Definition.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Form y=a·x+b: a ist…",
+          "options": [
+            "Achsenabschnitt",
+            "Steigung",
+            "Wert von y bei x=0"
+          ],
+          "answer_index": 1,
+          "rationale": "a=Steigung.",
+          "covers_outcomes": [
+            0,
+            1,
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. a=Steigung.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst lineare (Un-)Gleichungen lösen und auf betriebswirtschaftliche Texte anwenden."
+    },
+    {
+      "type": "outlook",
+      "text": "Weiter geht's mit **M02 – Algebra & Funktionen I** (wenn freigeschaltet): Terme, lineare Funktionen, Proportionalität."
+    }
+  ],
+  "reading_time_band": "normal"
+}

@@ -1,0 +1,325 @@
+{
+  "id": "M07L01",
+  "title": "Lehrtext – Grundlagen: Ganzzahlige Modelle I – Binär- & Ganzzahlvariablen, Big‑M & Logik (Rabatt/Skonto)",
+  "reading_time_min": 90,
+  "prerequisites": [
+    "M06L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Unterschied LP vs. (M)ILP; Binär-/Ganzzahlvariablen, Big‑M, Indikatorrestriktionen."
+    },
+    {
+      "level": "Understand",
+      "text": "Logische Verknüpfungen (entweder‑oder, impliziert, wenn‑dann) linear formulieren."
+    },
+    {
+      "level": "Apply",
+      "text": "Fixkosten, Mindestmengen, Auswahlentscheidungen modellieren (Rucksack, Projektwahl, Losgröße)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Big‑M numerisch sinnvoll wählen, starke/valide Ungleichungen erkennen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Viele Praxisprobleme erfordern **Ja/Nein‑Entscheidungen**: Standort wählen, Maschine rüsten, Projekt aufnehmen.\nDas führt zu **(M)ILP** mit Binärvariablen. Wir zeigen die wichtigsten **Modellierungsmuster** didaktisch aufgebaut."
+    },
+    {
+      "type": "concept",
+      "title": "Grundbausteine",
+      "text": "- **Binärvariable y∈{0,1}**: 1=aktiv/ausgewählt.  \n- **Fixkosten**: Kosten = k_fix·y + k_var·x.  \n- **Kopplung**: x ≤ U·y (**Big‑M**, mit sinnvollem U).  \n- **Wenn‑dann**: y=1 ⇒ ax≤b lässt sich mit ax ≤ b + M·(1−y) abbilden.  \n- **Entweder‑oder**: y₁ + y₂ = 1 (genau eine Wahl).  \n- **Mindestens/höchstens k** aus n: Σ y_i ≥/≤ k.",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "Big‑M richtig wählen – Schrittfolge",
+      "steps": [
+        "1) Obergrenze U für x aus Daten ableiten (nicht ‚unendlich‘!).",
+        "2) x ≤ U·y statt x ≤ M·y; U klein halten → stärkere Relaxation, bessere Rechenzeit.",
+        "3) Prüfe Einheiten und Plausibilität (U in derselben Einheit wie x).",
+        "4) Alternativ: **Indikatorrestriktionen** (wenn Solver es unterstützt)."
+      ],
+      "comment": "Zu großes M/U führt zu schwachen Schranken und Instabilitäten."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Fixkosten‑Knick",
+      "ascii": "Kosten\n  ^          /  variable Kosten\n  |   ____--\n  |  /   <- Fixkosten aktivieren (y=1)\n  +------------------> Menge x",
+      "caption": "Fixkosten aktivieren Produktion erst (y=1), dann steigen variable Kosten linear.",
+      "alt_text": "ASCII-Visual: Fixkosten aktivieren Produktion erst (y=1), dann steigen variable Kosten linear. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Projektwahl (Rucksack)",
+      "text": "Projekte i=1..5 mit Kapitalbedarf K_i und Deckungsbeitrag DB_i. Budget B.  \nVariablen: y_i∈{0,1}. Zielfunktion: max Σ DB_i y_i s.t. Σ K_i y_i ≤ B.  \n**Interpretation**: Klassischer 0/1‑Rucksack; lineares Modell, aber binär – benötigt MILP‑Löser.",
+      "steps": [
+        "Projekte i=1..5 mit Kapitalbedarf K_i und Deckungsbeitrag DB_i. Budget B",
+        "Variablen: y_i∈{0,1}. Zielfunktion: max Σ DB_i y_i s.t. Σ K_i y_i ≤ B",
+        "Interpretation**: Klassischer 0/1‑Rucksack; lineares Modell, aber binär – benötigt MILP‑Löser"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Mindestmenge & Fixkosten (Losgröße)",
+      "text": "Produktion x≥0 nur, wenn y=1. Mindestmenge L, Kapazität U.  \nx ≥ L·y;  x ≤ U·y;  Kosten = k_fix·y + k_var·x.  \n**Hinweis**: L>0 vermeidet mikroskopische x, wenn y=1.",
+      "steps": [
+        "Produktion x≥0 nur, wenn y=1. Mindestmenge L, Kapazität U",
+        "x ≥ L·y;  x ≤ U·y;  Kosten = k_fix·y + k_var·x",
+        "Hinweis**: L>0 vermeidet mikroskopische x, wenn y="
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Entweder‑oder‑Preisstrategie",
+      "text": "Strategie S1 (Rabatt) oder S2 (Premium). y₁+y₂=1.  \na) Verknüpfe Deckungsbeitarife mit y. b) Formuliere Umsatz ≥ Ziel nur, wenn S1 aktiv ist.",
+      "solution": [
+        "Umsatz = (p₁−vK)·x mit y₁, (p₂−vK)·x mit y₂; z=max (DB₁·x·y₁ + DB₂·x·y₂).",
+        "U ≥ Ziel − M·(1−y₁)."
+      ],
+      "steps": [
+        "Strategie S1 (Rabatt) oder S2 (Premium). y₁+y₂=",
+        "a) Verknüpfe Deckungsbeitarife mit y. b) Formuliere Umsatz ≥ Ziel nur, wenn S1 aktiv ist"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Formuliere: ‚Projekt nur, wenn Budget freigegeben (y)‘",
+          "hint": "x ≤ U·y",
+          "solution": "Kopplung korrekt",
+          "check": {
+            "type": "string_contains",
+            "expected": "≤"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Genau 2 von 5 Projekten",
+          "hint": "Σ y_i = 2",
+          "solution": "Auswahlbedingung",
+          "check": {
+            "type": "string_contains",
+            "expected": "="
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wenn‑dann ax≤b",
+          "hint": "ax ≤ b + M(1−y)",
+          "solution": "Indikatorersatz",
+          "check": {
+            "type": "string_contains",
+            "expected": "M"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Budget‑Rucksack für CAPEX",
+          "context": "5 Projekte, Budget 1,2 Mio. Wähle Projekte (y_i) zur Maximierung DB; Synergie: Wenn A und B gemeinsam, zusätzlicher Bonus 40k.",
+          "subtasks": [
+            {
+              "text": "Basismodell (Rucksack)."
+            },
+            {
+              "text": "Füge Bonus als neue Binärvariable z_AB hinzu."
+            },
+            {
+              "text": "Sorge für z_AB ≤ y_A und z_AB ≤ y_B."
+            }
+          ],
+          "hints": [
+            "Σ K_i y_i ≤ 1,2 Mio.; max Σ DB_i y_i.",
+            "Zielfunktion + 40k·z_AB.",
+            "Logik sichert z_AB=1 nur bei A=B=1."
+          ],
+          "solutions": [
+            "Modell konsistent",
+            "Bonus korrekt",
+            "Lösung interpretierbar"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Rucksack",
+                "Synergie",
+                "Bonus"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Modell konsistent",
+            "Bonus korrekt",
+            "Lösung interpretierbar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "M viel zu groß gewählt → schwache Relaxation.",
+        "Logiken ohne Binärvariablen versucht (reine LPs).",
+        "Mindestmenge vergessen → y=1 mit x≈0 (unrealistisch)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Kopplung ist korrekt?",
+          "options": [
+            "x ≥ U·y",
+            "x ≤ U·y",
+            "x = U·y"
+          ],
+          "answer_index": 1,
+          "rationale": "Obergrenze bindet x an y.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Obergrenze bindet x an y.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Indikatorrestriktionen ersetzen Big‑M, wenn der Solver sie unterstützt.",
+          "answer": true,
+          "rationale": "Numerisch stabiler.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Numerisch stabiler.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Genau eine Option wählen:",
+          "options": [
+            "Σ y_i ≥ 1",
+            "Σ y_i = 1",
+            "Σ y_i ≤ 1"
+          ],
+          "answer_index": 1,
+          "rationale": "Eindeutige Wahl.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Eindeutige Wahl.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du beherrschst Binär‑/Ganzzahlmodellierung, Big‑M/Indikatorlogik und typische Muster (Rucksack, Losgröße, Auswahl)."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Branch‑and‑Bound & Schnitte** – wie MILPs gelöst werden."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

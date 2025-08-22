@@ -1,0 +1,207 @@
+{
+  "id": "M11L03",
+  "title": "Lehrtext – Grundlagen: Panel‑BSTS & Hierarchische Causal‑Impact‑Modelle – Mehrere Einheiten, gemeinsame Faktoren & Spillovers",
+  "reading_time_min": 106,
+  "prerequisites": [
+    "M11L02",
+    "M10L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Gemeinsame Komponenten (Trend/Saison) und unit‑spezifische Abweichungen in Panel‑BSTS."
+    },
+    {
+      "level": "Apply",
+      "text": "Mehrere behandelte Einheiten gemeinsam schätzen; Posterior‑Counterfactuals & kumulative Effekte je Einheit berichten."
+    },
+    {
+      "level": "Analyze",
+      "text": "Spillover/Interferenz erkennen (räumlich/zeitlich) und in die Modellierung/Interpretation einbeziehen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "**Panel‑BSTS** erweitert Causal Impact auf mehrere Einheiten und Hierarchien (SKU→Kategorie→Gesamt). \nGemeinsame Komponenten erhöhen Stabilität; Einheiten‑Spezifika bleiben flexibel."
+    },
+    {
+      "type": "concept",
+      "title": "Struktur & Priors",
+      "text": "- **Gemeinsame Level/Trend/Saison** + **Random‑Effects** je Einheit.  \n- **Regressoren**: gemeinsame & unit‑spezifische X.  \n- **Posterior‑Pooling**: kleine Einheiten profitieren von großen (hierarchisch).  \n- **Spillover**: mögliche Beeinflussung nicht behandelter Einheiten – explizit prüfen."
+    },
+    {
+      "type": "derivation",
+      "title": "Ablauf",
+      "steps": [
+        "1) Definiere Ebenen (SKU/Kat./Gesamt) und Behandlungen pro Einheit.",
+        "2) Baue gemeinsame Komponenten + unit‑Spezifika.",
+        "3) Fit auf Pre; prognostiziere Counterfactual je Einheit im Post.",
+        "4) Summiere Effekte hierarchiekonsistent (Reconciliation).",
+        "5) Prüfe Spillover (räumliche Nähe, Lieferketten, Kannibalisierung)."
+      ],
+      "comment": "Hierarchie‑Kohärenz und Spillover‑Prüfung sind entscheidend für valide Aussagen."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Panel‑BSTS Skizze",
+      "ascii": "Gesamt\n     /   \\\n  KatA  KatB      (gemeinsamer Trend)\n  / \\     \\\nS1  S2    S3      (einheitsspezifische Abweichungen + X)",
+      "caption": "Gemeinsame Komponenten + individuelle Effekte.",
+      "alt_text": "ASCII-Visual: Gemeinsame Komponenten + individuelle Effekte. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Rollout in 15 Filialen",
+      "text": "Panel‑BSTS mit gemeinsamem Trend & Saison, Regressor ‚Wetter‘. Pre: 52 Wochen, Post: 8 Wochen.  \nKumulativer Gesamteffekt +420 k€, 95%‑Band [+180; +620]; P(Effekt>0)=0,985. Zwei Nachbarfilialen ohne Treatment zeigen geringe positive Post‑Abweichungen → Hinweis auf Spillover.",
+      "steps": [
+        "Panel‑BSTS mit gemeinsamem Trend & Saison, Regressor ‚Wetter‘. Pre: 52 Wochen, Post: 8 Wochen",
+        "Kumulativer Gesamteffekt +420 k€, 95%‑Band [+180; +620]; P(Effekt>0)=0,985. Zwei Nachbarfilialen ohne Treatment zeigen geringe positive Post‑Abweichungen → Hinweis auf Spillover"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Spillover adressieren",
+      "text": "a) Wie erkennst du Interferenz? b) Was tust du dagegen?",
+      "solution": [
+        "Korrelation der Post‑Abweichungen in Nähe/gleichen Clustern; Domänenwissen.",
+        "Exkludiere betroffene Donoren, räumliche Dummies, Sensitivitäten berichten."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Wozu gemeinsame Komponenten?",
+          "hint": "Stabilität/Pooling",
+          "solution": "besserer Fit bei kleinen Einheiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Pooling"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Reconciliation bedeutet…",
+          "hint": "Effekte über Ebenen konsistent machen",
+          "solution": "Summe SKU = Kategorie",
+          "check": {
+            "type": "string_contains",
+            "expected": "konsistent"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Spillover prüfen…",
+          "hint": "räumlich/zeitlich/kanalbezogen",
+          "solution": "Kontamination der Kontrolle",
+          "check": {
+            "type": "string_contains",
+            "expected": "Spillover"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Panel‑Impact Bericht",
+          "context": "10 Regionen, 3 behandelt. Ziel: Effekte je Region + Gesamt, Spillover‑Check.",
+          "subtasks": [
+            {
+              "text": "Baue Panel‑BSTS (gemeinsame Saison)."
+            },
+            {
+              "text": "Berichte Posterior‑Effekte je Region + Gesamt."
+            },
+            {
+              "text": "Dokumentiere Spillover‑Analyse & Robustheit."
+            }
+          ],
+          "hints": [
+            "Pooling hilft kleinen Regionen.",
+            "Intervalle & P(Effekt>0).",
+            "Nachbarschaft/Cluster prüfen."
+          ],
+          "solutions": [
+            "Panel‑Modell steht",
+            "Effekte berichtet",
+            "Spillover dokumentiert"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Panel",
+                "Spillover",
+                "Posterior"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Panel‑Modell steht",
+            "Effekte berichtet",
+            "Spillover dokumentiert"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Hierarchie nicht reconciliert → Widersprüche.",
+        "Spillover ignoriert → verzerrte Placebos.",
+        "Zu wenige gemeinsame Komponenten → instabile Einheitenfits."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Panel‑BSTS nutzt…",
+          "options": [
+            "nur Einzel‑Komponenten",
+            "gemeinsame + individuelle Komponenten",
+            "nur individuelle"
+          ],
+          "answer_index": 1,
+          "rationale": "Hierarchische Struktur.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Hierarchische Struktur."
+        },
+        {
+          "type": "true_false",
+          "question": "Spillover kann Kontrollen verfälschen.",
+          "answer": true,
+          "rationale": "Interferenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Interferenz."
+        },
+        {
+          "type": "single_choice",
+          "question": "Reconciliation stellt sicher, dass…",
+          "options": [
+            "SKU≠Kategorie",
+            "Summen konsistent sind",
+            "nichts"
+          ],
+          "answer_index": 1,
+          "rationale": "Kohärenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kohärenz."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du setzt Panel‑BSTS hierarchisch ein, prüfst Spillover und berichtest Effekte konsistent."
+    },
+    {
+      "type": "outlook",
+      "text": "Zum Abschluss: **Geo‑Experimente & Guardrails** – Cluster‑Randomisierung, Power, Monitoring."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}
