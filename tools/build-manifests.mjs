@@ -115,7 +115,7 @@ async function maybeBuildNamespace(ns) {
   await writeJSON(path.join(latestDir, 'index.json'), { version: `${VERSION}`, index: `../v${VERSION}/index.json` });
 }
 
-// ---------------- helpers ----------------
+// ------------- helpers -------------
 function parseArgs(argv) {
   const out = {};
   for (let i = 0; i < argv.length; i++) {
