@@ -1,0 +1,288 @@
+{
+  "id": "M11L04",
+  "title": "Lehrtext – Grundlagen: Geo‑Experimente & Interferenz – Cluster‑Randomisierung, Guardrails, Power & Governance (Rabatt/Skonto)",
+  "reading_time_min": 108,
+  "prerequisites": [
+    "M11L03",
+    "M10L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Warum Geo/Cluster‑Experimente? Interferenz/Spillover, Guardrail‑Kennzahlen, Governance."
+    },
+    {
+      "level": "Apply",
+      "text": "Cluster randomisieren, Power grob abschätzen, Guardrails/Failsafes definieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Trade‑offs (Bias vs. Varianz), Störgrößen & Saisons kontrollieren, Randomization Inference nutzen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Wenn Kausaleffekte breit ausgerollt werden, helfen **Geo/Cluster‑Experimente**: Einheiten (Filialen/Regionen) werden randomisiert.\n**Interferenz** (Spillover) und **Guardrails** (z. B. Marge, Service) gehören von Anfang an in das Design."
+    },
+    {
+      "type": "concept",
+      "title": "Design‑Bausteine",
+      "text": "- **Cluster‑Randomisierung**: zufällige Zuweisung auf Gruppen (balanciere Größe/Features).  \n- **Guardrail‑Metriken**: KPIs, die nicht verschlechtern dürfen (z. B. Retourenquote).  \n- **Power‑Skizze**: Effektgröße δ, Varianz σ², Anzahl Cluster G; Daumenregeln und Pre‑Perioden zur Kovarianz‑Reduktion.  \n- **Randomization Inference**: Signifikanz durch Permutieren der Zuweisung.",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "Ablauf – von Planung bis Auswertung",
+      "steps": [
+        "1) Definiere Ziel‑ und Guardrail‑KPIs; Leckagen/Interferenz antizipieren.",
+        "2) Cluster nach Größe/Region stratifizieren; dann randomisieren.",
+        "3) Baseline‑Check: Pre‑Balance und Parallelität dokumentieren.",
+        "4) Auswertung: DiD/SC/BSTS je nach Daten; Randomization Inference ergänzen.",
+        "5) Governance: Stopping‑Regeln, Monitoring, Dokumentation."
+      ],
+      "comment": "Vorab‑Regeln verhindern nachträgliche Verzerrungen."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Cluster‑Schema",
+      "ascii": "Regionen:  [A][B][C][D][E][F]\nRandom:      T  C  T  C  T  C\nGuardrails:  ✓  ✓  ✓  ⚠  ✓  ✓",
+      "caption": "Randomisiere, überwache Guardrails, dokumentiere Abweichungen.",
+      "alt_text": "ASCII-Visual: Randomisiere, überwache Guardrails, dokumentiere Abweichungen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Preis‑Test über 24 Regionen",
+      "text": "12 T/12 C, Pre‑Fenster 26 Wochen. Erwarteter δ=+1,5% Umsatz, σ≈3% → grobe Power ausreichend.  \nGuardrails: Marge, Warenverfügbarkeit. Randomization Inference p≈0,08 → Evidenz grenzwertig; Empfehlung: weitere Periode testen.",
+      "steps": [
+        "T/12 C, Pre‑Fenster 26 Wochen. Erwarteter δ=+1,5% Umsatz, σ≈3% → grobe Power ausreichend",
+        "Guardrails: Marge, Warenverfügbarkeit. Randomization Inference p≈0,08 → Evidenz grenzwertig; Empfehlung: weitere Periode testen"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Interferenz begrenzen",
+      "text": "a) Wie reduzierst du Spillover? b) Was, wenn es unvermeidbar ist?",
+      "solution": [
+        "Pufferzonen, nicht benachbarte Cluster wählen, Kanäle trennen.",
+        "Effektdefinition/Interpretation anpassen; Kontrollen entsprechend wählen, Sensitivität berichten."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Warum Guardrails?",
+          "hint": "Schäden vermeiden (z. B. Service, Retoure)",
+          "solution": "Nebenbedingungen für ‚Go‘",
+          "check": {
+            "type": "string_contains",
+            "expected": "Guardrail"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "Schäden vermeiden (z.",
+            "B.",
+            "Service, Retoure)"
+          ]
+        },
+        {
+          "prompt": "Randomization Inference nutzt…",
+          "hint": "Permutation der Zuweisung",
+          "solution": "exakte p‑ähnliche Größe",
+          "check": {
+            "type": "string_contains",
+            "expected": "Permutation"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Power steigt durch…",
+          "hint": "mehr Cluster/geringere Varianz/stärkerer Effekt",
+          "solution": "Pre‑Kontrollen helfen",
+          "check": {
+            "type": "string_contains",
+            "expected": "Varianz"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Geo‑Test planen",
+          "context": "Ziel: Promo‑Rollout, 30 Regionen, Test 6 Wochen.",
+          "subtasks": [
+            {
+              "text": "Stratifiziere & randomisiere Cluster."
+            },
+            {
+              "text": "Lege Primär‑/Guardrail‑KPIs fest + Stopping‑Regeln."
+            },
+            {
+              "text": "Skizziere Auswertung (DiD/SC) + Randomization Inference."
+            }
+          ],
+          "hints": [
+            "Größe/Region/Volumen in Strata.",
+            "KPIs & Regeln schriftlich fixieren.",
+            "Permutationstest vorbereiten."
+          ],
+          "solutions": [
+            "Design sauber",
+            "Governance klar",
+            "Auswertung robust"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Randomization",
+                "Guardrail",
+                "Permutation"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Design sauber",
+            "Governance klar",
+            "Auswertung robust"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Keine Guardrails → ökonomische Nebenwirkungen übersehen.",
+        "Stratifizierung vergessen → unausgewogene Gruppen.",
+        "Nur p‑Wert ohne Effektgröße/ROI."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Warum Cluster‑Randomisierung?",
+          "options": [
+            "leichter Bias",
+            "Reduktion von Interferenz/Spillover",
+            "keine Wirkung"
+          ],
+          "answer_index": 1,
+          "rationale": "Designvorteil.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Designvorteil.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Randomization Inference permutiert die Zuweisung, um Signifikanz zu bewerten.",
+          "answer": true,
+          "rationale": "Exakt unter Nullhypothese.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Exakt unter Nullhypothese.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Power steigt üblicherweise mit…",
+          "options": [
+            "mehr Clustern und geringerer Varianz",
+            "weniger Clustern",
+            "höherer Varianz"
+          ],
+          "answer_index": 0,
+          "rationale": "Daumenregel.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Daumenregel.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du planst Geo‑Experimente mit Guardrails und robuster Inferenz; Interferenz wird gemanagt statt ignoriert."
+    },
+    {
+      "type": "outlook",
+      "text": "Optional: **M12 – Mixed Models & Causal ML** (Double ML, DR‑Learner, Uplift‑Trees)."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

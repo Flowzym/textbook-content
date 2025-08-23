@@ -1,0 +1,283 @@
+{
+  "id": "M12L02",
+  "title": "Lehrtext – Grundlagen: Double Machine Learning – Orthogonalisierung, Cross‑Fitting & CATE (Rabatt/Skonto)",
+  "reading_time_min": 108,
+  "prerequisites": [
+    "M12L01",
+    "M10L02",
+    "M10L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Neyman‑Orthogonalität: Störschätzer‑Fehler beeinflussen Ziel kaum."
+    },
+    {
+      "level": "Apply",
+      "text": "ATE/CATE mit DML schätzen (z. B. Promo‑Uplift) und Cross‑Fitting korrekt einsetzen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Assumptions (Unconfoundedness, Overlap) prüfen; Modellwahl & Tuning dokumentieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "**Double Machine Learning (DML)** isoliert kausale Effekte in Settings mit **vielen Kovariaten**. \nIdee: **Orthogonalisierung** der Störschätzer (Outcome‑/Treatment‑Modelle) und **Cross‑Fitting** gegen Overfit."
+    },
+    {
+      "type": "concept",
+      "title": "Bausteine DML",
+      "text": "- **Neyman‑Orthogonalität**: Momentbedingungen so wählen, dass Fehler in Nuisance‑Schätzungen (m(x), e(x)) den Effekt kaum verzerren.  \n- **Cross‑Fitting**: Daten falten, Störschätzer out‑of‑fold schätzen, dann Effekt zusammensetzen.  \n- **ATE vs. CATE**: globaler Durchschnitt vs. bedingter Effekt (Segment/Individuum).",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "Schritt für Schritt (Binary‑Treatment)",
+      "steps": [
+        "1) Schätze e(x)=P(T=1|X) (Propensity) und m_t(x)=E[Y|T=t,X] mit ML (z. B. Gradient Boosting).",
+        "2) Erzeuge orthogonalisierte Reste (z. B. pseudo‑Outcome).",
+        "3) Schätze Effekt θ via linearem Modell/Meta‑Learner; nutze **Cross‑Fitting**.",
+        "4) Berichte Unsicherheit (Bootstraps/Asymptotik) und prüfe Overlap."
+      ],
+      "comment": "Dokumentiere Hyperparameter/Tuning; vermeide Data Leakage."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Cross‑Fitting",
+      "ascii": "Fold A: fit e,m on B → predict A\nFold B: fit e,m on A → predict B\ncombine → θ̂",
+      "caption": "Out‑of‑fold verhindert zu optimistische Effekte.",
+      "alt_text": "ASCII-Visual: Out‑of‑fold verhindert zu optimistische Effekte. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Promo‑Uplift (ATE)",
+      "text": "Mit DML ergibt sich θ̂≈+4,2% Umsatz‑Uplift (95%‑CI [+2,1; +6,0]). Overlap OK (0,1<e(x)<0,9 für 95% der Beobachtungen).",
+      "steps": [
+        "Mit DML ergibt sich θ̂≈+4,2% Umsatz‑Uplift (95%‑CI [+2,1; +6,0]).",
+        "Overlap OK (0,1<e(x)<0,9 für 95% der Beobachtungen)."
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – CATE‑Segmente",
+      "text": "a) Welche Segmente profitieren stärker? b) Wie validierst du Stabilität?",
+      "solution": [
+        "Schätze CATE(x), prüfe Qini/CUVE‑Kurven.",
+        "Cross‑Val, zeitliche Validierung, Policy‑Simulation."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Warum Orthogonalisierung?",
+          "hint": "Robust gegen Nuisance‑Fehler",
+          "solution": "Bias↓",
+          "check": {
+            "type": "string_contains",
+            "expected": "Orthogonal"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wofür Cross‑Fitting?",
+          "hint": "Leakage vermeiden",
+          "solution": "Out‑of‑fold",
+          "check": {
+            "type": "string_contains",
+            "expected": "fold"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Overlap prüfen…",
+          "hint": "Propensity nicht 0/1",
+          "solution": "Trimmregeln",
+          "check": {
+            "type": "string_contains",
+            "expected": "Overlap"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – DML‑Lift mit Policy",
+          "context": "Daten: Wochenumsatz, Treatment=Promo, X=Preis/Kalender/Region.",
+          "subtasks": [
+            {
+              "text": "Schätze ATE mit DML (Binary)."
+            },
+            {
+              "text": "Schätze CATE‑Ranking und zeichne Qini‑Skizze (ASCII)."
+            },
+            {
+              "text": "Entwirf Policy‑Regel: bediene Top‑q % CATE."
+            }
+          ],
+          "hints": [
+            "Cross‑Fitting K=2–5.",
+            "Qini steigt mit q, vergleiche Random‑Linie.",
+            "Policy je Budgetlimit q."
+          ],
+          "solutions": [
+            "ATE korrekt",
+            "Qini gezeichnet",
+            "Policy begründet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "DML",
+                "CATE",
+                "Qini"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "ATE korrekt",
+            "Qini gezeichnet",
+            "Policy begründet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Keine Overlap‑Prüfung → extrapolierte Effekte.",
+        "In‑fold‑Predictions → zu optimistisch.",
+        "Nur ML‑Güte statt kausale Checks (Balance, Placebos)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Orthogonalisierung macht…",
+          "options": [
+            "Effekt robust gg. Nuisance‑Fehler",
+            "Overfit stärker",
+            "Propensity unnötig"
+          ],
+          "answer_index": 0,
+          "rationale": "Robustheit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Robustheit.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Cross‑Fitting reduziert Bias durch Leakage.",
+          "answer": true,
+          "rationale": "Out‑of‑fold.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Out‑of‑fold.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "CATE ist…",
+          "options": [
+            "durchschnittlicher Effekt",
+            "bedingter Effekt je X",
+            "kein Effekt"
+          ],
+          "answer_index": 1,
+          "rationale": "Heterogenität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Heterogenität.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du setzt DML sauber um, prüfst Overlap und berichtest ATE/CATE mit Policy‑Bezug."
+    },
+    {
+      "type": "outlook",
+      "text": "Weiter: **Uplift‑Modelle** (T/S/X/DR‑Learner), Qini/CUVE & Policy‑Learning."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

@@ -1,0 +1,315 @@
+{
+  "id": "M03L02",
+  "title": "Lehrtext – Grundlagen: Zahlungsreihen I: Sparrenten, Entnahmerenten & Staffelmieten (v3) (Zinseszins)",
+  "reading_time_min": 42,
+  "prerequisites": [
+    "M03L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "FV/PV für nachschüssig/vorschüssig; wachsende Rente (geometrisches Wachstum g) kennen."
+    },
+    {
+      "level": "Understand",
+      "text": "Timeline und Unterschied zwischen i (Verzinsung) und g (Wachstum der Zahlung) erklären."
+    },
+    {
+      "level": "Apply",
+      "text": "Staffelmieten/Indexrenten als wachsende Rente rechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Grenzfall i=g sowie i≈g diskutieren (L’Hospital/Limitfall)."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "**Staffelmieten** oder **Indexrenten** steigen regelmäßig, z. B. jedes Jahr um g %. Das modellieren wir als **wachsende Rente**.\nWichtig: **i** (Markt-/Diskontzins) vs. **g** (Wachstumsrate der Zahlung) strikt trennen."
+    },
+    {
+      "type": "concept",
+      "title": "Wachsende Rente (nachschüssig)",
+      "text": "Zahlung in t: R·(1+g)^{t−1}.  \n**Barwert:** PV = R · [1 − ((1+g)/(1+i))^n] / (i − g), solange i ≠ g.  \n**Grenzfall i → g:** PV ≈ R · n / (1+i)  (wenn i=g; präziser Limes).\nVorschüssig: ×(1+i).",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "derivation",
+      "title": "Herleitung über geometrische Reihe",
+      "steps": [
+        "PV = Σ_{t=1..n} R(1+g)^{t−1}/(1+i)^t = (R/(1+i))·Σ[(1+g)/(1+i)]^{t−1}.",
+        "Quotient q=(1+g)/(1+i). PV = (R/(1+i))·(1−q^n)/(1−q).",
+        "Algebraisch umformen zu PV-Formel oben."
+      ],
+      "comment": "Für FV analog alle Zahlungen auf das Periodenende n aufzinsen."
+    },
+    {
+      "type": "visual",
+      "title": "Timeline Staffelmiete",
+      "ascii": "0    1        2            ...    n\n     R     R(1+g)     R(1+g)^2        ... R(1+g)^{n-1}",
+      "caption": "Zahlungen wachsen jedes Jahr um g %.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Zahlungen wachsen jedes Jahr um g %.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – PV einer Staffelmiete",
+      "text": "R=€ 1,000/Jahr, Laufzeit n=5, Zins i=3%, Staffelschritt g=2% (nachschüssig).\nPV = 1000·[1−((1,02)/(1,03))^5]/(0,03−0,02) ≈ **€ 4,761**.",
+      "steps": [
+        "R=€ 1,000/Jahr, Laufzeit n=5, Zins i=3%, Staffelschritt g=2% (nachschüssig",
+        "PV = 1000·[1−((1,02)/(1,03))^5]/(0,03−0,02) ≈ **€ 4,"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Grenzfall i≈g",
+      "text": "i=2,5%, g=2,5%, n=6, R=900. PV≈ R·n/(1+i) ≈ 900·6/1,025 ≈ **€ 5,268**.",
+      "steps": [
+        "i=2,5%, g=2,5%, n=6, R=900.",
+        "PV≈ R·n/(1+i) ≈ 900·6/1,025 ≈ **€ 5,268**."
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – due vs. immediate (wachsende Rente)",
+      "text": "a) Nachschüssig: PV = R·[1−((1+g)/(1+i))^n]/(i−g) für R=1200, i=4%, g=1,5%, n=8 → __\nb) Vorschüssig: PV_due = __ × (1+i) = __",
+      "solution": [
+        "≈8,774",
+        "8,774",
+        "≈9,125"
+      ],
+      "steps": [
+        "a) Nachschüssig: PV = R·[1−((1+g)/(1+i))^n]/(i−g) für R=1200, i=4%, g=1,5%, n=8 → __",
+        "b) Vorschüssig: PV_due = __ × (1+i) = __"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "FV einer wachsenden Sparrente (nachschüssig): Formel?",
+          "hint": "FV = R·[((1+i)^n − (1+g)^n)/(i − g)]",
+          "solution": "Formel erkannt",
+          "check": {
+            "type": "string_contains",
+            "expected": "i − g"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PV bei i=g: Grenzformel?",
+          "hint": "PV≈R·n/(1+i)",
+          "solution": "Grenzfall",
+          "check": {
+            "type": "string_contains",
+            "expected": "R·n"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Interpretation: i>g bewirkt…",
+          "hint": "stärkere Diskontierung",
+          "solution": "PV kleiner",
+          "check": {
+            "type": "free_form",
+            "keywords": [
+              "i>g",
+              "PV kleiner"
+            ]
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Staffelmietvertrag bewerten",
+          "context": "Startmiete € 1,100/J., jährliche Erhöhung g=2%, Laufzeit 10 Jahre. Diskontzins i=3,5%.",
+          "subtasks": [
+            {
+              "text": "Berechne PV (nachschüssig)."
+            },
+            {
+              "text": "Gib durchschnittliche jährliche Barwertmiete (PV/n) an."
+            },
+            {
+              "text": "Diskutiere Sensitivität bei i±0,5%-Punkte."
+            }
+          ],
+          "hints": [
+            "PV = R·[1−((1+g)/(1+i))^n]/(i−g).",
+            "PV/n.",
+            "Erhöhe/Senke i."
+          ],
+          "solutions": [
+            "PV≈€ 9,66",
+            "PV/n≈€ 966,-",
+            "Höherer i → PV↓; niedriger i → PV↑"
+          ],
+          "checks": [
+            {
+              "type": "approx",
+              "expected": 9.66,
+              "tolerance": 0.5,
+              "expr": "9.66"
+            }
+          ],
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "PV≈€ 9,66",
+            "PV/n≈€ 966,-",
+            "Höherer i → PV↓; niedriger i → PV↑"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "i und g verwechselt.",
+        "Vorschüssig ohne ×(1+i).",
+        "Grenzfall i=g nicht korrekt behandelt."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei wachsenden Zahlungen ist der Diskontfaktor je Zahlung…",
+          "options": [
+            "konstant",
+            "steigend",
+            "fallend"
+          ],
+          "answer_index": 1,
+          "rationale": "Spätere Zahlungen werden stärker diskontiert.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Spätere Zahlungen werden stärker diskontiert.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Für i=g vereinfacht sich PV≈R·n/(1+i).",
+          "answer": true,
+          "rationale": "Grenzfall.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Grenzfall.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wenn g>i, dann…",
+          "options": [
+            "PV wird sehr groß",
+            "PV wird kleiner",
+            "PV bleibt gleich"
+          ],
+          "answer_index": 0,
+          "rationale": "Wachstum überwiegt Diskontierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wachstum überwiegt Diskontierung.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst Staffelmieten/Indexrenten als wachsende Rente sicher bewerten."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: Effektivzins & Leasingvergleich über IRR."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

@@ -1,0 +1,314 @@
+{
+  "id": "M12L01",
+  "title": "Lehrtext – Grundlagen: Gemischte Modelle I – Random/Fixed Effects, ICC & Shrinkage (LMM/GLMM) (Rabatt/Skonto)",
+  "reading_time_min": 104,
+  "prerequisites": [
+    "M09L03",
+    "M11L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: Fixed vs. Random Effect, Random Intercept/Slope, ICC (Intracluster‑Korrelation)."
+    },
+    {
+      "level": "Understand",
+      "text": "Warum hierarchische Daten (Filiale/SKU/Periode) Shrinkage & Pooling benötigen."
+    },
+    {
+      "level": "Apply",
+      "text": "Ein einfaches LMM spezifizieren und Effekte interpretieren (Intercept/Slope, Varianzkomponenten)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Wann GLMM (logit/Poisson) statt LMM? Modellannahmen & Diagnose beurteilen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Daten in Controlling/Vertrieb sind oft **hierarchisch**: Umsätze je **Filiale** und **SKU** über die **Zeit**.\nEin globales Modell übersieht Unterschiede; ein Modell pro Einheit überfittet. **Gemischte Modelle** verbinden beides durch **Pooling**."
+    },
+    {
+      "type": "concept",
+      "title": "Fixed vs. Random & ICC",
+      "text": "- **Fixed Effect**: interessierender systematischer Effekt (z. B. Preis).  \n- **Random Effect**: Zufallskomponente je Gruppe (z. B. Filial‑Intercept).  \n- **Random Intercept**: jede Filiale eigenes Niveau; **Random Slope**: z. B. eigener Preiseffekt.  \n- **ICC**: Anteil der Varianz, der durch Gruppen erklärt wird (Clusterung).",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "LMM – Schritt für Schritt",
+      "steps": [
+        "1) Formuliere y_{ij} = (β₀ + u_{0j}) + βᵀx_{ij} + ε_{ij} mit u_{0j}~N(0,σ_u²), ε_{ij}~N(0,σ²).",
+        "2) Interpretiere **β** (global) und **u_{0j}** (Abweichung Filiale j).",
+        "3) **Shrinkage**: kleine Gruppen ziehen stärker zum Gesamtmittel (stabil).",
+        "4) Diagnose: Residuen je Gruppe, Varianzkomponenten, ICC."
+      ],
+      "comment": "Bei Zähldaten/Anteil: **GLMM** (Link‑Funktion)."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Random Intercepts",
+      "ascii": "y ^\n  |   | |  |   | |\n  |  /  \\  \\  /  \\__   (je Filiale anderes Niveau)\n  +---------------------> x (Preis, Zeit,...)",
+      "caption": "Parallele Linien (Random Intercepts) mit gleichem globalen Trend.",
+      "alt_text": "ASCII-Visual: Parallele Linien (Random Intercepts) mit gleichem globalen Trend. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Filial‑Intercepts",
+      "text": "LMM mit Random Intercept je Filiale. ICC=0,28 → erhebliche Clusterung.  \nInterpretation: Filial‑Spezifika erklären 28% der Varianz der Umsätze; Preis‑Effekt β_preis=−0,12 (pro 1% Preis ↑, Umsatz ↓ um 0,12%).",
+      "steps": [
+        "LMM mit Random Intercept je Filiale. ICC=0,28 → erhebliche Clusterung",
+        "Interpretation: Filial‑Spezifika erklären 28% der Varianz der Umsätze; Preis‑Effekt β_preis=−0,12 (pro 1% Preis ↑, Umsatz ↓ um 0,12%"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Wann GLMM?",
+      "text": "Quartals‑Retourenquote (Anteil, 0–1) je Filiale.",
+      "solution": [
+        "Link‑Funktion logit, Binomial‑Likelihood.",
+        "Random Intercepts für Filialen; ggf. Random Slopes für Saison."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Was misst ICC?",
+          "hint": "Anteil Varianz durch Gruppen",
+          "solution": "Clustereffekt",
+          "check": {
+            "type": "string_contains",
+            "expected": "Varianz"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Shrinkage bedeutet…",
+          "hint": "Ziehen kleiner Gruppen zum Mittel",
+          "solution": "stabilere Schätzungen",
+          "check": {
+            "type": "string_contains",
+            "expected": "Shrinkage"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Fixed vs. Random?",
+          "hint": "Interesse vs. Varianzkomponente",
+          "solution": "Definition klar",
+          "check": {
+            "type": "string_contains",
+            "expected": "Random"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "Interesse vs.",
+            "Varianzkomponente"
+          ]
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Budget‑Plan mit LMM",
+          "context": "SKU‑Umsatz je Filiale & Monat mit Preis, Promo, Saison.",
+          "subtasks": [
+            {
+              "text": "Baue LMM mit Random Intercept (Filiale)."
+            },
+            {
+              "text": "Bewerte ICC & Varianzkomponenten."
+            },
+            {
+              "text": "Interpretiere Preiseffekt wirtschaftlich."
+            }
+          ],
+          "hints": [
+            "Pooling stabilisiert kleine Filialen.",
+            "ICC>0 zeigt Clusterung.",
+            "β_preis in % interpretieren."
+          ],
+          "solutions": [
+            "Modell korrekt",
+            "ICC berichtet",
+            "Interpretation plausibel"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "LMM",
+                "ICC",
+                "Shrinkage"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Modell korrekt",
+            "ICC berichtet",
+            "Interpretation plausibel"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Alles als Fixed modellieren → Überparameterisierung.",
+        "Keine Diagnose je Gruppe (Residualplots).",
+        "GLMM nötig, aber LMM verwendet (z. B. Anteile/Zählungen)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ICC≈0,30 heißt…",
+          "options": [
+            "30% Varianz zwischen Gruppen",
+            "keine Clusterung",
+            "alles Rauschen"
+          ],
+          "answer_index": 0,
+          "rationale": "Clustereffekt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Clustereffekt.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Random Intercepts erlauben gruppenspezifische Niveaus.",
+          "answer": true,
+          "rationale": "Niveau‑Shift.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Niveau‑Shift.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Bei Zähldaten nutzt du…",
+          "options": [
+            "LMM",
+            "GLMM mit log‑Link (Poisson)",
+            "keine Modelle"
+          ],
+          "answer_index": 1,
+          "rationale": "GLMM.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. GLMM.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du setzt LMM/GLMM sinnvoll ein, verstehst ICC & Shrinkage und liest Varianzkomponenten."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Double Machine Learning** – kausale Effekte trotz vieler Kovariaten robust schätzen."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

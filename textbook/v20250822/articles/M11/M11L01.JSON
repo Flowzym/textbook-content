@@ -1,0 +1,212 @@
+{
+  "id": "M11L01",
+  "title": "Lehrtext – Grundlagen: Synthetische Kontrolle I – Prinzip, Donor‑Pool, Gewichte & Placebo‑Inference",
+  "reading_time_min": 102,
+  "prerequisites": [
+    "M10L03",
+    "M10L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: Donor‑Pool, Pre‑Fit/RMSPE, Gap, In‑Space/In‑Time‑Placebos."
+    },
+    {
+      "level": "Understand",
+      "text": "Warum gewichtete Kombinationen ein besseres Counterfactual liefern können als eine Einzel‑Kontrolle."
+    },
+    {
+      "level": "Apply",
+      "text": "Schritt‑für‑Schritt: Donor‑Auswahl, Pre‑Fenster, Gewichtsschätzung, Gap‑Analyse, Placebo‑Tests."
+    },
+    {
+      "level": "Analyze",
+      "text": "Qualitätskriterien (Pre‑RMSPE, Balance der Kovariaten), Sensitivität und Robustheit bewerten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "**Synthetische Kontrolle (SC)** baut aus vielen unbehandelten Einheiten (Donor‑Pool) eine **gewichtete ‚synthetische‘ Kontrolle**, \ndie den **Pre‑Perioden‑Verlauf und Kovariaten** der behandelten Einheit möglichst gut nachbildet. Der **Gap** im Post‑Fenster ist der Effektschätzer."
+    },
+    {
+      "type": "concept",
+      "title": "Kernelemente",
+      "text": "- **Donor‑Pool**: unbehandelte, ähnliche Einheiten (z. B. Filialen/Regionen).  \n- **Pre‑Perioden**: Trainingsfenster; Ziel: **kleiner RMSPE** und gute **Kovariaten‑Balance**.  \n- **Gewichte**: w_j ≥ 0, Σ w_j=1; gewählt so, dass Pre‑Fehler minimiert wird.  \n- **Gap**: y_t − ŷ_syn,t (positiv bei Uplift).  \n- **Inference**: **Placebo in space** (so tue, als wären andere behandelt) und **in time** (falsches t₀)."
+    },
+    {
+      "type": "derivation",
+      "title": "SC – Vorgehen Schritt für Schritt",
+      "steps": [
+        "1) Definiere t₀ (Start der Maßnahme) und Pre‑/Post‑Fenster.",
+        "2) Wähle Donor‑Pool (ähnliche Einheiten; keine indirekte Betroffenheit).",
+        "3) Wähle Kovariaten (Niveau, Trends, Saison, Größe).",
+        "4) Schätze Gewichte w_j: minimiere Pre‑RMSPE und balanciere Kovariaten.",
+        "5) Erzeuge ŷ_syn im Post → **Gap**; bewerte Robustheit via Placebos/Sensitivität."
+      ],
+      "comment": "Kein einzelner ‚Zwilling‘ nötig – Mischung vieler Donoren liefert oft bessere Passung."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Gap & Placebos",
+      "ascii": "y ^          Pre                  Post\n  |   Treated ————•———↗           ↑ Gap = Treated − Synthetic\n  |            /       \\          |\n  |  Synthetic ————•———→         |\n  |  Placebos: ~~~•~~~~→  ~~~•~~→ (für andere Einheiten)\n  +--------------------------------------> t\n                   t0",
+      "caption": "Großer Post‑Gap bei gutem Pre‑Fit → Hinweis auf Effekt. Prüfe Placebos.",
+      "alt_text": "ASCII-Visual: Großer Post‑Gap bei gutem Pre‑Fit → Hinweis auf Effekt. Prüfe Placebos. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Regionale TV‑Kampagne (Umsatz)",
+      "text": "Donor‑Pool: 12 ähnliche Regionen ohne Kampagne. Pre‑Fenster: 52 Wochen. Gewichte ergeben Pre‑RMSPE=3,1%.  \nPost (8 Wochen): kumulativer Gap = **+5,6%** (95% der Placebos zeigen <3%). Interpretation: substanzielle, robuste Wirkung.",
+      "steps": [
+        "Donor‑Pool: 12 ähnliche Regionen ohne Kampagne. Pre‑Fenster: 52 Wochen. Gewichte ergeben Pre‑RMSPE=3,1%",
+        "Post (8 Wochen): kumulativer Gap = **+5,6%** (95% der Placebos zeigen <3%). Interpretation: substanzielle, robuste Wirkung"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Kovariaten & Leakage",
+      "text": "a) Welche Kovariaten sind wichtig? b) Was ist ‚Leakage‘? c) Wie erkennst du indirekte Betroffenheit im Donor‑Pool?",
+      "solution": [
+        "Niveau/Trend, Größe, Kalendereffekte (Feiertage), Saisonalität.",
+        "Donoren beeinflusst durch Maßnahme → verzerrt.",
+        "Placebo‑Gaps, strukturelle Brüche in Donoren, Fachwissen."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Warum mehrere Donoren statt eine Kontrolle?",
+          "hint": "besserer Pre‑Fit, weniger idiosynkratisches Rauschen",
+          "solution": "stabileres Counterfactual",
+          "check": {
+            "type": "string_contains",
+            "expected": "Pre‑Fit"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Was misst RMSPE?",
+          "hint": "Pre‑Fehler der Passung",
+          "solution": "klein= gute Passung",
+          "check": {
+            "type": "string_contains",
+            "expected": "Fehler"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wozu Placebos?",
+          "hint": "Inference/Robustheit",
+          "solution": "Vergleich der Gap‑Größen",
+          "check": {
+            "type": "string_contains",
+            "expected": "Placebo"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – SC‑Analyse für Filiale A",
+          "context": "Daten: 104 Wochen Pre, 12 Wochen Post; 20 Donoren. Maßnahme: Ladenumbau.",
+          "subtasks": [
+            {
+              "text": "Stelle Kriterien für Donor‑Pool & Kovariaten zusammen."
+            },
+            {
+              "text": "Beschreibe, wie du Gewichte und Pre‑RMSPE bewertest."
+            },
+            {
+              "text": "Skizziere Placebo‑Design (space/time) und Entscheidungsregel."
+            }
+          ],
+          "hints": [
+            "Ähnlichkeit, keine Betroffenheit, stabile Serien.",
+            "RMSPE‑Schwelle, Balance‑Tabelle.",
+            "Post‑Gap vs. Placebo‑Verteilung; p‑ähnliche Größe."
+          ],
+          "solutions": [
+            "Kriterien klar",
+            "Fit bewertet",
+            "Inference konzipiert"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Donor",
+                "RMSPE",
+                "Placebo"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Kriterien klar",
+            "Fit bewertet",
+            "Inference konzipiert"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Zu kurzer Pre‑Zeitraum → instabile Gewichte.",
+        "Donoren indirekt betroffen (Leakage).",
+        "Kovariaten nicht balanciert → Scheinpassung nur im Niveau."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "SC‑Gewichte…",
+          "options": [
+            "dürfen negativ sein",
+            "sind nichtnegativ & summieren zu 1",
+            "beliebig"
+          ],
+          "answer_index": 1,
+          "rationale": "Konvexe Mischung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konvexe Mischung."
+        },
+        {
+          "type": "true_false",
+          "question": "Großer Post‑Gap bei schlechtem Pre‑Fit ist überzeugend.",
+          "answer": false,
+          "rationale": "Erst Pre‑Fit sicherstellen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Erst Pre‑Fit sicherstellen."
+        },
+        {
+          "type": "single_choice",
+          "question": "Placebo‑Tests dienen…",
+          "options": [
+            "nur der Optik",
+            "der Inferenz/Robustheit",
+            "der Trendschätzung"
+          ],
+          "answer_index": 1,
+          "rationale": "Vergleichsverteilung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vergleichsverteilung."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst SC durchführen, Pre‑Fit/Balance prüfen und Placebos für robuste Evidenz nutzen."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Generalisierungen** – gestaffelte Einführung, Matrix‑Completion & Synth‑DiD."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}
