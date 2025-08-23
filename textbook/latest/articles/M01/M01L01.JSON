@@ -1,0 +1,914 @@
+{
+  "id": "M01L01",
+  "title": "Lehrtext – Grundlagen: Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (Rabatt/Skonto)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M01L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Zahlbereiche (ℕ, ℤ, ℚ, ℝ) und deren Beziehung."
+    },
+    {
+      "level": "Understand",
+      "text": "Rechenregeln (Kommutativ, Assoziativ, Distributiv) und Vorrangregeln (Klammern–Punkt–Strich)."
+    },
+    {
+      "level": "Apply",
+      "text": "Ausdrücke korrekt umformen und berechnen (inkl. negative Zahlen und Brüche)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Fehlerquellen in Berechnungen erkennen und begründen (z. B. falsche Reihenfolge)."
+    },
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Zahlbereiche & Rechenregeln abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft dein Wissen mit gezielten Prüfungssets A–D. Jedes Set fokussiert auf verschiedene Aspekte: Grundlagen, Methoden, Diagnose und Praxis."
+    },
+    {
+      "type": "concept",
+      "title": "Prüfungssets-Übersicht",
+      "text": "- **Set A**: Grundlagen (Zahlbereiche, Kommutativität, Reihenfolge)  \n- **Set B**: Methoden/Regeln (Distributiv, Punkt vor Strich, Vorzeichen)  \n- **Set C**: Diagnose/Fehler (Typische Fehlerquellen identifizieren)  \n- **Set D**: Praxis & Fallen (Anwendung in realen Situationen)",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Reihenfolge bei 18−6:3+4?",
+          "options": [
+            "(18−6):3+4",
+            "18−(6:3)+4",
+            "18−6:(3+4)"
+          ],
+          "answer_index": 1,
+          "rationale": "Punkt vor Strich; links→rechts. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Punkt vor Strich; links→rechts. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Kommutativgesetz gilt für Addition und Multiplikation.",
+          "answer": true,
+          "rationale": "Nicht für Subtraktion/Division. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nicht für Subtraktion/Division. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Aussage ist korrekt?",
+          "options": [
+            "ℚ⊂ℤ",
+            "ℤ⊂ℚ",
+            "ℝ⊂ℚ"
+          ],
+          "answer_index": 1,
+          "rationale": "Ketteneinschluss. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ketteneinschluss. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Regeln",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Distributiv anwenden: 5·(x−3)",
+          "options": [
+            "5x−15",
+            "5x−3",
+            "(5x)/3"
+          ],
+          "answer_index": 0,
+          "rationale": "Ausmultiplizieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Ausmultiplizieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei 24:3·2 rechnest du (24:3)·2.",
+          "answer": true,
+          "rationale": "Links→rechts bei gleicher Priorität. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Links→rechts bei gleicher Priorität. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "−(a−b) entspricht…",
+          "options": [
+            "−a−b",
+            "−a+b",
+            "a−b"
+          ],
+          "answer_index": 1,
+          "rationale": "Minus vor Klammer kehrt Vorzeichen um. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Minus vor Klammer kehrt Vorzeichen um. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Fehler",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fehlerdiagnose: 3−(2−5)=3−2−5=−4. Fehler?",
+          "options": [
+            "kein Fehler",
+            "Minus vor Klammer falsch aufgelöst",
+            "Punkt vor Strich missachtet"
+          ],
+          "answer_index": 1,
+          "rationale": "Richtig: 3−(−3)=6. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Richtig: 3−(−3)=6. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Division ist nicht assoziativ.",
+          "answer": true,
+          "rationale": "Klammern wichtig. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Klammern wichtig. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Welcher Wert ist irrationale Zahl?",
+          "options": [
+            "3/7",
+            "√2",
+            "−1,25"
+          ],
+          "answer_index": 1,
+          "rationale": "√2∉ℚ. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. √2∉ℚ. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: Bestellmenge=120−2·(15−8). Ergebnis?",
+          "options": [
+            "120−2·7=106",
+            "120−(30−16)=106",
+            "(120−2)·(15−8)=826"
+          ],
+          "answer_index": 0,
+          "rationale": "Klammer, Punkt, Strich. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Klammer, Punkt, Strich. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kassenchecks sind klare Klammern zentral.",
+          "answer": true,
+          "rationale": "Fehlervermeidung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fehlervermeidung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Gute Strategie?",
+          "options": [
+            "alles im Kopf",
+            "Zwischenschritte notieren",
+            "Regeln ignorieren"
+          ],
+          "answer_index": 1,
+          "rationale": "Cognitive Load senken. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Cognitive Load senken. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 1,000·1,04^2=1,081,60. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Faktorrechnung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 12,000/(18−11)=12,000/7≈1,714. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig ist K0 = K/(1+i)^n. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 0,10·2,400=240. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Zahlbereiche & Rechenregeln: Begriffe, Regeln, Diagnose und Praxis ab."
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "steps": [
+          "[Schritt 1] …"
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "steps": [
+          "…"
+        ]
+      }
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini 1",
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini 2",
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "PLATZHALTER – Aufgabe",
+          "hints": [
+            "…"
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L01.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M01/pruefungssets/pruefung-zinseszins/M01L01_v2.json",
+        "note": "selected_best_variant"
+      },
+      {
+        "source": "canonical_repo",
+        "path": "v20250822/articles/M01/M01L01.JSON"
+      },
+      {
+        "source": "v20250823_variant",
+        "path": "v20250823/articles/M01/M01L01.JSON"
+      }
+    ],
+    "versionTag": "v20250823-hybrid",
+    "didactics": {
+      "steps": false
+    }
+  }
+}
