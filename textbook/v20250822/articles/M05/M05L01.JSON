@@ -1,0 +1,473 @@
+{
+  "id": "M05L01",
+  "title": "Lehrtext – Grundlagen: Unsicherheit & Sensitivitätsanalyse (v2): Rohstoffe, Lager, Preishebel (Rabatt/Skonto)",
+  "reading_time_min": 78,
+  "prerequisites": [
+    "M04L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Treiber, Baseline, Punkt‑Sensitivität, Elastizität, Tornado, Break‑even definieren."
+    },
+    {
+      "level": "Understand",
+      "text": "Hebelwirkung bei Preis, Menge, variablen Kosten und Fixkosten erklären."
+    },
+    {
+      "level": "Apply",
+      "text": "Rohstoffpreis‑Sensitivität, Lagerbestands‑Risiko (Abschreibungen) und Preishebel rechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "2‑Faktoren‑Analysen (Preis×Menge, Rohstoff×Marge) erstellen und interpretieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "In Einkauf/Produktion bestimmen **Rohstoffpreise**, **Lagerbestände** und **Preissetzung** die Ergebnisunsicherheit.\nDu lernst, diese Treiber systematisch zu variieren und **Tornados** zu erstellen, bevor du komplexere Szenarien modellierst."
+    },
+    {
+      "type": "concept",
+      "title": "Kennzahlen & Vorgehen",
+      "text": "Punkt‑Sensitivität (ΔZ/Δx), Elastizität ((ΔZ/Z)/(Δx/x)), 1‑ und 2‑Faktoren‑Analysen, Break‑even. \nVisualisierung: Tornado (sortierte |Δ|‑Balken).",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "derivation",
+      "title": "Schrittfolge",
+      "steps": [
+        "Baseline definieren (Parameterblatt mit Einheiten).",
+        "Einzeltreiber ±10% variieren → ΔNPV/ΔGewinn messen.",
+        "Elastizitäten berechnen und ordnen.",
+        "2‑Faktoren‑Raster (z. B. Rohstoffpreis×Verkaufspreis).",
+        "Break‑even für kritische Treiber bestimmen."
+      ],
+      "comment": "Worked Examples zuerst vollständig, dann Fading."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII‑Tornado (Rohstoff dominiert)",
+      "ascii": "Einfluss auf Gewinn (|Δ|)\nRohstoffpreis  ███████████████████\nVerkaufspreis  ████████████\nAbsatz         ████████\nFixkosten      ████",
+      "caption": "In rohstoffintensiven Branchen dominiert der Inputpreis häufig.",
+      "alt_text": "ASCII-Visual: In rohstoffintensiven Branchen dominiert der Inputpreis häufig. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Rohstoff‑Sensitivität (€/t)",
+      "text": "Produkt nutzt 0,8 t Rohstoff pro Stück. Rohstoffpreis steigt von 500 auf € 575/t (+15%). \nMehrkosten pro Stück: 0,8·75=€ 60,- Bei Preis=€ 140,- vK sonst=€ 40,- Fix=300k, Menge=8,000:\nGewinn vorher: (140−(0,8·500+40))·8000−300k = (140−440)·8000−300k = −300k. \nNach Anstieg: (140−(0,8·575+40))·8000−300k = (140−500)·8000−300k = −? → **katastrophal**. \n→ Preishebel/Produktmix nötig (Begriffe verdeutlicht).",
+      "steps": [
+        "Produkt nutzt 0,8 t Rohstoff pro Stück. Rohstoffpreis steigt von 500 auf € 575/t (+15%",
+        "Mehrkosten pro Stück: 0,8·75=€ 60,- Bei Preis=€ 140,- vK sonst=€ 40,- Fix=300k, Menge=8,000:",
+        "Gewinn vorher: (140−(0,8·500+40))·8000−300k = (140−440)·8000−300k = −300k",
+        "Nach Anstieg: (140−(0,8·575+40))·8000−300k = (140−500)·8000−300k = −? → **katastrophal",
+        "→ Preishebel/Produktmix nötig (Begriffe verdeutlicht"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Lagerbestands‑Risiko (Abschreibung)",
+      "text": "Lager 1,000 Stk. zu € 70/Stk. bilanziert, Marktpreis fällt auf € 55,- → Wertberichtigung € 15/Stk. = € 15,- Einmaleffekt.\nSensitivität: ΔGewinn/ΔPreisbestand = Bestand · ΔPreis. Bei 2,000 Stk. wäre Effekt doppelt so groß.",
+      "steps": [
+        "Lager 1,000 Stk. zu € 70/Stk. bilanziert, Marktpreis fällt auf € 55,- → Wertberichtigung € 15/Stk. = € 15,- Einmaleffekt",
+        "Sensitivität: ΔGewinn/ΔPreisbestand = Bestand · ΔPreis. Bei 2,000 Stk. wäre Effekt doppelt so groß"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – 2‑Faktoren (Preis×Menge)",
+      "text": "Baue 3×3‑Raster (−5%, 0, +5%). Markiere NPV<0‑Felder.\na) Welche Kombination am riskantesten? b) Welche Maßnahmen?",
+      "solution": [
+        "Preis↓ & Menge↓",
+        "Rabatt‑Staffeln prüfen, Vertrieb fokussieren, Kostenvariabilisierung"
+      ],
+      "steps": [
+        "Baue 3×3‑Raster (−5%, 0, +5%). Markiere NPV<0‑Felder",
+        "a) Welche Kombination am riskantesten? b) Welche Maßnahmen?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Elastizität: ΔGewinn=+120k bei +5% Preis, Gewinn0=300k.",
+          "hint": "(0,4)/(0,05)",
+          "solution": "=8,0",
+          "check": {
+            "type": "approx",
+            "expected": 8.0,
+            "tolerance": 0.05,
+            "expr": "8.0"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Break‑even‑Menge bei P=120, vK=75, Fix=225k",
+          "hint": "Fix/(P−vK)",
+          "solution": "=5,000",
+          "check": {
+            "type": "numeric",
+            "expected": 5000
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "ΔGewinn durch Rohstoff +€ 20/t, Einsatz 0,6 t/Stk., Menge 10k",
+          "hint": "−20·0,6·10k",
+          "solution": "=−120k",
+          "check": {
+            "type": "numeric",
+            "expected": -120000
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Rohstoff‑Hedge‑Bedarf grob abschätzen",
+          "context": "Variiere Rohstoffpreis ±€ 20/t; ermittele ΔGewinn und leite Hedge‑Volumen (t) ab, um ±100k Ergebnisschwankung zu begrenzen.",
+          "subtasks": [
+            {
+              "text": "ΔGewinn pro € 1/t berechnen."
+            },
+            {
+              "text": "Ziel ΔGewinn=±100k → benötigte t."
+            },
+            {
+              "text": "Diskutiere Teil‑Hedging (50–70%)."
+            }
+          ],
+          "hints": [
+            "ΔGewinn/€/t = Einsatz_t/Stk · Menge.",
+            "t=100k/(Einsatz·Menge).",
+            "Teil‑Hedge reduziert Kosten, erhält Chancen."
+          ],
+          "solutions": [
+            "Formel korrekt",
+            "t berechnet",
+            "Maßnahmen genannt"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Hedge",
+                "Rohstoff",
+                "Volumen"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Formel korrekt",
+            "t berechnet",
+            "Maßnahmen genannt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Preis‑ und Mengenänderungen additiv statt multiplikativ kombiniert.",
+        "Elastizität mit Steigung verwechselt (Einheiten!).",
+        "Bestandseffekte (Abschreibungen) ignoriert."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Tornado: erster Balken ist…",
+          "options": [
+            "kleinster Einfluss",
+            "größter Einfluss",
+            "mittlerer Einfluss"
+          ],
+          "answer_index": 1,
+          "rationale": "Sortierung nach |Δ|.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sortierung nach |Δ|.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Elastizität ist einheitenfrei.",
+          "answer": true,
+          "rationale": "%/%.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. %/%.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Break‑even‑Menge =",
+          "options": [
+            "Fix/(P−vK)",
+            "Fix/P",
+            "P/vK"
+          ],
+          "answer_index": 0,
+          "rationale": "Standard.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Standard.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Rohstoffpreis wirkt auf…",
+          "options": [
+            "Fixkosten",
+            "variable Kosten",
+            "Abschreibungen nur"
+          ],
+          "answer_index": 1,
+          "rationale": "Stückkosten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stückkosten.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Wertberichtigung Lager senkt Gewinn einmalig.",
+          "answer": true,
+          "rationale": "Einmaleffekt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Einmaleffekt.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "2‑Faktoren‑Raster eignet sich für…",
+          "options": [
+            "unabhängige Treiber",
+            "gleichzeitige Änderungen",
+            "nur lineare Effekte"
+          ],
+          "answer_index": 1,
+          "rationale": "Kombinationen sehen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kombinationen sehen.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ΔGewinn/€/t bei Einsatz 0,8 t und Menge 8k?",
+          "options": [
+            "€ 6,400/€",
+            "€ 800/€",
+            "€ 64/€"
+          ],
+          "answer_index": 0,
+          "rationale": "0,8·8000=6400.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 0,8·8000=6400.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Preishebel ist meist stärker als Fixkostenhebel kurzfristig.",
+          "answer": true,
+          "rationale": "Hebel auf Deckungsbeitrag.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Hebel auf Deckungsbeitrag.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Lagerwertberichtigung pro € 10,- bei 1,200 Stk.?",
+          "options": [
+            "12k",
+            "120k",
+            "1,2k"
+          ],
+          "answer_index": 0,
+          "rationale": "10·1200.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 10·1200.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welcher Fehler ist typisch?",
+          "options": [
+            "Prozent mit Prozentpunkten verwechselt",
+            "lineare vs. exponentielle Effekte sauber getrennt",
+            "alle Einheiten korrekt"
+          ],
+          "answer_index": 0,
+          "rationale": "Klassiker.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Klassiker.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Negative Elastizität bei Rohstoffpreis bedeutet: Preis↑ → Ergebnis↓.",
+          "answer": true,
+          "rationale": "Gegensinniger Effekt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gegensinniger Effekt.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Kennzahl macht Treiber vergleichbar?",
+          "options": [
+            "Steigung",
+            "Elastizität",
+            "Varianz"
+          ],
+          "answer_index": 1,
+          "rationale": "Einheitenfrei.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Einheitenfrei.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du bewertest Rohstoff‑, Lager‑ und Preishebel strukturiert und leitest Hedge‑/Pricing‑Maßnahmen ab."
+    },
+    {
+      "type": "outlook",
+      "text": "Weiter mit **Szenarien & FX‑Risiken** inkl. Entscheidungsbäumen."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M05/M05L01.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M05/lehrtexte/grundlagen-rabatt-skonto-3/M05L01_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": false
+    }
+  }
+}
