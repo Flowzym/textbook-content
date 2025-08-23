@@ -1,0 +1,387 @@
+{
+  "id": "M11L02",
+  "title": "Lehrtext – Grundlagen: Synthetische Kontrolle II – Gestaffelte Einführung, Generalisierte SC & Matrix‑Completion (Rabatt/Skonto)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M11L01",
+    "M11L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Staggered Adoption (gestaffelte Starts), Event‑Study‑Logik und generalisierte SC‑Rahmen."
+    },
+    {
+      "level": "Apply",
+      "text": "Matrix‑Completion/Synth‑DiD skizzieren; Pre‑Balance/Parallel‑Trends über mehrere Kohorten prüfen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Heterogene Effekte über Zeit/Kohorten berichten; Robustheits‑Designs wählen."
+    },
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Gestaffelte Einführung & Matrix abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Staggered Adoption heißt…",
+          "options": [
+            "gleiches t0",
+            "gestaffelte Starts",
+            "keine Post-Periode"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Event-Study zeigt Leads/Lags relativ zum Start.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Matrix-Completion nutzt…",
+          "options": [
+            "niedrigen Rang / gemeinsame Faktoren",
+            "reine Zufallsstruktur",
+            "nur ARIMA"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": ""
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Synth-DiD verbindet…",
+          "options": [
+            "SC/Matching und DiD",
+            "nur DiD",
+            "nur SC"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Leads nahe 0 stützen die Annahmen (keine Vortrends).",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Kohorten-Analyse berichtet…",
+          "options": [
+            "aggregierte Event-Kurve",
+            "nur Durchschnitt über alle Zeitpunkte",
+            "nur Pre-Fehler"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Robustheit bei gestaffelt:",
+          "options": [
+            "Placebos je Kohorte",
+            "keine Placebos",
+            "nur RMSE"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Vortrends ignorieren ist unkritisch.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Zeit nutzt du für Plot?",
+          "options": [
+            "absolute Kalenderzeit",
+            "relative Event-Zeit k",
+            "zufällige Reihenfolge"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Falle:",
+          "options": [
+            "Wellen ohne Relativierung mischen",
+            "Leads prüfen",
+            "Balance dokumentieren"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Matrix-Methoden brauchen stabile Struktur oder Regularisierung.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Pre-Balance pro Kohorte ist…",
+          "options": [
+            "optional",
+            "wichtig",
+            "verboten"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Gestaffelte Einführung & Matrix: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M11/M11L02.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M11/pruefungssets/pruefung-statistik/M11L02.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 13
+    },
+    "scrubbed_placeholders": true
+  }
+}

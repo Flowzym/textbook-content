@@ -1,0 +1,302 @@
+{
+  "id": "M05L02",
+  "title": "Lehrtext – Grundlagen: Szenarien (v2): FX‑Risiken im Export & Entscheidungsbäume mit Hedging‑Optionen (Rabatt/Skonto)",
+  "reading_time_min": 82,
+  "prerequisites": [
+    "M05L01",
+    "M04L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Szenariokonstruktion mit Korrelationen (Preis×Menge, FX×Preis) und konsistenten Annahmen."
+    },
+    {
+      "level": "Apply",
+      "text": "E[NPV] und Varianz mit FX‑Szenarien (EUR/USD) berechnen; Hedging‑Zweige in Entscheidungsbäumen modellieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Hedging‑Kosten vs. Risikoreduktion trade‑offen; Schwellenwerte für Hedge‑Quote ableiten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Exporteure tragen **FX‑Risiko** (z. B. USD‑Umsätze, EUR‑Kosten). Szenarien müssen **FX** und **Absatz** konsistent kombinieren.\nEntscheidungsbäume erweitern wir um **Hedging‑Zweige** (Forward/Optionen)."
+    },
+    {
+      "type": "concept",
+      "title": "FX‑Logik (vereinfacht)",
+      "text": "Umsatz_EUR = Umsatz_USD / FX (EUR/USD‑Notation). Euro‑Aufwertung (FX↓) senkt EUR‑Umsatz. \nHedging: Forward fixiert Kurs (Gebühr vernachlässigt/pauschal), Option sichert Mindestkurs gegen Prämie.",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII‑Baum mit Hedge‑Zweig",
+      "ascii": "[Start]─Decision→(Hedge 70%)─Chance (FX gut/schlecht)→ NPV_H1 / NPV_H2\n         └────────→(No Hedge)─Chance → NPV_N1 / NPV_N2",
+      "caption": "Vergleiche E[NPV] und Varianz der Pfade.",
+      "alt_text": "ASCII-Visual: Vergleiche E[NPV] und Varianz der Pfade. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – 3 FX‑Szenarien mit p_k",
+      "text": "p=[0,3, 0,5, 0,2] für EUR/USD = [0,95; 1,00; 1,10]. USD‑Umsatz 5,0 Mio.; Kosten 3,8 Mio. EUR (fix).\nUmsatz_EUR = 5,0/FX; Gewinn ≈ Umsatz_EUR − 3,8. E[Gewinn] ≈ 5,0·(0,3/0,95+0,5/1,0+0,2/1,1) − 3,8 ≈ **0,55 Mio. EUR**.",
+      "steps": [
+        "p=[0,3, 0,5, 0,2] für EUR/USD = [0,95; 1,00; 1,10]. USD‑Umsatz 5,0 Mio.; Kosten 3,8 Mio. EUR (fix",
+        "Umsatz_EUR = 5,0/FX; Gewinn ≈ Umsatz_EUR − 3,8. E[Gewinn] ≈ 5,0·(0,3/0,95+0,5/1,0+0,2/1,1) − 3,8 ≈ **0,55 Mio. EUR"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Hedge‑Quote bestimmen",
+      "text": "Ziel: VaR95(Ergebnis) ≤ −0,2 Mio. EUR. \na) Skizziere, wie du die Hedge‑Quote q suchst (0..100%). b) Was ist der Trade‑off?",
+      "solution": [
+        "Iterativ q erhöhen, NPV‑Varianz/Quantile neu berechnen, bis Budget erfüllt.",
+        "Mehr Hedge senkt Risiko, kann den Erwartungswert leicht senken (Kosten/Verzicht auf Upside)."
+      ],
+      "steps": [
+        "Ziel: VaR95(Ergebnis) ≤ −0,2 Mio. EUR",
+        "a) Skizziere, wie du die Hedge‑Quote q suchst (0..100%). b) Was ist der Trade‑off?"
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "p_k nicht auf 1 normiert.",
+        "FX‑Wirkung verwechselt (EUR/USD vs. USD/EUR).",
+        "Hedge‑Kosten/Prämien komplett ignoriert."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "E[NPV] ist…",
+          "options": [
+            "gewichteter Mittelwert der NPVs",
+            "arithmetisches Mittel ohne Gewichte",
+            "Median"
+          ],
+          "answer_index": 0,
+          "rationale": "Σ p·NPV.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Σ p·NPV.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "EUR‑Aufwertung (EUR/USD↓) senkt EUR‑Umsatz aus USD‑Verkäufen.",
+          "answer": true,
+          "rationale": "Division 1/FX.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Division 1/FX.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Forward vs. Option: welche sichert Mindestkurs gegen Prämie?",
+          "options": [
+            "Forward",
+            "Option",
+            "Keins"
+          ],
+          "answer_index": 1,
+          "rationale": "Optionsfloor.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optionsfloor.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Hedge‑Quote 0% vs. 100%: welcher Effekt sicher?",
+          "options": [
+            "Varianz↓ mit Quote",
+            "E[NPV] steigt stark",
+            "VaR steigt"
+          ],
+          "answer_index": 0,
+          "rationale": "Risikoreduktion.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Risikoreduktion.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Korrelation Preis×Menge sollte in Szenarien berücksichtigt werden.",
+          "answer": true,
+          "rationale": "Realistisch.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Realistisch.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Im Baum wird gewählt nach…",
+          "options": [
+            "max Varianz",
+            "max E[NPV] (Budget einhalten)",
+            "min Hedge‑Quote"
+          ],
+          "answer_index": 1,
+          "rationale": "Erwartungswert + Budget.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Erwartungswert + Budget.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wenn FX von 1,00 auf 0,90 fällt, steigt EUR‑Umsatz um…",
+          "options": [
+            "~11,1%",
+            "~10%",
+            "~9%"
+          ],
+          "answer_index": 0,
+          "rationale": "1/0,9=1,111…",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. 1/0,9=1,111…",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein partieller Hedge lässt Upside teilweise bestehen.",
+          "answer": true,
+          "rationale": "Nur ungesicherter Anteil schwankt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nur ungesicherter Anteil schwankt.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welches p‑Set ist valide?",
+          "options": [
+            "0,2/0,5/0,4",
+            "0,3/0,5/0,2",
+            "0,3/0,5/0,3"
+          ],
+          "answer_index": 1,
+          "rationale": "Summe=1.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Summe=1.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei fixen EUR‑Kosten verbessert USD‑Stärke (FX↑) Ergebnis‑EUR…",
+          "options": [
+            "immer",
+            "typisch ja",
+            "nie"
+          ],
+          "answer_index": 1,
+          "rationale": "Mehr EUR‑Umsatz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehr EUR‑Umsatz.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "true_false",
+          "question": "E[NPV] kann trotz Hedge nahezu unverändert bleiben, wenn Kosten ~0 sind.",
+          "answer": true,
+          "rationale": "Forward neutral außer Prämie.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Forward neutral außer Prämie.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        },
+        {
+          "type": "single_choice",
+          "question": "Was prüfst du bei Optionen zusätzlich?",
+          "options": [
+            "Prämie & Strike",
+            "nur Strike",
+            "nur Laufzeit"
+          ],
+          "answer_index": 0,
+          "rationale": "Kosten/Nutzen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kosten/Nutzen.",
+          "feedback_incorrect": "Beachte: Faktorrechnung bei Kettenrabatten; Skonto nach Rabatt anwenden."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du konstruierst FX‑Szenarien, modellierst Hedge‑Zweige im Entscheidungsbaum und triffst risikoadjustierte Entscheidungen."
+    },
+    {
+      "type": "outlook",
+      "text": "Weiter mit **Monte‑Carlo** für FX & Rohstoffe inkl. Korrelationen."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M05/M05L02.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M05/lehrtexte/grundlagen-rabatt-skonto-3/M05L02_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 13,
+      "blocks_after": 13
+    },
+    "scrubbed_placeholders": true
+  }
+}

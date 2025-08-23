@@ -1,0 +1,388 @@
+{
+  "id": "M11L04",
+  "title": "Lehrtext – Grundlagen: Geo‑Experimente & Interferenz – Cluster‑Randomisierung, Guardrails, Power & Governance (Rabatt/Skonto)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M11L03",
+    "M10L04",
+    "M11L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Warum Geo/Cluster‑Experimente? Interferenz/Spillover, Guardrail‑Kennzahlen, Governance."
+    },
+    {
+      "level": "Apply",
+      "text": "Cluster randomisieren, Power grob abschätzen, Guardrails/Failsafes definieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Trade‑offs (Bias vs. Varianz), Störgrößen & Saisons kontrollieren, Randomization Inference nutzen."
+    },
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Geo-Design abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Cluster-Randomisierung hilft…",
+          "options": [
+            "Interferenz zu verringern",
+            "Bias zu erhöhen",
+            "nichts"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Guardrails sind KPIs, die nicht verschlechtern dürfen.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Randomization Inference basiert auf…",
+          "options": [
+            "Permutation der Zuweisung",
+            "Normalverteilung",
+            "ARIMA"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": ""
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Power verbessert durch…",
+          "options": [
+            "mehr Cluster/geringere Varianz/stärkerer Effekt",
+            "weniger Cluster",
+            "höhere Varianz"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Stratifizierung vor Randomisierung ist sinnvoll.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Auswertung kann…",
+          "options": [
+            "DiD/SC/BSTS je nach Daten",
+            "nur Mittelwertvergleich",
+            "nur p-Wert"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei Interferenz…",
+          "options": [
+            "Pufferzonen/Design anpassen",
+            "ignorieren",
+            "nur ROI rechnen"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Vorab definierte Stopping-Regeln verhindern Bias.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Berichte neben Effektgröße…",
+          "options": [
+            "nur p-Wert",
+            "Intervalle & ROI",
+            "nur ROI"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Falle:",
+          "options": [
+            "keine Guardrails",
+            "Stratifizierung",
+            "Monitoring"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Permutationstest ist bei kleinen n nützlich.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Dokumentiere…",
+          "options": [
+            "Design, Randomisierung, Regeln",
+            "nur Ergebnis",
+            "nichts"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Geo-Design: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M11/M11L04.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M11/pruefungssets/pruefung-statistik/M11L04.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 13
+    },
+    "scrubbed_placeholders": true
+  }
+}
