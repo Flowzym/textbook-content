@@ -1,0 +1,188 @@
+{
+  "id": "M03L01",
+  "title": "Lehrtext – Grundlagen: Zinseszins – Grundlagen & Wachstumsfaktoren (v3, Praxis: geometrische Abschreibung)",
+  "reading_time_min": 19,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "K(t)=K0·(1+i)^t; unterjährig K(t)=K0·(1+i/m)^{m·t}; i_eff=(1+i/m)^m−1."
+    },
+    {
+      "level": "Understand",
+      "text": "Exponentielles Wachstum vs. linear begründen."
+    },
+    {
+      "level": "Apply",
+      "text": "Endwert, Dauer, Startkapital und i_eff berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Geometrische Abschreibung als negativer Zinsfaktor modellieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Zinseszins steuert viele Wachstums- und Schwundprozesse. In der Praxis entspricht eine *geometrische Abschreibung* einem jährlichen Abschlagsfaktor < 1."
+    },
+    {
+      "type": "concept",
+      "title": "Faktoren & Realzins",
+      "text": "Jährlich: K=K0(1+i)^t; unterjährig: K=K0(1+i/m)^{m·t}; i_eff=(1+i/m)^m−1; Schwund/Abschreibung: Faktor (1−d).",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Geometrische Abschreibung",
+      "text": "Maschine € 50,000, jährliche Wertminderung 15% geometrisch. Wert nach 5 J.: 50000·0,85^5 ≈ **€ 22,832**.",
+      "steps": [
+        "Maschine € 50,000, jährliche Wertminderung 15% geometrisch.",
+        "Wert nach 5 J.: 50000·0,85^5 ≈ **€ 22,832**."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "i_eff für j=8% bei m=12?",
+          "hint": "(1+0,08/12)^12−1",
+          "solution": "≈8,30%",
+          "check": {
+            "type": "approx",
+            "expected": 8.3,
+            "tolerance": 0.05,
+            "expr": "8.30"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wert nach 3 J. bei 12% Schwund von € 10,-",
+          "hint": "×0,88^3",
+          "solution": "≈€ 6,82 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Restwertabschätzung",
+          "context": "Fuhrpark: Anschaffung € 180,000, jährliche geometrische Abschreibung 18%. Schätze Restwert nach 6 Jahren.",
+          "subtasks": [
+            {
+              "text": "Bestimme Faktor."
+            },
+            {
+              "text": "Berechne K6."
+            },
+            {
+              "text": "Erkläre den Unterschied zur linearen Abschreibung."
+            }
+          ],
+          "hints": [
+            "0,82 pro Jahr.",
+            "K6=180000·0,82^6≈**65,9 T€**.",
+            "Geometrisch sinkt schneller zu Beginn."
+          ],
+          "solutions": [
+            "≈€ 65,90"
+          ],
+          "checks": [
+            {
+              "type": "approx",
+              "expected": 65.9,
+              "tolerance": 0.5,
+              "expr": "65.90"
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "0,82 pro Jahr.",
+            "K6=180000·0,82^6≈**65,9 T€**.",
+            "Geometrisch sinkt schneller zu Beginn."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Geometrische Abschreibung entspricht…",
+          "options": [
+            "Zinseszins mit negativem i",
+            "linearer Verteilung",
+            "Konstante absolute Abschläge"
+          ],
+          "answer_index": 0,
+          "rationale": "Faktor < 1, exponentiell fallend.",
+          "covers_outcomes": [
+            1,
+            2,
+            3
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Faktor < 1, exponentiell fallend.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "i_eff ≥ j, wenn m>1 und j>0.",
+          "answer": true,
+          "rationale": "Mehrfache Zinseszinswirkung.",
+          "covers_outcomes": [
+            2,
+            3
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehrfache Zinseszinswirkung.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du überträgst Zinseszins auf Wertverläufe (z. B. Abschreibung)."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: Zahlungsreihen inkl. Staffelmieten."
+    }
+  ],
+  "reading_time_band": "normal"
+}

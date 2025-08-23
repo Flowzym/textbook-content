@@ -1,0 +1,314 @@
+{
+  "id": "M07L04",
+  "title": "Lehrtext – Grundlagen: Heuristiken & Metaheuristiken – Greedy, Local Search, SA & Tabu (Controlling)",
+  "reading_time_min": 98,
+  "prerequisites": [
+    "M07L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Konstruktions‑ vs. Verbesserungsheuristiken, Nachbarschaften, Abbruchkriterien, Re‑Starts."
+    },
+    {
+      "level": "Apply",
+      "text": "Greedy/GRASP, 1‑swap/2‑opt, Simulated Annealing (SA), Tabu‑Search konzeptionell anwenden."
+    },
+    {
+      "level": "Analyze",
+      "text": "Lösungsqualität messen (Gap, Bounds), robuste Pipelines aufbauen (Seed, Multi‑Start, Diversifikation)."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Heuristik für konkretes Praxisproblem auswählen und begründen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Exakte MILP‑Lösungen können bei großen Instanzen dauern. **Heuristiken** liefern schnell **gute** Lösungen.\nWir bauen einen praxistauglichen Werkzeugkasten mit klarer Didaktik: erst Greedy, dann Local Search, dann Metaheuristiken."
+    },
+    {
+      "type": "concept",
+      "title": "Baukasten",
+      "text": "- **Greedy/GRASP**: konstruiere Lösung iterativ (mit Zufall/Mehrfachstarts).  \n- **Local Search**: definiere Nachbarschaft (1‑swap, 2‑opt), akzeptiere nur Verbesserungen.  \n- **Simulated Annealing**: akzeptiere gelegentlich Verschlechterungen (Temperatur T).  \n- **Tabu Search**: verbiete kürzlich gesehene Moves (Tabu‑Liste), Diversifikation.  \n- **Abbruch**: Zeitlimit, keine Verbesserung, Iterationslimit.",
+      "explanation": "\n\n**Decision-Hints:**\n- Deckungsbeitrag: DB = p − k_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – 2‑opt Idee",
+      "ascii": "Lösung: [A B C D E]\n      swap( B ↔ D )  →  neue Lösung",
+      "caption": "Ein einfacher Nachbarschaftswechsel (2‑opt/Swap) durchsucht die Umgebung.",
+      "alt_text": "ASCII-Visual: Ein einfacher Nachbarschaftswechsel (2‑opt/Swap) durchsucht die Umgebung. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Greedy + Local Search für Rucksack",
+      "text": "1) Sortiere Items nach Quote v_i/w_i (Greedy) → initiale Auswahl bis Budget.  \n2) **Local Search**: tausche 1‑für‑1 oder 2‑für‑1, solange Verbesserung.  \n**Qualitätsmessung**: vergleiche mit LP‑Relaxation (obere Schranke) → **Gap**.",
+      "steps": [
+        "Sortiere Items nach Quote v_i/w_i (Greedy) → initiale Auswahl bis Budget",
+        "Local Search**: tausche 1‑für‑1 oder 2‑für‑1, solange Verbesserung",
+        "Qualitätsmessung**: vergleiche mit LP‑Relaxation (obere Schranke) → **Gap"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – SA‑Schema (qualitativ)",
+      "text": "Starte mit T₀; bei jedem Schritt ziehe Nachbar. Akzeptiere Verbesserung immer; Verschlechterung mit p=exp(−Δ/T).\nSenke T geometrisch (T ← αT). Stop bei T<T_min oder keine Verbesserung.",
+      "steps": [
+        "Starte mit T₀; bei jedem Schritt ziehe Nachbar. Akzeptiere Verbesserung immer; Verschlechterung mit p=exp(−Δ/T",
+        "Senke T geometrisch (T ← αT). Stop bei T<T_min oder keine Verbesserung"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Tabu‑Regeln definieren",
+      "text": "Für Set‑Cover: Tabu‑Liste speichert zuletzt entfernte/ hinzugefügte Sets.  \na) Welche Dauer (Tabu‑Tenure) ist sinnvoll? b) Wie verhinderst du Zyklen?",
+      "solution": [
+        "Tenure 5–10 Moves als Startwert.",
+        "Aspirationskriterium: erlaube Tabu‑Move, wenn er beste Lösung verbessert."
+      ],
+      "steps": [
+        "Für Set‑Cover: Tabu‑Liste speichert zuletzt entfernte/ hinzugefügte Sets",
+        "a) Welche Dauer (Tabu‑Tenure) ist sinnvoll? b) Wie verhinderst du Zyklen?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gap‑Definition bei Maximierung",
+          "hint": "(z* − z_heur)/z* (oder Bound)",
+          "solution": "Prozentgap",
+          "check": {
+            "type": "string_contains",
+            "expected": "Gap"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wann Local Search stoppen?",
+          "hint": "keine Verbesserung mehr",
+          "solution": "Plateau",
+          "check": {
+            "type": "string_contains",
+            "expected": "Verbesserung"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Warum Multi‑Start?",
+          "hint": "lokale Minima vermeiden",
+          "solution": "Diversifikation",
+          "check": {
+            "type": "string_contains",
+            "expected": "lokal"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Heuristische Pipeline für Standortwahl",
+          "context": "Baue: Greedy‑Konstruktion → Local Search (1‑swap) → SA‑Re‑Start. Metriken: Kosten, Abdeckung, Gap zur LP‑Relaxation.",
+          "subtasks": [
+            {
+              "text": "Definiere Nachbarschaft & Evaluationsfunktion."
+            },
+            {
+              "text": "Setze Abbruch nach 200 Iter. ohne Verbesserung."
+            },
+            {
+              "text": "Dokumentiere Gap vs. LP‑Bound."
+            }
+          ],
+          "hints": [
+            "1‑swap öffne/schließe Standort.",
+            "Stopkriterium klar.",
+            "Gap=(z_LP−z_heur)/z_LP."
+          ],
+          "solutions": [
+            "Pipeline definiert",
+            "Abbruch sauber",
+            "Gap berechnet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Greedy",
+                "Local",
+                "Annealing",
+                "Gap"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Pipeline definiert",
+            "Abbruch sauber",
+            "Gap berechnet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Fehlende Evaluationsfunktion (z. B. Strafen für Verletzungen vergessen).",
+        "Nur ein Start (festgefahren in lokalem Optimum).",
+        "Keine Quality‑Checks (keine Bounds/Gaps)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Heuristik akzeptiert absichtlich Verschlechterungen?",
+          "options": [
+            "Local Search",
+            "Simulated Annealing",
+            "Greedy"
+          ],
+          "answer_index": 1,
+          "rationale": "Temperatur‑Akzeptanz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Temperatur‑Akzeptanz.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Tabu‑Search nutzt eine Verbotsliste, um Zyklen zu vermeiden.",
+          "answer": true,
+          "rationale": "Tenure & Aspiration.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Tenure & Aspiration.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gap‑Schätzung benötigt…",
+          "options": [
+            "nur heuristisches z",
+            "einen Bound (z. B. LP)",
+            "nichts"
+          ],
+          "answer_index": 1,
+          "rationale": "Vergleichsbasis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vergleichsbasis.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du setzt Greedy, Local Search, SA und Tabu sinnvoll ein, misst Qualität (Gap) und baust robuste Heuristik‑Pipelines."
+    },
+    {
+      "type": "outlook",
+      "text": "Optional: **Metaheuristik‑Tuning** (Parameter, Cooling), **Hybrid MILP+Heuristik**, **LNS** (Large Neighborhood Search)."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

@@ -1,0 +1,311 @@
+{
+  "id": "M08L03",
+  "title": "Lehrtext – Grundlagen: Zeitreihen III – Forecastgüte: MAE, RMSE, MAPE & Backtesting (Lager/Logistik)",
+  "reading_time_min": 92,
+  "prerequisites": [
+    "M08L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Definitionen von MAE, RMSE, MAPE, sMAPE, MASE."
+    },
+    {
+      "level": "Understand",
+      "text": "Stärken/Schwächen der Metriken (Skalierung, Ausreißer, Prozentprobleme)."
+    },
+    {
+      "level": "Apply",
+      "text": "Rolling‑Origin‑Backtests aufbauen, Hyperparameter wählen (α,β,γ) per Grid/Bruteforce klein."
+    },
+    {
+      "level": "Analyze",
+      "text": "Konfidenz‑ vs. Prognoseintervalle unterscheiden; Bias erkennen (systematische Über/Unterschätzung)."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Forecasts sind nur so gut wie ihre **Validierung**. Du lernst, **Fehlermaße** korrekt zu berechnen und mit **Backtesting** \nrealitätsnah zu vergleichen – unverzichtbar für Budget, S&OP und Bestandsplanung."
+    },
+    {
+      "type": "concept",
+      "title": "Fehlermaße",
+      "text": "- **AE_t**=|y_t − ̂y_t|; **SE_t**=(y_t − ̂y_t)^2.  \n- **MAE**=Durchschnitt AE; **RMSE**=√Durchschnitt SE (bestraft Ausreißer stärker).  \n- **MAPE**=Durchschnitt |(y_t − ̂y_t)/y_t|; **Problem** bei y_t≈0.  \n- **sMAPE**=Durchschnitt 2|y−̂y|/(|y|+|̂y|); **MASE** skaliert gegen naive Differenz.  \n- **Bias**: Mittel (y−̂y) – >0 = systematisch zu niedrig prognostiziert.",
+      "explanation": "\n\n**Decision-Hints:**\n- EOQ/Losgröße: Fixe Bestellkosten vs. Lagerhaltung abwägen.\n- Bestellpunkt mit Sicherheitsbestand berücksichtigen."
+    },
+    {
+      "type": "derivation",
+      "title": "Rolling Origin – Schrittfolge",
+      "steps": [
+        "1) Wähle Startfenster (z. B. 24 Monate).",
+        "2) Fit-Modell auf dieses Fenster, prognostiziere 1–h Schritte voraus.",
+        "3) Rolle den Ursprung um 1 Periode nach vorn, wiederhole.",
+        "4) Sammle Fehler und mitt(e)le (MAE/RMSE/...).",
+        "5) Vergleiche mehrere Parameter (z. B. α) fair auf derselben Rollsequenz."
+      ],
+      "comment": "So vermeidest du Look‑ahead‑Bias."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Rolling Origin",
+      "ascii": "Zeit ^\n     |[Train----][Test]\n     |    [Train----][Test]\n     |        [Train----][Test]\n     +--------------------------> t",
+      "caption": "Train/Test‑Split wird rollierend verschoben.",
+      "alt_text": "ASCII-Visual: Train/Test‑Split wird rollierend verschoben. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – MAE vs. RMSE",
+      "text": "Fehlerfolge e=[2, −1, 0, 5]. MAE=(2+1+0+5)/4=2,0. RMSE=√((4+1+0+25)/4)=√7,5≈2,74.  \n**Interpretation**: RMSE bestraft großen Ausreißer (5) stärker → höherer Wert.",
+      "steps": [
+        "Fehlerfolge e=[2, −1, 0, 5]. MAE=(2+1+0+5)/4=2,0. RMSE=√((4+1+0+25)/4)=√7,5≈2,",
+        "Interpretation**: RMSE bestraft großen Ausreißer (5) stärker → höherer Wert"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – MAPE‑Falle",
+      "text": "y=[0, 10, 10], ̂y=[0, 8, 12]. a) MAPE definieren? b) Problem bei y=0? c) Alternative?",
+      "solution": [
+        "MAPE=Durchschnitt |(y−̂y)/y|.",
+        "Division durch 0 → undefiniert.",
+        "sMAPE/MASE verwenden."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Bias>0 bedeutet…",
+          "hint": "Prognosen zu niedrig",
+          "solution": "systematische Unterschätzung",
+          "check": {
+            "type": "string_contains",
+            "expected": "niedrig"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Welche Metrik robust gegen Ausreißer?",
+          "hint": "MAE",
+          "solution": "L1‑Robustheit",
+          "check": {
+            "type": "string_contains",
+            "expected": "MAE"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "MAPE geeignet bei y≈0?",
+          "hint": "nein",
+          "solution": "sMAPE/MASE nehmen",
+          "check": {
+            "type": "string_contains",
+            "expected": "nein"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere den Bestellpunkt mit Sicherheitsbestand (Textantwort).",
+          "solution": "Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand",
+          "check": {
+            "type": "string_contains",
+            "expected": "Sicherheitsbestand"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere den Bestellpunkt mit Sicherheitsbestand (Textantwort).",
+          "solution": "Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand",
+          "check": {
+            "type": "string_contains",
+            "expected": "Sicherheitsbestand"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere den Bestellpunkt mit Sicherheitsbestand (Textantwort).",
+          "solution": "Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand",
+          "check": {
+            "type": "string_contains",
+            "expected": "Sicherheitsbestand"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere den Bestellpunkt mit Sicherheitsbestand (Textantwort).",
+          "solution": "Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand",
+          "check": {
+            "type": "string_contains",
+            "expected": "Sicherheitsbestand"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Backtest Holt‑Winters",
+          "context": "Monatsreihe 60 Monate. Rolle Ursprung (h=1) ab Monat 25 bis 60. Vergleiche α∈{0,1;0,2}, β∈{0,1;0,2}, γ∈{0,1;0,2}.",
+          "subtasks": [
+            {
+              "text": "Definiere identische Rollsequenz."
+            },
+            {
+              "text": "Logge MAE/RMSE je Parameterkombination."
+            },
+            {
+              "text": "Wähle bestes Tripel."
+            }
+          ],
+          "hints": [
+            "Kein Datenleck.",
+            "Matrix der Fehlerwerte.",
+            "Trade‑off RMSE vs. MAE diskutieren."
+          ],
+          "solutions": [
+            "Sequenz sauber",
+            "Matrix erstellt",
+            "Wahl begründet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Backtesting",
+                "MAE",
+                "RMSE"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Sequenz sauber",
+            "Matrix erstellt",
+            "Wahl begründet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "MAPE bei Nullen genutzt → irreführend/unendlich.",
+        "Train/Test nicht sauber getrennt → zu optimistisch.",
+        "Nur eine Metrik betrachtet → einseitige Bewertung."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Metrik bestraft Ausreißer am stärksten?",
+          "options": [
+            "MAE",
+            "RMSE",
+            "MAPE"
+          ],
+          "answer_index": 1,
+          "rationale": "Quadratische Fehler.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Quadratische Fehler.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        },
+        {
+          "type": "true_false",
+          "question": "Bias=Durchschnitt(y−̂y). Ein positiver Bias heißt Unterprognose.",
+          "answer": true,
+          "rationale": "Zu niedrige Forecasts.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zu niedrige Forecasts.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Backtesting ohne Look‑ahead…",
+          "options": [
+            "Rolling Origin",
+            "einmalig zufällig splitten",
+            "alles trainieren"
+          ],
+          "answer_index": 0,
+          "rationale": "Rollierender Ursprung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Rollierender Ursprung.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Bestellpunkt berücksichtigt den Sicherheitsbestand.",
+          "answer": true,
+          "rationale": "Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        },
+        {
+          "type": "true_false",
+          "question": "EOQ/Losgröße balanciert Bestell- und Lagerhaltungskosten.",
+          "answer": true,
+          "rationale": "Optimale Bestellmenge minimiert Gesamtkosten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optimale Bestellmenge minimiert Gesamtkosten.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Bestellpunkt berücksichtigt den Sicherheitsbestand.",
+          "answer": true,
+          "rationale": "Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        },
+        {
+          "type": "true_false",
+          "question": "EOQ/Losgröße balanciert Bestell- und Lagerhaltungskosten.",
+          "answer": true,
+          "rationale": "Optimale Bestellmenge minimiert Gesamtkosten.",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optimale Bestellmenge minimiert Gesamtkosten.",
+          "feedback_incorrect": "Beachte: Bestellpunkt = Verbrauch bis Lieferzeit + Sicherheitsbestand; EOQ balanciert Kosten."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du misst Forecastqualität korrekt, nutzt Rolling‑Origin‑Backtests und interpretierst Bias vs. Streuung."
+    },
+    {
+      "type": "outlook",
+      "text": "Zum Abschluss: **Praxisfälle** – Absatz, Budget, Sicherheitsbestand, Kombinations‑Forecasts, Hierarchien."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

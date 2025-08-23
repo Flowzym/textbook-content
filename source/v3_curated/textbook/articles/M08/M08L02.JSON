@@ -1,0 +1,211 @@
+{
+  "id": "M08L02",
+  "title": "Lehrtext – Grundlagen: Zeitreihen II – Glättung: MA, SES, Holt, Holt‑Winters",
+  "reading_time_min": 98,
+  "prerequisites": [
+    "M08L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Gleitende Durchschnitte (MA) vs. Exponentialglättung (SES, Holt, Holt‑Winters)."
+    },
+    {
+      "level": "Apply",
+      "text": "Parameter (α, β, γ) interpretieren und einstellen; Forecasts berechnen (Hands‑on, kleine Reihen)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Additiv vs. multiplikativ bei Holt‑Winters begründen; Warm‑Start/Initialisierung sauber setzen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Für operative Forecasts in Controlling/SCM sind **Exponentialglättungen** Standard: schnell, robust, erklärbar.\nWir bauen sie Schritt‑für‑Schritt auf – vom **einfachen Niveau (SES)** über **Trend (Holt)** bis **Saison (Holt‑Winters)**."
+    },
+    {
+      "type": "concept",
+      "title": "Formeln kompakt",
+      "text": "- **MA(k)**: ̂y_{t+1} = (1/k)·Σ_{i=0}^{k-1} y_{t−i}.  \n- **SES**: Niveau L_t = α y_t + (1−α) L_{t−1}; Forecast ̂y_{t+h}=L_t.  \n- **Holt** (Niveau+Trend): L_t = α y_t + (1−α)(L_{t−1}+B_{t−1}); B_t = β(L_t−L_{t−1}) + (1−β)B_{t−1}; ̂y_{t+h}=L_t + h·B_t.  \n- **Holt‑Winters additiv**: + saisonaler Index S_{t−m}; **multiplikativ**: · S_{t−m}. Parameter γ für Saison."
+    },
+    {
+      "type": "derivation",
+      "title": "Initialisierung (warm start)",
+      "steps": [
+        "SES: L_0 = y_1 oder Durchschnitt der ersten k Werte.",
+        "Holt: L_0 = y_1; B_0 = y_2 − y_1 (oder Regression auf erste m Punkte).",
+        "Holt‑Winters: Saisons S_1..S_m aus Mittel je Periode initialisieren; L_0, B_0 per Regression oder Differenz."
+      ],
+      "comment": "Gute Startwerte stabilisieren die ersten Forecasts (Cognitive Load senken)."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Reaktionsgeschwindigkeit α",
+      "ascii": "Fehler springt ↑\ny    ^\n     |      __\n     |  __ /  \\__         (α hoch: schnelle Reaktion, aber mehr Rauschen)\n     |_/          \\___\n     +---------------------> t",
+      "caption": "Hohe α/β reagieren schnell, können aber übersteuern; kleine dämpfen.",
+      "alt_text": "ASCII-Visual: Hohe α/β reagieren schnell, können aber übersteuern; kleine dämpfen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Holt (Niveau+Trend) von Hand (kurz)",
+      "text": "Daten: y=[100, 104, 107]. Initial L0=100, B0=3. α=0,5, β=0,4.\nt=1: L1=0,5·100+0,5·(100+3)=101,5; B1=0,4·(101,5−100)+0,6·3=0,6+1,8=2,4.  \nt=2: L2=0,5·104+0,5·(101,5+2,4)=52+51,95=103,95; B2=0,4·(103,95−101,5)+0,6·2,4=0,98+1,44=2,42.  \n̂y_{3}=L2+B2≈106,37 (nah bei 107).",
+      "steps": [
+        "Daten: y=[100, 104, 107]. Initial L0=100, B0=3. α=0,5, β=0,",
+        "t=1: L1=0,5·100+0,5·(100+3)=101,5; B1=0,4·(101,5−100)+0,6·3=0,6+1,8=2,",
+        "t=2: L2=0,5·104+0,5·(101,5+2,4)=52+51,95=103,95; B2=0,4·(103,95−101,5)+0,6·2,4=0,98+1,44=2,",
+        "̂y_{3}=L2+B2≈106,37 (nah bei"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Holt‑Winters additiv vs. multiplikativ",
+      "text": "Monatsdaten mit m=12; konstante Amplitude vs. Prozentmuster.\na) Welche Variante wählst du? b) Wie setzt du S_1..S_12 initial? c) Was passiert bei γ=0?",
+      "solution": [
+        "additiv bei konstanter Amplitude, multiplikativ bei Prozentmuster",
+        "Durchschnitt je Monat; normieren",
+        "keine Saisonanpassung (nur Niveau/Trend)."
+      ],
+      "steps": [
+        "Monatsdaten mit m=12; konstante Amplitude vs. Prozentmuster",
+        "a) Welche Variante wählst du? b) Wie setzt du S_1..S_12 initial? c) Was passiert bei γ=0?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "SES reagiert schneller bei…",
+          "hint": "höherem α",
+          "solution": "aber noisiger",
+          "check": {
+            "type": "string_contains",
+            "expected": "α"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Holt‑Trend reagiert schneller bei…",
+          "hint": "höherem β",
+          "solution": "Trade‑off Stabilität",
+          "check": {
+            "type": "string_contains",
+            "expected": "β"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "HW‑Saisonstärke steuert…",
+          "hint": "γ",
+          "solution": "Einfluss der Saisonanpassung",
+          "check": {
+            "type": "string_contains",
+            "expected": "γ"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Absatzforecast (Holt‑Winters)",
+          "context": "Monatsabsatz mit deutlicher Saison. Ziel: 6‑Monats‑Forecast mit additiver HW.",
+          "subtasks": [
+            {
+              "text": "Initialisiere L0,B0,S1..S12."
+            },
+            {
+              "text": "Wähle α,β,γ (Start 0,2/0,1/0,1)."
+            },
+            {
+              "text": "Erzeuge Forecast und zeige Saisonverlauf."
+            }
+          ],
+          "hints": [
+            "Normiere Saisonindizes.",
+            "Starte konservativ, dann feinjustieren.",
+            "Plot mit Forecastband (qualitativ)."
+          ],
+          "solutions": [
+            "Initial ok",
+            "Parameter gesetzt",
+            "Forecast erzeugt"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Holt-Winters",
+                "Saison",
+                "Parameter"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Initial ok",
+            "Parameter gesetzt",
+            "Forecast erzeugt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Multiplikative HW gewählt bei Null‑ oder sehr kleinen Werten (Division instabil).",
+        "Zu hohe α/β/γ → Überschwingen, instabile Forecasts.",
+        "Initialisierung ignoriert → erste Perioden fehlerhaft."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Methode bildet Trend **explizit** ab?",
+          "options": [
+            "SES",
+            "Holt",
+            "MA"
+          ],
+          "answer_index": 1,
+          "rationale": "Holt hat Trendkomponente.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Holt hat Trendkomponente."
+        },
+        {
+          "type": "true_false",
+          "question": "Holt‑Winters kann additiv oder multiplikativ formuliert werden.",
+          "answer": true,
+          "rationale": "Je nach Saisonamplitude.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Je nach Saisonamplitude."
+        },
+        {
+          "type": "single_choice",
+          "question": "Was steuert γ?",
+          "options": [
+            "Niveau",
+            "Trend",
+            "Saison"
+          ],
+          "answer_index": 2,
+          "rationale": "Saisongewicht.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Saisongewicht."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du beherrschst MA, SES, Holt und Holt‑Winters mit sinnvoller Parametrisierung & Initialisierung."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Fehlermessung & Backtesting** (MAE, RMSE, MAPE; Rolling Origin)."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}
