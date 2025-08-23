@@ -1,0 +1,809 @@
+{
+  "id": "M01L02",
+  "title": "Lehrtext – Grundlagen: Brüche & Dezimalzahlen – Umwandeln, Rechnen, Anteile & Prozente (Zinseszins)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M01L01",
+    "M01L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: echter/unechter Bruch, Dezimalzahl (endlich/periodisch), Kürzen/Erweitern."
+    },
+    {
+      "level": "Understand",
+      "text": "Zusammenhang Bruch↔Dezimalzahl; Prozent als Hundertstel."
+    },
+    {
+      "level": "Apply",
+      "text": "Addieren/Subtrahieren, Multiplizieren/Dividieren von Brüchen; Prozent- und Dreisatzrechnungen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Fehlerbilder erkennen (falsches Kürzen, Mischbrüche, Prozentpunkte vs. Prozent)."
+    },
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Brüche/Prozent abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft Brüche & Prozente mit gezielten Prüfungssets A–D. Focus auf Kürzen, Rechnen, Kettenrabatte und typische Fallstricke."
+    },
+    {
+      "type": "concept",
+      "title": "Prüfungssets-Übersicht",
+      "text": "- **Set A**: Grundlagen (Kürzen, Kehrwert, Periodizität)  \n- **Set B**: Methoden/Regeln (Addition, Kettenrabatte, Prozentpunkte)  \n- **Set C**: Diagnose/Fehler (Falsches Kürzen, Begriffsverwechslung)  \n- **Set D**: Praxis & Fallen (KPI-Berechnung, Rabattreihenfolge)",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Kürze 18/42.",
+          "options": [
+            "3/7",
+            "6/14",
+            "9/14"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Zum Dividieren von Brüchen multiplizierst du mit dem Kehrwert.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Dezimalzahl ist periodisch?",
+          "options": [
+            "1/8",
+            "3/20",
+            "2/11"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": ""
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Regeln",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Addiere 3/8 + 5/12.",
+          "options": [
+            "19/24",
+            "8/20",
+            "1/2"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Prozentpunkte ≠ Prozentänderung.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Skonto 2% nach 10% Rabatt auf € 500:",
+          "options": [
+            "€ 450,-",
+            "€ 441,-",
+            "€ 490,-"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "schwer",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Fehler",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fehlerdiagnose: 2/3 + 1/4 = 3/7?",
+          "options": [
+            "korrekt",
+            "falsch: Nenner nicht addieren",
+            "korrekt, wenn erweitert"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Nur Produkte/Quotienten lassen sich kürzen.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche ist richtig?",
+          "options": [
+            "15% von € 200,- = € 25,-",
+            "−20% = −0,2",
+            "30% von x = 0,3x"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: Bruttomarge 35%, Umsatz € 80,- Rohgewinn?",
+          "options": [
+            "€ 28,-",
+            "€ 45,-",
+            "€ 18,-"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten zählt die Reihenfolge.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Anteil berechnen: 45 von 300:",
+          "options": [
+            "0,15",
+            "0,2",
+            "0,25"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 1,000,00, i=4%, n=2 → K=?",
+          "options": [
+            "€ 1,040,00",
+            "€ 1,081,60",
+            "€ 1,120,00"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man die Prozentsätze.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "BE bei K_fix=€ 12,000, p=€ 18,- k_v=€ 11?",
+          "options": [
+            "1,000",
+            "1,200",
+            "1,714",
+            "2,000"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 3,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Abzinsung nutzt K0=K·(1−i)^n.",
+          "answer": false,
+          "rationale": "",
+          "difficulty": "mittel",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "10% von € 2,400?",
+          "options": [
+            "€ 200,-",
+            "€ 240,-",
+            "€ 260,-"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Brüche/Prozent: Begriffe, Regeln, Diagnose und Praxis ab."
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L02.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M01/pruefungssets/pruefung-zinseszins/M01L02_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 13
+    },
+    "scrubbed_placeholders": true
+  }
+}

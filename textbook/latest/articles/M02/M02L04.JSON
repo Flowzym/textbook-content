@@ -1,0 +1,497 @@
+{
+  "id": "M02L04",
+  "title": "Lehrtext – Grundlagen: Zinszeiten & Zinsmethoden – Praxisfälle (inkl. Schaltjahr) (Zinseszins)",
+  "reading_time_min": 70,
+  "prerequisites": [
+    "M02L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "t nach 30/360, act/360, act/365, act/act bestimmen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Differenzen begründen und dokumentieren."
+    },
+    {
+      "level": "Create",
+      "text": "Verständliche Vertragsklauseln zur Day-Count-Methode formulieren."
+    },
+    {
+      "level": "Remember",
+      "text": "30/360 (deutsch), act/360, act/365, act/act nennen."
+    },
+    {
+      "level": "Apply",
+      "text": "Zeitanteile t und Zinsen für verschiedene Konventionen berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Schaltjahreffekt und methodische Unterschiede begründen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Konventionen bestimmen t. Unterschiedliche Branchen/Verträge nutzen unterschiedliche Regeln."
+    },
+    {
+      "type": "concept",
+      "title": "Überblick",
+      "text": "30/360 (deutsch): jeder Monat 30 Tage, Jahr 360; act/360: tatsächliche Tage/360; act/365: tatsächliche Tage/365; act/act: tatsächliche Tage/tatsächliches Jahr.",
+      "explanation": "\n\n**Zinseszins:** K=K0·(1+i)^n. **Abzinsung:** K0=K/(1+i)^n.\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Vergleich (kein Schaltjahr) 17,01.–12,03.",
+      "text": "K0=20,000, p=5% → 30/360: t=55/360 → € 152,78; act/360: 54/360 → € 150,00; act/365: 54/365 → € 147,95",
+      "worked": {
+        "title": "Endwert",
+        "steps": [
+          "[Schritt 1] K0=€ 5,000,00, i=4%, n=5 ⇒ 5,000 · 1,04^5 = 6,083,26 → € 6,083,26"
+        ]
+      },
+      "fading": {
+        "title": "Barwert",
+        "steps": [
+          "K=€ 10,000,00, i=3%, n=4 ⇒ 10,000 / 1,03^4 = 8,888,49 → € 8,888,49"
+        ]
+      },
+      "steps": [
+        "K0=20,000, p=5%",
+        "30/360: t=55/360",
+        "€ 152,78; act/360: 54/360",
+        "€ 150,00; act/365: 54/365",
+        "€ 147,95"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Schaltjahr 2024 – 28,02.–01,03.",
+      "text": "Tage: act/act = 2/366 (29,02. zählt), act/365 = 2/365, act/360 = 2/360, 30/360 = 2/360 (Monatsenden vereinheitlicht).",
+      "worked": {
+        "title": "Endwert",
+        "steps": [
+          "[Schritt 1] K0=€ 5,000,00, i=4%, n=5 ⇒ 5,000 · 1,04^5 = 6,083,26 → € 6,083,26"
+        ]
+      },
+      "fading": {
+        "title": "Barwert",
+        "steps": [
+          "K=€ 10,000,00, i=3%, n=4 ⇒ 10,000 / 1,03^4 = 8,888,49 → € 8,888,49"
+        ]
+      }
+    },
+    {
+      "type": "visual",
+      "title": "Tageszähler (ASCII)",
+      "ascii": "Zeitraum: 25,02.2024 – 15,04.2024  (Schaltjahr)\n30/360: (30−25)+30+15 = 50\nact/360: (29−25)+31+15 = 50  → Basis 360\nact/365: 50/365\nact/act: 50/366",
+      "caption": "Schaltjahr beeinflusst den Nenner bei act/act.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Schaltjahr beeinflusst den Nenner bei act/act.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Tage zählen (Schaltjahr)",
+      "text": "Zeitraum 10,02.2024–05,03.2024.\n1) Tage 30/360 = __\n2) Tage act/act = __ (Schaltjahr)\n3) t act/act = __",
+      "solution": [
+        "(30−10)+5=25",
+        "20+5=25",
+        "25/366≈0,0683"
+      ],
+      "worked": {
+        "title": "Endwert",
+        "steps": [
+          "[Schritt 1] K0=€ 5,000,00, i=4%, n=5 ⇒ 5,000 · 1,04^5 = 6,083,26 → € 6,083,26"
+        ]
+      },
+      "fading": {
+        "title": "Barwert",
+        "steps": [
+          "K=€ 10,000,00, i=3%, n=4 ⇒ 10,000 / 1,03^4 = 8,888,49 → € 8,888,49"
+        ]
+      },
+      "steps": [
+        "Zeitraum 10,02.2024–05,",
+        "Tage 30/360 = __",
+        "Tage act/act = __ (Schaltjahr",
+        "t act/act = __"
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei 30/360 hat jeder Monat…",
+          "options": [
+            "30 Tage",
+            "tatsächliche Tage"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "act/act berücksichtigt Schaltjahre.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Zeitanteil 90 Tage act/360?",
+          "options": [
+            "0,25",
+            "0,2466",
+            "0,219"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": ""
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Methode liefert i. d. R. höhere Z bei gleichem p?",
+          "options": [
+            "30/360",
+            "act/365",
+            "act/act"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei act/365 ist die Jahresbasis 365.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Bei 54 Tagen act/365 ist t≈…",
+          "options": [
+            "0,1479",
+            "0,1500",
+            "0,1356"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Zinszeit 17,01.–12,03. (kein Schaltjahr), act/360: Tage?",
+          "options": [
+            "54",
+            "55",
+            "56"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "covers_outcomes": [],
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "30/360 setzt den 31. auf den 30. des Monats.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Angabe gehört **nicht** zur Day-Count-Konvention?",
+          "options": [
+            "Jahresbasis",
+            "Tageszählregel",
+            "Zinssatz p"
+          ],
+          "answer_index": 2,
+          "rationale": "",
+          "covers_outcomes": [],
+          "difficulty": "schwer",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Schaltjahr 2024: 01,02.–01,03. act/act: t=?",
+          "options": [
+            "28/366",
+            "29/366",
+            "30/366"
+          ],
+          "answer_index": 1,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "act/365 vs. act/act für 50 Tage in 2024: Verhältnis t_act/act / t_act/365?",
+          "options": [
+            "365/366",
+            "366/365",
+            "≈1"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei act/360 ist Schaltjahr irrelevant.",
+          "answer": true,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Methode ist in vielen Bankverträgen üblich?",
+          "options": [
+            "act/360",
+            "act/365",
+            "act/act"
+          ],
+          "answer_index": 0,
+          "rationale": "",
+          "difficulty": "leicht",
+          "feedback_correct": "",
+          "feedback_incorrect": "",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst Day-Count-Methoden inkl. Schaltjahr sicher anwenden."
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "",
+          "fix": "",
+          "mistake_tag": "misc"
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M02/M02L04.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M02/pruefungssets/pruefung-zinseszins/M02L04.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 5,
+      "blocks_after": 15
+    },
+    "scrubbed_placeholders": true
+  }
+}

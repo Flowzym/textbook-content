@@ -1,0 +1,319 @@
+{
+  "id": "M04L01",
+  "title": "Lehrtext – Grundlagen: Zeitwert des Geldes (v2): PV/FV in Praxis – Energie, Leasing, Einkauf (Zinseszins)",
+  "reading_time_min": 42,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Definitionen von PV, FV, Diskontfaktor und Aufzinsfaktor nennen."
+    },
+    {
+      "level": "Understand",
+      "text": "Nominal vs. real trennen und Zeitpunkte sauber einordnen."
+    },
+    {
+      "level": "Apply",
+      "text": "Typische Branchenfälle (Energiecontracting, Leasinganzahlung, Skonto vs. Ziel) auf PV/FV abbilden."
+    },
+    {
+      "level": "Analyze",
+      "text": "Plausibilitäts-Checks durchführen (Grenzfälle, Monotoneffekte)."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Der Zeitwert des Geldes macht **heute** und **später** vergleichbar. In dieser Lesson übst du PV/FV mit\n**Energieeinsparverträgen**, **Leasinganzahlungen** und **Skonto** im Einkauf."
+    },
+    {
+      "type": "concept",
+      "title": "PV/FV & Faktoren",
+      "text": "FV = PV·(1+i)^t,  PV = FV·(1+i)^{−t};  Diskontfaktor v^t=(1+i)^{−t}.\nRealzins: (1+i_nom)/(1+π)−1. Perioden müssen passen (Monate ↔ Monatszins).",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "derivation",
+      "title": "Herleitung knapp",
+      "steps": [
+        "Wachstum: Multiplikation mit (1+i) je Jahr → (1+i)^t.",
+        "Inverse: Diskontierung durch Division → (1+i)^{−t}.",
+        "Für Monate: i_m=i/12; t in Monaten."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Timeline (ASCII)",
+      "ascii": "0         1         2        ...        t\nPV ──×(1+i)→ ──×(1+i)→ ... → FV",
+      "caption": "Aufzinsen vorwärts, Abzinsen rückwärts.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Aufzinsen vorwärts, Abzinsen rückwärts.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Skonto statt Zahlungsziel (Einkauf)",
+      "text": "Brutto € 20,000, Zahlungsziel 30 Tage, Skonto 2% bei Zahlung in 10 Tagen.\nErsparnis € 400,- für 20 Tage entspricht ≈ 400/19,600 ≈ 2,04% in 20 Tagen → hochgerechnet ≈ 37% p.a. (linear).\nPV-Interpretation: Frühe Zahlung (−19,600) vs. späte (−20,000 in 30 Tagen) → Diskontiere und vergleiche.",
+      "steps": [
+        "Brutto € 20,000, Zahlungsziel 30 Tage, Skonto 2% bei Zahlung in 10 Tagen",
+        "Ersparnis € 400,- für 20 Tage entspricht ≈ 400/19,600 ≈ 2,04% in 20 Tagen → hochgerechnet ≈ 37% p.a. (linear",
+        "PV-Interpretation: Frühe Zahlung (−19,600) vs. späte (−20,000 in 30 Tagen) → Diskontiere und vergleiche"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Energiecontracting (AT)",
+      "text": "Contractor bietet Einmalzahlung € 60,- heute für Rechte an Einsparungen 12× € 5,800/Jahr (am Periodenende). Diskont i=5%.\nPV_Einsparungen = 5800·(1−1/1,05^{12})/0,05 ≈ **53,8 T€**. → Angebot **nicht** attraktiv (PV<60 T€).",
+      "steps": [
+        "Contractor bietet Einmalzahlung € 60,- heute für Rechte an Einsparungen 12× € 5,800/Jahr (am Periodenende). Diskont i=5%",
+        "PV_Einsparungen = 5800·(1−1/1,05^{12})/0,05 ≈ **53,8 T€**. → Angebot **nicht** attraktiv (PV<60 T€"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Leasinganzahlung vs. höhere Rate",
+      "text": "Variante A: Anzahlung 5,000 heute + 36× 420. Variante B: keine Anzahlung, dafür 36× 565. Diskont i=5% p.a. (Monate).\na) PV_A = __ ; b) PV_B = __ ; c) Welche günstiger?",
+      "solution": [
+        "PV_A≈5000 + Σ420/(1+i_m)^t",
+        "PV_B≈Σ565/(1+i_m)^t",
+        "A tendenziell günstiger, wenn i moderat."
+      ],
+      "steps": [
+        "Variante A: Anzahlung 5,000 heute + 36× 420. Variante B: keine Anzahlung, dafür 36× 565. Diskont i=5% p.a. (Monate",
+        "a) PV_A = __ ; b) PV_B = __ ; c) Welche günstiger?"
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Nominale CFs mit Realzins diskontiert (oder umgekehrt).",
+        "Falsche Periodizität (Jahres‑/Monatszins vertauscht).",
+        "Zeitpunkte (Beginn/Ende) nicht beachtet."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "PV‑Formel?",
+          "options": [
+            "PV=FV·(1+i)^t",
+            "PV=FV·(1+i)^{−t}",
+            "PV=FV·i·t"
+          ],
+          "answer_index": 1,
+          "rationale": "Diskontierung.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Diskontierung.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Höherer i → kleinerer PV.",
+          "answer": true,
+          "rationale": "Stärkere Diskontierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stärkere Diskontierung.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Realzins genau aus i und π?",
+          "options": [
+            "i−π",
+            "(1+i)/(1+π)−1",
+            "π−i"
+          ],
+          "answer_index": 1,
+          "rationale": "Exakter Zusammenhang.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Exakter Zusammenhang.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Skonto 2% für 20 Tage auf 20,000 → p.a. (linear)?",
+          "options": [
+            "~24%",
+            "~36%",
+            "~48%"
+          ],
+          "answer_index": 1,
+          "rationale": "2% / 20 Tage × 360 ≈ 36%.",
+          "covers_outcomes": [],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. 2% / 20 Tage × 360 ≈ 36%.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Eine frühere Zahlung ist im PV-Vergleich ‚teurer‘.",
+          "answer": false,
+          "rationale": "Frühere Auszahlung hat **höheren** PV, nicht günstiger. Entscheidung hängt von Nachlass.",
+          "covers_outcomes": [],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Frühere Auszahlung hat **höheren** PV, nicht günstiger. Entscheidung hängt von Nachlass.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Monatszins bei 5% p.a. nominal? ",
+          "options": [
+            "0,5%",
+            "5%",
+            "0,4167%"
+          ],
+          "answer_index": 2,
+          "rationale": "0,05/12≈0,4167%.",
+          "covers_outcomes": [],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. 0,05/12≈0,4167%.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei Energiecontracting ist PV der Einsparung…",
+          "options": [
+            "Summe ohne Diskont",
+            "Diskontierte Rente",
+            "IRR"
+          ],
+          "answer_index": 1,
+          "rationale": "Rente diskontieren.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Rente diskontieren.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei 0% Zins sind PV und FV gleich.",
+          "answer": true,
+          "rationale": "Kein Zeitwert-Effekt.",
+          "covers_outcomes": [],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Zeitwert-Effekt.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Leasinganzahlung heute wirkt im PV…",
+          "options": [
+            "schwach",
+            "stark",
+            "gar nicht"
+          ],
+          "answer_index": 1,
+          "rationale": "Heutiger CF zählt voll.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Heutiger CF zählt voll.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Diskontfaktor v^t bei i=6%, t=3?",
+          "options": [
+            "≈0,8396",
+            "≈1,191",
+            "≈0,94"
+          ],
+          "answer_index": 0,
+          "rationale": "(1,06)^{−3}≈0,8396.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. (1,06)^{−3}≈0,8396.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "PV steigt mit t.",
+          "answer": false,
+          "rationale": "Mehr Wartezeit → stärkerer Abschlag.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehr Wartezeit → stärkerer Abschlag.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Perioden müssen übereinstimmen?",
+          "options": [
+            "CF & i",
+            "CF & π",
+            "π & Steuer"
+          ],
+          "answer_index": 0,
+          "rationale": "Periodizität!",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Periodizität!",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "PV/FV sicher, inklusive Skonto, Leasinganzahlung und Energieeinspar-Deals."
+    },
+    {
+      "type": "outlook",
+      "text": "Weiter mit **NPV** inkl. Steuern, Restwert und EAA."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M04/M04L01.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M04/lehrtexte/grundlagen-zinseszins-3/M04L01_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 15,
+      "blocks_after": 15
+    },
+    "scrubbed_placeholders": true
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "id": "M06L03",
+  "title": "Lehrtext – Grundlagen: Lineare Optimierung III – Dualität, Schattenpreise & Sensitivität (Rabatt/Skonto)",
+  "reading_time_min": 16,
+  "prerequisites": [
+    "M06L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Dualbildung (max↔min), ökonomische Bedeutung der Dualvariablen (Schattenpreise)."
+    },
+    {
+      "level": "Apply",
+      "text": "Komplementäre Schlupfbedingungen prüfen; zulässige Dual‑Lösung aus Primaler Lösung ableiten."
+    },
+    {
+      "level": "Analyze",
+      "text": "Sensitivität: RHS‑Änderungen (b_i) und Zielfunktionskoeffizienten (c_j); reduzierte Kosten interpretieren."
+    },
+    {
+      "level": "Understand",
+      "text": "Dualbildung sicher; Komplementarität anwenden."
+    },
+    {
+      "level": "Apply",
+      "text": "Schattenpreise wirtschaftlich interpretieren (inkl. Umwelt‑Constraint)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Sensitivität auf RHS/c und reduzierte Kosten erklären."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Wir erweitern Dualität um **CO₂‑Budgetrestriktionen** und üben mit Quiz‑Sets A–D."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – CO₂‑Budget als Nebenbedingung",
+      "text": "Produktmix mit Emissionen e_A=4 kg, e_B=2 kg je Stück. CO₂‑Budget B=20 kg.  \nLP: max z=30x_A+20x_B s.t. …, **4x_A+2x_B ≤ 20**, x≥0.  \nIm Optimum: y_CO2 ist der **Schattenpreis** des Budgets (€/kg). y_CO2>0 nur, wenn Budget **bindet**.",
+      "steps": [
+        "Produktmix mit Emissionen e_A=4 kg, e_B=2 kg je Stück. CO₂‑Budget B=20 kg",
+        "LP: max z=30x_A+20x_B s.t. …, **4x_A+2x_B ≤ 20**, x≥",
+        "Im Optimum: y_CO2 ist der **Schattenpreis** des Budgets (€/kg). y_CO2>0 nur, wenn Budget **bindet"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Dual interpretieren",
+      "text": "Dual enthält y_CO2 ≥ 0; bei Bindung gilt in Aᵗy ≥ c: 4·y_CO2 + … ≥ 30; 2·y_CO2 + … ≥ 20.  \n**Interpretation**: Wenn y_CO2=€ 6/kg, erhöht +1 kg CO₂‑Budget den maximalen Deckungsbeitrag um € 6,- (innerhalb Gültigkeitsbereichs).",
+      "steps": [
+        "Dual enthält y_CO2 ≥ 0; bei Bindung gilt in Aᵗy ≥ c: 4·y_CO2 + … ≥ 30; 2·y_CO2 + … ≥",
+        "Interpretation**: Wenn y_CO2=€ 6/kg, erhöht +1 kg CO₂‑Budget den maximalen Deckungsbeitrag um € 6,- (innerhalb Gültigkeitsbereichs"
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Dual zu max cᵗx s.t. Ax≤b, x≥0?",
+          "options": [
+            "min bᵗy s.t. Aᵗy≥c, y≥0",
+            "min bᵗy s.t. Aᵗy≤c",
+            "max bᵗy s.t. Aᵗy≥c"
+          ],
+          "answer_index": 0,
+          "rationale": "Schema.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Schema.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "y_i>0 nur, wenn Restriktion i bindet.",
+          "answer": true,
+          "rationale": "Komplementarität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Komplementarität.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "CO₂‑Budget ist typ. eine…",
+          "options": [
+            "≥‑Bedingung",
+            "≤‑Bedingung",
+            "="
+          ],
+          "answer_index": 1,
+          "rationale": "Verbrauch ≤ Budget.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verbrauch ≤ Budget.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "y_CO2 misst…",
+          "options": [
+            "Kosten je kg CO₂ im Markt",
+            "Grenzwertschöpfung je kg Budget",
+            "Mittelwert"
+          ],
+          "answer_index": 1,
+          "rationale": "Schattenpreis.",
+          "covers_outcomes": [],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Schattenpreis.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Wenn Budget locker, dann y_CO2=0.",
+          "answer": true,
+          "rationale": "Kein Engpass.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Engpass.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Reduzierte Kosten r_j = c_j − (Aᵗy)_j sind im Optimum (max)…",
+          "options": [
+            "≥0",
+            "≤0 (Nichtbasis)",
+            "beliebig"
+          ],
+          "answer_index": 1,
+          "rationale": "Kriterium.",
+          "covers_outcomes": [],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Kriterium.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Erhöht sich B um Δ, dann gilt näherungsweise…",
+          "options": [
+            "Δz≈y_CO2·Δ",
+            "Δz≈0",
+            "Δz≈Δ²"
+          ],
+          "answer_index": 0,
+          "rationale": "Linear im Bereich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Linear im Bereich.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Schattenpreise gelten global ohne Einschränkung.",
+          "answer": false,
+          "rationale": "Nur solange Basis konstant.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nur solange Basis konstant.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wie prüfst du Bindung einer Restriktion?",
+          "options": [
+            "Slack=0?",
+            "c̄=0?",
+            "RHS groß?"
+          ],
+          "answer_index": 0,
+          "rationale": "Slack=0 bindet.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Slack=0 bindet.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Zertifikate kaufen, wenn…",
+          "options": [
+            "Marktpreis < y_CO2",
+            "Marktpreis > y_CO2",
+            "egal"
+          ],
+          "answer_index": 0,
+          "rationale": "Arbitrage‑Logik.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Arbitrage‑Logik.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "CO₂‑Budget führt immer zu MILP.",
+          "answer": false,
+          "rationale": "Linear möglich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Linear möglich.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wenn r_j<0 für Produkt j, dann…",
+          "options": [
+            "Produkt in Basis aufnehmen lohnt",
+            "verwerfen",
+            "keine Aussage"
+          ],
+          "answer_index": 0,
+          "rationale": "Verbesserung möglich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verbesserung möglich.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Dualzeichen verwechselt (≥/≤).",
+        "Schattenpreise außerhalb Gültigkeitsbereichs extrapoliert.",
+        "r_j mit DB verwechselt."
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du interpretierst CO₂‑Budgets über Dualvariablen und setzt Schattenpreise operativ ein."
+    },
+    {
+      "type": "outlook",
+      "text": "In L04 bauen wir das CO₂‑Budget in Transport/Produktionsplanung ein."
+    }
+  ],
+  "reading_time_band": "normal",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M06/M06L03.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M06/pruefungssets/pruefung-rabatt-skonto/M06L03_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 11
+    },
+    "scrubbed_placeholders": true
+  }
+}
