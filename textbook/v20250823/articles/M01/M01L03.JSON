@@ -1,0 +1,146 @@
+{
+  "id": "M01L03",
+  "title": "Lehrtext – Grundlagen: Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (Zinseszins)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M01L02",
+    "M01L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Potenzen a^n, Wurzeln √a, wissenschaftliche Notation; Rechengesetze."
+    },
+    {
+      "level": "Understand",
+      "text": "Zusammenhang Potenz↔Wurzel↔Logarithmus (nur auf Intuitionsebene)."
+    },
+    {
+      "level": "Apply",
+      "text": "Mit Potenzgesetzen rechnen; Größenordnungen einschätzen; Zinseszins berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Wachstumsprozesse vs. lineare Zuwächse unterscheiden; Fehler in Einheiten/Notation vermeiden."
+    },
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Potenzen/Wurzeln/Zins abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "content": "In dieser Lektion begreifst du Zinseszins ruhig und systematisch. Du verstehst, warum jeder Zeitraum auf den dann aktuellen Betrag wirkt, wie daraus die Potenz (1+i)^n entsteht, und wie du Endwert und Barwert sicher berechnest. Zusätzlich siehst du, wie stark schon kleine Zinsunterschiede über mehrere Jahre wirken."
+    },
+    {
+      "type": "concept",
+      "title": "Intuition in ganzen Sätzen",
+      "items": [
+        "Denke an einen Verstärker, der jedes Jahr denselben Faktor anwendet. Was im ersten Jahr verstärkt wurde, wird im zweiten Jahr erneut verstärkt – deshalb multipliziert man Faktoren mehrfach.",
+        "Prozentangaben werden in Faktoren übersetzt: +5 % entspricht dem Faktor 1,05; −3 % entspricht dem Faktor 0,97."
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Endwert K_n bei 5 % für 10 Jahre (Schritt für Schritt)",
+      "steps": [
+        "Ich starte mit K_0 = 1000. Der jährliche Faktor ist 1,05.",
+        "Nach einem Jahr: 1000 × 1,05 = 1050. Nach zwei Jahren: 1050 × 1,05 = 1102,5.",
+        "Allgemein nach n Jahren: K_n = 1000 × 1,05^n. Für n = 10 ergibt sich etwa 1629 €."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Wachstumskurve (5 % p.a.)",
+      "image": "assets/M01L03_growth.png",
+      "content": "Die Kurve steigt nicht linear, sondern mit jedem Jahr etwas stärker. Das ist der Zinseszinseffekt."
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – Barwert: Wie viel ist ein Ziel von 10 000 € in 5 Jahren heute wert?",
+      "steps": [
+        "Ich arbeite rückwärts. Der jährliche Faktor vorwärts ist 1,04; rückwärts teile ich durch 1,04.",
+        "Barwertformel: PV = 10 000 / 1,04^5 ≈ 8227,",
+        "Bedeutung: Wenn ich heute etwa 8228 € zu 4 % anlege, habe ich in 5 Jahren 10 000 €."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Barwert → Endwert über die Zeit",
+      "image": "assets/M01L03_pv.png",
+      "content": "Die durchgezogene Linie zeigt den wachsenden Betrag; die gestrichelte Linie markiert das Ziel von 10 000 €."
+    },
+    {
+      "type": "concept",
+      "title": "Effektiv vs. nominal – kurzer Blick",
+      "items": [
+        "Nominal 6 % jährlich kann effektiv leicht höher sein, wenn monatlich verzinst wird. Der Effektivzins berücksichtigt die unterjährigen Schritte.",
+        "Schon 1 Prozentpunkt Unterschied (5 % zu 6 %) wächst über 10 Jahre deutlich auseinander."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Vergleich 5 % vs 6 % p.a.",
+      "image": "assets/M01L03_rate_compare.png",
+      "content": "Die zweite Kurve liegt jedes Jahr etwas höher. Über die Jahre macht das einen spürbaren Unterschied."
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – mit Lösungsskizzen",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "Endwert von 2000 € nach 3 Jahren bei 4 % p.a.?",
+          "solution": "2000 × 1,04^3 ≈ 2249,73 €."
+        },
+        {
+          "id": "E2",
+          "stem": "Welcher Barwert ergibt 5000 € in 4 Jahren bei 3,5 % p.a.?",
+          "solution": "5000 / 1,035^4 ≈ 4398,10 €."
+        },
+        {
+          "id": "E3",
+          "stem": "Vergleiche 2 % vs 2,5 % für 10 Jahre bei 1000 € Start. Welcher Endwert ist höher und warum?",
+          "solution": "2,5 %: 1000×1,025^10 ≈ 1280 > 1000×1,02^10 ≈ 1219. Höherer Faktor wirkt über Jahre immer stärker."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Spickzettel in Sätzen",
+      "items": [
+        "Zinseszins = wiederholtes Multiplizieren desselben Faktors.",
+        "Endwert: K_n = K_0 · (1+i)^n. Barwert: PV = K_n / (1+i)^n.",
+        "Kleine Zinsunterschiede summieren sich über Zeit zu großen Beträgen."
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L03.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M01/pruefungssets/pruefung-zinseszins/M01L03_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 13
+    },
+    "deep_enriched": true,
+    "deep_version": "step-v1"
+  }
+}
