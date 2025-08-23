@@ -1,0 +1,434 @@
+{
+  "id": "M03L03",
+  "title": "Lehrtext – Grundlagen: Effektivzins & Angebotsvergleich (APR/EAR, Gebühren, Disagio) (Zinseszins)",
+  "reading_time_min": 65,
+  "prerequisites": [
+    "M03L01",
+    "M03L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "EAR (Sparen) vs. Kredit-APR (IRR) unterscheiden; Leasing-Cashflows abbilden."
+    },
+    {
+      "level": "Apply",
+      "text": "Leasing vs. Kredit per IRR/PV vergleichen (inkl. Anzahlung, Restwert, Gebühren)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Effekte von Abschlussgebühr, Servicepauschale, Restwertrisiko begründen."
+    },
+    {
+      "level": "Understand",
+      "text": "Unterscheide nominalen Zinssatz, effektiven Jahreszins (EAR) und Effektivzinssatz eines Kredits (APR/IRR)."
+    },
+    {
+      "level": "Apply",
+      "text": "Bestimme Effektivzins durch Cashflow‑IRR bei Gebühren/Disagio."
+    },
+    {
+      "level": "Analyze",
+      "text": "Vergleiche Kreditangebote fair (gleiche Day‑Count/Perioden, gleiche Zahlungszeitpunkte)."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Beurteile Gebührenstrukturen kritisch (Bearbeitungsgebühr, Disagio, Restschuldversicherung)."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Nominal 5% **heißt nicht** automatisch günstig. Entscheidend ist der **Effektivzins**, der **alle Zahlungsströme**\n(Auszahlung, Raten, Gebühren, Disagio) auf einen Jahreszins abbildet. Mathematisch ist das der **interne Zinsfuß (IRR)**."
+    },
+    {
+      "type": "concept",
+      "title": "Begriffe",
+      "text": "- **EAR (i_eff)**: Eff. Jahreszins aus unterjähriger Verzinsung (Sparen): (1+i/m)^m−1.\n- **APR / Effektivzinssatz des Kredits**: Zinssatz r, der **PV aller Cashflows = 0** macht.\n- **Disagio**: Abzug vom Auszahlungsbetrag (z. B. 2%) → geringerer Zufluss heute → Effektivzins steigt.",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "derivation",
+      "title": "IRR‑Gleichung (vereinfacht)",
+      "steps": [
+        "CF_0 (heute, positiv als Zufluss an Kreditnehmer), gefolgt von Raten CF_1…CF_n (negativ).",
+        "Finde r, sodass 0 = CF_0 + CF_1/(1+r) + … + CF_n/(1+r)^n.",
+        "Mit Gebühren/Disagio: CF_0 = Auszahlungsbetrag **nach** Abzug; Raten bleiben unverändert."
+      ],
+      "comment": "In der Praxis numerisch gelöst; wir arbeiten mit Näherungen/Tools."
+    },
+    {
+      "type": "visual",
+      "title": "Cashflow‑Timeline (Kredit)",
+      "ascii": "t=0:  +Auszahlung (nach Disagio/Gebühren)\nt=1..n: −Rate, −Rate, …, −Rate",
+      "caption": "Effektivzins ist der i, der PV der Reihe auf 0 bringt.",
+      "alt_text": "ASCII-Visual: Effektivzins ist der i, der PV der Reihe auf 0 bringt. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Disagio-Effekt",
+      "text": "Nominal 6%, Annuität 5 Jahre, Rate € 237,39/Monat auf Nominal € 12,-\nAuszahlung nur 98% (Disagio 2%) = € 11,76\nEffektivzins r (monatlich) liegt **über** 0,5%/Monat → p.a. effektiv > 6%.\n(Mit IRR‑Tool: r_m ≈ 0,576% → EAR ≈ 7,13%).",
+      "steps": [
+        "Nominal 6%, Annuität 5 Jahre, Rate € 237,39/Monat auf Nominal € 12,",
+        "Auszahlung nur 98% (Disagio 2%) = € 11,",
+        "Effektivzins r (monatlich) liegt **über** 0,5%/Monat → p.a. effektiv > 6%",
+        "Mit IRR‑Tool: r_m ≈ 0,576% → EAR ≈ 7,13%"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Bearbeitungsgebühr einmalig",
+      "text": "Kredit € 10,000, Rate € 193,33/Monat (60 Mon.), nominal 5,5%. Einmalige Gebühr € 150,- sofort.\nEffektivzins steigt leicht (CF_0=+9,850 statt +10,000). (IRR ≈ 5,73% p.a.).",
+      "steps": [
+        "Kredit € 10,000, Rate € 193,33/Monat (60 Mon.), nominal 5,5%. Einmalige Gebühr € 150,- sofort",
+        "Effektivzins steigt leicht (CF_0=+9,850 statt +10,000). (IRR ≈ 5,73% p.a"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Angebotsvergleich",
+      "text": "Angebot A: nominal 4,9%, keine Gebühren. Angebot B: nominal 4,6%, 2% Disagio.\n1) Welche CF_0 setzt du an?\n2) Erwartung: Welches Angebot hat eher höheren Effektivzins?",
+      "solution": [
+        "CF_0=Auszahlung nach Abzug (B geringer).",
+        "B trotz niedriger Nominalrate tendenziell höherer Effektivzins."
+      ],
+      "steps": [
+        "Angebot A: nominal 4,9%, keine Gebühren. Angebot B: nominal 4,6%, 2% Disagio",
+        "Welche CF_0 setzt du an?",
+        "Erwartung: Welches Angebot hat eher höheren Effektivzins?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "EAR bei j=5%, m=12",
+          "hint": "(1+0,05/12)^12−1",
+          "solution": "≈5,12%",
+          "check": {
+            "type": "approx",
+            "expected": 5.12,
+            "tolerance": 0.05,
+            "expr": "5.12"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Was macht Disagio mit CF_0?",
+          "hint": "verringert Zufluss",
+          "solution": "CF_0 kleiner → Effektivzins ↑",
+          "check": {
+            "type": "string_contains",
+            "expected": "kleiner"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "CF_0 kleiner",
+            "Effektivzins ↑"
+          ]
+        },
+        {
+          "prompt": "IRR‑Definition in einem Satz.",
+          "hint": "PV aller CF = 0",
+          "solution": "Nullstellenproblem",
+          "check": {
+            "type": "free_form",
+            "keywords": [
+              "PV",
+              "0"
+            ]
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "Vergleich zweier Kredite (qualitativ + Rechenschritte)",
+          "context": "Beide € 20,- Nominal, 48 Monatsraten. A: nominal 5,2%, keine Gebühren. B: nominal 4,8%, 1,5% Disagio + € 120,- Gebühr.",
+          "subtasks": [
+            {
+              "text": "Stelle CF_0 für A und B auf."
+            },
+            {
+              "text": "Berechne Monatszins nominal und Rate (Annuitätenformel, Skizze)."
+            },
+            {
+              "text": "Setze IRR‑Gleichung (ohne Lösungstool, nur Struktur)."
+            },
+            {
+              "text": "Wer wirkt tendenziell günstiger?"
+            }
+          ],
+          "hints": [
+            "CF_0(A)=20,000; CF_0(B)=20,000−300−120=19,580.",
+            "i_m(A)=0,052/12; i_m(B)=0,048/12. Rate via A=K0·i/(1−(1+i)^{−n}).",
+            "0=CF_0+Σ(−Rate/(1+r)^t).",
+            "A tendenziell günstiger wegen höherem CF_0 bei ähnlicher Rate."
+          ],
+          "solutions": [
+            "CF-Struktur korrekt",
+            "Annuitätenformel skizziert",
+            "IRR‑Ansatz formuliert",
+            "Begründetes Urteil"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "IRR",
+                "Annuität"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "CF-Struktur korrekt",
+            "Annuitätenformel skizziert",
+            "IRR‑Ansatz formuliert",
+            "Begründetes Urteil"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Nominalrate mit Effektivzins verwechseln.",
+        "Gebühren/Disagio nicht in CF_0 eingerechnet.",
+        "EAR (Sparen) und Kredit‑Effektivzins (IRR) durcheinandergebracht."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Effektivzins (APR) ist…",
+          "options": [
+            "Nominalzins",
+            "IRR der Kredit‑Cashflows",
+            "EAR bei monatlicher Verzinsung"
+          ],
+          "answer_index": 1,
+          "rationale": "Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Disagio senkt den Effektivzins.",
+          "answer": false,
+          "rationale": "Senkung von CF_0 → Effektivzins steigt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Senkung von CF_0 → Effektivzins steigt.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Größe gehört **nicht** in CF_0?",
+          "options": [
+            "Auszahlungsbetrag",
+            "Bearbeitungsgebühr",
+            "Zinszahlung der ersten Rate"
+          ],
+          "answer_index": 2,
+          "rationale": "Raten kommen später.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Raten kommen später.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "EAR bei 6% nominal, m=2?",
+          "options": [
+            "6,00%",
+            "6,09%",
+            "6,12%"
+          ],
+          "answer_index": 1,
+          "rationale": "(1+0,03)^2−1.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. (1+0,03)^2−1.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "IRR löst PV=0.",
+          "answer": true,
+          "rationale": "Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gleiche Nominalzinsen, aber Gebühr 2% upfront →",
+          "options": [
+            "gleicher Effektivzins",
+            "höherer Effektivzins",
+            "niedrigerer Effektivzins"
+          ],
+          "answer_index": 1,
+          "rationale": "CF_0 kleiner.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. CF_0 kleiner.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du setzt IRR zur Bewertung von Kreditangeboten ein und verstehst EAR vs. APR."
+    },
+    {
+      "type": "outlook",
+      "text": "Zum Schluss: **Tilgungspläne** und Annuitäten – Raten, Zins‑/Tilgungsanteile, Sondertilgung."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "alternates": [
+      {
+        "title": "Lehrtext – Grundlagen: Effektivzins & Angebotsvergleich (v3, Leasing vs. Kredit) (Zinseszins)",
+        "from": "canonical"
+      }
+    ],
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M03/M03L03.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M03/lehrtexte/grundlagen-zinseszins/M03L03.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": false
+    }
+  }
+}
