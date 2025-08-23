@@ -1,0 +1,334 @@
+{
+  "id": "M02L03",
+  "title": "Lehrtext – Grundlagen: Einfache Verzinsung (linear) – Bankpraxis (Zinseszins)",
+  "reading_time_min": 52,
+  "prerequisites": [
+    "M02L01",
+    "M01L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Zinsen mit Monats-/Tagesanteilen (linear) rechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Lineare Verzinsung vs. Zinseszins begründen."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Auswirkungen der Day-Count-Wahl auf die Zinskosten einschätzen."
+    },
+    {
+      "level": "Remember",
+      "text": "Formeln der linearen Verzinsung kennen: Z=K0·p·t; Kt=K0·(1+p·t)."
+    },
+    {
+      "level": "Apply",
+      "text": "Zinsen für Monate/Tage berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Abgrenzung zur Zinseszins-Rechnung erläutern."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Linear = keine Zinseszinsen; geeignet für kurzfristige Abrechnungen."
+    },
+    {
+      "type": "concept",
+      "title": "Formeln",
+      "text": "Z=K0·p·t; Kt=K0·(1+p·t). t in Jahren (Monate/12; Tage je Konvention).",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "derivation",
+      "title": "Herleitung kurz",
+      "steps": [
+        "Pro Jahr: Z1 = K0·p",
+        "Für t Jahre linear: Z = t·Z1 = K0·p·t",
+        "Endwert: Kt = K0 + Z = K0(1+p·t)"
+      ],
+      "comment": "Ohne Wiederanlage = lineares Wachstum."
+    },
+    {
+      "type": "visual",
+      "title": "Linear vs. exponentiell (ASCII)",
+      "ascii": "Zeit →\nK\n│     exponentiell\n│    ／\n│   ／\n│  ／ linear\n└─────────────",
+      "caption": "Einfache Verzinsung: Gerade; Zinseszins: Kurve.",
+      "alt_text": "ASCII-Visual: Einfache Verzinsung: Gerade; Zinseszins: Kurve. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Monate",
+      "text": "K0=10,000, p=6%, t=9/12 → Z=450; Kt=10,450.",
+      "steps": [
+        "K0=10,000, p=6%, t=9/12",
+        "Z=450; Kt=10,450."
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Tage act/360",
+      "text": "K0=5,000, p=4%, 45 Tage → t=45/360 → Z=25.",
+      "steps": [
+        "K0=5,000, p=4%, 45 Tage",
+        "t=45/360",
+        "Z=25."
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Grundformeln nutzen",
+      "text": "K0=€ 8,000, p=5%, t=__ Monate. Z=€ 400,-\n1) p·t = __\n2) t = __ (in Jahren)\n3) t in Monaten = __",
+      "solution": [
+        "Z/(K0)=400/8000=0,05",
+        "0,05/0,05=1",
+        "12"
+      ],
+      "steps": [
+        "K0=€ 8,000, p=5%, t=__ Monate. Z=€ 400,",
+        "p·t = __",
+        "t = __ (in Jahren",
+        "t in Monaten = __"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Zinsen: K0=€ 12,000, p=3%, t=4/12",
+          "hint": "Z=K0·p·t",
+          "solution": "120",
+          "check": {
+            "type": "numeric",
+            "expected": 120
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Endwert: K0=€ 5,000, p=2%, t=2 Jahre",
+          "hint": "Kt=K0·(1+p·t)",
+          "solution": "5200",
+          "check": {
+            "type": "numeric",
+            "expected": 5200
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Zeitanteil: 90 Tage, act/360",
+          "hint": "t=90/360",
+          "solution": "0,25",
+          "check": {
+            "type": "numeric",
+            "expected": 0.25
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Z als p·t statt K0·p·t berechnen (K0 vergessen).",
+        "Zinseszins statt linearer Ansatz verwendet.",
+        "Tage/Jahr falsch normiert (360/365)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Formel der einfachen Zinsen?",
+          "options": [
+            "Z=K0·p·t",
+            "Z=K0·(1+p)^t − K0",
+            "Z=K0·p^t"
+          ],
+          "answer_index": 0,
+          "rationale": "Linear.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Linear.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Keine Zinseszinsen enthalten.",
+          "answer": true,
+          "rationale": "Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Z für 80 Tage, act/365, K0=12,000, p=5%?",
+          "options": [
+            "131,51",
+            "131,21",
+            "132,88"
+          ],
+          "answer_index": 0,
+          "rationale": "12000·0,05·(80/365)≈131,51.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 12000·0,05·(80/365)≈131,51.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Kt bei K0=6,000, p=5%, t=0,5?",
+          "options": [
+            "6150",
+            "6300",
+            "6500"
+          ],
+          "answer_index": 0,
+          "rationale": "6000·(1+0,025)=6150.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 6000·(1+0,025)=6150.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei p=0 sind Z=0.",
+          "answer": true,
+          "rationale": "Z=K0·0·t=0.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Z=K0·0·t=0.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du rechnest lineare Zinsen sicher."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: Zinszeiten & Zinsmethoden (30/360, act/360, act/365, act/act)."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M02/M02L03.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M02/lehrtexte/grundlagen-zinseszins-2/m02l03_compact_fixed.json",
+        "note": "selected_best_variant"
+      },
+      {
+        "source": "canonical_repo",
+        "path": "v20250822/articles/M02/M02L03.JSON"
+      },
+      {
+        "source": "v20250823_variant",
+        "path": "v20250823/articles/M02/M02L03.JSON"
+      }
+    ],
+    "versionTag": "v20250823-hybrid",
+    "didactics": {
+      "steps": false
+    }
+  }
+}
