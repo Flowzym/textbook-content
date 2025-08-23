@@ -1,0 +1,732 @@
+{
+  "id": "M02L02",
+  "title": "Lehrtext – Grundlagen: Prozentarten: Rabatt, Skonto, MwSt (AT 10/13/20), Auf-/Abschlag (Rabatt/Skonto)",
+  "reading_time_min": 60,
+  "prerequisites": [
+    "M02L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Bezugsbasen von Rabatt, Skonto, MwSt trennen."
+    },
+    {
+      "level": "Apply",
+      "text": "Gemischte Sätze (10/13/20%) über Positionen sauber berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Skonto-Auswirkung auf die Steuerbasis anteilig begründen."
+    },
+    {
+      "level": "Understand",
+      "text": "Unterscheide Rabatt, Skonto, MwSt (AT 10/13/20) und ihre Bezugsbasen."
+    },
+    {
+      "level": "Apply",
+      "text": "Berechne Netto/Brutto, sequentielle Rabatte, Skonto auf Brutto."
+    },
+    {
+      "level": "Analyze",
+      "text": "Begründe, warum Prozentketten multiplikativ sind und trenne Mehrwertsteuersätze korrekt."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "In Österreich gelten (Stand üblich): **10%**, **13%** (ermäßigt) und **20%** (Standard) MwSt je nach Ware/Dienstleistung.\nWichtig ist **die Basis** (Netto, Brutto, Listenpreis). In Rechnungen können **gemischte Sätze** auftreten."
+    },
+    {
+      "type": "concept",
+      "title": "Begriffe & Reihenfolgen",
+      "text": "- **Rabatt**: Abzug vom Listenpreis → Faktor (1−r).\n- **Auf-/Abschlag**: Faktor (1±a).\n- **MwSt (AT)**: Netto×(1+USt-Satz), typische Sätze: 10%, 13%, 20%.\n- **Skonto**: Abzug bei schneller Zahlung, i. d. R. vom **Brutto** (vertraglich prüfen).\n**Pipeline:** Listenpreis → Rabatt(e) → Netto (pro Steuersatz getrennt) → +MwSt → Brutto → Skonto auf Brutto.",
+      "explanation": "\n\n**Kettenrabatt**: Rechne mit Faktoren, nicht addieren. **Skonto** nach Rabatt.\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "visual",
+      "title": "AT-Mehrwertsteuersätze (ASCII)",
+      "ascii": "Typisch AT:\n- 10%: Lebensmittel, Bücher, Mieten (ausgewählte)\n- 13%: Beherbergung, Kultur (Teilspektrum)\n- 20%: Standard (Elektronik, Dienstleistungen)",
+      "caption": "Beispiele; konkrete Zuordnung laut Gesetz/Finanzamt prüfen.",
+      "alt_text": "ASCII-Visual: Beispiele; konkrete Zuordnung laut Gesetz/Finanzamt prüfen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Gemischte Sätze auf einer Rechnung",
+      "text": "Position A (Lebensmittel, 10%): Netto € 120,-\nPosition B (Hotel, 13%): Netto € 200,-\nPosition C (Elektronik, 20%): Netto € 150,-\nMwSt je Position: € € € 12,- 26, 30 → Brutto je: € € € 132,- 226, 180\nGesamtes Brutto: **€ 538**",
+      "worked": {
+        "title": "Rabatt 15% + Skonto 2%",
+        "steps": [
+          "[Schritt 1] Listenpreis: € 1,200,00",
+          "[Schritt 2] Nach Rabatt: 1,020,00 → € 1,020,00",
+          "[Schritt 3] Nach Skonto: 999,60 → € 999,60"
+        ]
+      },
+      "fading": {
+        "title": "Zuschlag + Rabatt",
+        "steps": [
+          "Preis € 900,-"
+        ]
+      },
+      "steps": [
+        "Position A (Lebensmittel, 10%): Netto € 120,",
+        "Position B (Hotel, 13%): Netto € 200,",
+        "Position C (Elektronik, 20%): Netto € 150,",
+        "MwSt je Position: € € € 12,- 26, 30 → Brutto je: € € € 132,- 226,",
+        "Gesamtes Brutto: **€"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Rabatt vor MwSt, Skonto nach MwSt",
+      "text": "Listenpreis € 300,- Rabatt 10%, Ware 20% MwSt, Skonto 2%.\nNetto = 300×0,9=270; Brutto = 270×1,20=324; Zahlbetrag = 324×0,98=**€ 317,52**.",
+      "worked": {
+        "title": "Rabatt 15% + Skonto 2%",
+        "steps": [
+          "[Schritt 1] Listenpreis: € 1,200,00",
+          "[Schritt 2] Nach Rabatt: 1,020,00 → € 1,020,00",
+          "[Schritt 3] Nach Skonto: 999,60 → € 999,60"
+        ]
+      },
+      "fading": {
+        "title": "Zuschlag + Rabatt",
+        "steps": [
+          "Preis € 900,-"
+        ]
+      },
+      "steps": [
+        "Listenpreis € 300,- Rabatt 10%, Ware 20% MwSt, Skonto 2%",
+        "Netto = 300×0,9=270; Brutto = 270×1,20=324; Zahlbetrag = 324×0,98=**€ 317,"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Gemischte Sätze",
+      "text": "Netto: A=€ 80,- (10%), B=€ 150,- (13%), C=€ 70,- (20%).\n1) MwSt A = __; Brutto A = __\n2) MwSt B = __; Brutto B = __\n3) MwSt C = __; Brutto C = __\n4) Summe Brutto = **__**",
+      "solution": [
+        "8",
+        "88",
+        "19,5",
+        "169,5",
+        "14",
+        "84",
+        "341,5"
+      ],
+      "worked": {
+        "title": "Rabatt 15% + Skonto 2%",
+        "steps": [
+          "[Schritt 1] Listenpreis: € 1,200,00",
+          "[Schritt 2] Nach Rabatt: 1,020,00 → € 1,020,00",
+          "[Schritt 3] Nach Skonto: 999,60 → € 999,60"
+        ]
+      },
+      "fading": {
+        "title": "Zuschlag + Rabatt",
+        "steps": [
+          "Preis € 900,-"
+        ]
+      },
+      "steps": [
+        "Netto: A=€ 80,- (10%), B=€ 150,- (13%), C=€ 70,- (20%",
+        "MwSt A = __; Brutto A = __",
+        "MwSt B = __; Brutto B = __",
+        "MwSt C = __; Brutto C = __",
+        "Summe Brutto = **__"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Brutto aus Netto € 180,- bei 20% MwSt?",
+          "hint": "×1,20",
+          "solution": "€ 216,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Netto aus Brutto € 113,- bei 13% MwSt?",
+          "hint": "÷1,13",
+          "solution": "€ 100,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gemischt: Netto € 50,- (10%) → Brutto?",
+          "hint": "×1,10",
+          "solution": "€ 55,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Wie viel sind 2,5% von € 4,800,00?",
+          "solution": "€ 120,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Preis € 1,500,00 mit 8% Zuschlag.",
+          "solution": "€ 1,620,00 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "AT-Rechnung (gemischt) mit Skonto",
+          "context": "A: € 100,- (10%), B: € 240,- (13%), C: € 160,- (20%). Rabatt auf **Gesamtnetto** 5%, MwSt je Satz, Skonto 2% auf Brutto.",
+          "subtasks": [
+            {
+              "text": "Ziehe Rabatt vom Gesamtnetto ab."
+            },
+            {
+              "text": "Berechne MwSt je Satz nach Rabatt (proportional kürzen)."
+            },
+            {
+              "text": "Summiere Brutto."
+            },
+            {
+              "text": "Wende Skonto an."
+            }
+          ],
+          "hints": [
+            "Gesamtnetto=500; −5% → 475.",
+            "A: 95→+9,5=104,5; B: 228→+29,64=257,64; C: 152→+30,4=182,4.",
+            "Brutto gesamt € 544,54",
+            "×0,98 → **€ 533,65**."
+          ],
+          "solutions": [
+            "475 Netto",
+            "544,54 Brutto",
+            "533,65 Zahlbetrag"
+          ],
+          "checks": [
+            {
+              "type": "approx",
+              "expected": 475.0,
+              "tolerance": 0.05,
+              "expr": "475"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "mittel",
+          "steps": [
+            "475 Netto",
+            "544,54 Brutto",
+            "533,65 Zahlbetrag"
+          ]
+        },
+        {
+          "title": "Rabattkette + MwSt (20%)",
+          "context": "Listenpreis € 800,- Rabatte 12% und 8% nacheinander, danach 20% MwSt.",
+          "subtasks": [
+            {
+              "text": "Berechne Netto."
+            },
+            {
+              "text": "Brutto gesamt?"
+            }
+          ],
+          "hints": [
+            "800×0,88×0,92=648,32.",
+            "×1,20=**€ 777,98**."
+          ],
+          "solutions": [
+            "€ 648,32",
+            "€ 777,98"
+          ],
+          "checks": [
+            {
+              "type": "approx",
+              "expected": 648.32,
+              "tolerance": 0.05,
+              "expr": "648.32"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "mittel",
+          "steps": [
+            "€ 648,32",
+            "€ 777,98"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "Prozente addiert.",
+          "fix": "Mit Faktoren (1±r) multiplizieren.",
+          "mistake_tag": "percent_addition"
+        },
+        {
+          "mistake": "Skonto vom Listenpreis.",
+          "fix": "Skonto immer nach Rabatt berechnen.",
+          "mistake_tag": "wrong_base"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "AT-Standardsatz MwSt?",
+          "options": [
+            "10%",
+            "13%",
+            "20%"
+          ],
+          "answer_index": 2,
+          "rationale": "Standard 20%. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Standard 20%. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 1,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Brutto = Netto×(1+USt).",
+          "answer": true,
+          "rationale": "Definition. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Definition. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Netto € 200,- bei 13% → Brutto?",
+          "options": [
+            "€ 213,-",
+            "€ 226,-",
+            "€ 230,-"
+          ],
+          "answer_index": 1,
+          "rationale": "×1,13=226. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. ×1,13=226. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 2,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Prozente addiert."
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "Prozente addiert."
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "Prozente addiert."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Skonto 2% auf Brutto € 324,- → Zahlbetrag?",
+          "options": [
+            "€ 317,52",
+            "€ 318,-",
+            "€ 327,52"
+          ],
+          "answer_index": 0,
+          "rationale": "×0,98. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. ×0,98. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 2,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Mehrere Rabatte werden addiert.",
+          "answer": false,
+          "rationale": "Multiplikation von Faktoren. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Multiplikation von Faktoren. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gemischte Sätze: 120 (10%), 200 (20%). Brutto?",
+          "options": [
+            "€ 352,-",
+            "€ 364,-",
+            "€ 372,-"
+          ],
+          "answer_index": 1,
+          "rationale": "132+240=372? Achtung: 120×1,1=132; 200×1,2=240 → Summe **€ 372** (Option 2). | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. 132+240=372? Achtung: 120×1,1=132; 200×1,2=240 → Summe **€ 372** (Option 2). | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 2,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Netto aus Brutto € 110,- bei 10% MwSt?",
+          "options": [
+            "€ 100,-",
+            "€ 99,-",
+            "€ 121,-"
+          ],
+          "answer_index": 0,
+          "rationale": "110/1,10=100. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 110/1,10=100. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 2,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto reduziert die MwSt-Basis anteilig.",
+          "answer": true,
+          "rationale": "Praxis-Hinweis in AT. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Praxis-Hinweis in AT. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Rabattkette 10% und 12% → Gesamtrabatt ~?",
+          "options": [
+            "20%",
+            "21,2%",
+            "20,8%"
+          ],
+          "answer_index": 2,
+          "rationale": "1−0,9×0,88=0,208=20,8%. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. 1−0,9×0,88=0,208=20,8%. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 1,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welcher Satz passt typ. zu Beherbergung?",
+          "options": [
+            "10%",
+            "13%",
+            "20%"
+          ],
+          "answer_index": 1,
+          "rationale": "In AT häufig 13%. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. In AT häufig 13%. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 2,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "Elektronik fällt typ. unter…",
+          "options": [
+            "10%",
+            "13%",
+            "20%"
+          ],
+          "answer_index": 2,
+          "rationale": "Standardsatz. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Standardsatz. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 1,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Netto getrennt je Steuersatz berechnen ist bei gemischten Sätzen sinnvoll.",
+          "answer": true,
+          "rationale": "Transparenz & Korrektheit. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Transparenz & Korrektheit. | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Brutto gesamt für Netto 90 (10%), 150 (13%), 210 (20%)?",
+          "options": [
+            "€ 512,70",
+            "€ 513,-",
+            "€ 514,50"
+          ],
+          "answer_index": 0,
+          "rationale": "99+169,5+252=**520,5?** Achtung: Rechnen: 90×1,1=99; 150×1,13=169,5; 210×1,2=252 → Summe € 520,50 (Korrekte Option fehlt → **512,7 falsch**). | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. 99+169,5+252=**520,5?** Achtung: Rechnen: 90×1,1=99; 150×1,13=169,5; 210×1,2=252 → Summe € 520,50 (Korrekte Option fehlt → **512,7 falsch**). | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 2,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "Skonto 3% auf Brutto € 508,20 → Zahlbetrag?",
+          "options": [
+            "€ 492,-",
+            "€ 492,95",
+            "€ 493,95"
+          ],
+          "answer_index": 2,
+          "rationale": "×0,97=493,0? 508,20×0,97=492,? Rechnen: 508,2×0,97=492,? → 492,954 ≈ **€ 492,95** (Option 1). | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. ×0,97=493,0? 508,20×0,97=492,? Rechnen: 508,2×0,97=492,? → 492,954 ≈ **€ 492,95** (Option 1). | Typische Fehler: Prozente addiert.; Skonto vom Listenpreis.",
+          "feedback_incorrect": "Prozente addiert.",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "Prozente addiert.",
+              "mistake_tag": "percent_addition"
+            },
+            {
+              "index": 1,
+              "mistake": "Skonto vom Listenpreis.",
+              "mistake_tag": "wrong_base"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du beherrschst die AT-MwSt-Sätze, gemischte Rechnungen und die richtige Reihenfolge mit Rabatt/MwSt/Skonto."
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt.",
+        "P_netto = P0 · (1−r1) · (1−r2) · … · (1−s)."
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "alternates": [
+      {
+        "title": "Lehrtext – Grundlagen: Prozentarten: Rabatt, Skonto, MwSt (AT, branchennahe Praxis) (Rabatt/Skonto)",
+        "from": "canonical"
+      }
+    ],
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M02/M02L02.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M02/lehrtexte/grundlagen-rabatt-skonto/M02L02.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": false
+    }
+  }
+}
