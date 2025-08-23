@@ -1,0 +1,271 @@
+{
+  "id": "M12L03",
+  "title": "Uplift-Modelle – T/S/X/DR & Policy (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M12L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Uplift & Policy abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Uplift modelliert…",
+          "options": [
+            "Outcome direkt",
+            "Treatment-Wirkung Δ(x)",
+            "Propensity"
+          ],
+          "answer_index": 1,
+          "rationale": "Δ(x)=m1(x)-m0(x).",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Δ(x)=m1(x)-m0(x).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Qini/CUVE bewerten Policy-Mehrwert.",
+          "answer": true,
+          "rationale": "Über Random-Linie.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Über Random-Linie.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "DR-Learner ist…",
+          "options": [
+            "nicht robust",
+            "doppelt robust",
+            "nur für lineare Daten"
+          ],
+          "answer_index": 1,
+          "rationale": "Robust gg. Modellfehler.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Robust gg. Modellfehler.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "T-Learner nutzt…",
+          "options": [
+            "ein Modell",
+            "zwei Modelle m1,m0",
+            "keine Modelle"
+          ],
+          "answer_index": 1,
+          "rationale": "Zweischätzer.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zweischätzer.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "S-Learner kann Treatment-Effekt unterschätzen, wenn T selten.",
+          "answer": true,
+          "rationale": "Dominanz der Null-Klasse.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Dominanz der Null-Klasse.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Qini@q misst…",
+          "options": [
+            "ROC",
+            "Mehrgewinn ggü. Random bei Anteil q",
+            "RMSE"
+          ],
+          "answer_index": 1,
+          "rationale": "Policy-Metrik.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Policy-Metrik.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Stabilitätscheck:",
+          "options": [
+            "zeitliche Validierung",
+            "nur Train-Score",
+            "nur AUC"
+          ],
+          "answer_index": 0,
+          "rationale": "Out-of-time.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Out-of-time.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Guardrails (z. B. Churn) gehören in die Policy-Entscheidung.",
+          "answer": true,
+          "rationale": "Nebenbedingungen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nebenbedingungen.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Fairness/Compliance…",
+          "options": [
+            "irrelevant",
+            "prüfen (z. B. sensible Merkmale)",
+            "nur in Forschung"
+          ],
+          "answer_index": 1,
+          "rationale": "Praxisrelevant.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Praxisrelevant.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxisfalle:",
+          "options": [
+            "Cutoff ohne ROI/Unsicherheit",
+            "Qini berichten",
+            "Validierung"
+          ],
+          "answer_index": 0,
+          "rationale": "Wirtschaft ignoriert.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wirtschaft ignoriert.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Segmentgröße beeinflusst Varianz der CATE-Schätzung.",
+          "answer": true,
+          "rationale": "Power.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Power.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Policy-Learning priorisiert…",
+          "options": [
+            "höchste CATE×Wertbeitrag",
+            "zufällige Auswahl",
+            "größte Kunden"
+          ],
+          "answer_index": 0,
+          "rationale": "Optimierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optimierung.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Uplift & Policy: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

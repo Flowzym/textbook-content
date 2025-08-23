@@ -1,0 +1,271 @@
+{
+  "id": "M01L03_v2",
+  "title": "Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (v2: Prüfungssets A–D)",
+  "reading_time_min": 39,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Potenzen/Wurzeln/Zins abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft Potenzen & Wurzeln mit gezielten Prüfungssets A–D. Focus auf Rechengesetze, wissenschaftliche Notation und Zinseszins-Anwendungen."
+    },
+    {
+      "type": "concept",
+      "title": "Prüfungssets-Übersicht",
+      "text": "- **Set A**: Grundlagen (Potenzgesetze, Wurzelnotation, wiss. Notation)  \n- **Set B**: Methoden/Regeln (Zinseszins, negativer Exponent, Gesetze)  \n- **Set C**: Diagnose/Fehler (Vorzeichen-Fallen, Wurzeln, Inflation)  \n- **Set D**: Praxis & Fallen (Wachstumsprozesse, Monatszinsen, Größenordnungen)",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "(2^3·2^4)/2^2 =",
+          "options": [
+            "2^9",
+            "2^5",
+            "2^3"
+          ],
+          "answer_index": 1,
+          "rationale": "Exponenten addieren/subtrahieren → 2^(3+4−2)=2^5.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Exponenten addieren/subtrahieren → 2^(3+4−2)=2^5.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "√a = a^(1/2).",
+          "answer": true,
+          "rationale": "Definition.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wiss. Notation: 0,00072 =",
+          "options": [
+            "7,2·10^−4",
+            "72·10^−5",
+            "0,72·10^−3"
+          ],
+          "answer_index": 0,
+          "rationale": "Komma vier Stellen.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Komma vier Stellen.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Regeln",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Zinseszins: € 5,- zu 3% für 4 Jahre ≈",
+          "options": [
+            "5,000·1,12",
+            "5,000·1,1255",
+            "5,000·1,03^4"
+          ],
+          "answer_index": 2,
+          "rationale": "Formel anwenden.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Formel anwenden.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "a^(−n)=1/a^n (a≠ 0).",
+          "answer": true,
+          "rationale": "Negativer Exponent = Kehrwert.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Negativer Exponent = Kehrwert.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Aussage ist falsch?",
+          "options": [
+            "(ab)^n=a^n b^n",
+            "a^m+a^n=a^(m+n)",
+            "(a^m)^n=a^(mn)"
+          ],
+          "answer_index": 1,
+          "rationale": "Summe ist kein Gesetz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Summe ist kein Gesetz.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Fehler",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fehlerdiagnose: 10^−3 = −0,001?",
+          "options": [
+            "stimmt",
+            "falsch: 0,001",
+            "kommt auf a an"
+          ],
+          "answer_index": 1,
+          "rationale": "Negativ im Exponenten ≠ negatives Vorzeichen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Negativ im Exponenten ≠ negatives Vorzeichen.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Wurzel aus negativer Zahl ist im Reellen nicht definiert.",
+          "answer": true,
+          "rationale": "Kein reelles Ergebnis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein reelles Ergebnis.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Inflation 6% p.a. über 3 Jahre ≈",
+          "options": [
+            "18%",
+            "19,1%",
+            "16%"
+          ],
+          "answer_index": 1,
+          "rationale": "(1,06)^3−1.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. (1,06)^3−1.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: Stromverbrauch sinkt jährlich 4% über 3 Jahre. Faktor?",
+          "options": [
+            "(0,96)^3",
+            "1−0,04·3",
+            "(1,04)^−3"
+          ],
+          "answer_index": 0,
+          "rationale": "Exponentiell.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Exponentiell.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Monatszinsen führen bei gleichem Nominalsatz zu etwas höherem Endwert als Jahreszinsen.",
+          "answer": true,
+          "rationale": "Mehrfache Verzinsung.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehrfache Verzinsung.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Größenordnung: 3,2 Mio. ≈",
+          "options": [
+            "3,2·10^5",
+            "3,2·10^6",
+            "0,32·10^7"
+          ],
+          "answer_index": 1,
+          "rationale": "Million = 10^6.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Million = 10^6.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Potenzen/Wurzeln/Zins: Begriffe, Regeln, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

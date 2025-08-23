@@ -1,0 +1,286 @@
+{
+  "id": "M01L03",
+  "title": "Lehrtext – Grundlagen: Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (Zinseszins)",
+  "reading_time_min": 58,
+  "prerequisites": [
+    "M01L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Potenzen a^n, Wurzeln √a, wissenschaftliche Notation; Rechengesetze."
+    },
+    {
+      "level": "Understand",
+      "text": "Zusammenhang Potenz↔Wurzel↔Logarithmus (nur auf Intuitionsebene)."
+    },
+    {
+      "level": "Apply",
+      "text": "Mit Potenzgesetzen rechnen; Größenordnungen einschätzen; Zinseszins berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Wachstumsprozesse vs. lineare Zuwächse unterscheiden; Fehler in Einheiten/Notation vermeiden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Potenzen modellieren **Wachstum** – z. B. Zinseszins, Skaleneffekte, Inflationsrechnungen.\nDu lernst die Rechengesetze, sicher zu schreiben (Notation) und typische Stolpersteine zu vermeiden."
+    },
+    {
+      "type": "concept",
+      "title": "Definitionen & Gesetze",
+      "text": "- a^n = a·a·…·a (n-mal), a^0=1 (a≠ 0), a^(−n)=1/a^n.  \n- √a ist die Zahl, deren Quadrat a ist (a≥0).  \n- Gesetze (a>0): a^m·a^n=a^(m+n); a^m/a^n=a^(m−n); (a^m)^n=a^(mn); (ab)^n=a^n b^n.",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "derivation",
+      "title": "Schritt für Schritt – Zinseszins & Notation",
+      "steps": [
+        "Wissenschaftliche Notation: 3,450.000 = 3,45·10^6; 0,00072 = 7,2·10^−4.",
+        "Zinseszins: Endwert K_n = K_0·(1+i)^n; Effektiv bei monatlich: K_n = K_0·(1+i/12)^(12n).",
+        "Wurzel als Potenz: √a = a^(1/2); k-te Wurzel: a^(1/k)."
+      ],
+      "comment": "Einheiten nicht vergessen (€, Stück, …)."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Exponentielles vs. lineares Wachstum",
+      "ascii": "y ^\n  |         /   (exp)\n  |        /\n  |       /\n  |______/____ (linear)\n       t→",
+      "caption": "Exponential wächst schneller; bei Zinsen entscheidend.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Exponential wächst schneller; bei Zinsen entscheidend.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Zinseszins",
+      "text": "€ 5,- zu 4% p.a. nach 5 Jahren: K=5000·(1,04)^5 ≈ € 6,08  \nMonatsweise Verzinsung mit gleichem Nominalsatz: 5000·(1+0,04/12)^(60) ≈ € 6,10 (leicht höher).",
+      "steps": [
+        "€ 5,- zu 4% p.a. nach 5 Jahren: K=5000·(1,04)^5 ≈ € 6,",
+        "Monatsweise Verzinsung mit gleichem Nominalsatz: 5000·(1+0,04/12)^(60) ≈ € 6,10 (leicht höher"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Potenzgesetze",
+      "text": "Vereinfache: (2^3·2^4)/(2^2) · (3^2)^3",
+      "solution": [
+        "2^(3+4−2)·3^(6)=2^5·3^6.",
+        "Gesetze strikt anwenden."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Schreibe 0,00035 in wiss. Notation.",
+          "hint": "Verschiebe Komma",
+          "solution": "3,5·10^−4",
+          "check": {
+            "type": "string_contains",
+            "expected": "10^−4"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Berechne √144.",
+          "hint": "Quadratwurzel",
+          "solution": "12",
+          "check": {
+            "type": "numeric",
+            "expected": 12
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Zinseszins: € 2,- zu 3% für 10 Jahre?",
+          "hint": "Formel einsetzen",
+          "solution": "≈ 2,000·1,03^10 ≈ € 2,69 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 1.343916,
+            "tolerance": 0.05,
+            "expr": "1.03^10"
+          },
+          "covers_outcomes": [
+            0,
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Inflationsanpassung",
+          "context": "Preisindex steigt jährlich um 6%.",
+          "subtasks": [
+            {
+              "text": "Wie viel teurer nach 3 Jahren?"
+            },
+            {
+              "text": "Wie viel Reallohn sinkt bei nominal +3%/a?"
+            },
+            {
+              "text": "Erkläre exponentiellen Effekt."
+            }
+          ],
+          "hints": [
+            "(1,06)^3−1 ≈ 19,1%.",
+            "Real ≈ (1,03/1,06)−1 ≈ −2,8%/a.",
+            "Zins-auf-Zins."
+          ],
+          "solutions": [
+            "Rechnung korrekt",
+            "Interpretation real/nominal",
+            "Exp-Effekt erklärt"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Inflation",
+                "real",
+                "nominal"
+              ]
+            }
+          ],
+          "covers_outcomes": [
+            0,
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Rechnung korrekt",
+            "Interpretation real/nominal",
+            "Exp-Effekt erklärt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "10^−3 mit −0,001 verwechseln (richtig: 0,001).",
+        "Wurzeln von negativen Zahlen im Reellen nicht definiert.",
+        "Zinseszins linear gerechnet (i·n) statt (1+i)^n."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Was gilt?",
+          "options": [
+            "a^m·a^n=a^(m+n)",
+            "a^m+a^n=a^(m+n)",
+            "a^m/a^n=a^(m+n)"
+          ],
+          "answer_index": 0,
+          "rationale": "Produktregel.",
+          "covers_outcomes": [
+            0,
+            2
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Produktregel.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "√a = a^(1/2).",
+          "answer": true,
+          "rationale": "Potenzdarstellung.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Potenzdarstellung.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Zinseszinsformel lautet…",
+          "options": [
+            "K=K0·(1+i)^n",
+            "K=K0·(1+i·n)",
+            "K=K0·(1−i)^n"
+          ],
+          "answer_index": 0,
+          "rationale": "Standard.",
+          "covers_outcomes": [
+            0,
+            2
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Standard.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du rechnest sicher mit Potenzen/Wurzeln und setzt sie bei Zinsen & Wachstum korrekt ein."
+    },
+    {
+      "type": "outlook",
+      "text": "Zum Abschluss: **Lineare Gleichungen & Ungleichungen** – Textaufgaben in Kostenrechnung lösen."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

@@ -1,0 +1,210 @@
+{
+  "id": "M09L03",
+  "title": "ETS – State Space, Damped Trend, Auswahl (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M09L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte ETS‑Auswahl abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ETS steht für…",
+          "options": [
+            "Error, Trend, Season",
+            "Exponential Trend Smoothing",
+            "Error, Time, Signal"
+          ],
+          "answer_index": 0,
+          "rationale": "Akkonym.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Akkonym."
+        },
+        {
+          "type": "true_false",
+          "question": "Damped Trend reduziert Langfrist‑Extrapolation.",
+          "answer": true,
+          "rationale": "φ<1.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. φ<1."
+        },
+        {
+          "type": "single_choice",
+          "question": "ETS(A,N,N) entspricht…",
+          "options": [
+            "SES",
+            "Holt",
+            "Holt‑Winters"
+          ],
+          "answer_index": 0,
+          "rationale": "Ohne Trend/Saison.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ohne Trend/Saison."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wann ETS(A,A_d,A)?",
+          "options": [
+            "starker Trend mit Dämpfung + additive Saison",
+            "keine Saison, schwacher Trend",
+            "nur Saison"
+          ],
+          "answer_index": 0,
+          "rationale": "Praxisnah.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Praxisnah."
+        },
+        {
+          "type": "true_false",
+          "question": "Multiplikative Fehler sind problematisch bei Nullen.",
+          "answer": true,
+          "rationale": "Division durch 0/Skala.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Division durch 0/Skala."
+        },
+        {
+          "type": "single_choice",
+          "question": "Automatische Auswahl basiert oft auf…",
+          "options": [
+            "AICc/BIC",
+            "nur RMSE",
+            "MAPE"
+          ],
+          "answer_index": 0,
+          "rationale": "Informationskriterien.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Informationskriterien."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Vorteil Dämpfung:",
+          "options": [
+            "aggressivere Fernprognosen",
+            "konservativere, stabilere Fernhorizonte",
+            "kein Effekt"
+          ],
+          "answer_index": 1,
+          "rationale": "Realistischer.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Realistischer."
+        },
+        {
+          "type": "true_false",
+          "question": "ETS verallgemeinert Holt‑Winters als State‑Space‑Modell.",
+          "answer": true,
+          "rationale": "Rahmenwerk.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Rahmenwerk."
+        },
+        {
+          "type": "single_choice",
+          "question": "Additiv vs. multiplikativ in ETS richtet sich nach…",
+          "options": [
+            "Amplitude konstant vs. prozentual",
+            "Zufall",
+            "immer multiplikativ"
+          ],
+          "answer_index": 0,
+          "rationale": "Analog HW.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Analog HW."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Vergleich ETS vs. ARIMA fair?",
+          "options": [
+            "verschiedene Zeitfenster",
+            "gleiches Fenster/Backtest",
+            "nur auf Train‑Fehler"
+          ],
+          "answer_index": 1,
+          "rationale": "Gleiche Basis.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gleiche Basis."
+        },
+        {
+          "type": "true_false",
+          "question": "Bias‑Kontrolle bleibt wichtig, auch bei ETS.",
+          "answer": true,
+          "rationale": "Systematik.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Systematik."
+        },
+        {
+          "type": "single_choice",
+          "question": "Häufiger Fehler:",
+          "options": [
+            "Dämpfung ignoriert",
+            "Residuen geprüft",
+            "AICc genutzt"
+          ],
+          "answer_index": 0,
+          "rationale": "Fernhorizont zu optimistisch.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fernhorizont zu optimistisch."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken ETS‑Auswahl: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

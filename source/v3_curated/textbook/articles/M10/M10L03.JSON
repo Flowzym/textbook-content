@@ -1,0 +1,282 @@
+{
+  "id": "M10L03",
+  "title": "Lehrtext – Grundlagen: Causal Impact mit strukturellen Zeitreihen (BSTS) – Pre/Post, Controls & Effektschätzung (Statistik)",
+  "reading_time_min": 108,
+  "prerequisites": [
+    "M10L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Strukturelle Komponenten (Level/Trend/Saison), Regressoren, Pre/Post‑Segment."
+    },
+    {
+      "level": "Apply",
+      "text": "Counterfactual per Posterior‑Prognose ableiten; Punkt‑ und kumulative Effekte interpretieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Kontrollen auswählen (Korrelation/Stationarität), Placebo‑Tests/Robustheit bewerten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Wenn keine gute Kontrollgruppe existiert, hilft ein **Bayesianisches Strukturelles Zeitreihenmodell (BSTS)**:\nEs erklärt den Pre‑Period‑Verlauf und erzeugt einen **posterioren Counterfactual** für die Post‑Perioden – daraus entsteht ein Kausaleffekt."
+    },
+    {
+      "type": "concept",
+      "title": "BSTS‑Bausteine",
+      "text": "- **Lokales Niveau/Trend** (stochastisch): flexibler Verlauf.  \n- **Saison‑Komponente** (falls nötig).  \n- **Regressoren** (Kontrollreihen), optional **Spike‑&‑Slab‑Selektion**.  \n- **Pre‑/Post‑Split**: Maßnahme startet bei t₀; Pre trainiert Modell, Post dient zum Effektvergleich.",
+      "explanation": "\n\n**Decision-Hints:**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in Einheiten^2, Standardabweichung in Einheiten."
+    },
+    {
+      "type": "derivation",
+      "title": "Ablauf – Schritt für Schritt",
+      "steps": [
+        "1) Wähle Pre‑Fenster (lang genug, stabil) und Post‑Fenster (Effektdauer).",
+        "2) Kreiere Kandidaten‑Kontrollreihen (ähnliche, nicht betroffene SKUs/Filialen).",
+        "3) Fit BSTS auf Pre; erzeuge Posterior‑Prognose für Post (Counterfactual).",
+        "4) **Punktweise Effekte**: y_post − ŷ_cf; **kumulative Effekte**: Summe über Post.",
+        "5) Berichte Posterior‑Intervalle und die Wahrscheinlichkeit P(Effekt>0)."
+      ],
+      "comment": "Gute Kontrollen erhöhen **Erklärungsgrad** im Pre‑Fenster."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Counterfactual via BSTS",
+      "ascii": "y ^   Pre                 Post\n  |   *****Model-Fit***** |  Counterfactual (Band)\n  |   *   *   *   *   *   |   ~~~~~~~~\n  |                        \\__ tatsächliche Serie\n  +----------------------------------------------> t\n                     t0  (Start Maßnahme)",
+      "caption": "Posterior‑Prognose bildet den hypothetischen Verlauf ohne Maßnahme.",
+      "alt_text": "ASCII-Visual: Posterior‑Prognose bildet den hypothetischen Verlauf ohne Maßnahme. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Kampagneneffekt (kumulativ)",
+      "text": "Post‑Fenster 8 Wochen. Posteriorer kumulativer Effekt = +52 k€ (95%‑Intervall [+20; +82]).  \nP(Effekt>0)=0,992. **Interpretation**: Sehr wahrscheinlich positiver Effekt; Planung darf mit +52 k€ rechnen (mit Unsicherheitsband).",
+      "steps": [
+        "Post‑Fenster 8 Wochen. Posteriorer kumulativer Effekt = +52 k€ (95%‑Intervall [+20; +82]",
+        "P(Effekt>0)=0,992. **Interpretation**: Sehr wahrscheinlich positiver Effekt; Planung darf mit +52 k€ rechnen (mit Unsicherheitsband"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Kontrolle auswählen",
+      "text": "a) Welche Eigenschaften sollen gute Regressoren haben? b) Was vermeidest du?",
+      "solution": [
+        "Hohe Korrelation im Pre‑Fenster, keine Beeinflussung durch Maßnahme, ähnliche Saisonalität/Kalender.",
+        "Post‑Leakage, eigene Behandlungswirkungen, nichtstationäre Brüche."
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Was ist das ‚Counterfactual‘ hier?",
+          "hint": "Posterior‑Prognose der Zielgröße ohne Maßnahme",
+          "solution": "ŷ_cf(t) im Post‑Fenster",
+          "check": {
+            "type": "string_contains",
+            "expected": "Posterior"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Warum langes Pre‑Fenster?",
+          "hint": "Modell kalibrieren",
+          "solution": "stabilere Komponenten/Regressorgewichte",
+          "check": {
+            "type": "string_contains",
+            "expected": "Pre"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Was berichten neben Punktschätzung?",
+          "hint": "Posterior‑Intervall & P(Effekt>0)",
+          "solution": "entscheidungsrelevant",
+          "check": {
+            "type": "string_contains",
+            "expected": "P(Effekt>0)"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Filialkampagne bewerten",
+          "context": "Daten: Wochenumsätze einer Filiale, 52 Wochen Pre, 8 Wochen Post; 5 Kandidaten‑Kontrollreihen.",
+          "subtasks": [
+            {
+              "text": "Wähle 2–3 gute Kontrollen (Kriterien nennen)."
+            },
+            {
+              "text": "Skizziere Pre‑Fit‑Güte (R²_pre)."
+            },
+            {
+              "text": "Berichte kumulativen Effekt + 95%‑Intervall + P(Effekt>0)."
+            }
+          ],
+          "hints": [
+            "Korrelation/Stationarität prüfen.",
+            "Gute Pre‑Erklärung dokumentieren.",
+            "Kommuniziere Unsicherheit klar."
+          ],
+          "solutions": [
+            "Kontrollen begründet",
+            "Fit‑Güte notiert",
+            "Effekt sauber berichtet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Kontrolle",
+                "Posterior",
+                "kumulativ"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Kontrollen begründet",
+            "Fit‑Güte notiert",
+            "Effekt sauber berichtet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Kontrollreihen indirekt betroffen (Leakage).",
+        "Zu kurzes Pre‑Fenster → schwacher Fit.",
+        "Nur Punktwert berichten, Intervalle/Posterior‑Wahrscheinlichkeit fehlen."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Pre/Post‑Split dient…",
+          "options": [
+            "nur zur Dekomposition",
+            "zur Trennung von Training und Effektmessung",
+            "zur Saisondetektion"
+          ],
+          "answer_index": 1,
+          "rationale": "Training vor, Wirkung nach t₀.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Training vor, Wirkung nach t₀.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "P(Effekt>0) ist eine direkte bayesianische Wahrscheinlichkeit.",
+          "answer": true,
+          "rationale": "Posterior‑Masse.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Posterior‑Masse.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gute Kontrollen sind…",
+          "options": [
+            "hoch korreliert im Pre, nicht betroffen im Post",
+            "beliebig",
+            "nur gleiche Mittelwerte"
+          ],
+          "answer_index": 0,
+          "rationale": "Qualitätskriterium.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Qualitätskriterium.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du nutzt BSTS, um Counterfactuals zu erzeugen, und berichtest Effekte samt Unsicherheit entscheidungsreif."
+    },
+    {
+      "type": "outlook",
+      "text": "Zum Abschluss: **Experimente & Uplift** – Bayes‑A/B‑Tests, sequentielle Entscheidungen, Heterogenität (Uplift‑Modelle)."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

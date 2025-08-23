@@ -1,0 +1,271 @@
+{
+  "id": "M11L01",
+  "title": "SC I – Prinzip, Donor, Placebos (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M11L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Synthetische Kontrolle abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wozu dient der Donor-Pool?",
+          "options": [
+            "Counterfactual aus mehreren Einheiten bilden",
+            "nur Varianz schätzen",
+            "Post-Perioden definieren"
+          ],
+          "answer_index": 0,
+          "rationale": "Konvexe Mischung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konvexe Mischung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "SC-Gewichte sind nichtnegativ und summieren zu 1.",
+          "answer": true,
+          "rationale": "Konvexe Kombination.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konvexe Kombination.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "RMSPE bewertet…",
+          "options": [
+            "Pre-Fit-Fehler",
+            "Post-Gap",
+            "Kovarianz"
+          ],
+          "answer_index": 0,
+          "rationale": "Passgüte im Pre.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Passgüte im Pre.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Gap definiert als…",
+          "options": [
+            "ŷ_syn − y",
+            "y − ŷ_syn",
+            "y + ŷ_syn"
+          ],
+          "answer_index": 1,
+          "rationale": "Differenz tatsächlich minus synthetisch.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Differenz tatsächlich minus synthetisch.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein großer Post-Gap ist nur aussagekräftig bei gutem Pre-Fit.",
+          "answer": true,
+          "rationale": "Sonst Schein-Effekt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sonst Schein-Effekt.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Placebo-in-space bedeutet…",
+          "options": [
+            "falsches t0",
+            "so tun als wären andere Einheiten behandelt",
+            "Bootstrap"
+          ],
+          "answer_index": 1,
+          "rationale": "Inference über Vergleichsverteilung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Inference über Vergleichsverteilung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Kovariaten-Balance prüft…",
+          "options": [
+            "Gleichheit wichtiger Merkmale im Pre",
+            "nur Mittelwerte im Post",
+            "nur Varianz"
+          ],
+          "answer_index": 0,
+          "rationale": "Balance-Tabelle.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Balance-Tabelle.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Leakage im Donor-Pool kann Effekte verzerren.",
+          "answer": true,
+          "rationale": "Indirekte Betroffenheit vermeiden.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Indirekte Betroffenheit vermeiden.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "In-time-Placebo ist…",
+          "options": [
+            "falsches t0 in derselben Einheit",
+            "andere Einheit behandeln",
+            "Permutation der Gewichte"
+          ],
+          "answer_index": 0,
+          "rationale": "Robustheit über Zeit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Robustheit über Zeit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Falle:",
+          "options": [
+            "zu kurzes Pre-Fenster",
+            "Balance prüfen",
+            "Placebos berichten"
+          ],
+          "answer_index": 0,
+          "rationale": "Instabile Gewichte.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Instabile Gewichte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Negative Gewichte sind in klassischer SC nicht zulässig.",
+          "answer": true,
+          "rationale": "Nichtnegativitätsrestriktion.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nichtnegativitätsrestriktion.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Dokumentiere immer…",
+          "options": [
+            "nur Punktwert",
+            "Pre-RMSPE, Gap, Placebos",
+            "nur ROI"
+          ],
+          "answer_index": 1,
+          "rationale": "Reproduzierbarkeit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Reproduzierbarkeit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Synthetische Kontrolle: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

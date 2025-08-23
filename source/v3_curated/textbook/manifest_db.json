@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2025-08-19T15:19:38.035174Z",
+  "bucket": "textbook",
+  "chaptersInsertedOrUpdated": 12,
+  "sectionsInsertedOrUpdated": 48,
+  "sampleSections": [
+    {
+      "id": "M01L01",
+      "title": "Lehrtext – Grundlagen: Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (Rabatt/Skonto)",
+      "file_path": "articles/M01/M01L01.JSON"
+    },
+    {
+      "id": "M01L02",
+      "title": "Lehrtext – Grundlagen: Brüche & Dezimalzahlen – Umwandeln, Rechnen, Anteile & Prozente (Zinseszins)",
+      "file_path": "articles/M01/M01L02.JSON"
+    },
+    {
+      "id": "M01L03",
+      "title": "Lehrtext – Grundlagen: Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (Zinseszins)",
+      "file_path": "articles/M01/M01L03.JSON"
+    },
+    {
+      "id": "M01L04",
+      "title": "Lehrtext – Grundlagen: Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (Rabatt/Skonto)",
+      "file_path": "articles/M01/M01L04.JSON"
+    },
+    {
+      "id": "M02L01",
+      "title": "Lehrtext – Grundlagen: Prozentrechnung – Grundlagen (mit KPI-Praxis) (Rabatt/Skonto)",
+      "file_path": "articles/M02/M02L01.JSON"
+    },
+    {
+      "id": "M02L02",
+      "title": "Lehrtext – Grundlagen: Prozentarten: Rabatt, Skonto, MwSt (AT, branchennahe Praxis) (Rabatt/Skonto)",
+      "file_path": "articles/M02/M02L02.JSON"
+    },
+    {
+      "id": "M02L03",
+      "title": "Lehrtext – Grundlagen: Einfache Verzinsung (linear) – Bankpraxis (Zinseszins)",
+      "file_path": "articles/M02/M02L03.JSON"
+    },
+    {
+      "id": "M02L04",
+      "title": "Lehrtext – Grundlagen: Zinszeiten & Zinsmethoden – Praxisfälle (inkl. Schaltjahr) (Zinseszins)",
+      "file_path": "articles/M02/M02L04.JSON"
+    },
+    {
+      "id": "M03L01",
+      "title": "Lehrtext – Grundlagen: Zinseszins – Grundlagen & Wachstumsfaktoren (v3, Praxis: geometrische Abschreibung)",
+      "file_path": "articles/M03/M03L01.JSON"
+    },
+    {
+      "id": "M03L02",
+      "title": "Lehrtext – Grundlagen: Zahlungsreihen I: Sparrenten, Entnahmerenten & Staffelmieten (v3) (Zinseszins)",
+      "file_path": "articles/M03/M03L02.JSON"
+    }
+  ]
+}

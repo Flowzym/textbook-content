@@ -1,0 +1,287 @@
+{
+  "id": "M03L03",
+  "title": "Lehrtext – Grundlagen: Effektivzins & Angebotsvergleich (v3, Leasing vs. Kredit) (Zinseszins)",
+  "reading_time_min": 19,
+  "prerequisites": [
+    "M03L01",
+    "M03L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "EAR (Sparen) vs. Kredit-APR (IRR) unterscheiden; Leasing-Cashflows abbilden."
+    },
+    {
+      "level": "Apply",
+      "text": "Leasing vs. Kredit per IRR/PV vergleichen (inkl. Anzahlung, Restwert, Gebühren)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Effekte von Abschlussgebühr, Servicepauschale, Restwertrisiko begründen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Leasingzahlungen sind **Cashflows** ähnlich einer Rente, ggf. mit Anzahlung und Schlussrate (Restwert). Der faire Vergleich erfolgt über **IRR/Barwert**."
+    },
+    {
+      "type": "concept",
+      "title": "Leasing-CF-Struktur",
+      "text": "CF_0: −Anzahlung + evtl. Förderprämie; Perioden: −Rate (ggf. inkl. Service); letzte Periode: −Schlussrate/Restwert oder +Restwert bei Verkauf.",
+      "explanation": "\n\n**Decision-Hints:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: K = K0·(1+i)^n.\n- Abzinsen bei Barwertaufgaben: K0 = K/(1+i)^n."
+    },
+    {
+      "type": "visual",
+      "title": "Timeline Leasing vs. Kredit",
+      "ascii": "t=0: +Auszahlung (Kredit) / −Anzahlung (Leasing); t=1..n: −Rate; t=n: Ballon/Restwert",
+      "caption": "Hinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Hinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Leasingvergleich (IRR)",
+      "text": "Objekt € 30,- Option A: Kredit, i_m=0,4%/Monat, n=48, Rate ≈ € 678,- Option B: Leasing: Anzahlung € 3,000, 48× € 520,- Schlussrate € 6,-\nA: APR via Kreditformel/IRR ≈ 4,9–5,0% p.a. B: IRR der Leasing‑CFs ≈ **6–7% p.a.** → A tendenziell günstiger.\n(Genauer Wert hängt von Gebühren/Serviceanteilen ab.)",
+      "steps": [
+        "Objekt € 30,- Option A: Kredit, i_m=0,4%/Monat, n=48, Rate ≈ € 678,- Option B: Leasing: Anzahlung € 3,000, 48× € 520,- Schlussrate € 6,",
+        "A: APR via Kreditformel/IRR ≈ 4,9–5,0% p.a. B: IRR der Leasing‑CFs ≈ **6–7% p.a.** → A tendenziell günstiger",
+        "Genauer Wert hängt von Gebühren/Serviceanteilen ab"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – PV‑Vergleich (Diskont i=5% p.a.)",
+      "text": "a) Setze CFs für Leasing: t=0 −3,000; t=1..48 −520; t=48 zusätzlich −6,000.\nb) Diskontiere mit Monatszins ~0,05/12.\nc) Vergleiche mit PV der Kreditzahlungen.",
+      "solution": [
+        "CF‑Liste korrekt",
+        "PV_Monatszins ≈ 0,004167",
+        "Entscheidung anhand der kleineren PV"
+      ],
+      "steps": [
+        "a) Setze CFs für Leasing: t=0 −3,000; t=1..48 −520; t=48 zusätzlich −6,",
+        "b) Diskontiere mit Monatszins ~0,05/",
+        "c) Vergleiche mit PV der Kreditzahlungen"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Was macht eine höhere Schlussrate beim Leasing mit der laufenden Rate?",
+          "hint": "senkt Rate, verschiebt Last ans Ende",
+          "solution": "APR kann steigen",
+          "check": {
+            "type": "free_form",
+            "keywords": [
+              "Schlussrate",
+              "verschiebt"
+            ]
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gehört Servicepauschale in CF?",
+          "hint": "ja",
+          "solution": "in die Periodenzahlungen",
+          "check": {
+            "type": "string_contains",
+            "expected": "Service"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "check": {
+            "type": "string_contains",
+            "expected": "(1+i)^n"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "K=K0·(1+i)^n bzw.",
+            "K0=K/(1+i)^n"
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Firmenwagen: Leasing vs. Kredit",
+          "context": "Leasing: Anzahlung 10% (€ 3,200), 36× € 420,- Restwert € 8,000; Kredit: Auszahlung € 32,000, 36× Rate (zu berechnen) bei i_m=0,35%/Monat.",
+          "subtasks": [
+            {
+              "text": "Stelle CF beider Varianten auf."
+            },
+            {
+              "text": "Berechne Kreditrate."
+            },
+            {
+              "text": "Vergleiche PV bei Diskont 5% p.a. (Monatszins)."
+            },
+            {
+              "text": "Begründe Entscheidung."
+            }
+          ],
+          "hints": [
+            "Leasing‑CFs inkl. Restwert.",
+            "Annuitätenformel.",
+            "Diskontiere beide Reihen.",
+            "Dokumentiere Nebenkosten."
+          ],
+          "solutions": [
+            "Rate≈? (Skizze)",
+            "PV(Leasing) vs. PV(Kredit) bewertet",
+            "Entscheidung begründet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Annuität",
+                "PV",
+                "IRR"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Rate≈? (Skizze)",
+            "PV(Leasing) vs. PV(Kredit) bewertet",
+            "Entscheidung begründet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Nominalzins mit APR verwechselt.",
+        "Restwert/Ballon am Ende nicht berücksichtigt.",
+        "Service-/Abschlussgebühren nicht in CF aufgenommen."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Leasing‑IRR berechnet man über…",
+          "options": [
+            "PV der Raten = 0",
+            "IRR der CFs (inkl. Anzahlung/Restwert)",
+            "nur Nominalzins des Anbieters"
+          ],
+          "answer_index": 1,
+          "rationale": "Alle Cashflows einbeziehen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Alle Cashflows einbeziehen.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Höherer Restwert senkt die laufende Rate.",
+          "answer": true,
+          "rationale": "Mehr Last am Ende.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehr Last am Ende.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Größe gehört **nicht** in CF_0 beim Leasing?",
+          "options": [
+            "Anzahlung",
+            "Förderbonus",
+            "Monatsrate"
+          ],
+          "answer_index": 2,
+          "rationale": "Raten kommen später.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Raten kommen später.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
+          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du vergleichst Leasing vs. Kredit solide über IRR/PV und berücksichtigst Restwerte & Gebühren."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: Förderdarlehen und tilgungsfreie Zeiten im Tilgungsplan."
+    }
+  ],
+  "reading_time_band": "normal"
+}

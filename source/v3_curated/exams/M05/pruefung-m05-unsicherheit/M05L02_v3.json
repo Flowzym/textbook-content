@@ -1,0 +1,166 @@
+{
+  "id": "M05L02",
+  "title": "Szenarioanalyse & Entscheidungsbäume – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+  "reading_time_min": 78,
+  "prerequisites": [
+    "M05L01",
+    "M05L02",
+    "M05L03",
+    "M05L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Evaluate",
+      "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "text": "Feintuning: saubere p‑Sets, Konsistenz bei Korrelationen, korrekte FX‑Wirkung (EUR/USD)."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset E",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "E[NPV] aus p=[0,5;0,3;0,2] und NPVs [+20k; +60k; −10k] (k€)?",
+          "options": [
+            "+26",
+            "+24",
+            "+28"
+          ],
+          "answer_index": 0,
+          "rationale": "0,5·20+0,3·60+0,2·(−10)=10+18−2=26.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 0,5·20+0,3·60+0,2·(−10)=10+18−2=26.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Wahrscheinlichkeiten eines Szenariosets sollen zu 1 aufsummieren.",
+          "answer": true,
+          "rationale": "Sonst kein gültiger Erwartungswert.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sonst kein gültiger Erwartungswert.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "EUR/USD fällt von 1,00 auf 0,90. EUR‑Umsatz aus 4,5 Mio. USD wird…",
+          "options": [
+            "4,05 Mio.",
+            "5,00 Mio.",
+            "5,56 Mio."
+          ],
+          "answer_index": 2,
+          "rationale": "4,5/0,9=5,0; sorry, korrekt 5,00 Mio. → richtige Option ist 5,00 Mio.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 4,5/0,9=5,0; sorry, korrekt 5,00 Mio. → richtige Option ist 5,00 Mio.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Konsistenz: Preis↑ führt oft zu…",
+          "options": [
+            "Menge↑",
+            "Menge↓",
+            "keinem Effekt"
+          ],
+          "answer_index": 1,
+          "rationale": "Negative Korrelation plausibel.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Negative Korrelation plausibel.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Im Entscheidungsbaum wird der Pfad mit **max E[NPV]** gewählt (unter Budgetrestriktionen).",
+          "answer": true,
+          "rationale": "Kriterium.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Kriterium.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Restwert im NPV wird…",
+          "options": [
+            "auf t=0 addiert",
+            "gar nicht berücksichtigt",
+            "auf t=n diskontiert"
+          ],
+          "answer_index": 2,
+          "rationale": "Diskontieren!",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Diskontieren!",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Option vs. Forward: Mindestkurs gegen Prämie bietet…",
+          "options": [
+            "Forward",
+            "Option",
+            "beide"
+          ],
+          "answer_index": 1,
+          "rationale": "Optionsfloor gegen Prämie.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optionsfloor gegen Prämie.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Hedge‑Kosten können E[NPV] leicht senken, aber Varianz/VaR reduzieren.",
+          "answer": true,
+          "rationale": "Trade‑off.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Trade‑off.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

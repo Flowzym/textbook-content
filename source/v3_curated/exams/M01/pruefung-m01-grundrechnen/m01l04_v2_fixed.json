@@ -1,0 +1,276 @@
+{
+  "id": "M01L04_v2",
+  "title": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v2: Prüfungssets A–D)",
+  "reading_time_min": 14,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Lineare (Un-)Gleichungen abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft Gleichungen & Ungleichungen mit gezielten Prüfungssets A–D. Focus auf Äquivalenzumformungen, Break-Even und Textaufgaben."
+    },
+    {
+      "type": "concept",
+      "title": "Prüfungssets-Übersicht",
+      "text": "- **Set A**: Grundlagen (Gleichung lösen, Ungleichungsrichtung, lineare Funktion)  \n- **Set B**: Methoden/Regeln (Systeme, Äquivalenz, Break-Even)  \n- **Set C**: Diagnose/Fehler (Richtungsumkehr, Einheiten, Umformungen)  \n- **Set D**: Praxis & Fallen (Gewinnziel, Systeme grafisch, Struktur)",
+      "explanation": "\n\n**Decision-Hints:**\n- Break-even, wenn Gewinn=0: x_BE = K_fix/(p−k_v).\n- Zielgewinn mit (K_fix+G)/(p−k_v) berechnen."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Löse: 3x−7=2x+5",
+          "options": [
+            "x=12",
+            "x=−12",
+            "x=4"
+          ],
+          "answer_index": 0,
+          "rationale": "x nach links, Zahlen nach rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. x nach links, Zahlen nach rechts.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Multiplikation einer Ungleichung mit −1 kehrt sich die Richtung um.",
+          "answer": true,
+          "rationale": "Regel für Ungleichungen.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Regel für Ungleichungen.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Lineare Funktion y=a·x+b: a ist…",
+          "options": [
+            "Steigung",
+            "Achsenabschnitt",
+            "Produkt"
+          ],
+          "answer_index": 0,
+          "rationale": "Definition.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Regeln",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "System lösen: x+y=110, 2x+3y=280",
+          "options": [
+            "x=50,y=60",
+            "x=60,y=50",
+            "x=40,y=70"
+          ],
+          "answer_index": 0,
+          "rationale": "Eliminieren/Einsetzen.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Eliminieren/Einsetzen.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Äquivalenzumformungen erhalten die Lösungsmenge.",
+          "answer": true,
+          "rationale": "Gültige Schritte.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gültige Schritte.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Break-Even bei Preis 14, vK 8, Fix 12,000:",
+          "options": [
+            "2,000 Stk.",
+            "1,500 Stk.",
+            "2,500 Stk."
+          ],
+          "answer_index": 0,
+          "rationale": "(14−8)x=12,000.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. (14−8)x=12,000.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Fehler",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fehlerdiagnose: 5−2x≥11 ⇒ −2x≥6 ⇒ x≥−3",
+          "options": [
+            "korrekt",
+            "Richtung falsch, x≤−3",
+            "x=−3"
+          ],
+          "answer_index": 1,
+          "rationale": "Bei Division durch −2 kehrt Richtung um.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bei Division durch −2 kehrt Richtung um.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Textaufgaben sind Einheiten wichtig.",
+          "answer": true,
+          "rationale": "Plausibilität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Plausibilität.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Umformung ist unzulässig?",
+          "options": [
+            "beide Seiten +3",
+            "beide Seiten ·0",
+            "beide Seiten /2"
+          ],
+          "answer_index": 1,
+          "rationale": "Multiplikation mit 0 zerstört Information.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Multiplikation mit 0 zerstört Information.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: Gewinnziel € 9,- bei Preis € 20,- vK € 12,- Fix € 15,- Menge?",
+          "options": [
+            "3,000",
+            "2,500",
+            "3,500"
+          ],
+          "answer_index": 0,
+          "rationale": "(20−12)x−15,000=9,000.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. (20−12)x−15,000=9,000.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Systemen hilft grafische Kontrolle der Schnittpunkte.",
+          "answer": true,
+          "rationale": "Visuelle Plausibilität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Visuelle Plausibilität.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Sinnvolle Reihenfolge?",
+          "options": [
+            "planlos umstellen",
+            "Variablen definieren → Gleichung bilden → lösen",
+            "nur raten"
+          ],
+          "answer_index": 1,
+          "rationale": "Struktur.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Struktur.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Lineare (Un-)Gleichungen: Begriffe, Regeln, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "normal"
+}
