@@ -1,0 +1,471 @@
+{
+  "id": "M06L01",
+  "title": "Lehrtext – Grundlagen: Lineare Optimierung I – Modellierung & Geometrie (2 Variablen) (Break-even)",
+  "reading_time_min": 78,
+  "prerequisites": [
+    "M03L04",
+    "M04L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: Entscheidungsvariablen, Zielfunktion, Nebenbedingungen, Zulässigkeitsbereich, Ecke (Extrempunkt)."
+    },
+    {
+      "level": "Understand",
+      "text": "Warum lineare Modelle in Controlling/Produktion nützlich sind; Graphikansatz (2D) erklären."
+    },
+    {
+      "level": "Apply",
+      "text": "Wortproblem in ein LP überführen (Max/Min), Einheiten prüfen, einfache Modelle grafisch lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Sensitiv auf Parameter reagieren (rechte Seite, Zielfunktionskoeffizienten) – qualitativ im 2D‑Bild."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Lineare Programme (LP) helfen, **Ressourcen optimal einzusetzen**: Produktmix, Schichtplanung, Budgetallokation.\nDu lernst die **Modellierung** und löst erste Fälle **grafisch** (bei zwei Variablen). Wir nutzen Scaffolding: \nerst klare Schemata, dann Fading (du übernimmst Schritte)."
+    },
+    {
+      "type": "concept",
+      "title": "LP‑Bausteine",
+      "text": "- **Variablen**: x₁, x₂, … (z. B. Stückzahlen).  \n- **Zielfunktion**: max/min z = c₁x₁ + c₂x₂ + …  \n- **Nebenbedingungen**: a₁₁x₁ + a₁₂x₂ ≤ b₁ (Ressourcen), …; **Nichtnegativität** x≥0.\n- **Standardform (max)**: ≤‑Restriktionen, Slacks s≥0, z=max cᵗx.",
+      "explanation": "**Break-Even:** x_BE = K_fix/(p−k_v). G(x)=p·x − (K_fix + k_v·x).\n\n**Decision-Hints:**\n- Break-even, wenn Gewinn=0: x_BE = K_fix/(p−k_v).\n- Zielgewinn mit (K_fix+G)/(p−k_v) berechnen."
+    },
+    {
+      "type": "derivation",
+      "title": "Von Text zu Modell – Schema",
+      "steps": [
+        "1) Ziel definieren (Gewinn maximieren? Kosten minimieren?).",
+        "2) Variablen sauber mit **Einheiten** festlegen.",
+        "3) Ressourcengleichungen: Verbrauch × Menge ≤ Kapazität.",
+        "4) Zielfunktion mit Margen/Deckungsbeiträgen formulieren.",
+        "5) Einheiten‑/Plausibilitätscheck (kann z negativ werden? Grenzen?)."
+      ],
+      "comment": "Worked‑Example danach, anschließend Fading mit Lücken."
+    },
+    {
+      "type": "visual",
+      "title": "Zulässigkeitsbereich (ASCII)",
+      "ascii": "x2  ^\n    |   feasible region\n    |  ███████\n    |  █    /\n    |  █  /\n    |  █/________> x1\n    +--------------",
+      "caption": "Die optimale Lösung liegt bei linearen Problemen **in einer Ecke** (Extrempunkt).",
+      "alt_text": "ASCII-Visual: Die optimale Lösung liegt bei linearen Problemen **in einer Ecke** (Extrempunkt). — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Produktmix (Grafik)",
+      "text": "Produkte A/B mit Deckungsbeitrag DB_A=€ 30/Stk., DB_B=€ 20/Stk.  \nKapazität Maschine M: 4 Std/Tag; A braucht 2 Std, B 1 Std → 2x_A + 1x_B ≤ 4.  \nMaterial: A 3 kg, B 2 kg; Vorrat 6 kg → 3x_A + 2x_B ≤ 6. Nichtnegativität x_A,x_B≥0.  \nZiel: max z = 30x_A + 20x_B.  \n**Ecken**: (0,0), (0,3), (2,0), Schnitt der beiden Restriktionen:  \n2x_A + x_B = 4; 3x_A + 2x_B = 6 ⇒ x_A=2, x_B=0 (Schnitt fällt mit Ecke zusammen).  \nz(0,3)=60; z(2,0)=60 → **beide optimal** (ganze Kante optimal). Entscheide nach Zusatzkriterien (Absatz, Risiko).",
+      "worked": {
+        "title": "Break-Even",
+        "steps": [
+          "[Schritt 1] K_fix=€ 12,000,00, p=€ 14,00, k_v=€ 8,- ⇒ x_BE=2,000 Stk."
+        ]
+      },
+      "fading": {
+        "title": "Zielgewinn",
+        "steps": [
+          "G=€ 9,000,00 ⇒ 14x − (12,000+8x) = 9,000 ⇒ x = 3,500 Stk."
+        ]
+      },
+      "steps": [
+        "Produkte A/B mit Deckungsbeitrag DB_A=€ 30/Stk., DB_B=€ 20/Stk",
+        "Kapazität Maschine M: 4 Std/Tag; A braucht 2 Std, B 1 Std → 2x_A + 1x_B ≤",
+        "Material: A 3 kg, B 2 kg; Vorrat 6 kg → 3x_A + 2x_B ≤ 6. Nichtnegativität x_A,x_B≥",
+        "Ziel: max z = 30x_A + 20x_B",
+        "Ecken**: (0,0), (0,3), (2,0), Schnitt der beiden Restriktionen:",
+        "x_A + x_B = 4; 3x_A + 2x_B = 6 → x_A=2, x_B=0 (Schnitt fällt mit Ecke zusammen",
+        "z(0,3)=60; z(2,0)=60 → **beide optimal** (ganze Kante optimal). Entscheide nach Zusatzkriterien (Absatz, Risiko"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Wortproblem → LP",
+      "text": "Budget € 400,- Kampagne: Social Ads (x₁) € 50/Stk., SEA (x₂) € 80/Stk.  \nReichweite pro Einheit: 3,000 vs. 6,000. Max. 6 Social Ads buchbar. Ziel: **Reichweite maximieren**.  \na) Variablen: x₁=?, x₂=?  \nb) Nebenbedingungen: Kosten, Max‑Anzahl; Nichtnegativität.  \nc) Zielfunktion: z = __ x₁ + __ x₂.  \nd) Grafische Lösung: zeichne, bestimme Ecke(n).",
+      "solution": [
+        "x₁=Anzahl Social‑Pakete, x₂=Anzahl SEA‑Pakete",
+        "50x₁ + 80x₂ ≤ 400; x₁ ≤ 6; x₁,x₂ ≥ 0",
+        "3000·x₁ + 6000·x₂",
+        "Ecke(n) liefern Optimum; z. B. Budgetkante ausschöpfen"
+      ],
+      "worked": {
+        "title": "Break-Even",
+        "steps": [
+          "[Schritt 1] K_fix=€ 12,000,00, p=€ 14,00, k_v=€ 8,- ⇒ x_BE=2,000 Stk."
+        ]
+      },
+      "fading": {
+        "title": "Zielgewinn",
+        "steps": [
+          "G=€ 9,000,00 ⇒ 14x − (12,000+8x) = 9,000 ⇒ x = 3,500 Stk."
+        ]
+      },
+      "steps": [
+        "Budget € 400,- Kampagne: Social Ads (x₁) € 50/Stk., SEA (x₂) € 80/Stk",
+        "Reichweite pro Einheit: 3,000 vs. 6,000. Max. 6 Social Ads buchbar. Ziel: **Reichweite maximieren",
+        "a) Variablen: x₁=?, x₂=?",
+        "b) Nebenbedingungen: Kosten, Max‑Anzahl; Nichtnegativität",
+        "c) Zielfunktion: z = __ x₁ + __ x₂",
+        "d) Grafische Lösung: zeichne, bestimme Ecke(n"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Form: max 40x₁+25x₂ s.t. 2x₁+x₂≤10; x₁+2x₂≤12; x≥0 – wie viele Ecken?",
+          "hint": "Schnittpunkte + Achsen",
+          "solution": "typ. 3–4",
+          "check": {
+            "type": "numeric",
+            "expected": 4
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "typ.",
+            "3–4"
+          ]
+        },
+        {
+          "prompt": "Welche Ecke testen?",
+          "hint": "alle zulässigen",
+          "solution": "Ziel an jeder Ecke",
+          "check": {
+            "type": "string_contains",
+            "expected": "Ecke"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Einheitencheck: cᵗx",
+          "hint": "€ pro Stk × Stk = €",
+          "solution": "ok",
+          "check": {
+            "type": "string_contains",
+            "expected": "€"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Löse: 7x − 4 = 24",
+          "solution": "x=4",
+          "check": {
+            "type": "numeric",
+            "expected": 4
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "BE bei K_fix=€ 15,000,00, p=€ 18,00, k_v=€ 11,-",
+          "solution": "x_BE=2,142,86 ≈ 2,143",
+          "check": {
+            "type": "approx",
+            "expected": 2.143,
+            "tolerance": 0.05,
+            "expr": "2.143"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Schichtplanung (vereinfachtes LP)",
+          "context": "2 Tätigkeiten: Kasse (x₁ h) & Lager (x₂ h). Budget 80 h/Woche. Pflicht: mind. 30 h Kasse, mind. 20 h Lager. Produktivität (Gewicht): 6 Punkte/h Kasse, 4 Punkte/h Lager.",
+          "subtasks": [
+            {
+              "text": "Formuliere LP (x in Stunden)."
+            },
+            {
+              "text": "Zeige grafische Lösung."
+            },
+            {
+              "text": "Nenne optimale Allokation."
+            }
+          ],
+          "hints": [
+            "x₁+x₂ ≤ 80; x₁ ≥ 30; x₂ ≥ 20; max z=6x₁+4x₂.",
+            "Polygon zeichnen; Ecke(n).",
+            "Ecke (x₁=60,x₂=20) liefert z=6·60+4·20=440."
+          ],
+          "solutions": [
+            "LP korrekt",
+            "Ecke bestimmt",
+            "z=440"
+          ],
+          "checks": [
+            {
+              "type": "numeric",
+              "expected": 440
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "LP korrekt",
+            "Ecke bestimmt",
+            "z=440"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Variablen ohne Einheiten definiert → falsche Nebenbedingungen.",
+        "Ungleichungen in die falsche Richtung (≥ statt ≤) – achte auf Ressourcen vs. Mindestanforderungen.",
+        "Grafik: falsche Achsenskalierung → falsche Ecke."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wo liegt ein LP‑Optimum (linear, zulässig)?",
+          "options": [
+            "irgendwo innen",
+            "immer an einer Ecke",
+            "immer auf einer Kante"
+          ],
+          "answer_index": 1,
+          "rationale": "Grundsatz: Extrempunkte.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Grundsatz: Extrempunkte.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei paralleler Zielfunktions- und Randgeraden kann es mehrere Optima geben.",
+          "answer": true,
+          "rationale": "Kantenoptimum.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kantenoptimum.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Bedingung sichert Realismus?",
+          "options": [
+            "x beliebig",
+            "x≥0",
+            "x≤0"
+          ],
+          "answer_index": 1,
+          "rationale": "Nichtnegativität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nichtnegativität.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du modellierst LPs sauber und löst 2‑Variablen‑Fälle grafisch (Eckenregel, Kantenoptimum)."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Simplex‑Verfahren** für größere Probleme und saubere Tabellenarbeit."
+    },
+    {
+      "type": "summary",
+      "content": "In dieser Lektion lernst du lineare Gleichungen als Waage zu verstehen. Jede Umformung führst du auf beiden Seiten der Gleichung aus, damit die Balance erhalten bleibt. Ziel ist es, x Schritt für Schritt freizulegen."
+    },
+    {
+      "type": "concept",
+      "title": "Die Waage als Leitbild",
+      "items": [
+        "Stelle dir eine Balkenwaage vor: Links und rechts liegen Gewichte. Die Gleichung sagt: Beide Seiten sind gleich schwer.",
+        "Wenn du auf einer Seite etwas wegnimmst oder hinzufügst, musst du dasselbe auf der anderen Seite tun, sonst kippt die Waage.",
+        "Dieses Bild hilft dir, jede erlaubte Umformung in Ruhe nachzuvollziehen."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Erlaubte Schritte – in ganzen Sätzen gedacht",
+      "items": [
+        "Ich addiere dieselbe Zahl auf beiden Seiten.",
+        "Ich subtrahiere dieselbe Zahl auf beiden Seiten.",
+        "Ich multipliziere beide Seiten mit derselben Zahl.",
+        "Ich teile beide Seiten durch dieselbe Zahl (solange sie nicht 0 ist)."
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel 2x + 3 = 9 – sehr langsam gelöst",
+      "steps": [
+        "Ich entferne zuerst die +3, indem ich auf beiden Seiten 3 subtrahiere: 2x = 6.",
+        "Dann teile ich auf beiden Seiten durch 2, um x frei zu bekommen: x = 3.",
+        "Zur Kontrolle setze ich x = 3 in die Ausgangsgleichung ein und erhalte links 2·3 + 3 = 9, rechts 9 – die Gleichung stimmt."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Waage: 2x + 3 = 9",
+      "image": "assets/M06L01_balance.png",
+      "content": "Waage: 2x + 3 = 9"
+    },
+    {
+      "type": "visual",
+      "title": "Graphischer Schnittpunkt",
+      "image": "assets/M06L01_graph.png",
+      "content": "Graphischer Schnittpunkt"
+    },
+    {
+      "type": "concept",
+      "title": "Typische Fehler und Gegenstrategien",
+      "items": [
+        "Nur eine Seite verändern: Sprich jeden Schritt laut mit – „ich minus 3 links und rechts“.",
+        "Vorzeichenfehler: Schreibe die Gegenoperation bewusst als ganzen Satz auf.",
+        "Klammern vergessen: Denke daran, dass ein Faktor vor der Klammer auf alle Terme wirkt."
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – mit Lösungsskizze",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "3x − 5 = 16",
+          "solution": "+5 → 3x = 21, ÷3 → x = 7. Probe: 3·7 − 5 = 16."
+        },
+        {
+          "id": "E2",
+          "stem": "−4x + 2 = 18",
+          "solution": "−2 → −4x = 16, ÷(−4) → x = −4. Probe stimmt."
+        },
+        {
+          "id": "E3",
+          "stem": "(x/3) + 4 = 10",
+          "solution": "−4 → x/3 = 6, ×3 → x = 18. Probe stimmt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M06/M06L01.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M06/lehrtexte/grundlagen-rabatt-skonto/M06L01.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 11
+    },
+    "enriched": true,
+    "enriched_version": "v1",
+    "assets_base": "assets/"
+  }
+}
