@@ -1,0 +1,24 @@
+{
+  "id": "M02",
+  "title": "Prozent- & einfache Zinsrechnung",
+  "description": "Prozentrechnung systematisch beherrschen und lineare Verzinsung sicher anwenden (inkl. Zinszeiten).",
+  "lessons": [
+    {
+      "id": "M02L01",
+      "title": "Prozentrechnung – Grundlagen"
+    },
+    {
+      "id": "M02L02",
+      "title": "Prozentarten: Rabatt, Skonto, MwSt, Auf-/Abschlag"
+    },
+    {
+      "id": "M02L03",
+      "title": "Einfache Verzinsung (linear)"
+    },
+    {
+      "id": "M02L04",
+      "title": "Zinszeiten & Zinsmethoden"
+    }
+  ],
+  "created_at": "2025-08-17T08:21:26.052943"
+}
