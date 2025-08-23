@@ -1,0 +1,404 @@
+{
+  "id": "M06L04",
+  "title": "Lehrtext – Grundlagen: Lineare Optimierung IV – Anwendungen: Transport, Zuordnung, Blending & Produktionsplanung (Gleichungen)",
+  "reading_time_min": 92,
+  "prerequisites": [
+    "M06L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Transport‑/Zuordnungs‑/Blending‑/Produktionsplanungs‑LPs modellieren."
+    },
+    {
+      "level": "Analyze",
+      "text": "Modellierungsentscheidungen begründen (Indices, Balancegleichungen, Einheiten, zeitliche Kopplungen)."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Lösungen wirtschaftlich interpretieren (Schattenpreise, reduzierte Kosten, Kapazitätsauslastung)."
+    },
+    {
+      "level": "Understand",
+      "text": "Grenzen linearer Modelle kennen (Ganzzahlbedarf, Setup‑Kosten, Fix/Step‑Kosten)."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Wir übertragen LP‑Techniken auf typische **Controlling‑/Operations‑Fälle**: **Transport**, **Zuordnung**, **Blending (Mischung)**,\n**Produktionsplanung über Perioden**. Du erhältst Modell‑Schablonen, Worked‑Examples und Fading‑Aufgaben."
+    },
+    {
+      "type": "concept",
+      "title": "Index‑Modellierung (Schema)",
+      "text": "- Transport: x_{i,j} = Menge von Werk i zu Kunde j.  \n  Zielfunktion: min Σ c_{i,j} x_{i,j}; Nebenbedingungen: Σ_j x_{i,j} ≤ Angebot_i; Σ_i x_{i,j} ≥ Nachfrage_j; x≥0.\n- Zuordnung (Assignment): Spezialfall mit Σ_j x_{i,j}=1 und Σ_i x_{i,j}=1; oft 0/1‑Variablen (IP).\n- Blending: min Kosten bei Qualitätsgrenzen: Σ a_{k,i} x_i ≥/≤ Q_k; Σ x_i = Gesamtmenge.\n- Produktionsplanung (mehrperiodig): x_t Produktion, I_t Lager; I_t = I_{t-1} + x_t − Nachfrage_t; Kapazität x_t ≤ Kap_t; min Σ(Prod+Lagerkosten).",
+      "explanation": "**Break-Even:** x_BE = K_fix/(p−k_v). G(x)=p·x − (K_fix + k_v·x).\n\n**Decision-Hints:**\n- Break-even, wenn Gewinn=0: x_BE = K_fix/(p−k_v).\n- Zielgewinn mit (K_fix+G)/(p−k_v) berechnen."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Transportnetz",
+      "ascii": "Werke i=1..m  ──►  Kunden j=1..n\n   \\  x_ij  /\n    \\______/    Kosten c_ij pro Einheit",
+      "caption": "Flüsse x_{i,j} mit Angebots‑ und Nachfragerestriktionen.",
+      "alt_text": "ASCII-Visual: Flüsse x_{i,j} mit Angebots‑ und Nachfragerestriktionen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Transport (Kostenminimierung)",
+      "text": "2 Werke (Angebot 40/30), 3 Kunden (Nachfrage 20/25/25), Kosten c_{i,j} in €/Stück:  \nWerk1→(K1=2, K2=3, K3=1); Werk2→(K1=3, K2=1, K3=2).  \nModell: min Σ c_{i,j}x_{i,j} s.t. Angebots‑ & Nachfragegleichungen; x≥0.  \nEine optimale Basis: x_{1,3}=25, x_{1,1}=15, x_{2,2}=25, x_{2,1}=5 (andere 0).  \nGesamtkosten = 25·1 + 15·2 + 25·1 + 5·3 = **€ 95**.",
+      "worked": {
+        "title": "Break-Even",
+        "steps": [
+          "[Schritt 1] K_fix=€ 12,000,00, p=€ 14,00, k_v=€ 8,- ⇒ x_BE=2,000 Stk."
+        ]
+      },
+      "fading": {
+        "title": "Zielgewinn",
+        "steps": [
+          "G=€ 9,000,00 ⇒ 14x − (12,000+8x) = 9,000 ⇒ x = 3,500 Stk."
+        ]
+      },
+      "steps": [
+        "Werke (Angebot 40/30), 3 Kunden (Nachfrage 20/25/25), Kosten c_{i,j} in €/Stück:",
+        "Werk1→(K1=2, K2=3, K3=1); Werk2→(K1=3, K2=1, K3=",
+        "Modell: min Σ c_{i,j}x_{i,j} s.t. Angebots‑ & Nachfragegleichungen; x≥",
+        "Eine optimale Basis: x_{1,3}=25, x_{1,1}=15, x_{2,2}=25, x_{2,1}=5 (andere",
+        "Gesamtkosten = 25·1 + 15·2 + 25·1 + 5·3 = **€"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Produktionsplanung (2 Perioden)",
+      "text": "Nachfrage D₁=100, D₂=120; Kapazität K₁=110, K₂=110; Prod‑Kosten € 5/Stk., Lager € 0,5/Stk./Periode.  \nVariablen: x₁,x₂ Produktion; I₁,I₂ Lager (I₂ Endbestand optional).  \nI₁ = x₁ − D₁; I₂ = I₁ + x₂ − D₂; 0 ≤ x_t ≤ K_t; I_t ≥ 0.  \nZiel: min 5(x₁+x₂) + 0,5·I₁ (I₂=0). **Lösung**: x₁=110 → I₁=10; x₂=110 → I₂=0; Kosten=5·220+0,5·10=**€ 1,105**.",
+      "worked": {
+        "title": "Break-Even",
+        "steps": [
+          "[Schritt 1] K_fix=€ 12,000,00, p=€ 14,00, k_v=€ 8,- ⇒ x_BE=2,000 Stk."
+        ]
+      },
+      "fading": {
+        "title": "Zielgewinn",
+        "steps": [
+          "G=€ 9,000,00 ⇒ 14x − (12,000+8x) = 9,000 ⇒ x = 3,500 Stk."
+        ]
+      },
+      "steps": [
+        "Nachfrage D₁=100, D₂=120; Kapazität K₁=110, K₂=110; Prod‑Kosten € 5/Stk., Lager € 0,5/Stk./Periode",
+        "Variablen: x₁,x₂ Produktion; I₁,I₂ Lager (I₂ Endbestand optional",
+        "I₁ = x₁ − D₁; I₂ = I₁ + x₂ − D₂; 0 ≤ x_t ≤ K_t; I_t ≥",
+        "Ziel: min 5(x₁+x₂) + 0,5·I₁ (I₂=0). **Lösung**: x₁=110 → I₁=10; x₂=110 → I₂=0; Kosten=5·220+0,5·10=**€ 1,"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Blending",
+      "text": "Zwei Rohstoffe R1,R2 mit Kosten € 3/kg und € 5/kg. Mischung 100 kg mit mind. 20% Bestandteil A.  \nA‑Anteil: R1 hat 10%, R2 40%. Variablen x₁,x₂; Σ x=100; 0,10x₁+0,40x₂ ≥ 20 → __  \nZiel min 3x₁+5x₂; x≥0. Finde günstige Mischung.",
+      "solution": [
+        "0,10x₁+0,40x₂ ≥ 20 ⇒ x₂ ≥ (20−0,10x₁)/0,40",
+        "Kosten sinken mit mehr x₁, aber Qualitätsgrenze setzt Untergrenze für x₂. Ecklösung bei Bindung."
+      ],
+      "worked": {
+        "title": "Break-Even",
+        "steps": [
+          "[Schritt 1] K_fix=€ 12,000,00, p=€ 14,00, k_v=€ 8,- ⇒ x_BE=2,000 Stk."
+        ]
+      },
+      "fading": {
+        "title": "Zielgewinn",
+        "steps": [
+          "G=€ 9,000,00 ⇒ 14x − (12,000+8x) = 9,000 ⇒ x = 3,500 Stk."
+        ]
+      },
+      "steps": [
+        "Zwei Rohstoffe R1,R2 mit Kosten € 3/kg und € 5/kg. Mischung 100 kg mit mind. 20% Bestandteil A",
+        "A‑Anteil: R1 hat 10%, R2 40%. Variablen x₁,x₂; Σ x=100; 0,10x₁+0,40x₂ ≥ 20 → __",
+        "Ziel min 3x₁+5x₂; x≥0. Finde günstige Mischung"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Transport: Summenbedingungen heißen…",
+          "hint": "Angebot/Nachfrage",
+          "solution": "Balance",
+          "check": {
+            "type": "string_contains",
+            "expected": "Angebot"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Zuordnung: Zeilen/Spalten‑Summe…",
+          "hint": "=1",
+          "solution": "jede Aufgabe genau einer Ressource",
+          "check": {
+            "type": "string_contains",
+            "expected": "=1"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Produktionsplanung: Lagergleichung",
+          "hint": "I_t = I_{t-1} + x_t − D_t",
+          "solution": "Flow‑Balance",
+          "check": {
+            "type": "string_contains",
+            "expected": "I_t"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Löse: 7x − 4 = 24",
+          "solution": "x=4",
+          "check": {
+            "type": "numeric",
+            "expected": 4
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "BE bei K_fix=€ 15,000,00, p=€ 18,00, k_v=€ 11,-",
+          "solution": "x_BE=2,142,86 ≈ 2,143",
+          "check": {
+            "type": "approx",
+            "expected": 2.143,
+            "tolerance": 0.05,
+            "expr": "2.143"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – 3‑Perioden‑Planung",
+          "context": "D=[120,130,140]; K=[130,120,130]; Prod‑Kosten € 6/Stk., Lager € 0,4/Stk./Periode, Startlager 0, Endlager 0.",
+          "subtasks": [
+            {
+              "text": "Formuliere LP mit x₁..x₃, I₁..I₃."
+            },
+            {
+              "text": "Setze Zielfunktion."
+            },
+            {
+              "text": "Skizziere optimale Struktur (wann lagern?)."
+            }
+          ],
+          "hints": [
+            "I₁=x₁−120; I₂=I₁+x₂−130; I₃=I₂+x₃−140=0.",
+            "min 6Σx + 0,4(I₁+I₂).",
+            "Oft Produktion früh bis Kapazität, Rest später."
+          ],
+          "solutions": [
+            "LP korrekt",
+            "Kostenstruktur erklärt",
+            "Plan skizziert"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Bestand",
+                "Kapazität",
+                "Flow"
+              ]
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "LP korrekt",
+            "Kostenstruktur erklärt",
+            "Plan skizziert"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Indices verwechselt (i/j vertauscht).",
+        "Balancegleichungen als ≤ statt = geschrieben (bei exakter Nachfrage).",
+        "Einheiten nicht konsistent (kg vs. t; €/Stk vs. €/t)."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Transportmodell: Nachfragegleichungen sind üblicherweise…",
+          "options": [
+            "≤",
+            "≥",
+            "="
+          ],
+          "answer_index": 2,
+          "rationale": "Exakte Bedarfsdeckung (oder ≥ bei Mindestbedarfen).",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Exakte Bedarfsdeckung (oder ≥ bei Mindestbedarfen).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Zuordnungsproblem benötigt oft 0/1‑Variablen.",
+          "answer": true,
+          "rationale": "Ganzzahligkeit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ganzzahligkeit.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Mehrperiodenplanung: Lagerkosten…",
+          "options": [
+            "fördern Vorproduktion",
+            "bestrafen Vorproduktion",
+            "ohne Einfluss"
+          ],
+          "answer_index": 1,
+          "rationale": "Trade‑off.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Trade‑off.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du modellierst Transport, Zuordnung, Blending und Mehrperioden‑Produktion und interpretierst Lösungen ökonomisch."
+    },
+    {
+      "type": "outlook",
+      "text": "Optionales Folgemodul: **Ganzzahlige Optimierung & Heuristiken** (Binärvariablen, Losgrößen, Setup‑Kosten)."
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M06/M06L04.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M06/lehrtexte/grundlagen-rabatt-skonto/M06L04.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 12
+    }
+  }
+}

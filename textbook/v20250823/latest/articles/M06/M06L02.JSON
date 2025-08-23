@@ -1,0 +1,390 @@
+{
+  "id": "M06L02",
+  "title": "Lehrtext – Grundlagen: Lineare Optimierung II – Simplex, Tableau & Spezialfälle (Rabatt/Skonto)",
+  "reading_time_min": 21,
+  "prerequisites": [
+    "M06L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Standardform, Slackvariablen, Basis/Nichtbasis, Pivot‑Regeln, Abbruchkriterien."
+    },
+    {
+      "level": "Apply",
+      "text": "Kleines LP per Simplex lösen (Tabellen‑Schritte nachvollziehen)."
+    },
+    {
+      "level": "Analyze",
+      "text": "Sonderfälle erkennen: unbeschränkt, unzulässig, Degeneration, alternative Optima."
+    },
+    {
+      "level": "Understand",
+      "text": "Simplex‑Mechanik, Pivot‑Regeln, Spezialfälle."
+    },
+    {
+      "level": "Apply",
+      "text": "Kleine LPs per Tableau lösen; Degeneration/Mehrfachoptima erkennen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Losgrößen mit Rüstkosten als MILP formulieren (Big‑M, Binärvariablen) und LP‑Relaxation deuten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Neben Simplex führen wir einen **branchenrelevanten Losgrößenfall** ein: Rüstkosten erzeugen **Fixkosten**, was **Binärvariablen** erfordert (MILP).\nWir zeigen die Formulierung und die **LP‑Relaxation** für grobe Bounds."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Simplex (kurz)",
+      "text": "max z=4x₁+3x₂ s.t. 2x₁+x₂≤8; x₁+2x₂≤8; x≥0.  \nStart Slack‑Basis; Pivot‑Spalte x₁ (4>3); Quotienten 8/2=4, 8/1=8 ⇒ Zeile 1.  \nNach 2–3 Schritten Optimum bei (x₁,x₂)=(?); z=? (Rechenschritte im Tableau üben).",
+      "steps": [
+        "max z=4x₁+3x₂ s.t. 2x₁+x₂≤8; x₁+2x₂≤8; x≥",
+        "Start Slack‑Basis; Pivot‑Spalte x₁ (4>3); Quotienten 8/2=4, 8/1=8 → Zeile",
+        "Nach 2–3 Schritten Optimum bei (x₁,x₂)=(?); z=? (Rechenschritte im Tableau üben"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Losgrößen mit Rüstkosten – MILP",
+      "text": "Perioden t=1..T. Variablen: Produktion x_t≥0, Binär y_t∈{0,1} (1 wenn **Rüstung/Setup** anfällt).  \nKosten: K_prod·x_t + K_setup·y_t. Kapazität: x_t ≤ K·y_t (wenn ohne Rüstung keine Produktion).  \nLager: I_t = I_{t-1} + x_t − D_t, I_t≥0. Ziel: **min** Σ (K_prod x_t + K_setup y_t + K_lag I_t).\n**LP‑Relaxation**: y_t ∈ [0,1] → untere Schranke; gibt häufig fraktionale y_t (nur Bound!).",
+      "explanation": "\n\n**Decision-Hints:**\n- Lineare Gleichungen isolieren: gleiche Operation auf beiden Seiten.\n- Klammern zuerst auflösen, dann nach x umstellen."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Mini‑Losgröße (2 Perioden)",
+      "text": "D=[60,60], K_prod=€ 5/Stk., K_setup=€ 200,- K_lag=€ 0,4/Stk. K=120. Start/Endlager 0.  \nIntuition: Einmal rüsten in t=1 und alles produzieren? Lagerkosten vs. zweites Setup abwägen.  \nMILP‑Setup: min 5(x₁+x₂)+200(y₁+y₂)+0,4·I₁; I₁=x₁−60; I₂=I₁+x₂−60=0; x_t ≤ 120·y_t.",
+      "steps": [
+        "D=[60,60], K_prod=€ 5/Stk., K_setup=€ 200,- K_lag=€ 0,4/Stk. K=120. Start/Endlager",
+        "Intuition: Einmal rüsten in t=1 und alles produzieren? Lagerkosten vs. zweites Setup abwägen",
+        "MILP‑Setup: min 5(x₁+x₂)+200(y₁+y₂)+0,4·I₁; I₁=x₁−60; I₂=I₁+x₂−60=0; x_t ≤ 120·y_t"
+      ]
+    },
+    {
+      "type": "exercises",
+      "long": [
+        {
+          "title": "Praxis – Losgrößen mit Rüstkosten (3 Perioden)",
+          "context": "D=[80,90,70]; K_prod=6; K_setup=250; K_lag=0,5; K=120; Start/Endlager 0.",
+          "subtasks": [
+            {
+              "text": "Formuliere vollständige MILP‑Nebenbedingungen."
+            },
+            {
+              "text": "Vergleiche Strategie A (1 Setup, Lager) vs. B (2 Setups, weniger Lager)."
+            },
+            {
+              "text": "Diskutiere LP‑Relaxation (y∈[0,1])."
+            }
+          ],
+          "hints": [
+            "x_t≤K·y_t; I₁=x₁−80; I₂=I₁+x₂−90; I₃=I₂+x₃−70=0.",
+            "Kosten tabellieren.",
+            "Relaxation gibt Lower Bound, aber y wird fraktional."
+          ],
+          "solutions": [
+            "Formulierung korrekt",
+            "Kostenvergleich gezeigt",
+            "Relaxation erläutert"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "MILP",
+                "Big‑M",
+                "Relaxation"
+              ]
+            }
+          ],
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Formulierung korrekt",
+            "Kostenvergleich gezeigt",
+            "Relaxation erläutert"
+          ]
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Pivot‑Spalte wählt man…",
+          "options": [
+            "mit kleinstem c̄_j",
+            "mit größtem positiven Verbesserungspotential",
+            "zufällig"
+          ],
+          "answer_index": 1,
+          "rationale": "Zielfunktionsverbesserung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zielfunktionsverbesserung.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Wenn alle a_{i,pivot} ≤ 0, ist das LP unbeschränkt.",
+          "answer": true,
+          "rationale": "Kein Quotient möglich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Quotient möglich.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Slack‑Variablen dienen zur…",
+          "options": [
+            "Zielfunktion",
+            "Gleichungsform",
+            "Dualbildung"
+          ],
+          "answer_index": 1,
+          "rationale": "Ax+s=b.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ax+s=b.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Losgrößen mit Rüstkosten sind…",
+          "options": [
+            "LP",
+            "MILP",
+            "Quadratisch"
+          ],
+          "answer_index": 1,
+          "rationale": "Binärvariablen nötig.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Binärvariablen nötig.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "LP‑Relaxation liefert eine **untere Schranke** für Kostenminimierung.",
+          "answer": true,
+          "rationale": "Bound.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Bound.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Nebenbed. x_t ≤ K·y_t ist…",
+          "options": [
+            "linear",
+            "nichtlinear",
+            "nur heuristisch"
+          ],
+          "answer_index": 0,
+          "rationale": "Linear wegen Produkt K·y_t (y binär).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Linear wegen Produkt K·y_t (y binär).",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Degeneration im Simplex bewirkt…",
+          "options": [
+            "schnellere Konvergenz",
+            "z bleibt gleich, evtl. Zyklen",
+            "immer Unzulässigkeit"
+          ],
+          "answer_index": 1,
+          "rationale": "Bland hilft.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bland hilft.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Big‑M zu groß wählen kann numerische Probleme verursachen.",
+          "answer": true,
+          "rationale": "Stabilität beachten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stabilität beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "In der LP‑Relaxation sind y_t…",
+          "options": [
+            "0/1",
+            "beliebig real",
+            "zwischen 0 und 1"
+          ],
+          "answer_index": 2,
+          "rationale": "Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Setup vermeiden lohnt, wenn…",
+          "options": [
+            "Lagerkosten niedrig, Setup hoch",
+            "Lagerkosten hoch, Setup niedrig",
+            "beides niedrig"
+          ],
+          "answer_index": 0,
+          "rationale": "Vorproduktion attraktiv.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vorproduktion attraktiv.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Wenn K=∞, fällt x_t ≤ K·y_t weg.",
+          "answer": true,
+          "rationale": "Kein Kapazitätsbezug, dennoch Setup‑Logik prüfen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Kapazitätsbezug, dennoch Setup‑Logik prüfen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Größe ist **kein** Teil der Kostenfunktion hier?",
+          "options": [
+            "K_setup",
+            "K_lag",
+            "Schattenpreis"
+          ],
+          "answer_index": 2,
+          "rationale": "Schattenpreis ist Ergebnis, nicht Input.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Schattenpreis ist Ergebnis, nicht Input.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Vergessen, Iₜ ≥ 0 zu erzwingen → negative Lagerbestände.",
+        "y_t nicht binär deklariert → unrealistische Lösungen.",
+        "Big‑M zu groß/klein → entweder schwache Schranken oder Ausschluss guter Lösungen."
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du beherrschst Simplex und kannst Losgrößen mit Setups als MILP formulieren; LP‑Relaxation sinnvoll einordnen."
+    },
+    {
+      "type": "outlook",
+      "text": "Im Dual (L03) deuten wir Schattenpreise auch für CO₂‑Restriktionen."
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M06/M06L02.JSON",
+        "note": "baseline"
+      },
+      {
+        "source": "fixed_all_modules_with_steps",
+        "path": "M06/pruefungssets/pruefung-rabatt-skonto/M06L02_v2.json",
+        "note": "selected_best_variant"
+      }
+    ],
+    "versionTag": "v20250823-didactic-merge",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 12
+    }
+  }
+}
