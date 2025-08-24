@@ -1,0 +1,459 @@
+{
+  "id": "M01L03",
+  "title": "Lehrtext – Grundlagen: Potenzen & Wurzeln – Rechengesetze, Notation, exponentielles Wachstum & Zinseszins für Einsteiger",
+  "reading_time_min": 42,
+  "prerequisites": [
+    "M01L01",
+    "M01L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Ich kann Potenzen a^n und Wurzeln √a definieren, die wissenschaftliche Notation erklären und die wichtigsten Potenzgesetze aufzählen."
+    },
+    {
+      "level": "Understand",
+      "text": "Ich verstehe den Zusammenhang zwischen Potenz und Wurzel als Umkehroperationen und kann exponentielles von linearem Wachstum unterscheiden."
+    },
+    {
+      "level": "Apply",
+      "text": "Ich kann mit Potenzgesetzen rechnen, große und kleine Zahlen in wissenschaftlicher Notation schreiben und Zinseszins-Probleme lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ich erkenne Wachstumsprozesse in der Realität und kann beurteilen, ob ein Problem linear oder exponentiell ist."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Ich kann verschiedene Anlageformen vergleichen und die Macht des Zinseszinseffekts bewerten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "content": "In dieser Lektion entdeckst du die Welt der Potenzen und Wurzeln – von einfachen Quadratzahlen bis zum explosiven Wachstum bei Zinsen und Investitionen. Du lernst, wie sich kleine Prozentsätze über Jahre zu gewaltigen Summen entwickeln können und warum Einstein den Zinseszins als das 8. Weltwunder bezeichnete."
+    },
+    {
+      "type": "concept",
+      "title": "Wofür brauche ich das? – Das 1-Cent-Schachbrett",
+      "items": [
+        "Stell dir vor, jemand bietet dir einen Deal: Du bekommst am ersten Tag 1 Cent, am zweiten Tag 2 Cent, am dritten Tag 4 Cent – jeden Tag doppelt so viel wie am Vortag. Das klingt wenig, oder?",
+        "Am 10. Tag hättest du 5,12 €. Am 20. Tag schon 5.242,88 €. Am 30. Tag wären es über 5 Millionen Euro! Dieses explosive Wachstum nennt man exponentiell.",
+        "Das zeigt die ungeheure Kraft von Potenzen: 2^30 = 1.073.741.824 Cent. Eine scheinbar harmlose Verdopplung führt zu unvorstellbaren Summen."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die große Idee – Potenzen sind verkürzte Multiplikationen",
+      "items": [
+        "Eine Potenz wie 2^5 bedeutet einfach: Multipliziere die Basis 2 fünfmal mit sich selbst: 2 × 2 × 2 × 2 × 2 = 32.",
+        "Wurzeln sind das Gegenteil: √16 fragt 'Welche Zahl mit sich selbst multipliziert ergibt 16?' Die Antwort ist 4, denn 4 × 4 = 16.",
+        "Potenzen wachsen nicht gleichmäßig wie Addition, sondern immer schneller. Das macht sie perfekt für Zinsen, Wachstum und Zerfall."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Exponentielles vs. lineares Wachstum",
+      "image": "assets/M01L03_growth_comparison.png",
+      "content": "Zwei Kurven zeigen den Unterschied: Die blaue Linie (linear) steigt gleichmäßig. Die rote Kurve (exponentiell) startet flach, wird aber explosiv steil. Nach 20 Einheiten ist sie schon viel höher.",
+      "alt_text": "Diagramm mit linearer und exponentieller Kurve, y-Achse von 0-1000, x-Achse von 0-20",
+      "src": "assets/M01L03_growth_comparison.png",
+      "caption": "Zwei Kurven zeigen den Unterschied: Die blaue Linie (linear) steigt gleichmäßig. Die rote Kurve (exponentiell) startet flach, wird aber explosiv steil. Nach 20 Einheiten ist sie schon viel höher.",
+      "alt": "Diagramm mit linearer und exponentieller Kurve, y-Achse von 0-1000, x-Achse von 0-20"
+    },
+    {
+      "type": "concept",
+      "title": "Potenzen verstehen – Basis, Exponent und Ergebnis",
+      "items": [
+        "Bei 3^4 ist 3 die Basis (die Zahl, die multipliziert wird), 4 der Exponent (wie oft multipliziert wird) und 81 das Ergebnis.",
+        "Spezialfall a^0 = 1: Jede Zahl hoch 0 ergibt 1. Das ist kein Zufall, sondern folgt aus den Potenzgesetzen.",
+        "Spezialfall a^1 = a: Jede Zahl hoch 1 ist sie selbst. Einmaliges 'Multiplizieren' bedeutet: gar nicht multiplizieren."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Potenz-Anatomie",
+      "image": "assets/M01L03_power_anatomy.png",
+      "content": "Die Darstellung zeigt 5^3 = 125 mit Pfeilen: 5 ist die Basis, 3 ist der Exponent (hochgestellt), 125 ist das Ergebnis. Darunter die Bedeutung: 5 × 5 × 5.",
+      "alt_text": "Anatomische Aufschlüsselung einer Potenz mit beschrifteten Teilen",
+      "src": "assets/M01L03_power_anatomy.png",
+      "caption": "Die Darstellung zeigt 5^3 = 125 mit Pfeilen: 5 ist die Basis, 3 ist der Exponent (hochgestellt), 125 ist das Ergebnis. Darunter die Bedeutung: 5 × 5 × 5.",
+      "alt": "Anatomische Aufschlüsselung einer Potenz mit beschrifteten Teilen"
+    },
+    {
+      "type": "derivation",
+      "title": "Die Potenzgesetze – systematisch hergeleitet",
+      "steps": [
+        "Gesetz 1 – Multiplikation: a^m × a^n = a^(m+n). Beispiel: 2^3 × 2^2 = (2×2×2) × (2×2) = 2^5. Die Exponenten werden addiert.",
+        "Gesetz 2 – Division: a^m ÷ a^n = a^(m-n). Beispiel: 2^5 ÷ 2^2 = 32 ÷ 4 = 8 = 2^3. Die Exponenten werden subtrahiert.",
+        "Gesetz 3 – Potenz der Potenz: (a^m)^n = a^(m×n). Beispiel: (2^3)^2 = 8^2 = 64 = 2^6. Die Exponenten werden multipliziert.",
+        "Gesetz 4 – Potenz eines Produkts: (a×b)^n = a^n × b^n. Beispiel: (2×3)^2 = 6^2 = 36 und 2^2 × 3^2 = 4 × 9 = 36.",
+        "Diese Gesetze machen komplexe Rechnungen einfach und sind die Basis für Logarithmen und Exponentialfunktionen."
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Potenzgesetze in Aktion",
+      "steps": [
+        "Aufgabe: Vereinfache (2^3 × 2^4) ÷ 2^2 mit Potenzgesetzen.",
+        "Schritt 1 – Multiplikation im Zähler: 2^3 × 2^4 = 2^(3+4) = 2^7.",
+        "Schritt 2 – Division: 2^7 ÷ 2^2 = 2^(7-2) = 2^5.",
+        "Schritt 3 – Ausrechnen: 2^5 = 32.",
+        "Probe ohne Potenzgesetze: (8 × 16) ÷ 4 = 128 ÷ 4 = 32 ✓",
+        "Die Potenzgesetze sparen viel Rechenarbeit und verhindern Fehler bei großen Zahlen."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Potenzgesetze-Merkschema",
+      "image": "assets/M01L03_power_laws.png",
+      "content": "Eine übersichtliche Tabelle zeigt alle Potenzgesetze mit Beispielen: Multiplikation → Exponenten addieren, Division → subtrahieren, Potenz^Potenz → multiplizieren.",
+      "alt_text": "Tabellarische Übersicht der Potenzgesetze mit Formeln und Zahlenbeispielen",
+      "src": "assets/M01L03_power_laws.png",
+      "caption": "Eine übersichtliche Tabelle zeigt alle Potenzgesetze mit Beispielen: Multiplikation → Exponenten addieren, Division → subtrahieren, Potenz^Potenz → multiplizieren.",
+      "alt": "Tabellarische Übersicht der Potenzgesetze mit Formeln und Zahlenbeispielen"
+    },
+    {
+      "type": "concept",
+      "title": "Negative Exponenten – der Kehrwert-Trick",
+      "items": [
+        "Ein negativer Exponent bedeutet nicht 'negative Zahl', sondern 'Kehrwert': a^(-n) = 1/a^n.",
+        "Beispiel: 2^(-3) = 1/2^3 = 1/8 = 0,125. Das Ergebnis ist positiv, auch wenn der Exponent negativ ist.",
+        "Das folgt aus den Potenzgesetzen: 2^2 ÷ 2^5 = 2^(2-5) = 2^(-3). Da 4 ÷ 32 = 1/8 ist, muss 2^(-3) = 1/8 sein."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Negative Exponenten verstehen",
+      "image": "assets/M01L03_negative_exponents.png",
+      "content": "Eine Tabelle zeigt 2^3 = 8, 2^2 = 4, 2^1 = 2, 2^0 = 1, 2^(-1) = 1/2, 2^(-2) = 1/4. Jeder Schritt nach unten halbiert den Wert.",
+      "alt_text": "Tabelle mit abnehmenden Exponenten von 3 bis -2 und entsprechenden Potenzen",
+      "src": "assets/M01L03_negative_exponents.png",
+      "caption": "Eine Tabelle zeigt 2^3 = 8, 2^2 = 4, 2^1 = 2, 2^0 = 1, 2^(-1) = 1/2, 2^(-2) = 1/4. Jeder Schritt nach unten halbiert den Wert.",
+      "alt": "Tabelle mit abnehmenden Exponenten von 3 bis -2 und entsprechenden Potenzen"
+    },
+    {
+      "type": "concept",
+      "title": "Wurzeln – die Umkehrung der Potenz",
+      "items": [
+        "√a ist die Zahl, die mit sich selbst multipliziert a ergibt. √16 = 4, weil 4 × 4 = 16.",
+        "Die Quadratwurzel √a entspricht a^(1/2). Höhere Wurzeln: ∛a = a^(1/3), die dritte Wurzel.",
+        "Wurzeln aus negativen Zahlen sind im Bereich der reellen Zahlen nicht definiert. √(-4) gibt es nicht, weil keine reelle Zahl mit sich selbst multipliziert -4 ergibt."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Wurzel-Potenz-Zusammenhang",
+      "image": "assets/M01L03_root_power_relation.png",
+      "content": "Ein Kreisdiagramm zeigt den Zusammenhang: 4 → (hoch 2) → 16 → (Wurzel) → 4. Potenz und Wurzel heben sich gegenseitig auf.",
+      "alt_text": "Kreisförmiges Diagramm zeigt Umkehrbeziehung zwischen Potenz und Wurzel",
+      "src": "assets/M01L03_root_power_relation.png",
+      "caption": "Ein Kreisdiagramm zeigt den Zusammenhang: 4 → (hoch 2) → 16 → (Wurzel) → 4. Potenz und Wurzel heben sich gegenseitig auf.",
+      "alt": "Kreisförmiges Diagramm zeigt Umkehrbeziehung zwischen Potenz und Wurzel"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – Wurzelrechnung systematisch",
+      "steps": [
+        "Aufgabe: Berechne √(64) + ∛(27) - √(9).",
+        "Schritt 1 – Quadratwurzeln: √64 = 8 (weil 8 × 8 = 64) und √9 = 3 (weil 3 × 3 = 9).",
+        "Schritt 2 – Dritte Wurzel: ∛27 = 3 (weil 3 × 3 × 3 = 27).",
+        "Schritt 3 – Zusammensetzen: 8 + 3 - 3 = 8.",
+        "Probe: (√64)² + (∛27)³ - (√9)² = 64 + 27 - 9 = 82. Die Wurzeln sind korrekt."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Wissenschaftliche Notation – große und kleine Zahlen handhaben",
+      "items": [
+        "Sehr große oder kleine Zahlen schreibt man als a × 10^n, wobei 1 ≤ a < 10 und n eine ganze Zahl ist.",
+        "Beispiel: 5.400.000 = 5,4 × 10^6. Die 6 sagt: Komma 6 Stellen nach rechts schieben.",
+        "Beispiel: 0,0034 = 3,4 × 10^(-3). Die -3 sagt: Komma 3 Stellen nach links schieben."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Wissenschaftliche Notation Umwandlungsschema",
+      "image": "assets/M01L03_scientific_notation.png",
+      "content": "Ein Pfeildiagramm zeigt die Umwandlung: 450000 → Komma nach links → 4,5 → ×10^5. Für 0,0067: Komma nach rechts → 6,7 → ×10^(-3).",
+      "alt_text": "Umwandlungsdiagramm für wissenschaftliche Notation mit Pfeilen und Beispielen",
+      "src": "assets/M01L03_scientific_notation.png",
+      "caption": "Ein Pfeildiagramm zeigt die Umwandlung: 450000 → Komma nach links → 4,5 → ×10^5. Für 0,0067: Komma nach rechts → 6,7 → ×10^(-3).",
+      "alt": "Umwandlungsdiagramm für wissenschaftliche Notation mit Pfeilen und Beispielen"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel C – Wissenschaftliche Notation anwenden",
+      "steps": [
+        "Aufgabe: Die Lichtgeschwindigkeit beträgt etwa 300.000.000 m/s. Ein Lichtjahr sind etwa 9.460.000.000.000.000 m. Schreibe beide in wissenschaftlicher Notation.",
+        "Lichtgeschwindigkeit: 300.000.000 = 3,0 × 10^8 m/s. Das Komma wandert 8 Stellen nach links.",
+        "Lichtjahr: 9.460.000.000.000.000 = 9,46 × 10^15 m. Das Komma wandert 15 Stellen nach links.",
+        "Vorteil: Statt 16 Nullen zu schreiben, reicht 10^15. Rechnen wird einfacher: (3 × 10^8) × (2 × 10^5) = 6 × 10^13."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Exponentielles Wachstum vs. lineares Wachstum",
+      "items": [
+        "Lineares Wachstum: Jede Periode kommt der gleiche absolute Betrag dazu. Beispiel: Jeden Monat 100 € sparen.",
+        "Exponentielles Wachstum: Jede Periode wächst um den gleichen Prozentsatz. Beispiel: Jeden Monat 5% Zinsen auf das Gesamtkapital.",
+        "Das Tückische: Exponentielles Wachstum startet langsam, wird aber irgendwann explosiv. Darum ist früh anfangen bei Geldanlagen so wichtig."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Wachstumsvergleich über 20 Jahre",
+      "image": "assets/M01L03_growth_20_years.png",
+      "content": "Zwei Sparstrategien im Vergleich: Linear 100€/Monat erreicht nach 20 Jahren 24.000€. Exponentiell 1000€ zu 5% p.a. erreicht 2653€. Linear gewinnt hier!",
+      "alt_text": "Balkendiagramm vergleicht lineares und exponentielles Wachstum über 20 Jahre",
+      "src": "assets/M01L03_growth_20_years.png",
+      "caption": "Zwei Sparstrategien im Vergleich: Linear 100€/Monat erreicht nach 20 Jahren 24.000€. Exponentiell 1000€ zu 5% p.a. erreicht 2653€. Linear gewinnt hier!",
+      "alt": "Balkendiagramm vergleicht lineares und exponentielles Wachstum über 20 Jahre"
+    },
+    {
+      "type": "concept",
+      "title": "Zinseszins – die mächtigste Kraft im Universum",
+      "items": [
+        "Zinseszins bedeutet: Zinsen werden wieder angelegt und bringen selbst Zinsen. Die Formel: K = K0 × (1 + i)^n.",
+        "K0 ist das Anfangskapital, i der Zinssatz (als Dezimalzahl), n die Anzahl Jahre, K das Endkapital.",
+        "Beispiel: 1000€ zu 4% über 10 Jahre: K = 1000 × 1,04^10 ≈ 1000 × 1,48 = 1480€. Ohne Zinseszins wären es nur 1400€."
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel D – Zinseszins-Power in der Praxis",
+      "steps": [
+        "Situation: Du legst mit 25 Jahren 5000€ zu 6% p.a. an. Mit 65 Jahren gehst du in Rente. Wie viel hast du dann?",
+        "Laufzeit: 65 - 25 = 40 Jahre.",
+        "Formel: K = 5000 × 1,06^40.",
+        "Berechnung: 1,06^40 ≈ 10,29. Also K = 5000 × 10,29 = 51.450€.",
+        "Interpretation: Aus 5000€ wurden über 50.000€! Das ist mehr als das 10-fache. Davon sind 45.450€ reine Zinsen und Zinseszinsen.",
+        "Vergleich: Ohne Zinsen (unter der Matratze) wären es immer noch 5000€. Der Unterschied beträgt 46.450€ – das ist die Macht des Zinseszinses."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "40 Jahre Zinseszins-Entwicklung",
+      "image": "assets/M01L03_compound_interest_40years.png",
+      "content": "Eine Kurve zeigt die Entwicklung von 5000€ über 40 Jahre zu 6%. Die ersten 20 Jahre steigt sie sanft auf 16.000€, dann wird sie steil und erreicht 51.450€.",
+      "alt_text": "Exponentialkurve der Kapitalentwicklung über 40 Jahre, zeigt J-förmigen Verlauf",
+      "src": "assets/M01L03_compound_interest_40years.png",
+      "caption": "Eine Kurve zeigt die Entwicklung von 5000€ über 40 Jahre zu 6%. Die ersten 20 Jahre steigt sie sanft auf 16.000€, dann wird sie steil und erreicht 51.450€.",
+      "alt": "Exponentialkurve der Kapitalentwicklung über 40 Jahre, zeigt J-förmigen Verlauf"
+    },
+    {
+      "type": "concept",
+      "title": "Die 72er-Regel – Verdopplungszeit schnell schätzen",
+      "items": [
+        "Faustformel: Teile 72 durch den Zinssatz, und du erhältst die ungefähre Anzahl Jahre für eine Verdopplung.",
+        "Beispiel: Bei 6% Zinsen dauert es etwa 72 ÷ 6 = 12 Jahre, bis sich das Kapital verdoppelt.",
+        "Bei 3% dauert es 72 ÷ 3 = 24 Jahre. Bei 9% nur 72 ÷ 9 = 8 Jahre. Je höher der Zinssatz, desto schneller die Verdopplung."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "72er-Regel Tabelle",
+      "image": "assets/M01L03_rule_of_72.png",
+      "content": "Eine Tabelle zeigt Zinssätze von 1% bis 10% und die entsprechenden Verdopplungszeiten nach der 72er-Regel. Bei 1% dauert es 72 Jahre, bei 10% nur 7,2 Jahre.",
+      "alt_text": "Tabelle mit Zinssätzen und Verdopplungszeiten nach der 72er-Regel",
+      "src": "assets/M01L03_rule_of_72.png",
+      "caption": "Eine Tabelle zeigt Zinssätze von 1% bis 10% und die entsprechenden Verdopplungszeiten nach der 72er-Regel. Bei 1% dauert es 72 Jahre, bei 10% nur 7,2 Jahre.",
+      "alt": "Tabelle mit Zinssätzen und Verdopplungszeiten nach der 72er-Regel"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel E – Inflation und Kaufkraft",
+      "steps": [
+        "Problem: Die Inflation beträgt 2% pro Jahr. Was kostet ein heute 100€ teures Produkt in 10 Jahren?",
+        "Formel: Zukünftiger Preis = heutiger Preis × (1 + Inflationsrate)^Jahre.",
+        "Einsetzen: Preis = 100 × 1,02^10.",
+        "Berechnung: 1,02^10 ≈ 1,219. Also 100 × 1,219 = 121,90€.",
+        "Interpretation: Das Produkt kostet 21,90€ mehr. Deine Kaufkraft sinkt, wenn dein Geld nicht mindestens 2% Zinsen bringt.",
+        "Umkehrung: 100€ in 10 Jahren haben heute nur noch eine Kaufkraft von 100 ÷ 1,219 ≈ 82€."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Häufige Denkfallen bei Potenzen",
+      "items": [
+        "Denkfalle 1 – Negativer Exponent als negatives Ergebnis: 2^(-3) ist nicht -8, sondern +1/8.",
+        "Denkfalle 2 – Potenzgesetze auf Addition anwenden: 2^3 + 2^4 ist nicht 2^7, sondern 8 + 16 = 24.",
+        "Denkfalle 3 – Wurzel aus negativen Zahlen: √(-9) ist nicht -3, sondern nicht definiert (im Reellen).",
+        "Denkfalle 4 – Verwechslung von (ab)^n und a^n × b^n: (2×3)^2 = 6^2 = 36, aber 2^2 × 3^2 = 4 × 9 = 36. Hier stimmt es zufällig, aber (a+b)^n ≠ a^n + b^n."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Häufige Potenz-Fehler",
+      "image": "assets/M01L03_common_mistakes.png",
+      "content": "Vier Beispiele zeigen typische Fehler: negativer Exponent falsch interpretiert, Potenzgesetze bei Addition angewandt, Wurzel aus negativer Zahl, (a+b)^n falsch aufgelöst.",
+      "alt_text": "Vierteilige Fehlersammlung mit falschen und korrigierten Potenzrechnungen",
+      "src": "assets/M01L03_common_mistakes.png",
+      "caption": "Vier Beispiele zeigen typische Fehler: negativer Exponent falsch interpretiert, Potenzgesetze bei Addition angewandt, Wurzel aus negativer Zahl, (a+b)^n falsch aufgelöst.",
+      "alt": "Vierteilige Fehlersammlung mit falschen und korrigierten Potenzrechnungen"
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kurz (Aufwärmen)",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "Berechne: 2^4 × 2^3",
+          "hint": "Gleiche Basis → Exponenten addieren",
+          "solution": "2^4 × 2^3 = 2^(4+3) = 2^7 = 128"
+        },
+        {
+          "id": "E2",
+          "stem": "Was ist 5^0?",
+          "hint": "Jede Zahl hoch 0 ergibt...",
+          "solution": "5^0 = 1 (jede Zahl ungleich null hoch 0 ergibt 1)"
+        },
+        {
+          "id": "E3",
+          "stem": "Schreibe 3400 in wissenschaftlicher Notation",
+          "hint": "Komma so setzen, dass vor dem Komma eine Ziffer von 1-9 steht",
+          "solution": "3400 = 3,4 × 10^3"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kern (Können)",
+      "items": [
+        {
+          "id": "E4",
+          "stem": "Vereinfache: (3^2)^3 ÷ 3^4",
+          "solution": "(3^2)^3 = 3^6, dann 3^6 ÷ 3^4 = 3^(6-4) = 3^2 = 9"
+        },
+        {
+          "id": "E5",
+          "stem": "Berechne: √81 + ∛64",
+          "solution": "√81 = 9 (weil 9×9=81), ∛64 = 4 (weil 4×4×4=64), also 9 + 4 = 13"
+        },
+        {
+          "id": "E6",
+          "stem": "Was ist 4^(-2)?",
+          "solution": "4^(-2) = 1/4^2 = 1/16 = 0,0625"
+        },
+        {
+          "id": "E7",
+          "stem": "Zinseszins: 2000€ zu 5% für 6 Jahre",
+          "solution": "K = 2000 × 1,05^6 = 2000 × 1,3401 ≈ 2680,20€"
+        },
+        {
+          "id": "E8",
+          "stem": "Schreibe 0,00045 in wissenschaftlicher Notation",
+          "solution": "0,00045 = 4,5 × 10^(-4)"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Challenge (Transfer)",
+      "items": [
+        {
+          "id": "E9",
+          "stem": "Bakterienkultur verdoppelt sich alle 4 Stunden. Start: 100 Bakterien. Wie viele nach 24 Stunden?",
+          "solution": "24h ÷ 4h = 6 Verdopplungen. 100 × 2^6 = 100 × 64 = 6400 Bakterien"
+        },
+        {
+          "id": "E10",
+          "stem": "Bei 7% Zinsen: Nach wie vielen Jahren hat sich das Kapital verdoppelt? (72er-Regel und exakt)",
+          "solution": "72er-Regel: 72 ÷ 7 ≈ 10,3 Jahre. Exakt: 2 = 1,07^n → n = log(2)/log(1,07) ≈ 10,24 Jahre"
+        },
+        {
+          "id": "E11",
+          "stem": "Ein Neuwagen kostet 25000€. Er verliert jährlich 20% seines Werts. Was ist er nach 3 Jahren wert?",
+          "solution": "Wert = 25000 × 0,8^3 = 25000 × 0,512 = 12800€"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mini-Projekt – Investitionsvergleich",
+      "items": [
+        "Du hast 10000€ zu investieren. Drei Optionen stehen zur Wahl: A) 4% fest über 10 Jahre, B) 6% fest über 10 Jahre, C) 3% im ersten Jahr, dann jedes Jahr 0,5 Prozentpunkte mehr bis maximal 8%.",
+        "Aufgabe 1: Berechne den Endwert bei Option A und B.",
+        "Aufgabe 2: Bei Option C: Wie entwickelt sich das Kapital Jahr für Jahr?",
+        "Aufgabe 3: Welche Option bringt nach 10 Jahren am meisten?",
+        "Aufgabe 4: Nach wie vielen Jahren ist bei Option B das Kapital auf 15000€ gewachsen?",
+        "Lösung 1: A) 10000 × 1,04^10 = 14802,44€. B) 10000 × 1,06^10 = 17908,48€.",
+        "Lösung 2: C) Jahr 1: 10300€, Jahr 2: 10,909€ (3,5%), usw. bis Jahr 6: dann konstant 8%.",
+        "Lösung 3: Option B ist nach 10 Jahren am besten mit 17908€.",
+        "Lösung 4: 15000 = 10000 × 1,06^n → 1,5 = 1,06^n → n ≈ 6,96 Jahre."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Investitionsvergleich-Diagramm",
+      "image": "assets/M01L03_investment_comparison.png",
+      "content": "Drei Kurven zeigen die Kapitalentwicklung über 10 Jahre: Option A (4%) steigt stetig auf 14.802€, Option B (6%) steiler auf 17.908€, Option C variabel dazwischen.",
+      "alt_text": "Liniendiagramm mit drei Anlagekurven über 10 Jahre, y-Achse Euro, x-Achse Jahre",
+      "src": "assets/M01L03_investment_comparison.png",
+      "caption": "Drei Kurven zeigen die Kapitalentwicklung über 10 Jahre: Option A (4%) steigt stetig auf 14.802€, Option B (6%) steiler auf 17.908€, Option C variabel dazwischen.",
+      "alt": "Liniendiagramm mit drei Anlagekurven über 10 Jahre, y-Achse Euro, x-Achse Jahre"
+    },
+    {
+      "type": "concept",
+      "title": "Zusammenfassung & Spickzettel",
+      "items": [
+        "Potenzgesetze: a^m × a^n = a^(m+n), a^m ÷ a^n = a^(m-n), (a^m)^n = a^(m×n), (ab)^n = a^n × b^n.",
+        "Negativer Exponent: a^(-n) = 1/a^n. Wurzeln: √a = a^(1/2).",
+        "Wissenschaftliche Notation: a × 10^n mit 1 ≤ a < 10.",
+        "Zinseszins: K = K0 × (1+i)^n. 72er-Regel: Verdopplung in etwa 72÷Zinssatz Jahren.",
+        "Exponentielles Wachstum wird immer steiler, lineares Wachstum bleibt gleichmäßig."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Potenz-Spickzettel komplett",
+      "image": "assets/M01L03_complete_cheat_sheet.png",
+      "content": "Umfassender Spickzettel mit Potenzgesetzen, Wurzelregeln, wissenschaftlicher Notation, Zinseszinsformel und der 72er-Regel. Alles auf einen Blick.",
+      "alt_text": "Vollständiger Spickzettel für Potenzen, Wurzeln und exponentielles Wachstum",
+      "src": "assets/M01L03_complete_cheat_sheet.png",
+      "caption": "Umfassender Spickzettel mit Potenzgesetzen, Wurzelregeln, wissenschaftlicher Notation, Zinseszinsformel und der 72er-Regel. Alles auf einen Blick.",
+      "alt": "Vollständiger Spickzettel für Potenzen, Wurzeln und exponentielles Wachstum"
+    },
+    {
+      "type": "concept",
+      "title": "Selbstcheck – 3 Fragen zur Reflexion",
+      "items": [
+        "Frage 1: Warum ist exponentielles Wachstum anfangs langsam, wird aber explosiv? Antwort: Weil der Zuwachs prozentual konstant bleibt, aber auf eine immer größer werdende Basis angewendet wird. 5% von 100 sind 5, aber 5% von 10000 sind 500.",
+        "Frage 2: Woran erkenne ich, ob ein Problem exponentiell oder linear ist? Antwort: Linear: fester Betrag pro Periode (100€/Monat sparen). Exponentiell: fester Prozentsatz pro Periode (5% Zinsen aufs Gesamtkapital).",
+        "Frage 3: Warum ist früh anfangen bei Geldanlagen so wichtig? Antwort: Wegen des Zinseszinseffekts. Zeit ist bei exponentiellen Prozessen der wichtigste Faktor. 10000€ über 40 Jahre bringen mehr als 20000€ über 20 Jahre."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Ausblick & Verknüpfungen",
+      "items": [
+        "Als Nächstes lernst du lineare Gleichungen und siehst, wie sich lineare von exponentiellen Funktionen unterscheiden.",
+        "Die Potenzgesetze bereiten dich auf Logarithmen vor – die Umkehrfunktion der Exponentialfunktion.",
+        "In höheren Modulen begegnest du Exponentialfunktionen in der Analysis, wo du ihre Steigung und Fläche berechnest. Das Fundament legst du hier."
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L03.JSON",
+        "note": "baseline"
+      }
+    ],
+    "versionTag": "v20250824-complete-rebuild",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 11,
+      "blocks_after": 25
+    },
+    "deep_enriched": true,
+    "deep_version": "maximum-depth-v1",
+    "assets_count": 12,
+    "target_audience": "absolute_beginners",
+    "compat": {
+      "added_src_for_visuals": true
+    }
+  }
+}
