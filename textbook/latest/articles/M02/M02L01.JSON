@@ -1,0 +1,338 @@
+{
+  "id": "M02L01",
+  "title": "Lehrtext – Prozentrechnung Grundlagen: Grundwert, Prozentsatz, Prozentwert (KPI-Praxis für Einsteiger)",
+  "reading_time_min": 45,
+  "prerequisites": [
+    "M01L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Ich kann Grundwert (G), Prozentsatz (p%) und Prozentwert (W) in eigenen Worten erklären und in Beispielen identifizieren."
+    },
+    {
+      "level": "Understand",
+      "text": "Ich verstehe die Beziehungen W = p × G, p = W ÷ G und G = W ÷ p und kann sie mit Alltagsbeispielen begründen."
+    },
+    {
+      "level": "Apply",
+      "text": "Ich kann alle drei Grundtypen der Prozentrechnung (Grundwert gesucht, Prozentsatz gesucht, Prozentwert gesucht) sicher lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ich erkenne in KPI-Reports und Geschäftszahlen, welche Größe der Grundwert ist und kann falsche Bezugsgrößen identifizieren."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Ich kann beurteilen, ob Prozentangaben in Medien und Werbung korrekt verwendet werden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "content": "In dieser Lektion verstehst du Prozentrechnung von Grund auf. Du lernst die drei Grundbegriffe (Grundwert, Prozentsatz, Prozentwert) nicht auswendig, sondern durch Verstehen. Mit vielen Alltagsbeispielen aus Shopping, Business und KPIs wirst du sicher in allen Prozentaufgaben. Am Ende erkennst du typische Denkfallen und kannst Prozentangaben kritisch hinterfragen."
+    },
+    {
+      "type": "concept",
+      "title": "Wofür brauche ich das? – Das Tortendiagramm im Alltag",
+      "items": [
+        "Stell dir vor, du analysierst die Ausgaben deines Lieblings-Cafés. Von 100 Kunden an einem Tag haben 25 einen Cappuccino bestellt. Das sind 25 von 100, also 25 Prozent der Kunden.",
+        "Die 100 Kunden sind deine Bezugsgröße – der Grundwert. Die 25 Cappuccino-Kunden sind das, was tatsächlich passiert ist – der Prozentwert. Die 25% sind das Verhältnis zwischen beiden – der Prozentsatz.",
+        "Diese Situation lässt sich mit der Grundformel der Prozentrechnung beschreiben: 25% von 100 Kunden = 25 Kunden."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die große Idee – Prozent bedeutet 'von hundert'",
+      "items": [
+        "Das Wort 'Prozent' kommt aus dem Lateinischen: 'pro centum' bedeutet 'von hundert'. 25% ist dasselbe wie 25 von 100 oder der Bruch 25/100 oder die Dezimalzahl 0,25.",
+        "Prozentrechnung ist im Kern eine Verhältnisrechnung: Wie viel ist ein Teil vom Ganzen? Das Ganze nennen wir Grundwert (G), den Teil nennen wir Prozentwert (W), das Verhältnis nennen wir Prozentsatz (p).",
+        "Die drei Größen hängen immer zusammen: Wenn ich zwei kenne, kann ich die dritte berechnen. Das ist wie bei einem Dreieck – alle Seiten bestimmen sich gegenseitig."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Das Prozent-Dreieck – alle Formeln auf einen Blick",
+      "image": "assets/M02L01_triangle.png",
+      "content": "Das Dreieck zeigt die Grundformel W = p × G. Wenn du eine Größe suchst, deckst du sie ab und liest die Formel: W oben, also W = p × G. p links unten abgedeckt: p = W ÷ G. G rechts unten abgedeckt: G = W ÷ p.",
+      "alt_text": "Dreieck mit W oben, p links unten, G rechts unten, zeigt die drei Grundformeln der Prozentrechnung"
+    },
+    {
+      "type": "concept",
+      "title": "Die drei Akteure verstehen – nicht auswendig lernen",
+      "items": [
+        "Grundwert (G): Das ist das Ganze, der Ausgangswert, die Bezugsgröße. Frage: '100% von was?' Beispiele: alle Kunden, der ursprüngliche Preis, das Gesamtbudget.",
+        "Prozentwert (W): Das ist der Teil, das tatsächliche Ergebnis, die absolute Zahl. Frage: 'Wie viele konkret?' Beispiele: 25 Kunden, 15 Euro Rabatt, 3 defekte Geräte.",
+        "Prozentsatz (p): Das ist das Verhältnis, die relative Angabe mit %-Zeichen. Frage: 'Wie viel Prozent?' Beispiele: 25%, 12% Rabatt, 8% Ausschussquote."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Café-Beispiel visualisiert",
+      "image": "assets/M02L01_cafe_example.png",
+      "content": "100 Kunden (Grundwert G) sind als Kreisdiagramm dargestellt. 25 Kunden (Prozentwert W) haben Cappuccino bestellt – das ist der rot markierte Sektor. 25% (Prozentsatz p) ist die Beschriftung des Sektors.",
+      "alt_text": "Kreisdiagramm mit 100 Kunden total, 25 Cappuccino-Kunden rot hervorgehoben, 25% Label"
+    },
+    {
+      "type": "derivation",
+      "title": "Schritt-für-Schritt: Die drei Grundtypen erkennen und lösen",
+      "steps": [
+        "Schritt 1: Lies die Aufgabe zweimal und markiere alle Zahlen. Frage dich: Was ist gegeben, was ist gesucht?",
+        "Schritt 2: Identifiziere den Grundwert mit der Frage '100% von was?'. Der Grundwert ist oft die größte sinnvolle Gesamtmenge.",
+        "Schritt 3: Bestimme, welcher Typ vorliegt: Typ I (W gesucht), Typ II (p gesucht), Typ III (G gesucht).",
+        "Schritt 4: Wende die passende Formel an und rechne. Denk dabei in Dezimalzahlen: 25% = 0,25.",
+        "Schritt 5: Prüfe das Ergebnis auf Plausibilität. Ist das Ergebnis größer oder kleiner als erwartet?"
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Typ I: Prozentwert gesucht (klassischer Fall)",
+      "steps": [
+        "Aufgabe: In einer Klasse mit 28 Schülern sind 60% weiblich. Wie viele Schülerinnen sind das?",
+        "Schritt 1: Gegeben: G = 28 Schüler, p = 60%. Gesucht: W = ? Schülerinnen.",
+        "Schritt 2: Grundwert identifizieren: 100% = 28 Schüler (die ganze Klasse).",
+        "Schritt 3: Typ I erkannt, da Prozentwert W gesucht ist.",
+        "Schritt 4: Formel W = p × G anwenden: W = 0,60 × 28 = 16,8.",
+        "Schritt 5: Da Menschen nicht teilbar sind, runden wir auf 17 Schülerinnen. Probe: 17 ÷ 28 ≈ 0,607 = 60,7% ✓"
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Typ I visualisiert – vom Ganzen zum Teil",
+      "image": "assets/M02L01_type1_visual.png",
+      "content": "Ein Balken zeigt 28 Schüler als Ganzes. 60% des Balkens sind blau eingefärbt und ergeben 17 Schülerinnen. Der Pfeil zeigt: von 100% auf 60%.",
+      "alt_text": "Horizontaler Balken für 28 Schüler, 60% blau markiert für 17 Schülerinnen"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – Typ II: Prozentsatz gesucht (Verhältnis finden)",
+      "steps": [
+        "Aufgabe: Von 250 produzierten Handys sind 15 defekt. Wie hoch ist die Ausschussquote in Prozent?",
+        "Schritt 1: Gegeben: G = 250 Handys, W = 15 defekte Handys. Gesucht: p = ?%.",
+        "Schritt 2: Grundwert: 100% = 250 Handys (die gesamte Produktion).",
+        "Schritt 3: Typ II erkannt, da Prozentsatz p gesucht ist.",
+        "Schritt 4: Formel p = W ÷ G anwenden: p = 15 ÷ 250 = 0,06 = 6%.",
+        "Schritt 5: Plausibilität: 6% von 250 sind etwa 15. Stimmt! Die Ausschussquote beträgt 6%."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Typ II visualisiert – vom Teil zum Verhältnis",
+      "image": "assets/M02L01_type2_visual.png",
+      "content": "250 Handys als Punktwolke dargestellt, 15 defekte rot markiert. Ein Pfeil zeigt die Berechnung 15÷250 = 0,06 = 6%.",
+      "alt_text": "Grid aus 250 Handy-Icons, 15 davon rot für defekt, Berechnung 15÷250=6%"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel C – Typ III: Grundwert gesucht (das Ganze finden)",
+      "steps": [
+        "Aufgabe: 30% der Mitarbeiter einer Firma arbeiten im Homeoffice. Das sind 45 Personen. Wie viele Mitarbeiter hat die Firma insgesamt?",
+        "Schritt 1: Gegeben: p = 30%, W = 45 Personen. Gesucht: G = ? Mitarbeiter total.",
+        "Schritt 2: Grundwert gesucht: 100% = ? Mitarbeiter (alle Mitarbeiter).",
+        "Schritt 3: Typ III erkannt, da Grundwert G gesucht ist.",
+        "Schritt 4: Formel G = W ÷ p anwenden: G = 45 ÷ 0,30 = 150.",
+        "Schritt 5: Probe: 30% von 150 = 0,30 × 150 = 45 ✓. Die Firma hat 150 Mitarbeiter."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Typ III visualisiert – vom Teil zum Ganzen",
+      "image": "assets/M02L01_type3_visual.png",
+      "content": "45 Homeoffice-Mitarbeiter als orangener Balkenabschnitt (30%). Der komplette Balken zeigt 150 Mitarbeiter (100%). Pfeil zeigt: von 30% auf 100%.",
+      "alt_text": "Balkendiagramm mit 45 Personen als 30%-Abschnitt, hochgerechnet auf 150 Personen total"
+    },
+    {
+      "type": "concept",
+      "title": "KPI-Praxis – Prozente im Business verstehen",
+      "items": [
+        "In Unternehmen begegnen dir ständig Prozentzahlen: Umsatzwachstum, Marktanteil, Conversion-Rate, Gewinnmarge. Wichtig ist immer: Prozent wovon?",
+        "Beispiel Umsatzwachstum: '20% mehr Umsatz' ist nur aussagekräftig, wenn klar ist, im Vergleich zu wann. 20% mehr als letztes Jahr? Als letztes Quartal?",
+        "Vorsicht bei Prozentpunkten: Wenn die Arbeitslosigkeit von 5% auf 7% steigt, sind das 2 Prozentpunkte, aber 40% relative Steigerung (2÷5 = 0,40)."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "KPI-Dashboard Beispiel",
+      "image": "assets/M02L01_kpi_dashboard.png",
+      "content": "Ein typisches Business-Dashboard mit verschiedenen KPIs: Umsatz +15% (vs. Vorjahr), Conversion Rate 3,2%, Marktanteil 12%. Jede Zahl hat einen klar definierten Grundwert.",
+      "alt_text": "Business-Dashboard mit KPI-Kacheln, verschiedene Prozentangaben mit Bezugsgrößen"
+    },
+    {
+      "type": "concept",
+      "title": "Häufige Denkfallen und wie du sie umgehst",
+      "items": [
+        "Denkfalle 1 – Grundwert verwechseln: 'Der Preis steigt von 80€ auf 100€' ist ein Anstieg um 25% (20÷80), nicht um 20%. Der Grundwert ist der Ausgangspreis 80€.",
+        "Denkfalle 2 – Prozent und Prozentpunkte verwechseln: Wenn ein Zinssatz von 2% auf 3% steigt, sind das 1 Prozentpunkt, aber 50% relative Steigerung.",
+        "Denkfalle 3 – Unsinnige Grundwerte: '150% der Schüler' ist unmöglich. Ein Prozentwert kann größer als der Grundwert sein, aber nicht die Anzahl Schüler größer als die Anzahl Schüler.",
+        "Denkfalle 4 – Unklare Bezugsgröße: '30% mehr' – mehr als was? Immer nach dem Grundwert fragen."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Denkfallen visualisiert",
+      "image": "assets/M02L01_pitfalls.png",
+      "content": "Vier Beispiele für häufige Fehler: falscher Grundwert, Prozentpunkte vs. Prozent, unmögliche Werte über 100%, unklare Bezugsgrößen. Daneben die korrekten Interpretationen.",
+      "alt_text": "Vierteilige Grafik mit typischen Prozentfehlern links und korrekten Versionen rechts"
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kurz (Aufwärmen)",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "Berechne 25% von 80 Euro.",
+          "hint": "Das ist Typ I: Prozentwert gesucht",
+          "solution": "W = p × G = 0,25 × 80 = 20 Euro"
+        },
+        {
+          "id": "E2",
+          "stem": "15 von 60 Äpfeln sind faul. Wie viel Prozent?",
+          "hint": "Das ist Typ II: Prozentsatz gesucht",
+          "solution": "p = W ÷ G = 15 ÷ 60 = 0,25 = 25%"
+        },
+        {
+          "id": "E3",
+          "stem": "40% sind 12 Stück. Wie viele Stück sind 100%?",
+          "hint": "Das ist Typ III: Grundwert gesucht",
+          "solution": "G = W ÷ p = 12 ÷ 0,40 = 30 Stück"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kern (Können)",
+      "items": [
+        {
+          "id": "E4",
+          "stem": "In einem Restaurant mit 120 Plätzen sind abends 75% besetzt. Wie viele Gäste sind da?",
+          "solution": "Typ I: W = 0,75 × 120 = 90 Gäste"
+        },
+        {
+          "id": "E5",
+          "stem": "Von 300 Website-Besuchern kaufen 18 etwas. Wie hoch ist die Conversion-Rate?",
+          "solution": "Typ II: p = 18 ÷ 300 = 0,06 = 6%"
+        },
+        {
+          "id": "E6",
+          "stem": "Ein Unternehmen hat 12% Marktanteil. Das entspricht 2,4 Millionen Euro Umsatz. Wie groß ist der Gesamtmarkt?",
+          "solution": "Typ III: G = 2,4 ÷ 0,12 = 20 Millionen Euro"
+        },
+        {
+          "id": "E7",
+          "stem": "Der Umsatz steigt von 50.000€ auf 65.000€. Um wie viel Prozent ist das Wachstum?",
+          "hint": "Achtung: Grundwert ist der Ausgangsumsatz",
+          "solution": "Differenz: 65.000 - 50.000 = 15.000€. Wachstum: 15.000 ÷ 50.000 = 0,30 = 30%"
+        },
+        {
+          "id": "E8",
+          "stem": "Ein Zinssatz steigt von 2% auf 3%. Wie viel Prozent relative Steigerung ist das?",
+          "solution": "Differenz: 3% - 2% = 1 Prozentpunkt. Relativ: 1 ÷ 2 = 0,50 = 50% Steigerung"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Challenge (Transfer)",
+      "items": [
+        {
+          "id": "E9",
+          "stem": "Eine Umfrage: 60% der Befragten nutzen Instagram, 40% nutzen TikTok, 25% nutzen beide. Wie viel Prozent nutzen mindestens eine der beiden Plattformen?",
+          "hint": "Vorsicht: Die Mengen überlappen sich!",
+          "solution": "Instagram oder TikTok = 60% + 40% - 25% = 75% (Überlappung wird abgezogen)"
+        },
+        {
+          "id": "E10",
+          "stem": "Ein Produkt wird um 20% reduziert, dann um 25% erhöht. Ist der Endpreis höher oder niedriger als der Startpreis?",
+          "solution": "Faktor: 0,80 × 1,25 = 1,00. Der Endpreis ist genau gleich dem Startpreis!"
+        },
+        {
+          "id": "E11",
+          "stem": "In einer Firma arbeiten 60% Männer. Von den Männern haben 30% einen Universitätsabschluss, von den Frauen 45%. Wie viel Prozent aller Mitarbeiter haben einen Uni-Abschluss?",
+          "solution": "Männer mit Uni: 60% × 30% = 18%. Frauen mit Uni: 40% × 45% = 18%. Total: 18% + 18% = 36%"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mini-Projekt – E-Commerce Analyse",
+      "items": [
+        "Du analysierst einen Online-Shop. Letzte Woche: 2000 Besucher, 80 Bestellungen, Gesamtumsatz 3200 Euro. Diese Woche: 2400 Besucher, 120 Bestellungen, Gesamtumsatz 5040 Euro.",
+        "Aufgabe 1: Berechne die Conversion-Rate (Bestellungen ÷ Besucher) für beide Wochen.",
+        "Aufgabe 2: Berechne den durchschnittlichen Bestellwert für beide Wochen.",
+        "Aufgabe 3: Um wie viel Prozent ist die Conversion-Rate gestiegen?",
+        "Aufgabe 4: Um wie viel Prozent ist der durchschnittliche Bestellwert gestiegen?",
+        "Lösung 1: Letzte Woche: 80 ÷ 2000 = 4%. Diese Woche: 120 ÷ 2400 = 5%.",
+        "Lösung 2: Letzte Woche: 3200 ÷ 80 = 40 Euro. Diese Woche: 5040 ÷ 120 = 42 Euro.",
+        "Lösung 3: Steigerung Conversion: (5% - 4%) ÷ 4% = 25% Steigerung.",
+        "Lösung 4: Steigerung Bestellwert: (42 - 40) ÷ 40 = 5% Steigerung."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "E-Commerce Dashboard Vergleich",
+      "image": "assets/M02L01_ecommerce_analysis.png",
+      "content": "Zwei Dashboards nebeneinander zeigen die KPIs beider Wochen. Pfeile zeigen die Verbesserungen: Conversion +25%, Bestellwert +5%, Umsatz +57,5%.",
+      "alt_text": "Vergleichsdiagramm zweier E-Commerce-Dashboards mit KPI-Verbesserungen"
+    },
+    {
+      "type": "concept",
+      "title": "Zusammenfassung & Spickzettel",
+      "items": [
+        "Prozentrechnung = Verhältnisrechnung: Wie viel ist ein Teil vom Ganzen?",
+        "Drei Akteure: Grundwert G (das Ganze), Prozentwert W (der Teil), Prozentsatz p (das Verhältnis).",
+        "Drei Formeln: W = p × G, p = W ÷ G, G = W ÷ p. Das Prozent-Dreieck hilft beim Merken.",
+        "Immer fragen: Prozent wovon? Der Grundwert ist die Bezugsgröße für 100%.",
+        "Plausibilität prüfen: Ist das Ergebnis realistisch? Bei Menschen runden, bei Geld auf Cent genau."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Formel-Spickzettel",
+      "image": "assets/M02L01_formula_sheet.png",
+      "content": "Übersichtstafel mit dem Prozent-Dreieck, den drei Grundformeln und Beispielen für jeden Typ. Plus Umrechnungstabelle Prozent ↔ Dezimal ↔ Bruch.",
+      "alt_text": "Formelsammlung mit Prozent-Dreieck, drei Grundformeln und Umrechnungstabelle"
+    },
+    {
+      "type": "concept",
+      "title": "Selbstcheck – 3 Fragen zur Reflexion",
+      "items": [
+        "Frage 1: Woran erkenne ich den Grundwert in einer Aufgabe? Antwort: Er ist die Bezugsgröße für 100%. Frage dich: '100% von was?' oder 'Das Ganze ist...'. Oft ist es die größte sinnvolle Menge.",
+        "Frage 2: Wie unterscheide ich Prozent und Prozentpunkte? Antwort: Prozentpunkte sind absolute Differenzen (5% auf 7% = +2 Prozentpunkte). Prozent sind relative Änderungen (2÷5 = 40% Steigerung).",
+        "Frage 3: Wie prüfe ich, ob mein Ergebnis stimmt? Antwort: Setze es in die ursprüngliche Situation ein. Sind 25% von 80 wirklich 20? Rechne: 20÷80 = 0,25 = 25% ✓"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Ausblick & Verknüpfungen",
+      "items": [
+        "Als Nächstes lohnt sich der Sprung zu kombinierten Prozentänderungen – Rabatt plus Skonto, Mehrwertsteuer, Zinseszins. Dort wendest du diese Grundlagen in komplexeren Situationen an.",
+        "Das knüpft an dein Grundverständnis an: Jede Prozentänderung ist eine Multiplikation mit einem Faktor. Mehrere Änderungen nacheinander bedeutet mehrere Faktoren multiplizieren.",
+        "In höheren Modulen lernst du Wachstumsrechnungen, Statistik und Finanzmathematik – alles baut auf diesen Grundlagen auf."
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M02/M02L01.JSON",
+        "note": "baseline"
+      }
+    ],
+    "versionTag": "v20250824-full-dummies-expansion",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 8,
+      "blocks_after": 26
+    },
+    "deep_enriched": true,
+    "deep_version": "maximum-depth-v1",
+    "assets_count": 12,
+    "target_audience": "absolute_beginners",
+    "repair": {
+      "fixed_by": "auto_repair_v2",
+      "note": "from latest (ok)"
+    }
+  }
+}
