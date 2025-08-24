@@ -1,0 +1,405 @@
+{
+  "id": "M01L04_v3",
+  "title": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)",
+  "reading_time_min": 46,
+  "prerequisites": [
+    "M01L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft Gleichungen & Ungleichungen mit praxisnahen Rechenaufgaben (Sets E/F). Fokus auf Break-Even-Berechnungen und systematische Gleichungsaufstellung."
+    },
+    {
+      "type": "concept",
+      "title": "Rechen-Mix Konzept",
+      "text": "- **Set E**: Break-Even konkret berechnen, Ungleichungsrichtung  \n- **Set F**: Text zu Gleichung mit gestuften Hinweisen  \n- Ziel: Sichere Anwendung in betriebswirtschaftlichen Kontexten",
+      "explanation": "\n\n**Decision-Hints:**\n- Kettenrabatt niemals addieren: immer Faktoren multiplizieren.\n- Skonto auf den bereits rabattierten Preis anwenden."
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen-Mix",
+      "long": [
+        {
+          "title": "E1 – Break-Even",
+          "context": "Fix € 12,000, vK € 8/Stk., Preis € 14/Stk.",
+          "tasks": [
+            {
+              "prompt": "a) Schwelle?",
+              "hints": "(14−8)x=12,000",
+              "solution": "x=2,000 Stk.",
+              "check": {
+                "type": "string_contains",
+                "expected": "2,000"
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Ungleichung",
+          "context": "5−2x ≥ 11.",
+          "tasks": [
+            {
+              "prompt": "a) Lösung?",
+              "hints": "Richtung bei /−2 umkehren",
+              "solution": "x ≤ −3",
+              "check": {
+                "type": "string_contains",
+                "expected": "x ≤ −3"
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "title": "Mehrstufige Konditionen",
+          "hints": [
+            "Arbeite mit Faktoren.",
+            "Reihenfolge der Abzüge beachten.",
+            "Erst am Ende runden."
+          ],
+          "solution": "Beispiel: 1,200 · 0,85 · 0,98 = 999,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 1.2,
+            "tolerance": 0.05,
+            "expr": "1.200"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "Arbeite mit Faktoren.",
+            "Reihenfolge der Abzüge beachten.",
+            "Erst am Ende runden."
+          ]
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Kontrollaufgabe: 12% von € 3,750,00?",
+          "solution": "€ 450,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Löse: 9x + 18 = 0",
+          "solution": "x = -2",
+          "check": {
+            "type": "numeric",
+            "expected": -2
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "BE bei K_fix=€ 9,000,00, p=€ 15,00, k_v=€ 12,-",
+          "solution": "x_BE = 3,000",
+          "check": {
+            "type": "numeric",
+            "expected": 3000
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
+          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "check": {
+            "type": "string_contains",
+            "expected": "1−"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "long": [
+        {
+          "title": "F1 – Text zu Gleichung",
+          "context": "Zielgewinn € 9,000, Preis € 20,- vK € 12,- Fix € 15,-",
+          "tasks": [
+            {
+              "prompt": "a) Gleichung?",
+              "hints": "E−K=Ziel",
+              "solution": "(20x)−(15000+12x)=9000",
+              "check": {
+                "type": "string_contains",
+                "expected": "20x"
+              }
+            },
+            {
+              "prompt": "b) Menge?",
+              "hints": "umstellen",
+              "solution": "x=3000",
+              "check": {
+                "type": "numeric",
+                "expected": 3000
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "title": "Mehrstufige Konditionen",
+          "hints": [
+            "Arbeite mit Faktoren.",
+            "Reihenfolge der Abzüge beachten.",
+            "Erst am Ende runden."
+          ],
+          "solution": "Beispiel: 1,200 · 0,85 · 0,98 = 999,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 1.2,
+            "tolerance": 0.05,
+            "expr": "1.200"
+          },
+          "difficulty": "leicht",
+          "steps": [
+            "Arbeite mit Faktoren.",
+            "Reihenfolge der Abzüge beachten.",
+            "Erst am Ende runden."
+          ]
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "solution": "PLATZHALTER",
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Kontrollaufgabe: 12% von € 3,750,00?",
+          "solution": "€ 450,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Löse: 9x + 18 = 0",
+          "solution": "x = -2",
+          "check": {
+            "type": "numeric",
+            "expected": -2
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "BE bei K_fix=€ 9,000,00, p=€ 15,00, k_v=€ 12,-",
+          "solution": "x_BE = 3,000",
+          "check": {
+            "type": "numeric",
+            "expected": 3000
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation."
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "steps": [
+          "[Schritt 1] …"
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "steps": [
+          "…"
+        ]
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "PLATZHALTER – Aussage",
+          "answer": true,
+          "rationale": "PLATZHALTER – Begründung | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. PLATZHALTER – Begründung | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kettenrabatten addiert man Prozente.",
+          "answer": false,
+          "rationale": "Faktoren multiplizieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Faktoren multiplizieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "K0=€ 2,000, i=5%, n=2 → K=?",
+          "options": [
+            "€ 2,100,00",
+            "€ 2,205,00",
+            "€ 2,005,00"
+          ],
+          "answer_index": 1,
+          "rationale": "2,000·1,05^2=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 2,000·1,05^2=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Kettenrabatte werden addiert.",
+          "answer": false,
+          "rationale": "Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Rabatte als Faktoren multiplizieren; nicht addieren.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Skonto wird auf den bereits rabattierten Preis angewendet.",
+          "answer": true,
+          "rationale": "Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Reihenfolge: Rabatt(e) → Skonto (auf den rabattierten Preis).",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

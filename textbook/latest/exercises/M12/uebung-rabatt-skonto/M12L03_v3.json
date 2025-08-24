@@ -1,0 +1,143 @@
+{
+  "id": "M12L03",
+  "title": "Uplift-Modelle – T/S/X/DR & Policy (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "reading_time_min": 9,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "long": [
+        {
+          "title": "E1 – Qini@30%",
+          "context": "Random-Gewinn 20 k€, Policy 72 k€.",
+          "tasks": [
+            {
+              "prompt": "a) Mehrwert?",
+              "hints": "Differenz",
+              "solution": "+52 k€",
+              "check": {
+                "type": "numeric",
+                "expected": 52
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Cutoff-Policy",
+          "context": "Budget q=25%.",
+          "tasks": [
+            {
+              "prompt": "a) Regel?",
+              "hints": "Top-q nach CATE",
+              "solution": "adressiere Top 25%",
+              "check": {
+                "type": "string_contains",
+                "expected": "25"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "long": [
+        {
+          "title": "F1 – Guardrail",
+          "context": "CATE-Policy erhöht Retourenrate um +0,4%-Pkt; Grenze +0,5%-Pkt.",
+          "tasks": [
+            {
+              "prompt": "a) Entscheidung?",
+              "hints": "unter Grenze → ok, beobachten",
+              "solution": "freigeben mit Monitoring",
+              "check": {
+                "type": "string_contains",
+                "expected": "Monitoring"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation."
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "kurz"
+}
