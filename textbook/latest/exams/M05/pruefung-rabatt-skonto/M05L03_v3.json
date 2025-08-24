@@ -1,0 +1,166 @@
+{
+  "id": "M05L03",
+  "title": "Monte‑Carlo – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+  "reading_time_min": 82,
+  "prerequisites": [
+    "M05L01",
+    "M05L02",
+    "M05L03",
+    "M05L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Evaluate",
+      "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "text": "Feintuning: Auswahl geeigneter Verteilungen, Quantile & VaR/CVaR sicher interpretieren, Hedge‑Effekte."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset E",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "E[Triangular(10,20,40)]",
+          "options": [
+            "23,33",
+            "21,67",
+            "20,00"
+          ],
+          "answer_index": 0,
+          "rationale": "(10+20+40)/3=23,33.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. (10+20+40)/3=23,33.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "CVaR95 ist i. d. R. **größer** (schlimmer) als VaR95.",
+          "answer": true,
+          "rationale": "Tail‑Durchschnitt.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Tail‑Durchschnitt.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Verteilung ist für strikt positive Preise geeignet?",
+          "options": [
+            "Normal",
+            "Lognormal",
+            "Cauchy"
+          ],
+          "answer_index": 1,
+          "rationale": "Lognormal bleibt >0.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Lognormal bleibt >0.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "P5=−15k; P50=+4k; P95=+22k. VaR95 (Verlustsicht) =",
+          "options": [
+            "15k",
+            "22k",
+            "4k"
+          ],
+          "answer_index": 0,
+          "rationale": "VaR95= max(0, −P5)=15k.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. VaR95= max(0, −P5)=15k.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Negative Korrelation Preis×Menge erhöht oft die Ergebnisstreuung.",
+          "answer": true,
+          "rationale": "Ungünstige Kombis wahrscheinlicher.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ungünstige Kombis wahrscheinlicher.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Partial Sensitivity bewertet…",
+          "options": [
+            "Einfluss eines Inputs innerhalb der Simulation",
+            "nur linearen Trend",
+            "Median"
+          ],
+          "answer_index": 0,
+          "rationale": "z. B. Spearman‑Rangkorrelation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. z. B. Spearman‑Rangkorrelation.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Hedge 50% senkt typ. …",
+          "options": [
+            "VaR95",
+            "Median stark",
+            "P95"
+          ],
+          "answer_index": 0,
+          "rationale": "Downside sinkt, Median leicht.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Downside sinkt, Median leicht.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "„Mittelwertfalle“: Nur E[NPV] kann irreführen – Quantile beachten.",
+          "answer": true,
+          "rationale": "Verteilung zählt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verteilung zählt.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

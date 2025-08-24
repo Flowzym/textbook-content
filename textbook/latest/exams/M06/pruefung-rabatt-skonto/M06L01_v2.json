@@ -1,0 +1,387 @@
+{
+  "id": "M06L01",
+  "title": "Lineare Optimierung I – Modellierung & Geometrie (v2: Prüfungssets A–D & Schichtplanung)",
+  "reading_time_min": 19,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe und Standardform sicher beherrschen."
+    },
+    {
+      "level": "Apply",
+      "text": "Wortprobleme in LPs überführen, grafisch lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Parameter‑Sensitivität qualitativ deuten."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Praxisfall Schichtplanung mit Mindestbesetzung modellieren und interpretieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Aufbauend auf M06L01 (v1) vertiefst du die **Modellierung** mit einem **Praxisfall Schichtplanung** und prüfungsnahen **Quiz‑Sets A–D**."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Schichtplanung mit Mindestbesetzung",
+      "text": "Ziel: **Kosten minimieren**.  \nVariablen: x_M, x_A, x_N = Schichtstunden (Morgen/Abend/Nacht).  \nKosten: 18/20/€ 24/h. Anforderungen: Mindestens 30 h Morgen, 25 h Abend, 15 h Nacht; Total ≤ 90 h; Nacht ≤ 40% vom Total.  \nLP: min z=18x_M+20x_A+24x_N s.t. x_M≥30, x_A≥25, x_N≥15, x_M+x_A+x_N≤90, x_N ≤ 0,4(x_M+x_A+x_N), x≥0.  \nTipp: Schreib ≥ als ≤ mit Slacks über −x_M ≤ −30 etc. **Interpretation**: Nacht‑Quote begrenzt Verlagerung in günstige Schichten.",
+      "steps": [
+        "Ziel: **Kosten minimieren",
+        "Variablen: x_M, x_A, x_N = Schichtstunden (Morgen/Abend/Nacht",
+        "Kosten: 18/20/€ 24/h. Anforderungen: Mindestens 30 h Morgen, 25 h Abend, 15 h Nacht; Total ≤ 90 h; Nacht ≤ 40% vom Total",
+        "LP: min z=18x_M+20x_A+24x_N s.t. x_M≥30, x_A≥25, x_N≥15, x_M+x_A+x_N≤90, x_N ≤ 0,4(x_M+x_A+x_N), x≥",
+        "Tipp: Schreib ≥ als ≤ mit Slacks über −x_M ≤ −30 etc. **Interpretation**: Nacht‑Quote begrenzt Verlagerung in günstige Schichten"
+      ]
+    },
+    {
+      "type": "exercises",
+      "long": [
+        {
+          "title": "Praxis – Dienstplan mit Qualifikationsmix",
+          "context": "Zwei Tätigkeiten erfordern Qualifikation Q1 und Q2. Je Stunde Morgen/Abend/Nacht liefern (Q1,Q2)‑Leistung: M(1,0), A(0,8,0,6), N(0,7,0,9). Mindestbedarf: Q1≥40, Q2≥30. Kosten s. o.",
+          "subtasks": [
+            {
+              "text": "Formuliere ein LP mit Entscheidungsvariablen x_M,x_A,x_N."
+            },
+            {
+              "text": "Bilde Q1/Q2‑Nebenbedingungen."
+            },
+            {
+              "text": "Löse grafisch qualitativ (welche Ecke ist plausibel?)."
+            }
+          ],
+          "hints": [
+            "Matrixschreibweise hilft.",
+            "Q1: 1·x_M+0,8·x_A+0,7·x_N ≥ 40; Q2: 0,0·x_M+0,6·x_A+0,9·x_N ≥ 30.",
+            "Teurer Nachtanteil steigt, wenn Q2 knapp."
+          ],
+          "solutions": [
+            "LP korrekt",
+            "Nebenbedingungen stimmen",
+            "Ecke qualitativ begründet"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Qualifikation",
+                "Nebenbedingung",
+                "Quote"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "LP korrekt",
+            "Nebenbedingungen stimmen",
+            "Ecke qualitativ begründet"
+          ]
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Standardform (max) nutzt…",
+          "options": [
+            "≥‑Restriktionen",
+            "= mit Slacks s≥0",
+            "keine Slacks"
+          ],
+          "answer_index": 1,
+          "rationale": "Ax+s=b.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ax+s=b.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Das Optimum liegt bei einem linearen Problem immer in einem Extrempunkt (falls existent).",
+          "answer": true,
+          "rationale": "Eckenregel.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Eckenregel.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Ungleichung beschreibt eine **Kapazitätsgrenze**?",
+          "options": [
+            "≥",
+            "≤",
+            "="
+          ],
+          "answer_index": 1,
+          "rationale": "Verbrauch ≤ Kapazität.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Verbrauch ≤ Kapazität.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Nichtnegativität ist wichtig, weil…",
+          "options": [
+            "sonst unphysikalische Lösungen möglich",
+            "es hübsch aussieht",
+            "keine Auswirkung"
+          ],
+          "answer_index": 0,
+          "rationale": "Realismus.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Realismus.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Parallele Zielfunktions‑ und Randgeraden → evtl. Kantenoptimum.",
+          "answer": true,
+          "rationale": "Mehrere Optima.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehrere Optima.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Bei Schichtplanung ist ‚Nacht ≤ 0,4 Gesamt‘…",
+          "options": [
+            "lineares Verhältnis",
+            "nichtlinear",
+            "verboten"
+          ],
+          "answer_index": 0,
+          "rationale": "x_N − 0,4·(x_M+x_A+x_N) ≤ 0.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. x_N − 0,4·(x_M+x_A+x_N) ≤ 0.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wenn eine Mindestbesetzung gilt, nutzt man…",
+          "options": [
+            "≤",
+            "≥",
+            "="
+          ],
+          "answer_index": 1,
+          "rationale": "Untergrenze.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Untergrenze.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Einheitencheck: € pro h × h = €.",
+          "answer": true,
+          "rationale": "Richtig.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Richtig.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Ist x_N ≤ 0,4Σx linear?",
+          "options": [
+            "ja",
+            "nein",
+            "nur bei x_N fix"
+          ],
+          "answer_index": 0,
+          "rationale": "Linearisierbar: x_N − 0,4Σx ≤ 0.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Linearisierbar: x_N − 0,4Σx ≤ 0.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Grafische Lösung: Wie viele Ecken typ. testen?",
+          "options": [
+            "alle zulässigen",
+            "nur 2",
+            "keine"
+          ],
+          "answer_index": 0,
+          "rationale": "Alle Ecken.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Alle Ecken.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Slackvariablen messen ungenutzte Kapazitäten.",
+          "answer": true,
+          "rationale": "Interpretation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Interpretation.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welcher Fehler ist häufig?",
+          "options": [
+            "Richtung der Ungleichung vertauscht",
+            "Einheiten korrekt",
+            "Variablen klar"
+          ],
+          "answer_index": 0,
+          "rationale": "Achte auf ≤ vs. ≥.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Achte auf ≤ vs. ≥.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Mindest‑ als ≤ formuliert (verkehrte Richtung).",
+        "Quoten‑Constraints nicht linear umgesetzt.",
+        "Einheiten und Interpretationen nicht dokumentiert."
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du modellierst Schichtplanung fein und beherrschst Prüfungsaufgaben A–D (Modellierung, Geometrie, Quoten)."
+    },
+    {
+      "type": "outlook",
+      "text": "Weiter mit **Simplex** und Losgrößen‑Modellen (mit Setup → MILP‑Hinweis)."
+    }
+  ],
+  "reading_time_band": "normal"
+}

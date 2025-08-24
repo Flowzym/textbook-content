@@ -1,0 +1,271 @@
+{
+  "id": "M12L01",
+  "title": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M12L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte LMM/GLMM abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ICC misst…",
+          "options": [
+            "Anteil Varianz zwischen Gruppen",
+            "Fehlerquote des Modells",
+            "Korrelation von X und Y"
+          ],
+          "answer_index": 0,
+          "rationale": "Intracluster-Korrelation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Intracluster-Korrelation.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Random Intercepts erlauben gruppenspezifische Niveaus.",
+          "answer": true,
+          "rationale": "Niveau-Shift je Gruppe.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Niveau-Shift je Gruppe.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Shrinkage bedeutet…",
+          "options": [
+            "Ziehen kleiner Gruppen zum Gesamtmittel",
+            "Varianz steigt immer",
+            "Überanpassung"
+          ],
+          "answer_index": 0,
+          "rationale": "Stabilisierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stabilisierung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "GLMM nutzt…",
+          "options": [
+            "Identitätslink immer",
+            "geeignete Link-Funktion (z. B. logit)",
+            "keine Random Effects"
+          ],
+          "answer_index": 1,
+          "rationale": "Für Anteile/Zählungen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Für Anteile/Zählungen.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Random Slopes erlauben gruppenspezifische Effekte von Kovariaten.",
+          "answer": true,
+          "rationale": "Steigungen variieren.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Steigungen variieren.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "ICC≈0 nahe 0 deutet auf…",
+          "options": [
+            "kaum Clusterung",
+            "starke Clusterung",
+            "immer Heteroskedastizität"
+          ],
+          "answer_index": 0,
+          "rationale": "Geringe Gruppenvarianz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Geringe Gruppenvarianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Diagnose bei LMM:",
+          "options": [
+            "Residuen je Gruppe prüfen",
+            "nur globales R²",
+            "keine Checks nötig"
+          ],
+          "answer_index": 0,
+          "rationale": "Homoskedastizität/Normalität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Homoskedastizität/Normalität.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Zu viele Random-Komponenten können zu Konvergenzproblemen führen.",
+          "answer": true,
+          "rationale": "Parsimonie.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Parsimonie.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wann GLMM statt LMM?",
+          "options": [
+            "bei normalverteilten y",
+            "bei Anteilen/Zählungen",
+            "immer"
+          ],
+          "answer_index": 1,
+          "rationale": "Datenart beachten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Datenart beachten.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxisfalle:",
+          "options": [
+            "alles als Fixed modellieren",
+            "ICC berichten",
+            "Varianzkomponenten interpretieren"
+          ],
+          "answer_index": 0,
+          "rationale": "Überparameterisierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Überparameterisierung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Cluster-Robuste SE ersetzen kein korrektes Random-Effects-Modell bei hierarchischen Strukturen.",
+          "answer": true,
+          "rationale": "Modellstruktur wichtig.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Modellstruktur wichtig.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Reporting:",
+          "options": [
+            "nur Koeffizienten",
+            "auch Varianzkomponenten/ICC/Diagnosen",
+            "nichts"
+          ],
+          "answer_index": 1,
+          "rationale": "Transparenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Transparenz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken LMM/GLMM: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}
