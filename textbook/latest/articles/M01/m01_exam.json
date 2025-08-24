@@ -1,0 +1,29 @@
+{
+  "description": "Umfassende Prüfung der Grundlagen: Zahlen, Rechenregeln, Brüche, Prozente, Potenzen, Zinseszins und lineare Gleichungen",
+  "blocks": [],
+  "title": "Modul M01 – Grundlagen Mathematik: Kapitelprüfung",
+  "id": "M01_EXAM",
+  "meta": {
+    "version": "v20250824-comprehensive",
+    "question_distribution": {
+      "M01L01": 3,
+      "M01L02": 3,
+      "M01L03": 2,
+      "M01L04": 4,
+      "mixed": 3
+    },
+    "difficulty_distribution": {
+      "level_1": 3,
+      "level_2": 5,
+      "level_3": 4
+    },
+    "time_distribution": {
+      "quick_tasks": 4,
+      "medium_tasks": 4,
+      "complex_tasks": 4
+    },
+    "repair": {
+      "merged_from": "multiple_sources_keep_all_blocks"
+    }
+  }
+}
