@@ -1,0 +1,448 @@
+{
+  "book": {
+    "id": "mathe-textbook",
+    "title": "Mathe-Textbook"
+  },
+  "chapters": [
+    {
+      "id": "M01",
+      "slug": "m01-grundlagen-rabatt-skonto",
+      "title": "Grundlagen Rabatt Skonto",
+      "ordering": 1,
+      "sections": [
+        {
+          "id": "M01L01",
+          "slug": "lehrtext-grundlagen-zahlen-grundrechnen-zahlbereiche-rechenregeln-reihenfolge-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (Rabatt/Skonto)",
+          "ordering": 1,
+          "file": "articles/M01/M01L01.JSON"
+        },
+        {
+          "id": "M01L02",
+          "slug": "lehrtext-grundlagen-bruche-dezimalzahlen-umwandeln-rechnen-anteile-prozente-zinseszins",
+          "title": "Lehrtext – Grundlagen: Brüche & Dezimalzahlen – Umwandeln, Rechnen, Anteile & Prozente (Zinseszins)",
+          "ordering": 2,
+          "file": "articles/M01/M01L02.JSON"
+        },
+        {
+          "id": "M01L03",
+          "slug": "lehrtext-grundlagen-potenzen-wurzeln-rechengesetze-notation-wachstum-zinsen-zinseszins",
+          "title": "Lehrtext – Grundlagen: Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (Zinseszins)",
+          "ordering": 3,
+          "file": "articles/M01/M01L03.JSON"
+        },
+        {
+          "id": "M01L04",
+          "slug": "lehrtext-grundlagen-lineare-gleichungen-ungleichungen-textaufgaben-im-controlling-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (Rabatt/Skonto)",
+          "ordering": 4,
+          "file": "articles/M01/M01L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "slug": "m02-grundlagen-rabatt-skonto-grundlagen-zinseszins",
+      "title": "Grundlagen Rabatt Skonto & Grundlagen Zinseszins",
+      "ordering": 2,
+      "sections": [
+        {
+          "id": "M02L01",
+          "slug": "lehrtext-grundlagen-prozentrechnung-grundlagen-mit-kpi-praxis-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Prozentrechnung – Grundlagen (mit KPI-Praxis) (Rabatt/Skonto)",
+          "ordering": 1,
+          "file": "articles/M02/M02L01.JSON"
+        },
+        {
+          "id": "M02L02",
+          "slug": "lehrtext-grundlagen-prozentarten-rabatt-skonto-mwst-at-branchennahe-praxis-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Prozentarten: Rabatt, Skonto, MwSt (AT, branchennahe Praxis) (Rabatt/Skonto)",
+          "ordering": 2,
+          "file": "articles/M02/M02L02.JSON"
+        },
+        {
+          "id": "M02L03",
+          "slug": "lehrtext-grundlagen-einfache-verzinsung-linear-bankpraxis-zinseszins",
+          "title": "Lehrtext – Grundlagen: Einfache Verzinsung (linear) – Bankpraxis (Zinseszins)",
+          "ordering": 3,
+          "file": "articles/M02/M02L03.JSON"
+        },
+        {
+          "id": "M02L04",
+          "slug": "lehrtext-grundlagen-zinszeiten-zinsmethoden-praxisfalle-inkl-schaltjahr-zinseszins",
+          "title": "Lehrtext – Grundlagen: Zinszeiten & Zinsmethoden – Praxisfälle (inkl. Schaltjahr) (Zinseszins)",
+          "ordering": 4,
+          "file": "articles/M02/M02L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "slug": "m03-grundlagen-zinseszins",
+      "title": "Grundlagen Zinseszins",
+      "ordering": 3,
+      "sections": [
+        {
+          "id": "M03L01",
+          "slug": "lehrtext-grundlagen-zinseszins-grundlagen-wachstumsfaktoren-v3-praxis-geometrische-abschreibung",
+          "title": "Lehrtext – Grundlagen: Zinseszins – Grundlagen & Wachstumsfaktoren (v3, Praxis: geometrische Abschreibung)",
+          "ordering": 1,
+          "file": "articles/M03/M03L01.JSON"
+        },
+        {
+          "id": "M03L02",
+          "slug": "lehrtext-grundlagen-zahlungsreihen-i-sparrenten-entnahmerenten-staffelmieten-v3-zinseszins",
+          "title": "Lehrtext – Grundlagen: Zahlungsreihen I: Sparrenten, Entnahmerenten & Staffelmieten (v3) (Zinseszins)",
+          "ordering": 2,
+          "file": "articles/M03/M03L02.JSON"
+        },
+        {
+          "id": "M03L03",
+          "slug": "lehrtext-grundlagen-effektivzins-angebotsvergleich-v3-leasing-vs-kredit-zinseszins",
+          "title": "Lehrtext – Grundlagen: Effektivzins & Angebotsvergleich (v3, Leasing vs. Kredit) (Zinseszins)",
+          "ordering": 3,
+          "file": "articles/M03/M03L03.JSON"
+        },
+        {
+          "id": "M03L04",
+          "slug": "lehrtext-grundlagen-annuitatendarlehen-tilgungsplane-v3-forderdarlehen-tilgungsfreie-zeiten-zinseszins",
+          "title": "Lehrtext – Grundlagen: Annuitätendarlehen & Tilgungspläne (v3, Förderdarlehen & tilgungsfreie Zeiten) (Zinseszins)",
+          "ordering": 4,
+          "file": "articles/M03/M03L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "slug": "m04-grundlagen-zinseszins",
+      "title": "Grundlagen Zinseszins",
+      "ordering": 4,
+      "sections": [
+        {
+          "id": "M04L01",
+          "slug": "lehrtext-grundlagen-zeitwert-des-geldes-v2-pv-fv-in-praxis-energie-leasing-einkauf-zinseszins",
+          "title": "Lehrtext – Grundlagen: Zeitwert des Geldes (v2): PV/FV in Praxis – Energie, Leasing, Einkauf (Zinseszins)",
+          "ordering": 1,
+          "file": "articles/M04/M04L01.JSON"
+        },
+        {
+          "id": "M04L02",
+          "slug": "lehrtext-grundlagen-kapitalwert-npv-v2-atenergiezuschuss-maschinenersatz-eaa-zinseszins",
+          "title": "Lehrtext – Grundlagen: Kapitalwert (NPV) (v2): AT‑Energiezuschuss, Maschinenersatz & EAA (Zinseszins)",
+          "ordering": 2,
+          "file": "articles/M04/M04L02.JSON"
+        },
+        {
+          "id": "M04L03",
+          "slug": "lehrtext-grundlagen-irr-mirr-v2-mehrdeutigkeit-leasingvergleich-entscheidungsregeln-zinseszins",
+          "title": "Lehrtext – Grundlagen: IRR & MIRR (v2): Mehrdeutigkeit, Leasing‑Vergleich & Entscheidungsregeln (Zinseszins)",
+          "ordering": 3,
+          "file": "articles/M04/M04L03.JSON"
+        },
+        {
+          "id": "M04L04",
+          "slug": "lehrtext-grundlagen-amortisation-kostenvergleich-v2-energie-servicevertrage-zinseszins",
+          "title": "Lehrtext – Grundlagen: Amortisation & Kostenvergleich (v2): Energie & Serviceverträge (Zinseszins)",
+          "ordering": 4,
+          "file": "articles/M04/M04L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "slug": "m05-grundlagen-rabatt-skonto",
+      "title": "Grundlagen Rabatt Skonto",
+      "ordering": 5,
+      "sections": [
+        {
+          "id": "M05L01",
+          "slug": "lehrtext-grundlagen-unsicherheit-sensitivitatsanalyse-v2-rohstoffe-lager-preishebel-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Unsicherheit & Sensitivitätsanalyse (v2): Rohstoffe, Lager, Preishebel (Rabatt/Skonto)",
+          "ordering": 1,
+          "file": "articles/M05/M05L01.JSON"
+        },
+        {
+          "id": "M05L02",
+          "slug": "lehrtext-grundlagen-szenarien-v2-fxrisiken-im-export-entscheidungsbaume-mit-hedgingoptionen-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Szenarien (v2): FX‑Risiken im Export & Entscheidungsbäume mit Hedging‑Optionen (Rabatt/Skonto)",
+          "ordering": 2,
+          "file": "articles/M05/M05L02.JSON"
+        },
+        {
+          "id": "M05L03",
+          "slug": "lehrtext-grundlagen-montecarlo-v2-fx-rohstoffe-korreliert-var-cvar-partial-sensitivity-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Monte‑Carlo (v2): FX & Rohstoffe korreliert – VaR/CVaR & Partial Sensitivity (Rabatt/Skonto)",
+          "ordering": 3,
+          "file": "articles/M05/M05L03.JSON"
+        },
+        {
+          "id": "M05L04",
+          "slug": "lehrtext-grundlagen-risikobudget-stresstests-reporting-v2-lager-lieferketten-fxschocks-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Risikobudget, Stresstests & Reporting (v2): Lager, Lieferketten, FX‑Schocks (Rabatt/Skonto)",
+          "ordering": 4,
+          "file": "articles/M05/M05L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "slug": "m06-grundlagen-rabatt-skonto",
+      "title": "Grundlagen Rabatt Skonto",
+      "ordering": 6,
+      "sections": [
+        {
+          "id": "M06L01",
+          "slug": "lehrtext-grundlagen-lineare-optimierung-i-modellierung-geometrie-2-variablen-break-even",
+          "title": "Lehrtext – Grundlagen: Lineare Optimierung I – Modellierung & Geometrie (2 Variablen) (Break-even)",
+          "ordering": 1,
+          "file": "articles/M06/M06L01.JSON"
+        },
+        {
+          "id": "M06L02",
+          "slug": "lehrtext-grundlagen-lineare-optimierung-ii-simplex-tableau-spezialfalle-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Lineare Optimierung II – Simplex, Tableau & Spezialfälle (Rabatt/Skonto)",
+          "ordering": 2,
+          "file": "articles/M06/M06L02.JSON"
+        },
+        {
+          "id": "M06L03",
+          "slug": "lehrtext-grundlagen-lineare-optimierung-iii-dualitat-schattenpreise-sensitivitat-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Lineare Optimierung III – Dualität, Schattenpreise & Sensitivität (Rabatt/Skonto)",
+          "ordering": 3,
+          "file": "articles/M06/M06L03.JSON"
+        },
+        {
+          "id": "M06L04",
+          "slug": "lehrtext-grundlagen-lineare-optimierung-iv-anwendungen-transport-zuordnung-blending-produktionsplanung-gleichungen",
+          "title": "Lehrtext – Grundlagen: Lineare Optimierung IV – Anwendungen: Transport, Zuordnung, Blending & Produktionsplanung (Gleichungen)",
+          "ordering": 4,
+          "file": "articles/M06/M06L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M07",
+      "slug": "m07-grundlagen-gleichungen",
+      "title": "Grundlagen Gleichungen",
+      "ordering": 7,
+      "sections": [
+        {
+          "id": "M07L01",
+          "slug": "lehrtext-grundlagen-ganzzahlige-modelle-i-binar-ganzzahlvariablen-bigm-logik-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Ganzzahlige Modelle I – Binär- & Ganzzahlvariablen, Big‑M & Logik (Rabatt/Skonto)",
+          "ordering": 1,
+          "file": "articles/M07/M07L01.JSON"
+        },
+        {
+          "id": "M07L02",
+          "slug": "lehrtext-grundlagen-ganzzahlige-modelle-ii-branchandbound-relaxation-schnitte-gleichungen",
+          "title": "Lehrtext – Grundlagen: Ganzzahlige Modelle II – Branch‑and‑Bound, Relaxation & Schnitte (Gleichungen)",
+          "ordering": 2,
+          "file": "articles/M07/M07L02.JSON"
+        },
+        {
+          "id": "M07L03",
+          "slug": "lehrtext-grundlagen-klassische-milpprobleme-rucksack-set-cover-standort-budgetierung-break-even",
+          "title": "Lehrtext – Grundlagen: Klassische MILP‑Probleme – Rucksack, Set Cover, Standort & Budgetierung (Break-even)",
+          "ordering": 3,
+          "file": "articles/M07/M07L03.JSON"
+        },
+        {
+          "id": "M07L04",
+          "slug": "lehrtext-grundlagen-heuristiken-metaheuristiken-greedy-local-search-sa-tabu-controlling",
+          "title": "Lehrtext – Grundlagen: Heuristiken & Metaheuristiken – Greedy, Local Search, SA & Tabu (Controlling)",
+          "ordering": 4,
+          "file": "articles/M07/M07L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "slug": "m08-grundlagen-lager-logistik",
+      "title": "Grundlagen Lager Logistik",
+      "ordering": 8,
+      "sections": [
+        {
+          "id": "M08L01",
+          "slug": "lehrtext-grundlagen-zeitreihen-i-grundlagen-visualisierung-komponenten-gleichungen",
+          "title": "Lehrtext – Grundlagen: Zeitreihen I – Grundlagen, Visualisierung & Komponenten (Gleichungen)",
+          "ordering": 1,
+          "file": "articles/M08/M08L01.JSON"
+        },
+        {
+          "id": "M08L02",
+          "slug": "lehrtext-grundlagen-zeitreihen-ii-glattung-ma-ses-holt-holtwinters",
+          "title": "Lehrtext – Grundlagen: Zeitreihen II – Glättung: MA, SES, Holt, Holt‑Winters",
+          "ordering": 2,
+          "file": "articles/M08/M08L02.JSON"
+        },
+        {
+          "id": "M08L03",
+          "slug": "lehrtext-grundlagen-zeitreihen-iii-forecastgute-mae-rmse-mape-backtesting-lager-logistik",
+          "title": "Lehrtext – Grundlagen: Zeitreihen III – Forecastgüte: MAE, RMSE, MAPE & Backtesting (Lager/Logistik)",
+          "ordering": 3,
+          "file": "articles/M08/M08L03.JSON"
+        },
+        {
+          "id": "M08L04",
+          "slug": "lehrtext-grundlagen-zeitreihen-iv-praxisfalle-nachfrage-budget-bestande-forecastkombinationen-statistik",
+          "title": "Lehrtext – Grundlagen: Zeitreihen IV – Praxisfälle: Nachfrage, Budget, Bestände & Forecast‑Kombinationen (Statistik)",
+          "ordering": 4,
+          "file": "articles/M08/M08L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M09",
+      "slug": "m09-grundlagen-statistik",
+      "title": "Grundlagen Statistik",
+      "ordering": 9,
+      "sections": [
+        {
+          "id": "M09L01",
+          "slug": "lehrtext-grundlagen-zeitreihen-v-stationaritat-acf-pacf-ar-ma-arma-statistik",
+          "title": "Lehrtext – Grundlagen: Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (Statistik)",
+          "ordering": 1,
+          "file": "articles/M09/M09L01.JSON"
+        },
+        {
+          "id": "M09L02",
+          "slug": "lehrtext-grundlagen-arima-sarima-schatzen-auswahl-aic-bic-diagnose-statistik",
+          "title": "Lehrtext – Grundlagen: ARIMA & SARIMA – Schätzen, Auswahl (AIC/BIC), Diagnose (Statistik)",
+          "ordering": 2,
+          "file": "articles/M09/M09L02.JSON"
+        },
+        {
+          "id": "M09L03",
+          "slug": "lehrtext-grundlagen-etsmodelle-fehler-niveau-trend-saison-state-space-damped-trend-auswahl-gleichungen",
+          "title": "Lehrtext – Grundlagen: ETS‑Modelle – Fehler/Niveau/Trend/Saison (State Space), Damped Trend, Auswahl (Gleichungen)",
+          "ordering": 3,
+          "file": "articles/M09/M09L03.JSON"
+        },
+        {
+          "id": "M09L04",
+          "slug": "lehrtext-grundlagen-ursachenmodelle-arimax-feiertage-aktionen-reconciliation-kombination-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Ursachen‑Modelle & ARIMAX – Feiertage, Aktionen, Reconciliation & Kombination (Rabatt/Skonto)",
+          "ordering": 4,
+          "file": "articles/M09/M09L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "slug": "m10-grundlagen-gleichungen",
+      "title": "Grundlagen Gleichungen",
+      "ordering": 10,
+      "sections": [
+        {
+          "id": "M10L01",
+          "slug": "lehrtext-grundlagen-kausaleffekte-i-grundideen-counterfactual-did-differenceindifferences-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Kausaleffekte I – Grundideen, Counterfactual & DiD (Difference‑in‑Differences) (Rabatt/Skonto)",
+          "ordering": 1,
+          "file": "articles/M10/M10L01.JSON"
+        },
+        {
+          "id": "M10L02",
+          "slug": "lehrtext-grundlagen-bayesianische-grundlagen-prior-likelihood-posterior-credible-intervals-gleichungen",
+          "title": "Lehrtext – Grundlagen: Bayesianische Grundlagen – Prior, Likelihood, Posterior & Credible Intervals (Gleichungen)",
+          "ordering": 2,
+          "file": "articles/M10/M10L02.JSON"
+        },
+        {
+          "id": "M10L03",
+          "slug": "lehrtext-grundlagen-causal-impact-mit-strukturellen-zeitreihen-bsts-pre-post-controls-effektschatzung-statistik",
+          "title": "Lehrtext – Grundlagen: Causal Impact mit strukturellen Zeitreihen (BSTS) – Pre/Post, Controls & Effektschätzung (Statistik)",
+          "ordering": 3,
+          "file": "articles/M10/M10L03.JSON"
+        },
+        {
+          "id": "M10L04",
+          "slug": "lehrtext-grundlagen-experimente-uplift-bayesa-b-sequentielles-testen-heterogenitat-roi-break-even",
+          "title": "Lehrtext – Grundlagen: Experimente & Uplift – Bayes‑A/B, Sequentielles Testen, Heterogenität & ROI (Break-even)",
+          "ordering": 4,
+          "file": "articles/M10/M10L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M11",
+      "slug": "m11-grundlagen-rabatt-skonto",
+      "title": "Grundlagen Rabatt Skonto",
+      "ordering": 11,
+      "sections": [
+        {
+          "id": "M11L01",
+          "slug": "lehrtext-grundlagen-synthetische-kontrolle-i-prinzip-donorpool-gewichte-placeboinference",
+          "title": "Lehrtext – Grundlagen: Synthetische Kontrolle I – Prinzip, Donor‑Pool, Gewichte & Placebo‑Inference",
+          "ordering": 1,
+          "file": "articles/M11/M11L01.JSON"
+        },
+        {
+          "id": "M11L02",
+          "slug": "lehrtext-grundlagen-synthetische-kontrolle-ii-gestaffelte-einfuhrung-generalisierte-sc-matrixcompletion-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Synthetische Kontrolle II – Gestaffelte Einführung, Generalisierte SC & Matrix‑Completion (Rabatt/Skonto)",
+          "ordering": 2,
+          "file": "articles/M11/M11L02.JSON"
+        },
+        {
+          "id": "M11L03",
+          "slug": "lehrtext-grundlagen-panelbsts-hierarchische-causalimpactmodelle-mehrere-einheiten-gemeinsame-faktoren-spillovers",
+          "title": "Lehrtext – Grundlagen: Panel‑BSTS & Hierarchische Causal‑Impact‑Modelle – Mehrere Einheiten, gemeinsame Faktoren & Spillovers",
+          "ordering": 3,
+          "file": "articles/M11/M11L03.JSON"
+        },
+        {
+          "id": "M11L04",
+          "slug": "lehrtext-grundlagen-geoexperimente-interferenz-clusterrandomisierung-guardrails-power-governance-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Geo‑Experimente & Interferenz – Cluster‑Randomisierung, Guardrails, Power & Governance (Rabatt/Skonto)",
+          "ordering": 4,
+          "file": "articles/M11/M11L04.JSON"
+        }
+      ]
+    },
+    {
+      "id": "M12",
+      "slug": "m12-grundlagen-rabatt-skonto",
+      "title": "Grundlagen Rabatt Skonto",
+      "ordering": 12,
+      "sections": [
+        {
+          "id": "M12L01",
+          "slug": "lehrtext-grundlagen-gemischte-modelle-i-random-fixed-effects-icc-shrinkage-lmm-glmm-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Gemischte Modelle I – Random/Fixed Effects, ICC & Shrinkage (LMM/GLMM) (Rabatt/Skonto)",
+          "ordering": 1,
+          "file": "articles/M12/M12L01.JSON"
+        },
+        {
+          "id": "M12L02",
+          "slug": "lehrtext-grundlagen-double-machine-learning-orthogonalisierung-crossfitting-cate-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Double Machine Learning – Orthogonalisierung, Cross‑Fitting & CATE (Rabatt/Skonto)",
+          "ordering": 2,
+          "file": "articles/M12/M12L02.JSON"
+        },
+        {
+          "id": "M12L03",
+          "slug": "lehrtext-grundlagen-upliftmodelle-t-s-x-drlearner-qini-cuve-policylearning-break-even",
+          "title": "Lehrtext – Grundlagen: Uplift‑Modelle – T/S/X/DR‑Learner, Qini/CUVE & Policy‑Learning (Break-even)",
+          "ordering": 3,
+          "file": "articles/M12/M12L03.JSON"
+        },
+        {
+          "id": "M12L04",
+          "slug": "lehrtext-grundlagen-instrumentalvariablen-causalml-2sls-dmliv-deepiv-late-rabatt-skonto",
+          "title": "Lehrtext – Grundlagen: Instrumentalvariablen & Causal‑ML – 2SLS, DMLIV/DeepIV & LATE (Rabatt/Skonto)",
+          "ordering": 4,
+          "file": "articles/M12/M12L04.JSON"
+        }
+      ]
+    }
+  ],
+  "version": "v20250823",
+  "meta": {
+    "didactics": {
+      "enrichment": true,
+      "source": "fixed_all_modules_with_steps"
+    },
+    "built_at": "2025-08-23T18:03:37.452664Z"
+  }
+}
