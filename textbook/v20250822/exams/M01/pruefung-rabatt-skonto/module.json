@@ -1,0 +1,25 @@
+{
+  "id": "M01",
+  "title": "Grundlagen – Zahlen, Rechnen, Algebra (v2) – Prüfungssets A–D",
+  "description": "Zusätzliche Quiz-Blöcke A–D in allen Lessons (Grundrechnen, Brüche/Prozent, Potenzen/Wurzeln, Gleichungen).",
+  "lessons": [
+    {
+      "id": "M01L01_v2",
+      "title": "Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (v2: Prüfungssets A–D)"
+    },
+    {
+      "id": "M01L02_v2",
+      "title": "Brüche & Dezimalzahlen – Umwandeln, Rechnen, Anteile & Prozente (v2: Prüfungssets A–D)"
+    },
+    {
+      "id": "M01L03_v2",
+      "title": "Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (v2: Prüfungssets A–D)"
+    },
+    {
+      "id": "M01L04_v2",
+      "title": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v2: Prüfungssets A–D)"
+    }
+  ],
+  "version": "v2",
+  "updated_at": "2025-08-17T10:25:22.542508"
+}

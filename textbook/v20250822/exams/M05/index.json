@@ -1,0 +1,28 @@
+{
+  "chapter": {
+    "id": "M05",
+    "title": "Prüfungen M05"
+  },
+  "sections": [
+    {
+      "id": "pruefung-rabatt-skonto",
+      "title": "Unsicherheit & Risikomodellierung – Prüfungsset E (v3)",
+      "file": "exams/M05/pruefung-rabatt-skonto/module.json"
+    },
+    {
+      "id": "pruefung-rabatt-skonto-2",
+      "title": "Pruefung Rabatt Skonto 2",
+      "file": "exams/M05/pruefung-rabatt-skonto-2/module.json"
+    },
+    {
+      "id": "pruefung-rabatt-skonto-3",
+      "title": "Pruefung Rabatt Skonto 3",
+      "file": "exams/M05/pruefung-rabatt-skonto-3/module.json"
+    },
+    {
+      "id": "pruefung-rabatt-skonto-4",
+      "title": "Pruefung Rabatt Skonto 4",
+      "file": "exams/M05/pruefung-rabatt-skonto-4/module.json"
+    }
+  ]
+}

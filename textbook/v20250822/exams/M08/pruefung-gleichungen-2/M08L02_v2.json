@@ -1,0 +1,271 @@
+{
+  "id": "M08L02",
+  "title": "Zeitreihen II – Glättung: MA, SES, Holt, Holt‑Winters (v2: Prüfungssets A–D)",
+  "reading_time_min": 35,
+  "prerequisites": [
+    "M08L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Kernkonzepte sicher abfragen (A–D)."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln, Formeln und Interpretationen auf Fälle anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Additiv vs. multiplikativ – Daumenregel?",
+          "options": [
+            "Amplitude konstant vs. mit Niveau wachsend",
+            "immer additiv",
+            "immer multiplikativ"
+          ],
+          "answer_index": 0,
+          "rationale": "Wähle nach Amplitudenverhalten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wähle nach Amplitudenverhalten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Eine 1. Differenz entfernt typischerweise einen linearen Trend.",
+          "answer": true,
+          "rationale": "Δy_t = y_t − y_{t−1}.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Δy_t = y_t − y_{t−1}.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Transformation stabilisiert Varianz?",
+          "options": [
+            "Quadrat",
+            "Log",
+            "Kein Effekt"
+          ],
+          "answer_index": 1,
+          "rationale": "log(y).",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. log(y).",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "SES: Forecast für alle Horizonte h basiert auf…",
+          "options": [
+            "L_t",
+            "L_t + h·B_t",
+            "S_{t−m}"
+          ],
+          "answer_index": 0,
+          "rationale": "SES hat nur Niveau.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. SES hat nur Niveau.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Holt-Winters kann additiv oder multiplikativ sein.",
+          "answer": true,
+          "rationale": "Je nach Saisonmuster.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Je nach Saisonmuster.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Initialisierung ist wichtig, weil…",
+          "options": [
+            "egal",
+            "stabilisiert frühe Perioden",
+            "verhindert Saison"
+          ],
+          "answer_index": 1,
+          "rationale": "Startwerte senken Anlauf-Fehler.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Startwerte senken Anlauf-Fehler.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Gütemaße & Backtests",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "MAPE-Problem bei y≈0?",
+          "options": [
+            "keins",
+            "Division durch 0/überproportional groß",
+            "zu robust"
+          ],
+          "answer_index": 1,
+          "rationale": "Nutze sMAPE/MASE.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nutze sMAPE/MASE.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "RMSE bestraft Ausreißer stärker als MAE.",
+          "answer": true,
+          "rationale": "Quadratische Fehler.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Quadratische Fehler.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Rolling-Origin vermeidet…",
+          "options": [
+            "Look-ahead-Bias",
+            "Varianz",
+            "Saisons"
+          ],
+          "answer_index": 0,
+          "rationale": "Realistischer Backtest.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Realistischer Backtest.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Governance",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Sicherheitsbestand einfache Formel:",
+          "options": [
+            "z·σ_L",
+            "z/σ_L",
+            "σ_L/z"
+          ],
+          "answer_index": 0,
+          "rationale": "Servicefaktor × Streuung im Lead-Time-Horizont.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Servicefaktor × Streuung im Lead-Time-Horizont.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Forecast-Kombinationen können robuster sein als Einzelmodelle.",
+          "answer": true,
+          "rationale": "Diversifikation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Diversifikation.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Hierarchische Forecasts erfordern…",
+          "options": [
+            "Reconciliation/Konsistenz",
+            "nur Bottom-up",
+            "nur Top-down"
+          ],
+          "answer_index": 0,
+          "rationale": "Konsistente Ebenen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konsistente Ebenen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du bist fit für Glättung-Kernfragen: Begriffe, Methoden, Gütemaße und Umsetzung."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

@@ -1,0 +1,271 @@
+{
+  "id": "M10L01",
+  "title": "Kausaleffekte I – Counterfactual & DiD (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M10L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte DiD & Kausalität abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Was ist der DiD-Schätzer τ̂?",
+          "options": [
+            "(T1−T0) − (C1−C0)",
+            "T1−C1",
+            "(T1−C1) − (T0−C0)"
+          ],
+          "answer_index": 0,
+          "rationale": "Standard-Formel.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Standard-Formel.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Parallel-Trends-Annahme ist zentral für DiD.",
+          "answer": true,
+          "rationale": "Ohne sie ist τ̂ potenziell verzerrt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ohne sie ist τ̂ potenziell verzerrt.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wozu dient die Kontrollgruppe?",
+          "options": [
+            "Sie ersetzt das Counterfactual.",
+            "Sie erhöht den Umsatz.",
+            "Sie ist optional."
+          ],
+          "answer_index": 0,
+          "rationale": "Vergleichsverlauf ohne Maßnahme.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vergleichsverlauf ohne Maßnahme.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Regressions-Form von DiD: Effekt ist der Koeffizient vor…",
+          "options": [
+            "Post",
+            "Treat",
+            "Post×Treat"
+          ],
+          "answer_index": 2,
+          "rationale": "Interaktion modelliert den DiD-Effekt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Interaktion modelliert den DiD-Effekt.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Fixed Effects können unbeobachtete Heterogenität pro Einheit abfangen.",
+          "answer": true,
+          "rationale": "Zeitinvariante Unterschiede.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zeitinvariante Unterschiede.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Parallele Trends prüfst du…",
+          "options": [
+            "an Vorperioden",
+            "an den Postperioden",
+            "gar nicht"
+          ],
+          "answer_index": 0,
+          "rationale": "Vortrends vergleichen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vortrends vergleichen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Placebo-Test prüft…",
+          "options": [
+            "Effekt vor Intervention",
+            "Effektstärke im Post",
+            "Varianzgleichheit"
+          ],
+          "answer_index": 0,
+          "rationale": "Kein Effekt sollte vor t0 sichtbar sein.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Effekt sollte vor t0 sichtbar sein.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Heterogene Effekte zwischen Einheiten können den Durchschnitt verbergen.",
+          "answer": true,
+          "rationale": "Segmentiere/Interaktionen prüfen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Segmentiere/Interaktionen prüfen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Konfundierende Variable ist…",
+          "options": [
+            "nur Rauschen",
+            "beeinflusst Treatment und Outcome",
+            "irrelevant"
+          ],
+          "answer_index": 1,
+          "rationale": "Verzerrt Kausalschätzung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verzerrt Kausalschätzung.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Typische Praxisfalle:",
+          "options": [
+            "Kontrollgruppe ist indirekt betroffen",
+            "Vortrends geprüft",
+            "Robustheit dokumentiert"
+          ],
+          "answer_index": 0,
+          "rationale": "Leakage.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Leakage.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "DiD funktioniert auch mit mehr als zwei Zeitpunkten.",
+          "answer": true,
+          "rationale": "Panel-/Mehrperioden-DiD.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Panel-/Mehrperioden-DiD.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Matching hilft…",
+          "options": [
+            "Vergleichbarkeit verbessern",
+            "Effekt vergrößern",
+            "Daten verkleinern ohne Nutzen"
+          ],
+          "answer_index": 0,
+          "rationale": "Balance der Gruppen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Balance der Gruppen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken DiD & Kausalität: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}
