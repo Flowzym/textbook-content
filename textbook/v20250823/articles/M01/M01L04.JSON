@@ -1,0 +1,324 @@
+{
+  "id": "M01L04",
+  "title": "Lehrtext – Grundlagen: Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (Balance-Methode)",
+  "reading_time_min": 42,
+  "prerequisites": [
+    "M01L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Ich kenne die Balance-Methode für lineare Gleichungen und kann sie in eigenen Worten erklären."
+    },
+    {
+      "level": "Understand",
+      "text": "Ich verstehe, wie Alltagssituationen (Break-Even, Kostenvergleich) in Gleichungen übersetzt werden."
+    },
+    {
+      "level": "Apply",
+      "text": "Ich kann lineare Gleichungen schrittweise lösen und Ungleichungen grafisch darstellen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ich erkenne typische Fehler in Textaufgaben und prüfe Ergebnisse auf Plausibilität."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Ich kann Break-Even-Punkte berechnen und betriebswirtschaftlich interpretieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "content": "In dieser Lektion lernst du die Balance-Methode für lineare Gleichungen – eine systematische Art, Unbekannte zu isolieren. Du übersetzst Alltagsprobleme aus dem Controlling in mathematische Sprache und löst sie Schritt für Schritt. Am Ende erkennst du typische Denkfallen und kannst Break-Even-Analysen selbstständig durchführen."
+    },
+    {
+      "type": "concept",
+      "title": "Wofür brauche ich das? – Break-Even im Café",
+      "items": [
+        "Stell dir vor, du eröffnest ein kleines Café. Die Miete kostet 2000 € pro Monat, egal wie viele Kunden kommen. Das sind deine Fixkosten. Zusätzlich kostet jeder Kaffee 1,50 € in der Herstellung (Bohnen, Milch, Personal). Das sind deine variablen Kosten pro Stück.",
+        "Du verkaufst jeden Kaffee für 3,50 €. Die Frage lautet: Wie viele Kaffees musst du verkaufen, damit du keine Verluste machst? An diesem Punkt sind deine gesamten Kosten genauso hoch wie deine Erlöse.",
+        "Diese Situation lässt sich mit einer linearen Gleichung beschreiben: Fixkosten + variable Kosten = Erlöse."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die große Idee – Gleichung als Balance",
+      "items": [
+        "Eine Gleichung ist wie eine alte Balkenwaage: Beide Seiten müssen im Gleichgewicht bleiben. Wenn ich auf der linken Seite etwas verändere, muss ich auf der rechten Seite genau dasselbe tun.",
+        "Das Ziel ist immer dasselbe: Die Unbekannte (meist x) soll allein auf einer Seite stehen. Alle anderen Zahlen sollen auf die andere Seite wandern.",
+        "Ich arbeite dabei in einer festen Reihenfolge: Erst räume ich Addition und Subtraktion weg, dann kümmere ich mich um Multiplikation und Division."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Waage-Prinzip bei 3x + 5 = 20",
+      "image": "assets/M01L04_balance_scale.png",
+      "content": "Die Waage zeigt links '3x + 5' und rechts '20'. Um das Gleichgewicht zu halten, subtrahiere ich auf beiden Seiten 5. Dann teile ich beide Seiten durch 3. So bleibt x = 5 übrig.",
+      "alt_text": "Balkenwaage mit mathematischen Ausdrücken auf beiden Seiten, die das Prinzip der Äquivalenzumformung visualisiert"
+    },
+    {
+      "type": "derivation",
+      "title": "Balance-Methode – Schritt für Schritt",
+      "steps": [
+        "Schritt 1: Verschaffe dir einen Überblick. Schreibe die Gleichung sauber auf und markiere, wo die Unbekannte steht.",
+        "Schritt 2: Räume zuerst Additionen und Subtraktionen weg. Bringe alle Zahlen ohne x auf die andere Seite.",
+        "Schritt 3: Räume Multiplikationen und Divisionen weg. Teile oder multipliziere beide Seiten, bis x allein steht.",
+        "Schritt 4: Mache die Probe. Setze dein Ergebnis in die ursprüngliche Gleichung ein und prüfe, ob beide Seiten gleich sind."
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Café-Break-Even ausführlich gerechnet",
+      "steps": [
+        "Situation: Fixkosten 2000 €, variable Kosten 1,50 € pro Kaffee, Verkaufspreis 3,50 € pro Kaffee. Wie viele Kaffees für Break-Even?",
+        "Gleichung aufstellen: Gesamte Kosten = Erlöse → 2000 + 1,50x = 3,50x. Hier ist x die Anzahl der verkauften Kaffees.",
+        "Schritt 1 – Überblick: Die Unbekannte x steht auf beiden Seiten. Ich bringe alle x-Terme auf eine Seite.",
+        "Schritt 2 – x-Terme sammeln: 2000 + 1,50x = 3,50x → 2000 = 3,50x - 1,50x → 2000 = 2,00x.",
+        "Schritt 3 – Division: 2000 ÷ 2,00 = x → x = 1000.",
+        "Schritt 4 – Probe: Kosten = 2000 + 1,50 × 1000 = 3500 €. Erlöse = 3,50 × 1000 = 3500 €. Stimmt!",
+        "Antwort: Du musst 1000 Kaffees verkaufen, um die Gewinnschwelle zu erreichen."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Break-Even-Diagramm des Café-Beispiels",
+      "image": "assets/M01L04_breakeven_chart.png",
+      "content": "Das Diagramm zeigt die Kostenlinie (steigend von 2000 € Fixkosten) und die Erlöslinie (steigend vom Nullpunkt). Der Schnittpunkt bei 1000 Kaffees und 3500 € ist der Break-Even-Punkt.",
+      "alt_text": "Liniendiagramm mit x-Achse 'Anzahl Kaffees' und y-Achse 'Euro', zeigt Schnittpunkt von Kosten- und Erlöslinie bei 1000 Stück"
+    },
+    {
+      "type": "concept",
+      "title": "Vom Text zur Gleichung – systematisches Übersetzen",
+      "items": [
+        "Schritt 1: Lies die Aufgabe zweimal und markiere alle Zahlen mit ihren Einheiten.",
+        "Schritt 2: Definiere klar, was die Unbekannte bedeutet (z. B. x = Anzahl Produkte, t = Zeit in Stunden).",
+        "Schritt 3: Formuliere die Gleichung in Worten ('Gesamtkosten gleich Erlöse'), dann übersetze in Symbole.",
+        "Schritt 4: Löse die Gleichung mit der Balance-Methode und interpretiere das Ergebnis im ursprünglichen Kontext."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Übersetzungsschema Text → Gleichung",
+      "image": "assets/M01L04_text_to_equation.png",
+      "content": "Die Tabelle zeigt typische Formulierungen aus Textaufgaben und ihre mathematische Übersetzung. Zum Beispiel 'das Doppelte einer Zahl' wird zu '2x'.",
+      "alt_text": "Übersetzungstabelle mit deutschen Formulierungen links und mathematischen Ausdrücken rechts"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – Handytarif-Vergleich (ausführlich)",
+      "steps": [
+        "Situation: Tarif A kostet 15 € Grundgebühr + 0,12 € pro Minute. Tarif B kostet 25 € Grundgebühr + 0,08 € pro Minute. Ab welcher Minutenzahl ist Tarif B günstiger?",
+        "Unbekannte definieren: x = Anzahl Minuten pro Monat.",
+        "Gleichung aufstellen: Kosten A = Kosten B → 15 + 0,12x = 25 + 0,08x.",
+        "Schritt 1 – x-Terme sammeln: 15 + 0,12x = 25 + 0,08x → 0,12x - 0,08x = 25 - 15 → 0,04x = 10.",
+        "Schritt 2 – Division: x = 10 ÷ 0,04 = 250.",
+        "Schritt 3 – Probe: A = 15 + 0,12 × 250 = 45 €. B = 25 + 0,08 × 250 = 45 €. Stimmt!",
+        "Antwort: Bei genau 250 Minuten kosten beide Tarife gleich viel. Ab 251 Minuten ist Tarif B günstiger."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Tarifvergleich grafisch",
+      "image": "assets/M01L04_tariff_comparison.png",
+      "content": "Zwei Geraden zeigen die Kosten beider Tarife. Tarif A startet niedriger, steigt aber steiler. Der Schnittpunkt liegt bei 250 Minuten und 45 Euro.",
+      "alt_text": "Koordinatensystem mit x-Achse 'Minuten' und y-Achse 'Euro', zwei sich schneidende Geraden für Tarif A und B"
+    },
+    {
+      "type": "concept",
+      "title": "Ungleichungen – wenn es um Bereiche geht",
+      "items": [
+        "Manchmal fragst du nicht nach einem exakten Wert, sondern nach einem Bereich: 'Ab wann ist Variante A günstiger?' Das führt zu Ungleichungen mit <, >, ≤ oder ≥.",
+        "Du löst sie genauso wie Gleichungen – mit einer wichtigen Ausnahme: Wenn du beide Seiten durch eine negative Zahl teilst oder multiplizierst, dreht sich das Ungleichheitszeichen um.",
+        "Das Ergebnis ist meist ein Bereich, den du auf einem Zahlenstrahl markieren kannst."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Ungleichung auf dem Zahlenstrahl",
+      "image": "assets/M01L04_inequality_line.png",
+      "content": "Der Zahlenstrahl zeigt x ≥ 250. Der Bereich ab 250 (einschließlich) ist markiert. Ein gefüllter Punkt zeigt an, dass 250 zur Lösung gehört.",
+      "alt_text": "Zahlenstrahl von 0 bis 400, mit gefülltem Punkt bei 250 und Pfeil nach rechts für x ≥ 250"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel C – Ungleichung mit Vorzeichenwechsel",
+      "steps": [
+        "Situation: Ein Unternehmen macht Gewinn, wenn Erlöse > Kosten. Kosten = 500 + 20x, Erlöse = 35x. Ab welcher Stückzahl x ist das Unternehmen profitabel?",
+        "Ungleichung: 35x > 500 + 20x.",
+        "Schritt 1 – x-Terme sammeln: 35x - 20x > 500 → 15x > 500.",
+        "Schritt 2 – Division durch positive Zahl: x > 500 ÷ 15 ≈ 33,33.",
+        "Da x eine Stückzahl ist (ganzzahlig), muss x ≥ 34 sein.",
+        "Antwort: Ab 34 verkauften Stücken macht das Unternehmen Gewinn."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Häufige Fehler und wie du sie vermeidest",
+      "items": [
+        "Fehler 1 – Vorzeichenfehler beim Umstellen: Achte darauf, dass aus +5 auf der linken Seite -5 auf der rechten Seite wird. Merksatz: 'Was rüber geht, wechselt das Vorzeichen.'",
+        "Fehler 2 – Ungleichheitszeichen vergessen umzudrehen: Wenn du durch eine negative Zahl teilst, wird aus > ein < und umgekehrt.",
+        "Fehler 3 – Einheiten vergessen oder verwechseln: Prüfe immer, ob dein Ergebnis sinnvolle Einheiten hat (Stück, Euro, Minuten).",
+        "Fehler 4 – Probe auslassen: Das Einsetzen dauert 30 Sekunden und entlarvt fast alle Rechenfehler."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Typische Fehlerquellen visualisiert",
+      "image": "assets/M01L04_common_errors.png",
+      "content": "Die Übersicht zeigt vier häufige Fehler: falsches Vorzeichen, vergessene Umkehrung bei Ungleichungen, fehlende Einheiten und ausgelassene Probe. Daneben stehen die Korrekturen.",
+      "alt_text": "Vierteilige Grafik mit Fehlerbeispielen links und korrigierten Versionen rechts"
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kurz (Aufwärmen)",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "Löse: 2x + 7 = 19",
+          "hint": "Subtrahiere zuerst 7 von beiden Seiten",
+          "solution": "2x + 7 = 19 → 2x = 12 → x = 6. Probe: 2×6 + 7 = 19 ✓"
+        },
+        {
+          "id": "E2",
+          "stem": "Löse: 5x - 3 = 3x + 9",
+          "hint": "Sammle alle x-Terme auf einer Seite",
+          "solution": "5x - 3x = 9 + 3 → 2x = 12 → x = 6. Probe: 5×6 - 3 = 27 und 3×6 + 9 = 27 ✓"
+        },
+        {
+          "id": "E3",
+          "stem": "Löse: x/4 + 5 = 8",
+          "hint": "Subtrahiere 5, dann multipliziere mit 4",
+          "solution": "x/4 = 3 → x = 12. Probe: 12/4 + 5 = 8 ✓"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kern (Können)",
+      "items": [
+        {
+          "id": "E4",
+          "stem": "Ein Fitnessstudio kostet 30 € Anmeldung + 15 € monatlich. Ein anderes kostet 45 € monatlich ohne Anmeldung. Ab welchem Monat ist das zweite Studio günstiger?",
+          "solution": "30 + 15x = 45x → 30 = 30x → x = 1. Nach einem Monat kosten beide gleich (60 €). Ab dem 2. Monat ist das zweite günstiger."
+        },
+        {
+          "id": "E5",
+          "stem": "Löse die Ungleichung: 3x - 7 ≥ 2x + 5",
+          "solution": "3x - 2x ≥ 5 + 7 → x ≥ 12. Lösung: alle x-Werte ab 12 (einschließlich)."
+        },
+        {
+          "id": "E6",
+          "stem": "Ein Taxi kostet 3,50 € Grundgebühr + 1,20 € pro km. Für welche Strecke zahlt man genau 15 €?",
+          "solution": "3,50 + 1,20x = 15 → 1,20x = 11,50 → x = 9,58 km. Etwa 9,6 km Fahrstrecke."
+        },
+        {
+          "id": "E7",
+          "stem": "Löse: 4(x - 3) = 2x + 6",
+          "hint": "Klammer zuerst auflösen",
+          "solution": "4x - 12 = 2x + 6 → 2x = 18 → x = 9. Probe: 4(9-3) = 24 und 2×9 + 6 = 24 ✓"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Challenge (Transfer)",
+      "items": [
+        {
+          "id": "E8",
+          "stem": "Ein Online-Shop bietet zwei Versandoptionen: Standard (5 € + 2 € pro kg) oder Premium (12 € + 1 € pro kg). Ab welchem Gewicht lohnt sich Premium?",
+          "solution": "5 + 2x > 12 + x → x > 7. Ab 7,01 kg ist Premium günstiger. Bei genau 7 kg kosten beide 19 €."
+        },
+        {
+          "id": "E9",
+          "stem": "Zwei Wassertanks: Tank A hat 120 L und verliert 8 L/h. Tank B hat 80 L und verliert 5 L/h. Nach welcher Zeit haben beide denselben Inhalt?",
+          "solution": "Tank A: 120 - 8t, Tank B: 80 - 5t. Gleichung: 120 - 8t = 80 - 5t → 40 = 3t → t = 13,33 h. Nach etwa 13,3 Stunden."
+        },
+        {
+          "id": "E10",
+          "stem": "Die Herstellungskosten pro Stück sinken mit der Menge: K(x) = 2000/x + 5. Ab welcher Stückzahl sind die Stückkosten unter 10 €?",
+          "solution": "2000/x + 5 < 10 → 2000/x < 5 → 2000 < 5x → x > 400. Ab 401 Stück liegen die Stückkosten unter 10 €."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mini-Projekt – Lieferdienst-Optimierung",
+      "items": [
+        "Du planst einen Lieferdienst. Die Fahrzeugkosten betragen 800 € monatlich (fix). Jede Lieferung kostet zusätzlich 2,50 € (Sprit, Verschleiß). Du berechnest 8 € pro Lieferung.",
+        "Aufgabe 1: Wie viele Lieferungen brauchst du monatlich für die Gewinnschwelle?",
+        "Aufgabe 2: Ab wie vielen Lieferungen machst du mehr als 500 € Gewinn?",
+        "Aufgabe 3: Ein Konkurrent verlangt nur 7 € pro Lieferung, hat aber 1200 € Fixkosten. Ab welcher Lieferanzahl ist er günstiger für Kunden?",
+        "Lösung 1: 800 + 2,50x = 8x → 800 = 5,50x → x ≈ 145,5, also 146 Lieferungen.",
+        "Lösung 2: Gewinn = 8x - (800 + 2,50x) = 5,50x - 800. Für 500 € Gewinn: 5,50x - 800 = 500 → x ≈ 236,4, also 237 Lieferungen.",
+        "Lösung 3: Deine Kosten 800 + 2,50x, Konkurrent 1200 + 2,50x bei gleichem Verkaufspreis. Seine Kosten sind immer 400 € höher, also nie günstiger für Kunden."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Lieferdienst Break-Even-Analyse",
+      "image": "assets/M01L04_delivery_analysis.png",
+      "content": "Das Diagramm zeigt Fixkosten (horizontale Linie), Gesamtkosten (steigende Linie) und Erlöse (steilere Linie). Der Break-Even liegt bei 146 Lieferungen und 1168 €.",
+      "alt_text": "Geschäftsdiagramm mit Kostenlinien und Break-Even-Punkt, x-Achse zeigt Lieferungen, y-Achse Euro"
+    },
+    {
+      "type": "concept",
+      "title": "Zusammenfassung & Spickzettel",
+      "items": [
+        "Balance-Methode: Behandle Gleichungen wie eine Waage – was du links machst, machst du auch rechts.",
+        "Reihenfolge: Erst +/- wegräumen, dann ×/÷ wegräumen, am Ende steht x allein da.",
+        "Textaufgaben: Lies zweimal, definiere die Unbekannte, übersetze Satz für Satz, löse methodisch.",
+        "Ungleichungen: Bei Division durch negative Zahlen dreht sich das Zeichen um.",
+        "Immer Probe machen: 30 Sekunden Aufwand, verhindert 90% aller Fehler."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Formel-Spickzettel",
+      "image": "assets/M01L04_formula_sheet.png",
+      "content": "Übersichtstafel mit den wichtigsten Umformungsregeln: ax + b = c führt zu x = (c-b)/a. Dazu Beispiele für Break-Even und Kostenvergleiche.",
+      "alt_text": "Formelsammlung mit mathematischen Umformungen und betriebswirtschaftlichen Anwendungen"
+    },
+    {
+      "type": "concept",
+      "title": "Selbstcheck – 3 Fragen zur Reflexion",
+      "items": [
+        "Frage 1: Woran erkenne ich, ob eine Textaufgabe zu einer linearen Gleichung führt? Antwort: Es gibt eine Unbekannte, die nur in der ersten Potenz vorkommt. Kosten und Erlöse wachsen proportional.",
+        "Frage 2: Wie prüfe ich, ob meine Lösung plausibel ist? Antwort: Probe durch Einsetzen, Einheiten kontrollieren, Größenordnung abschätzen (z.B. bei 1000 € Fixkosten kann Break-Even nicht bei 5 Stück liegen).",
+        "Frage 3: Was mache ich, wenn x auf beiden Seiten der Gleichung steht? Antwort: Alle x-Terme auf eine Seite sammeln, alle Zahlen auf die andere Seite bringen."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Ausblick & Verknüpfungen",
+      "items": [
+        "Als Nächstes lohnt sich der Sprung zu linearen Funktionen – dort siehst du Gleichungen als Graphen und verstehst Steigungen geometrisch.",
+        "Das knüpft an dein Break-Even-Wissen an: Die Kostenfunktion und Erlösfunktion sind lineare Funktionen, deren Schnittpunkt du gerade berechnet hast.",
+        "In höheren Modulen lernst du Gleichungssysteme (mehrere Unbekannte) und quadratische Gleichungen (Parabeln statt Geraden)."
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L04.JSON",
+        "note": "baseline"
+      }
+    ],
+    "versionTag": "v20250824-full-expansion",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 1,
+      "blocks_after": 23
+    },
+    "deep_enriched": true,
+    "deep_version": "comprehensive-v1",
+    "assets_count": 9,
+    "repair": {
+      "fixed_by": "auto_repair_v2",
+      "note": "from latest (ok)"
+    }
+  }
+}
