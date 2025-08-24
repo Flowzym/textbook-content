@@ -1,0 +1,18 @@
+{
+  "chapter": {
+    "id": "M11",
+    "title": "Übungen M11"
+  },
+  "sections": [
+    {
+      "id": "uebung-statistik",
+      "title": "Synthetische Kontrolle & Panel-Kausalinferenz Advanced (v3) – Prüfungsset E/F",
+      "file": "exercises/M11/uebung-statistik/module.json"
+    },
+    {
+      "id": "uebung-statistik-2",
+      "title": "Synthetische Kontrolle & Panel-Kausalinferenz Advanced (v3) – Prüfungsset E/F",
+      "file": "exercises/M11/uebung-statistik-2/module.json"
+    }
+  ]
+}

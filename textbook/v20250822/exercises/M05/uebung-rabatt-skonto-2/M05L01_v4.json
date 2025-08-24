@@ -1,0 +1,197 @@
+{
+  "id": "M05L01",
+  "title": "Unsicherheit & Sensitivitätsanalyse – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+  "reading_time_min": 40,
+  "prerequisites": [
+    "M05L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben zu Elastizität, Tornado‑Ranking, Break‑even (Preis/Menge) sicher lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Zweistufige Sensitivitäten (Preis×Menge) interpretieren und Maßnahmen ableiten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Rechen‑Mix (mit gestuften Hinweisen)",
+      "long": [
+        {
+          "title": "F1 – Elastizität & Tornado",
+          "context": "Baseline: Gewinn 240k. Preis +5% → Gewinn 300k; Preis −5% → 180k. Menge ±5% führt zu 240k±36k.",
+          "tasks": [
+            {
+              "prompt": "a) Elastizität E_Preis bei +5%?",
+              "hints": [
+                "Schritt 1: ΔGewinn = 300−240 = 60k.",
+                "Schritt 2: (ΔG/G0) / (ΔP/P0) = (60/240)/0,05.",
+                "Schritt 3: Ergebnis runden auf eine Dezimalstelle."
+              ],
+              "solution": "E_Preis = (0,25)/0,05 = 5,0.",
+              "check": {
+                "type": "approx",
+                "expected": 5.0,
+                "tol": 0.01
+              }
+            },
+            {
+              "prompt": "b) Elastizität E_Menge bei +5%?",
+              "hints": [
+                "ΔG = 36k.",
+                "Elastizität = (36/240)/0,05."
+              ],
+              "solution": "E_Menge = 3,0.",
+              "check": {
+                "type": "approx",
+                "expected": 3.0,
+                "tol": 0.01
+              }
+            },
+            {
+              "prompt": "c) Tornado: welcher Treiber oben?",
+              "hints": [
+                "Vergleiche |ΔG| bei ±5%.",
+                "Größerer Balken zuerst."
+              ],
+              "solution": "Preis (|Δ|=60k) vor Menge (36k).",
+              "check": {
+                "type": "string_contains",
+                "expected": "Preis"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F2 – Break‑even Preis",
+          "context": "Fixkosten 180k, vK € 62/Stk., Menge 4,500 Stk.",
+          "tasks": [
+            {
+              "prompt": "a) BE‑Preis?",
+              "hints": [
+                "Formel: P = vK + Fix/M.",
+                "Setze Zahlen ein."
+              ],
+              "solution": "P = 62 + 180000/4500 = € 102,-",
+              "check": {
+                "type": "approx",
+                "expected": 102.0,
+                "tol": 0.1
+              }
+            },
+            {
+              "prompt": "b) Sicherheitsmarge bei aktuellem Preis € 98,- relativ zum BE‑Preis?",
+              "hints": [
+                "(BE−aktuell)/BE.",
+                "In % angeben."
+              ],
+              "solution": "(102−98)/102 ≈ 3,9%.",
+              "check": {
+                "type": "approx",
+                "expected": 0.0392,
+                "tol": 0.002
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F3 – 2‑Faktoren‑Sensitivität (Preis×Menge)",
+          "context": "Baseline: Gewinn 120k. Preis −5% und Menge −5% führen zu Gewinn 48k.",
+          "tasks": [
+            {
+              "prompt": "a) ΔGewinn absolut?",
+              "hints": [
+                "48−120.",
+                "Achte auf Vorzeichen."
+              ],
+              "solution": "ΔG = −72k.",
+              "check": {
+                "type": "numeric",
+                "expected": -72000
+              }
+            },
+            {
+              "prompt": "b) Handlungsempfehlung kurz?",
+              "hints": [
+                "Denke an Preisstaffeln/Vertrieb.",
+                "Fixkosten flexibilisieren?"
+              ],
+              "solution": "Preisdifferenzierung & Vertriebsschwerpunkt; Kostenvariabilisierung prüfen.",
+              "check": {
+                "type": "string_contains",
+                "expected": "Preis"
+              }
+            }
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "answer": false,
+          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

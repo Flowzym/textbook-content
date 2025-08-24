@@ -1,0 +1,25 @@
+{
+  "id": "M01",
+  "title": "Grundlagen – Zahlen, Rechnen, Algebra (v3) – Prüfungsset E/F",
+  "description": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (Grundrechnen, Brüche/Prozent, Potenzen/Wurzeln, Gleichungen).",
+  "lessons": [
+    {
+      "id": "M01L01_v3",
+      "title": "Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)"
+    },
+    {
+      "id": "M01L02_v3",
+      "title": "Brüche & Dezimalzahlen – Umwandeln, Rechnen, Anteile & Prozente (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)"
+    },
+    {
+      "id": "M01L03_v3",
+      "title": "Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)"
+    },
+    {
+      "id": "M01L04_v3",
+      "title": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)"
+    }
+  ],
+  "version": "v3",
+  "updated_at": "2025-08-17T10:25:22.549603"
+}
