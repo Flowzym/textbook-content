@@ -1,0 +1,352 @@
+{
+  "id": "M01L01",
+  "title": "Lehrtext – Grundlagen: Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge für Einsteiger",
+  "reading_time_min": 40,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Ich kann die Zahlbereiche (ℕ, ℤ, ℚ, ℝ) definieren und ihre Beziehungen zueinander erklären."
+    },
+    {
+      "level": "Understand",
+      "text": "Ich verstehe die Rechenregeln (Kommutativ, Assoziativ, Distributiv) und kann begründen, warum die Reihenfolge 'Klammern–Punkt–Strich' wichtig ist."
+    },
+    {
+      "level": "Apply",
+      "text": "Ich kann komplexe Rechenausdrücke korrekt berechnen und dabei alle Regeln systematisch anwenden."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ich erkenne Fehlerquellen in Berechnungen und kann typische Denkfallen identifizieren und vermeiden."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Ich kann beurteilen, ob Rechenergebnisse plausibel sind und verschiedene Lösungsansätze bewerten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "content": "In dieser grundlegenden Lektion baust du ein sicheres Fundament in Zahlen und Rechnen auf. Du lernst die verschiedenen Zahlbereiche kennen, verstehst warum Rechenregeln existieren und wendest die korrekte Reihenfolge bei komplexen Berechnungen an. Jeder Schritt wird in ganzen Sätzen erklärt, damit du ihn sicher auf neue Situationen übertragen kannst."
+    },
+    {
+      "type": "concept",
+      "title": "Wofür brauche ich das? – Der Kassenfehler im Supermarkt",
+      "items": [
+        "Stell dir vor, du arbeitest an der Kasse eines Supermarkts. Ein Kunde kauft 3 Äpfel zu je € 0,50, dazu 2 Brote zu je € 1,20 und bekommt 10% Rabatt auf alles. Ohne die richtige Reihenfolge beim Rechnen machst du Fehler, die dem Geschäft Geld kosten.",
+        "Die falsche Reihenfolge: $3 \\times 0$,$50 + 2 \\times 1$,$20 - 10$% = 1,$50 + 2$,$40 - 0$,10 = € 3,80. Aber das ist völlig falsch! Die 10% beziehen sich auf die Gesamtsumme, nicht nur auf € 0,10.",
+        "Diese Situation zeigt, warum wir klare Rechenregeln brauchen: Erst Multiplikation, dann Addition, dann Prozentrechnung auf das Gesamtergebnis."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die große Idee – Zahlen haben Ordnung und Regeln",
+      "items": [
+        "Zahlen sind nicht chaotisch – sie folgen einer strengen Hierarchie. Natürliche Zahlen (1, 2, 3...) sind die Grundlage, darauf bauen alle anderen auf.",
+        "Rechenregeln sind keine Willkür, sondern entstehen aus der Logik der Zahlen selbst. Das Kommutativgesetz $(3 + 5 = 5 + 3)$ funktioniert, weil Addition bedeutet 'zusammenfügen' – und die Reihenfolge beim Zusammenfügen ist egal.",
+        "Die Punkt-vor-Strich-Regel gibt es, weil Multiplikation eine 'stärkere' Operation ist als Addition – sie bindet die Zahlen enger zusammen."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Zahlbereiche als Zwiebelschalen",
+      "image": "assets/M01L01_number_sets.png",
+      "content": "Die Grafik zeigt die Zahlbereiche wie Zwiebelschalen: ℕ (natürliche Zahlen) im Kern, dann ℤ (ganze Zahlen), ℚ (rationale Zahlen), und ℝ (reelle Zahlen) als äußerste Schale. Jeder Bereich enthält alle inneren.",
+      "alt_text": "Konzentrische Kreise zeigen die Einbettung der Zahlbereiche ineinander",
+      "src": "assets/M01L01_number_sets.png"
+    },
+    {
+      "type": "concept",
+      "title": "Die Zahlbereiche verstehen – eine Reise durch die Mathematik",
+      "items": [
+        "Natürliche Zahlen ℕ = {1, 2, 3, 4, ...}: Das sind die Zahlen zum Zählen. Ein Kind lernt sie zuerst. Damit kannst du zählen, aber nicht rechnen wenn das Ergebnis kleiner wird.",
+        "Ganze Zahlen ℤ = {..., -2, -1, 0, 1, 2, ...}: Wir fügen die Null und negative Zahlen hinzu. Jetzt können wir subtrahieren, ohne dass unmögliche Ergebnisse entstehen.",
+        "Rationale Zahlen ℚ = {a/b | a,b ∈ ℤ, $b ≠ 0$}: Alle Brüche. Jetzt können wir teilen und erhalten trotzdem eine Zahl. 1/3, 2/5, -7/4 gehören dazu.",
+        "Reelle Zahlen ℝ: Alle rationalen Zahlen plus irrationale wie π, √2, e. Damit können wir Längen, Flächen und Kurven vollständig beschreiben."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Zahlenstrahl mit allen Bereichen",
+      "image": "assets/M01L01_number_line.png",
+      "content": "Der Zahlenstrahl zeigt verschiedene Zahlentypen: Natürliche Zahlen als blaue Punkte, ganze Zahlen als rote Punkte, rationale Zahlen als grüne Striche (Brüche), irrationale als goldene Punkte (π, √2).",
+      "alt_text": "Horizontaler Zahlenstrahl von -5 bis 5 mit farbcodierten Zahlentypen",
+      "src": "assets/M01L01_number_line.png"
+    },
+    {
+      "type": "derivation",
+      "title": "Die Rechengesetze Schritt für Schritt verstehen",
+      "steps": [
+        "Kommutativgesetz (Vertauschungsgesetz): $a + b = b + a$ und $a \\times b = b \\times a$. Addition und Multiplikation kann man vertauschen, Subtraktion und Division nicht.",
+        "Assoziativgesetz (Verbindungsgesetz): $(a + b) + c = a + (b + c)$ und $(a \\times b) \\times c = a \\times (b \\times c)$. Bei mehreren gleichen Operationen ist die Klammerung egal.",
+        "Distributivgesetz (Verteilungsgesetz): $a \\times (b + c) = a \\times b + a \\times c$. Multiplikation verteilt sich über Addition und Subtraktion.",
+        "Diese Gesetze sind nicht willkürlich – sie folgen aus der Definition der Operationen und machen Mathematik vorhersagbar und zuverlässig."
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Rechengesetze in Aktion (ausführlich)",
+      "steps": [
+        "Aufgabe: Vereinfache $5 \\times (3 + 7)$ und zeige, dass das Distributivgesetz funktioniert.",
+        "Weg 1 – Klammer zuerst: $5 \\times (3 + 7) = 5 \\times 10 = 50$.",
+        "Weg 2 – Distributivgesetz: $5 \\times (3 + 7) = 5 \\times 3 + 5 \\times 7 = 15 + 35 = 50$.",
+        "Beide Wege führen zum gleichen Ergebnis. Das Distributivgesetz ist kein Trick, sondern eine mathematische Wahrheit.",
+        "Warum funktioniert das? $5 \\times (3 + 7)$ bedeutet 'nimm fünfmal die Summe von 3 und 7'. Das ist dasselbe wie 'nimm fünfmal 3 und fünfmal 7, dann addiere'."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Distributivgesetz visualisiert",
+      "image": "assets/M01L01_distributive.png",
+      "content": "Ein Rechteck zeigt $5 \\times (3 + 7)$: 5 Reihen mit je 10 Punkten. Dasselbe Rechteck aufgeteilt: $5 \\times 3$ $(linker Teil) + 5 \\times 7$ (rechter Teil). Beide Darstellungen haben 50 Punkte.",
+      "alt_text": "Rechteckdiagramm demonstriert Distributivgesetz durch Aufteilung in zwei Teilrechtecke",
+      "src": "assets/M01L01_distributive.png"
+    },
+    {
+      "type": "concept",
+      "title": "Die Reihenfolge der Operationen – warum Punkt vor Strich?",
+      "items": [
+        "Die Reihenfolge ist: 1. Klammern, 2. Potenzen, 3. Multiplikation und Division (von links nach rechts), 4. Addition und Subtraktion (von links nach rechts).",
+        "Warum diese Reihenfolge? Multiplikation bedeutet 'mehrfache Addition'. $2 + 3 \\times 4$ heißt $2 + (4 + 4 + 4)$, nicht $(2 + 3) \\times 4$.",
+        "Ohne diese Regel wäre Mathematik mehrdeutig: Würde $2 + 3 \\times 4$ gleich 14 oder 20 bedeuten? Mit der Regel ist es eindeutig: 14."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Operationen-Hierarchie",
+      "image": "assets/M01L01_order_hierarchy.png",
+      "content": "Pyramide zeigt die Operationshierarchie: Klammern an der Spitze (stärkste Bindung), dann Potenzen, dann Punkt-Operationen, unten Strich-Operationen (schwächste Bindung).",
+      "alt_text": "Pyramidendiagramm mit vier Ebenen der mathematischen Operationspriorität",
+      "src": "assets/M01L01_order_hierarchy.png"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – Komplexer Ausdruck systematisch gelöst",
+      "steps": [
+        "Aufgabe: $24 \\div 4 \\times 3 + (15 - 3 \\times 2)$² - 8. Ich erkläre jeden Schritt einzeln.",
+        "Schritt 1 – Innerste Klammer zuerst: $3 \\times 2 = 6$, also wird $(15 - 3 \\times 2)$ zu $(15 - 6) = 9$.",
+        "Jetzt haben wir: $24 \\div 4 \\times 3 + 9$² - 8.",
+        "Schritt 2 – Potenz: 9² = 81. Jetzt: $24 \\div 4 \\times 3 + 81 - 8$.",
+        "Schritt 3 – $Punkt-Operationen$ von links nach rechts: $24 \\div 4 = 6$, dann $6 \\times 3 = 18$.",
+        "Jetzt haben wir: 18 + 81 - 8.",
+        "Schritt 4 – $Strich-Operationen$ von links nach rechts: $18 + 81 = 99$, dann $99 - 8 = 91$.",
+        "Ergebnis: 91. Probe durch Einsetzen bestätigt das Ergebnis."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Schritt-für-Schritt Auflösung",
+      "image": "assets/M01L01_step_by_step.png",
+      "content": "Fünf Zeilen zeigen die schrittweise Vereinfachung des komplexen Ausdrucks. Jeder Schritt ist farblich markiert: rot für Klammern, blau für Potenzen, grün für Punkt, orange für Strich.",
+      "alt_text": "Fünfzeiliges Berechnungsschema mit farbcodierten Rechenschritten",
+      "src": "assets/M01L01_step_by_step.png"
+    },
+    {
+      "type": "concept",
+      "title": "Negative Zahlen – das Vorzeichen-Chaos vermeiden",
+      "items": [
+        "Negative Zahlen sind nicht 'schlechte' Zahlen, sondern Zahlen mit einer Richtung. Auf dem Zahlenstrahl gehen sie nach links.",
+        "Vorzeichenregeln: Plus mal $Plus = Plus$, Minus mal $Minus = Plus$, Plus mal $Minus = Minus$, Minus mal $Plus = Minus$. Merksatz: 'Gleiche Vorzeichen geben Plus.'",
+        "Beim Subtrahieren negativer Zahlen: $a - (-b) = a + b$. 'Minus Minus wird Plus'. Das ist keine willkürliche Regel, sondern folgt aus der Definition der Subtraktion."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Vorzeichenregeln-Tabelle",
+      "image": "assets/M01L01_sign_rules.png",
+      "content": "$4\\times 4-Tabelle$ zeigt alle Kombinationen von +/- bei Multiplikation und Division. Grüne Felder für positive Ergebnisse, rote für negative. Muster: gleiche Vorzeichen → grün, verschiedene → rot.",
+      "alt_text": "Vorzeichentabelle mit grün-roten Feldern für positive und negative Ergebnisse",
+      "src": "assets/M01L01_sign_rules.png"
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel C – Negative Zahlen richtig behandeln",
+      "steps": [
+        "Aufgabe: $(-3) \\times (5 - 8) + (-2) \\times (-4)$. Schritt für Schritt mit Vorzeichen.",
+        "Schritt 1 – Klammer auflösen: $5 - 8$ = -3. Also $(-3) \\times (-3) + (-2) \\times (-4)$.",
+        "Schritt 2 – Multiplikationen: $(-3) \\times (-3)$ = +9 (Minus mal $Minus = Plus)$, $(-2) \\times (-4)$ = +8.",
+        "Schritt 3 – Addition: $9 + 8 = 17$.",
+        "Warum ist $(-3) \\times (-3)$ positiv? Denk an 'Schulden': Wenn du 3 Schulden von je € 3,-,- loswirst, gewinnst du € 9,-,-.",
+        "Probe: Setze andere Zahlen ein und prüfe, ob die Vorzeichenregeln stimmen."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Häufige Denkfallen und wie du sie umgehst",
+      "items": [
+        "Denkfalle 1 – Punkt vor Strich vergessen: $2 + 3 \\times 4$ ist nicht $(2 + 3) \\times 4 = 20$, sondern $2 + 12 = 14$.",
+        "Denkfalle 2 – Vorzeichenfehler bei Klammern: -$(3 - 5)$ ist $nicht -3 - 5$ = -8, $sondern -(-2)$ = +2.",
+        "Denkfalle 3 – Division durch Null: $5 \\div 0$ ist nicht '0' oder '∞', sondern nicht definiert. Das bricht die Mathematik.",
+        "Denkfalle 4 – Kommutativgesetz bei Subtraktion: 5 - 3 ist nicht dasselbe wie 3 - 5. Subtraktion ist nicht kommutativ."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Häufige Fehler visualisiert",
+      "image": "assets/M01L01_common_mistakes.png",
+      "content": "Vier Beispiele zeigen typische Fehler: falsche Operationsreihenfolge, Vorzeichenfehler, Division durch Null, falsches Kommutativgesetz. Daneben die korrekten Lösungen.",
+      "alt_text": "Vierteilige Fehlersammlung mit falschen Rechnungen links und korrekten Versionen rechts",
+      "src": "assets/M01L01_common_mistakes.png"
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kurz (Aufwärmen)",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "Berechne: $15 - 3 \\times 4 + 8$",
+          "hint": "Punkt vor Strich beachten",
+          "solution": "$15 - 12 + 8 = 11$. Erst $3 \\times 4 = 12$, dann von links nach rechts."
+        },
+        {
+          "id": "E2",
+          "stem": "Vereinfache: $(-5) + (-3) \\times 2$",
+          "hint": "Multiplikation zuerst, dann Addition",
+          "solution": "$(-5) + (-6)$ = -11. Erst $(-3) \\times 2$ = -6, dann $(-5) + (-6)$."
+        },
+        {
+          "id": "E3",
+          "stem": "Berechne: $4 \\times (7 - 2) \\div 2$",
+          "hint": "Klammer zuerst, dann von links nach rechts",
+          "solution": "$4 \\times 5 \\div 2 = 20 \\div 2 = 10$"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kern (Können)",
+      "items": [
+        {
+          "id": "E4",
+          "stem": "Berechne: 3² + $4 \\times (8 - 5) - 12 \\div 3$",
+          "solution": "$9 + 4 \\times 3 - 4 = 9 + 12 - 4 = 17$"
+        },
+        {
+          "id": "E5",
+          "stem": "Welche Rechengesetze werden hier angewendet: $5 \\times (3 + 7) = 5 \\times 3 + 5 \\times 7$?",
+          "solution": "Distributivgesetz: Multiplikation wird über Addition verteilt."
+        },
+        {
+          "id": "E6",
+          "stem": "Vereinfache: (-2)³ - $(-3) \\times 4 + 5$",
+          "solution": "$(-8) - (-12) + 5$ = -$8 + 12 + 5 = 9$"
+        },
+        {
+          "id": "E7",
+          "stem": "Prüfe, ob kommutativ: a) $15 - 8$ und $8 - 15$, b) $6 \\times 4$ und $4 \\times 6$",
+          "solution": "a) 7 ≠ -7, nicht kommutativ. b) $24 = 24$, kommutativ. Subtraktion ist nicht kommutativ, Multiplikation schon."
+        },
+        {
+          "id": "E8",
+          "stem": "Berechne: $100 - 4 \\times 5$² + $(18 - 2 \\times 7)$",
+          "solution": "$100 - 4 \\times 25 + (18 - 14) = 100 - 100 + 4 = 4$"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Challenge (Transfer)",
+      "items": [
+        {
+          "id": "E9",
+          "stem": "Fehlerdiagnose: Ein Schüler rechnet $2 + 3 \\times 4 = (2 + 3) \\times 4 = 20$. Was ist der Fehler und wie lautet die richtige Antwort?",
+          "solution": "Fehler: Punkt vor Strich nicht beachtet. Korrekt: $2 + 3 \\times 4 = 2 + 12 = 14$."
+        },
+        {
+          "id": "E10",
+          "stem": "Zeige mit einem Beispiel, dass Subtraktion nicht assoziativ ist.",
+          "solution": "Beispiel: $(10 - 5) - 3 = 2$, aber $10 - (5 - 3) = 8$. Da $2 ≠ 8$, ist Subtraktion nicht assoziativ."
+        },
+        {
+          "id": "E11",
+          "stem": "$Supermarkt-Rechnung$: 3 × € 1,$20 + 2$ × € 2,$50 - 10$% Rabatt auf alles. Berechne den Endpreis.",
+          "solution": "Gesamtpreis: € 3,60 + € 5,-,- = € 8,60. Mit 10% Rabatt: € 8,$60 \\times 0$,9 = € 7,74."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mini-Projekt – Schulkiosk-Abrechnung",
+      "items": [
+        "Du hilfst beim Schulkiosk und musst die Tagesabrechnung machen. Verkauft wurden: 15 Brötchen à € 1,50, 8 Getränke à € 2,-,-, 12 Süßigkeiten à € 0,80. Am Ende des Tages gibt es 5% Personalrabatt für Lehrer.",
+        "Aufgabe 1: Berechne den Bruttoumsatz (ohne Rabatt).",
+        "Aufgabe 2: Ein Lehrer kauft 2 Brötchen und 1 Getränk. Was zahlt er mit Personalrabatt?",
+        "Aufgabe 3: Erkläre die Rechenreihenfolge bei: $Kosten = 15 \\times 1$,$50 + 8 \\times 2$,$00 + 12 \\times 0$,80.",
+        "Aufgabe 4: Überprüfe das Ergebnis mit dem Distributivgesetz.",
+        "Lösung 1: $15 \\times 1$,$50 + 8 \\times 2$,$00 + 12 \\times 0$,$80 = 22$,$50 + 16$,$00 + 9$,60 = € 48,10",
+        "Lösung 2: Lehrer: $(2 \\times 1$,$50 + 1 \\times 2$,$00) \\times 0$,$95 = 5$,$00 \\times 0$,95 = € 4,75",
+        "Lösung 3: Erst alle Multiplikationen (Punkt), dann Additionen (Strich) von links nach rechts.",
+        "Lösung 4: Distributiv: $(15 + 8 + 12) \\times (1$,$50 + 2$,$00 + 0$,80) funktioniert NICHT, da verschiedene Preise. Distributivgesetz nur bei gleichen Faktoren."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Schulkiosk-Abrechnung Dashboard",
+      "image": "assets/M01L01_school_kiosk.png",
+      "content": "Tabellarische Darstellung der Verkäufe: Produkte, Mengen, Einzelpreise, Zwischensummen. Unten Gesamtsumme und Lehrerrabatt-Berechnung. Rechenweg ist farblich markiert.",
+      "alt_text": "Abrechnungstabelle mit Produktdaten und Gesamtsummenberechnung",
+      "src": "assets/M01L01_school_kiosk.png"
+    },
+    {
+      "type": "concept",
+      "title": "Zusammenfassung & Spickzettel",
+      "items": [
+        "Zahlbereiche: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Jeder Bereich erweitert die Möglichkeiten des Rechnens.",
+        "Rechengesetze: Kommutativ (vertauschen), Assoziativ (Klammern verschieben), Distributiv (Multiplikation verteilen).",
+        "Reihenfolge: Klammern → Potenzen → Punkt (×,÷) → Strich (+,-).",
+        "Vorzeichen: Gleiche Vorzeichen → positiv, verschiedene → negativ.",
+        "Immer Probe machen und auf Plausibilität prüfen."
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Mathematik-Grundlagen Spickzettel",
+      "image": "assets/M01L01_cheat_sheet.png",
+      "content": "Kompakte Übersicht: Zahlbereiche-Diagramm, Rechengesetze-Formeln, Operationsreihenfolge-Schema, Vorzeichenregeln-Tabelle. Alles auf einem Blick.",
+      "alt_text": "Vierteiliger Spickzettel mit allen wichtigen Grundlagen der Mathematik",
+      "src": "assets/M01L01_cheat_sheet.png"
+    },
+    {
+      "type": "concept",
+      "title": "Selbstcheck – 3 Fragen zur Reflexion",
+      "items": [
+        "Frage 1: Warum gibt es die $Punkt-vor-Strich-Regel$? Antwort: Weil Multiplikation eine verkürzte Addition ist. $3 \\times 4$ bedeutet $4 + 4 + 4$. Deshalb $bindet \\times st$ärker als +.",
+        "Frage 2: Wie erkenne ich, ob ein Rechengesetz anwendbar ist? Antwort: Kommutativ und Assoziativ nur $bei + und$ ×. Distributiv bei × ü$ber + oder$ -. $Bei - und \\div vorsichtig$ sein.",
+        "Frage 3: Wie prüfe ich, ob mein Ergebnis stimmt? Antwort: Probe durch Einsetzen, Plausibilität abschätzen, Alternative Rechenwege verwenden (z.B. Distributiv), Größenordnung prüfen."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Ausblick & Verknüpfungen",
+      "items": [
+        "Als Nächstes lohnt sich der Sprung zu Brüchen und Dezimalzahlen – dort wendest du diese Grundregeln auf erweiterte Zahlenformen an.",
+        "Das knüpft direkt an: Bruchrechnung folgt denselben Gesetzen, nur komplexer. Das Distributivgesetz hilft beim Kürzen und Erweitern.",
+        "In höheren Modulen sind diese Grundlagen das Fundament für Algebra, Funktionen und Analysis. Ohne sichere Grundrechenarten geht nichts."
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L01.JSON",
+        "note": "baseline"
+      }
+    ],
+    "versionTag": "v20250824-complete-rebuild",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 5,
+      "blocks_after": 26
+    },
+    "deep_enriched": true,
+    "deep_version": "maximum-depth-v1",
+    "assets_count": 10,
+    "target_audience": "absolute_beginners",
+    "compat": {
+      "added_src_for_visuals": true
+    }
+  }
+}
