@@ -1,0 +1,191 @@
+{
+  "id": "M05L02",
+  "title": "Szenarioanalyse & Entscheidungsbäume – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+  "reading_time_min": 40,
+  "prerequisites": [
+    "M05L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Erwartungswerte/Varianzen aus Szenarien berechnen; Entscheidungsbäume mit Hedge‑Zweigen bewerten."
+    },
+    {
+      "level": "Analyze",
+      "text": "Konsistenz (p‑$Summe=1$, Korrelationen) prüfen und robuste Empfehlung ableiten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Rechen‑Mix (mit gestuften Hinweisen)",
+      "long": [
+        {
+          "title": "F1 – E[NPV] & Varianz",
+          "context": "Szenarien: Down $(p=0$,2, NPV=−12k), Base $(p=0$,5, +18k), Up $(p=0$,3, +42k).",
+          "tasks": [
+            {
+              "prompt": "a) E[NPV]?",
+              "hints": [
+                "Σ $p\\cdot NPV$.",
+                "0,$2\\cdot (-12)+0$,$5\\cdot 18+0$,$3\\cdot 42$"
+              ],
+              "solution": "E = −2,$4 + 9 + 12$,6 = +19,2k.",
+              "check": {
+                "type": "approx",
+                "expected": 19200,
+                "tol": 50
+              }
+            },
+            {
+              "prompt": "b) Varianz?",
+              "hints": [
+                "Σ $p\\cdot (NPV-E)^2$.",
+                "Rechne in k€ und multipliziere am Ende."
+              ],
+              "solution": "Var ≈ 0,$2\\cdot (-31,2)^2 + 0$,$5\\cdot (-1,2)^2 + 0$,$3\\cdot (22$,$8)^2$ ≈ 0,$2\\cdot 973 + 0$,$5\\cdot 1$,$44 + 0$,$3\\cdot 520$ ≈ 194,6 $(k€)^2$.",
+              "check": {
+                "type": "approx",
+                "expected": 194.6,
+                "tol": 2.0
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F2 – Entscheidungsbaum mit Hedge",
+          "context": "Option A (No‑Hedge): p=[0,4,0,6], NPV=[−8k, +22k]; Option B (Hedge 60%): p=[0,4,0,6], NPV=[−4k, +20k].",
+          "tasks": [
+            {
+              "prompt": "a) E[NPV]_A und E[NPV]_B?",
+              "hints": [
+                "E=Σ $p\\cdot NPV$ je Option."
+              ],
+              "solution": "E_$A=0$,$4\\cdot (-8)+0$,$6\\cdot 22$= −3,$2+13$,2=+10k; E_$B=0$,$4\\cdot (-4)+0$,$6\\cdot 20$= −1,$6+12$=+10,4k.",
+              "check": {
+                "type": "approx",
+                "expected": 10400,
+                "tol": 50
+              }
+            },
+            {
+              "prompt": "b) Welche hat geringere Varianz (qualitativ)?",
+              "hints": [
+                "Downside vergleiche.",
+                "Hedge glättet Tail."
+              ],
+              "solution": "B hat geringere Varianz (kleinere Downside).",
+              "check": {
+                "type": "string_contains",
+                "expected": "B"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F3 – Konsistenzcheck",
+          "context": "p‑Werte 0,3/0,5/0,3; FX‑Sätze 0,95/1,00/1,10 (EUR/USD).",
+          "tasks": [
+            {
+              "prompt": "a) Sind p valide?",
+              "hints": [
+                "Summe prüfen."
+              ],
+              "solution": "Nein, $Summe=1$,1 > 1 → anpassen.",
+              "check": {
+                "type": "string_contains",
+                "expected": "Nein"
+              }
+            },
+            {
+              "prompt": "b) Qualitative Korrelation $Preis\\times Menge$?",
+              "hints": [
+                "Typisch negativ."
+              ],
+              "solution": "Preis↑, Menge↓ (und umgekehrt).",
+              "check": {
+                "type": "string_contains",
+                "expected": "negativ"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "Worked Example",
+        "steps": []
+      },
+      "fading": {
+        "title": "Fading Example",
+        "steps": []
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

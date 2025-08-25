@@ -1,0 +1,143 @@
+{
+  "id": "M11L01",
+  "title": "SC I – Prinzip, Donor, Placebos (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "reading_time_min": 7,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "long": [
+        {
+          "title": "E1 – Gap & kumulativer Effekt",
+          "context": "Post-Wochen-Gap [%]: [1,2,1,3,2].",
+          "tasks": [
+            {
+              "prompt": "a) Kumulativer Gap?",
+              "hints": "Summe bilden",
+              "solution": "9%‑Punkte kumulativ",
+              "check": {
+                "type": "numeric",
+                "expected": 9
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Pre-RMSPE bewerten",
+          "context": "$Pre-RMSPE=2$,5%, $Post-Mittelgap=3$,2%.",
+          "tasks": [
+            {
+              "prompt": "a) Plausibel?",
+              "hints": "Post >> Pre?",
+              "solution": "Ja, Signal > Rauschen (Daumenregel)",
+              "check": {
+                "type": "string_contains",
+                "expected": "Signal"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "long": [
+        {
+          "title": "F1 – Placebo-in-space",
+          "context": "20 Donoren; 95%-Quantil der $Placebo-Gaps=2$,8%.",
+          "tasks": [
+            {
+              "prompt": "a) Dein $Gap=3$,2% – Interpretation?",
+              "hints": "über Quantil → stark",
+              "solution": "robuste Evidenz",
+              "check": {
+                "type": "string_contains",
+                "expected": "Evidenz"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation."
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "kurz"
+}

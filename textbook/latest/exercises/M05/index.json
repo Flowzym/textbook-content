@@ -1,0 +1,18 @@
+{
+  "chapter": {
+    "id": "M05",
+    "title": "Übungen M05"
+  },
+  "sections": [
+    {
+      "id": "uebung-rabatt-skonto",
+      "title": "Unsicherheit & Risikomodellierung – Prüfungsset F (v4)",
+      "file": "exercises/M05/uebung-rabatt-skonto/module.json"
+    },
+    {
+      "id": "uebung-rabatt-skonto-2",
+      "title": "Unsicherheit & Risikomodellierung – Prüfungsset F (v4)",
+      "file": "exercises/M05/uebung-rabatt-skonto-2/module.json"
+    }
+  ]
+}

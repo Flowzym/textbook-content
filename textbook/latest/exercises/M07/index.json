@@ -1,0 +1,18 @@
+{
+  "chapter": {
+    "id": "M07",
+    "title": "Übungen M07"
+  },
+  "sections": [
+    {
+      "id": "uebung-controlling",
+      "title": "Ganzzahlige Optimierung & Heuristiken (v3) – Prüfungsset E/F",
+      "file": "exercises/M07/uebung-controlling/module.json"
+    },
+    {
+      "id": "uebung-statistik",
+      "title": "Ganzzahlige Optimierung & Heuristiken (v3) – Prüfungsset E/F",
+      "file": "exercises/M07/uebung-statistik/module.json"
+    }
+  ]
+}
