@@ -1,0 +1,304 @@
+{
+  "id": "M05L02",
+  "title": "Szenarioanalyse & Entscheidungsbäume – Von Best/Worst zu erwarteten NPVs",
+  "reading_time_min": 26,
+  "prerequisites": [
+    "M05L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: Basisszenario, Best/Worst Case, Szenariomatrix, Erwartungswert E[NPV]."
+    },
+    {
+      "level": "Understand",
+      "text": "Wozu Wahrscheinlichkeiten? Unterschied zufälliger Schwankung vs. systematischer Lageverschiebung."
+    },
+    {
+      "level": "Apply",
+      "text": "Szenarien konsistent konstruieren (Treiber‑Korrelation, dokumentierte Annahmen) und E[NPV] berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Einfache Entscheidungsbäume aufstellen und optimalen Pfad wählen (max E[NPV])."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "**Szenarioanalyse** kombiniert mehrere Treiber zu stimmigen Zukunftsbildern. Statt nur „±10%“ denken wir in\n**Korrelationen** (z. B. Preis↓ korreliert mit Menge↑?) und bewerten Entscheidungen über **Erwartungswerte**."
+    },
+    {
+      "type": "concept",
+      "title": "Szenarien & E[NPV]",
+      "text": "- Szenario S_k hat Annahmen (Preis, Menge, Kosten, i) und eine **Wahrscheinlichkeit p_k**.  \n- **E[NPV] = Σ p_$k \\cdot NPV$_k**, Varianz Var(NPV)=Σ p_k $(NPV_k - E[NPV])^2$.  \n- Entscheidungsbaum: $Knoten = Entscheidung$/Zufall; Blä$tter = NPV$.",
+      "explanation": "\n\n**$Decision-Hints$:**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in $Einheiten^2$, Standardabweichung in Einheiten."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII‑Entscheidungsbaum",
+      "ascii": "[Start]─Decision→(A)─Chance p/1−p→ [NPV_A1]/[NPV_A2]\n         └────────→(B)─Chance p/1−p→ [NPV_B1]/[NPV_B2]",
+      "caption": "Wähle den Pfad mit maximalem erwarteten NPV.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Wähle den Pfad mit maximalem erwarteten NPV.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Drei Szenarien mit p_k",
+      "text": "Base $p=0$,5: NPV=+20k; Upside $p=0$,3: +60k; Downside $p=0$,2: −10k.  \n**E[NPV]=0,$5\\cdot 20+0$,$3\\cdot 60+0$,$2\\cdot (-10)=10+18-2$=** **+26k**. Var≈0,$5\\cdot (-6)^2+0$,3·$3$4^2$$+0,$2\\cdot (-36)^2$= … (Übung).",
+      "steps": [
+        "Base $p=0$,5: NPV=+20k; Upside $p=0$,3: +60k; Downside $p=0$,2: −10k",
+        "E[NPV]=0,$5\\cdot 20+0$,$3\\cdot 60+0$,$2\\cdot (-10)=10+18-2$=** **+26k**. Var≈0,$5\\cdot (-6)^2+0$,3·$3$4^2$$+0,$2\\cdot (-36)^2$= … (Übung"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Korrelation beachten",
+      "text": "Preis und Menge oft **negativ** korreliert: höherer Preis → geringere Menge.\nSzenarien daher **konsistent** kombinieren (z. B. Preis↑, Menge↓; Preis↓, Menge↑).",
+      "steps": [
+        "Preis und Menge oft **negativ** korreliert: höherer Preis → geringere Menge",
+        "Szenarien daher **konsistent** kombinieren (z. B. Preis↑, Menge↓; Preis↓, Menge↑"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Entscheidungsbaum",
+      "text": "Option A: Marketing (−30k heute) → Umsatz hoch mit $p=0$,4: +80k PV, $sonst +20k$ PV.  \nOption B: kein Marketing (0 heute) → Umsatz hoch $p=0$,25: +70k, $sonst +18k$.\na) E[NPV]_A = __ ; b) E[NPV]_B = __ ; c) Entscheidung?",
+      "solution": [
+        "−$30 + 0$,$4\\cdot 80 + 0$,$6\\cdot 20$ = −$30 + 32 + 12$ = **+14k**",
+        "$0 + 0$,$25\\cdot 70 + 0$,$75\\cdot 18$ = **+31,5k**",
+        "B wählen"
+      ],
+      "steps": [
+        "Option A: Marketing (−30k heute) → Umsatz hoch mit $p=0$,4: +80k PV, $sonst +20k$ PV",
+        "Option B: kein Marketing (0 heute) → Umsatz hoch $p=0$,25: +70k, $sonst +18k$",
+        "a) E[NPV]_A = __ ; b) E[NPV]_B = __ ; c) Entscheidung?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "E[NPV]: p=[0,6,0,4], NPV=[10k, −5k]",
+          "hint": "0,$6\\cdot 10+0$,$4\\cdot (-5)$",
+          "solution": "= +4k",
+          "check": {
+            "type": "numeric",
+            "expected": 4000
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Varianzkomponente für Abweichung $d=8k$, $p=0$,3",
+          "hint": "p·$d^2$",
+          "solution": "0,$3\\cdot 64=19$,2 (k€^2) (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "check": {
+            "type": "approx",
+            "expected": 0.3,
+            "tolerance": 0.1,
+            "expr": "0.3"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Konsistenzprüfung bei neg. Korrelation $P\\times M$?",
+          "hint": "Preis↑ → Menge↓",
+          "solution": "richtig",
+          "check": {
+            "type": "string_contains",
+            "expected": "Menge"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "solution": "σ = √Varianz",
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Szenario‑Portfolio für ein Investitionsprojekt",
+          "context": "Erstelle 4 Szenarien (Downside, Base, Upside, Super‑Upside) mit p=[0,2,0,5,0,25,0,05]. NPVs [−15k, +18k, +45k, +90k].",
+          "subtasks": [
+            {
+              "text": "E[NPV] und Var berechnen."
+            },
+            {
+              "text": "Diskutiere, ob Risikoprämie (höheres i) gerechtfertigt ist."
+            },
+            {
+              "text": "Leite Management‑Maßnahmen ab."
+            }
+          ],
+          "hints": [
+            "E=Σ $p\\cdot NPV$.",
+            "Var analog.",
+            "Maßnahmen: Preismechanismen, flexible Kapazität, Hedging."
+          ],
+          "solutions": [
+            "E≈+23,7k",
+            "Var berechnet",
+            "Maßnahmenliste"
+          ],
+          "checks": [
+            {
+              "type": "approx",
+              "expected": 23.7,
+              "tolerance": 0.5,
+              "expr": "23.7"
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "E≈+23,7k",
+            "Var berechnet",
+            "Maßnahmenliste"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Wahrscheinlichkeiten summieren nicht zu 1.",
+        "Szenarien ohne Korrelationen (unrealistisch kombiniert).",
+        "Erwartungswert nur verbal, nicht gerechnet."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "E[NPV] berechnet sich als…",
+          "options": [
+            "Σ p_k + NPV_k",
+            "Σ p_$k \\cdot NPV$_k",
+            "Σ NPV_k / n"
+          ],
+          "answer_index": 1,
+          "rationale": "Gewichteter Mittelwert.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gewichteter Mittelwert.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Szenarien sollten Treiber‑Korrelationen respektieren.",
+          "answer": true,
+          "rationale": "Realismus.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Realismus.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Entscheidungsbaum: Wähle Pfad mit…",
+          "options": [
+            "max Varianz",
+            "max E[NPV]",
+            "min Kosten"
+          ],
+          "answer_index": 1,
+          "rationale": "Erwartungswertkriterium.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Erwartungswertkriterium.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du konstruierst konsistente Szenarien, berechnest E[NPV] und triffst Entscheidungen mit einfachen Entscheidungsbäumen."
+    },
+    {
+      "type": "outlook",
+      "text": "Als Nächstes: **Monte‑Carlo‑Simulation** – von Szenarien zu Verteilungen."
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

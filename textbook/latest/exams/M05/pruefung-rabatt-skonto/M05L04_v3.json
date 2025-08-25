@@ -1,0 +1,166 @@
+{
+  "id": "M05L04",
+  "title": "Risikobudget, Stresstests & Reporting – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+  "reading_time_min": 80,
+  "prerequisites": [
+    "M05L01",
+    "M05L02",
+    "M05L03",
+    "M05L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Evaluate",
+      "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "text": "Feintuning: Budget‑Checks vor Empfehlung, Maßnahmen priorisieren, Ampel‑Reporting."
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset E",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Risikobudget: $VaR95 ≤ 80k$. Gemessen: $VaR95=92k$. Erste Maßnahme?",
+          "options": [
+            "Projekt stoppen",
+            "Hedge‑Quote erhöhen / Treiber senken",
+            "Budget anheben"
+          ],
+          "answer_index": 1,
+          "rationale": "Risikotreiber reduzieren.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Risikotreiber reduzieren.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "CVaR95 ist Tail‑Durchschnitt jenseits des VaR.",
+          "answer": true,
+          "rationale": "Strenger als VaR.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Strenger als VaR.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Executive‑Summary enthält **nicht**:",
+          "options": [
+            "KPIs vs. Budget",
+            "klare Empfehlung",
+            "langes Formelkorsett"
+          ],
+          "answer_index": 2,
+          "rationale": "Formeln in Anhang.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Formeln in Anhang.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Frühindikator Lagerrisiko:",
+          "options": [
+            "Lagerreichweite (Tage)",
+            "Median‑Gewinn",
+            "E[NPV]"
+          ],
+          "answer_index": 0,
+          "rationale": "Direkter KPI.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Direkter KPI.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Stresstests sind extremer als Szenarien und dienen Robustheitscheck.",
+          "answer": true,
+          "rationale": "Purpose.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Purpose.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wenn Hedge den VaR reduziert, CVaR aber über Budget bleibt…",
+          "options": [
+            "ok",
+            "nicht ok – Tail zu dick",
+            "egal"
+          ],
+          "answer_index": 1,
+          "rationale": "Auf CVaR achten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Auf CVaR achten.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Maßnahme, die **nicht** direkt Tail‑Risiko senkt:",
+          "options": [
+            "Preis‑Floor",
+            "Dual Sourcing",
+            "Fixkosten erhöhen"
+          ],
+          "answer_index": 2,
+          "rationale": "Fixe Kosten erhöhen Risiko.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Fixe Kosten erhöhen Risiko.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Empfehlungen sollten Verantwortliche und Fristen enthalten.",
+          "answer": true,
+          "rationale": "Umsetzung sichern.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Umsetzung sichern.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

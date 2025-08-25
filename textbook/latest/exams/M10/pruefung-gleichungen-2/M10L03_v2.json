@@ -1,0 +1,271 @@
+{
+  "id": "M10L03",
+  "title": "Causal Impact (BSTS) – Pre/Post & Effektschätzung (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M10L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte BSTS Causal Impact abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "BSTS steht für…",
+          "options": [
+            "Bayesian Structural Time Series",
+            "Basic Seasonal Time Series",
+            "Bayesian Simple Trend System"
+          ],
+          "answer_index": 0,
+          "rationale": "Strukturelle Komponenten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Strukturelle Komponenten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Counterfactual im Post stammt aus Posterior-Prognosen des Pre-angepassten Modells.",
+          "answer": true,
+          "rationale": "Kernidee.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kernidee.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gute Regressoren…",
+          "options": [
+            "sind hoch korreliert im Pre & unbeeinflusst im Post",
+            "sind zufällig",
+            "sind ebenfalls behandelt"
+          ],
+          "answer_index": 0,
+          "rationale": "Qualitätsmerkmal.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Qualitätsmerkmal.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Warum langes Pre-Fenster?",
+          "options": [
+            "stabilere Komponenten/Koef.",
+            "mehr Post-Beobachtungen",
+            "besserer Umsatz"
+          ],
+          "answer_index": 0,
+          "rationale": "Kalibrierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kalibrierung.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Spike-&-Slab hilft bei Variablenselektion.",
+          "answer": true,
+          "rationale": "Bayesianische Auswahl.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bayesianische Auswahl.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Berichte neben Punktwert stets…",
+          "options": [
+            "Posterior-Intervall & P(Effekt>0)",
+            "nur RMSE",
+            "nur MAE"
+          ],
+          "answer_index": 0,
+          "rationale": "Unsicherheit kommunizieren.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Unsicherheit kommunizieren.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Placebo (falsches t0) sollte…",
+          "options": [
+            "signifikanten Effekt zeigen",
+            "keinen Effekt zeigen",
+            "immer positiv sein"
+          ],
+          "answer_index": 1,
+          "rationale": "Robustheit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Robustheit.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Kumulative Effekte sind Summe der punktweisen Effekte über Post.",
+          "answer": true,
+          "rationale": "Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Kontroll-Leakage ist…",
+          "options": [
+            "wenn Kontrollen betroffen sind",
+            "wenn Posterior groß ist",
+            "wenn Pre zu lang ist"
+          ],
+          "answer_index": 0,
+          "rationale": "Verzerrung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verzerrung.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxisfalle:",
+          "options": [
+            "keine Regressoren nutzen, obwohl verfügbar",
+            "Kontrollen prüfen",
+            "Pre-Fit dokumentieren"
+          ],
+          "answer_index": 0,
+          "rationale": "Schwächeres Modell.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Schwächeres Modell.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Wenn P$(Effekt>0)=0$,6 ist Evidenz schwach.",
+          "answer": true,
+          "rationale": "Oft unzureichend.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Oft unzureichend.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Auswahl von Kontrollen:",
+          "options": [
+            "nur Mittelwerte vergleichen",
+            "auch Saisonalität/Trend prüfen",
+            "nur p-Werte"
+          ],
+          "answer_index": 1,
+          "rationale": "Dynamik wichtig.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Dynamik wichtig.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken BSTS Causal Impact: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

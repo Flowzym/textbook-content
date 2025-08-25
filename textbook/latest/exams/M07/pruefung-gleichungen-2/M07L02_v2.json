@@ -1,0 +1,340 @@
+{
+  "id": "M07L02",
+  "title": "Ganzzahlige Modelle II – Branch‑and‑Bound (v2: Walkthroughs + Prüfungssets A–D)",
+  "reading_time_min": 110,
+  "prerequisites": [
+    "M07L02"
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Bounds, Branching‑Regeln, Fathoming, Integrality Gap."
+    },
+    {
+      "level": "Apply",
+      "text": "B&B‑Bäume skizzieren, Bounds vergleichen, Abschneidekriterien korrekt anwenden."
+    },
+    {
+      "level": "Analyze",
+      "text": "Schnittideen qualitativ bewerten; Heuristik‑Startlösungen als Untergrenze nutzen."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Zwei ausführliche Walkthroughs mit ASCII‑Bäumen + vier Prüfungssets."
+    },
+    {
+      "type": "example",
+      "subtype": "walkthrough",
+      "title": "Walkthrough 1 – 0/1‑Rucksack $(Budget=6)$",
+      "text": "Daten: DB=[50,40,35], Kosten=[4,3,3], y∈{0,1}. Ziel: max Σ $DB\\cdot y$, Σ $Kosten\\cdot y ≤ 6$.\nRoot‑LP (Relaxation): $y1=1$, $y2=2$/3, $y3=0$ → z_$LP=50+26$,$7=76$,7 (obere Schranke).\nBranch auf y2:\n  $y2=1$  → Budget 7>6 → unzulässig (fathom).\n  $y2=0$  → verbleibend 2 → $y3=0$; zulässig, $z=50$ → beste int. Lösung z*=50 (Untergrenze).\nBranch auf y3 vom Root (alternativ):\n  $y3=1$  → LP mit $y3=1$, $y1=1$ nicht möglich $(4+3$>6), prüfe Kombinationen → $y1=0$,$y2=1$,$z=40$; $y1=0$,$y2=0$,$z=35$ ⇒ bester Pfad $z=40$ < 50 (fathom).\nErgebnis: z*=50, Bound z_$LP=76$,7 → Gap≈(76,$7-50)$/76,7≈35% (vor Cuts/weitere Branches).",
+      "steps": [
+        "Daten: DB=[50,40,35], Kosten=[4,3,3], y∈{0,1}. Ziel: max Σ $DB\\cdot y$, Σ $Kosten\\cdot y$ ≤",
+        "Root‑LP (Relaxation): $y1=1$, $y2=2$/3, $y3=0$ → z_$LP=50+26$,$7=76$,7 (obere Schranke",
+        "Branch auf y2:",
+        "$y2=1$  → Budget 7>6 → unzulässig (fathom",
+        "$y2=0$  → verbleibend 2 → $y3=0$; zulässig, $z=50$ → beste int. Lösung z*=50 (Untergrenze",
+        "Branch auf y3 vom Root (alternativ):",
+        "$y3=1$  → LP mit $y3=1$, $y1=1$ nicht möglich $(4+3$>6), prüfe Kombinationen → $y1=0$,$y2=1$,$z=40$; $y1=0$,$y2=0$,$z=35$ → bester Pfad $z=40$ < 50 (fathom",
+        "Ergebnis: z*=50, Bound z_$LP=76$,7 → Gap≈(76,$7-50)$/76,7≈35% (vor Cuts/weitere Branches"
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "ASCII‑B&B‑Baum (Walkthrough 1)",
+      "ascii": "[Root] z_$LP=76$,7\n    /           \\\n $y2=1$         $y2=0$  $(z=50$ int)\ninfeas         |\n             fathom $(best=50)$",
+      "caption": "Fathoming durch Unzulässigkeit bzw. schlechteren Bound.",
+      "alt_text": "ASCII-Visual: Fathoming durch Unzulässigkeit bzw. schlechteren Bound. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "walkthrough",
+      "title": "Walkthrough 2 – Auswahl mit Bonus (klein)",
+      "text": "Projekte A,B,C: DB=[60,45,30], Kosten=[5,4,3], Budget 8. Bonus 20, wenn A und B gemeinsam (z_$AB=1$ ⇒ $yA=yB=1)$.\nRoot‑LP liefert z_LP≈? (fraktional). Startheuristik (Greedy nach DB/Kosten): wähle A (12), B (11,25) → Budget 9>8,\ntausche B gegen C: $A+C$ (12 und 10) Budget 8 → $z=90$. Prüfe Bonus‑Pfad: $B+C$ (11,25 und 10) $z=75$ ohne Bonus; $A+B$ wäre $105+20=125$, aber Budget 9>8.\nB&B: Branch auf yA:\n  $yA=1$ → Restbudget 3 → kann nur C (3) → $z=90$ (int, $Untergrenze=90)$.\n  $yA=0$ → dann wähle $B+C$ (7) → $z=75$ (int). Root‑Bound z_$LP≥90$ ⇒ Gap klein; Optimum z*=90.",
+      "steps": [
+        "Projekte A,B,C: DB=[60,45,30], Kosten=[5,4,3], Budget 8. Bonus 20, wenn A und B gemeinsam (z_$AB=1$ → $yA=yB$=",
+        "Root‑LP liefert z_LP≈? (fraktional). Startheuristik (Greedy nach DB/Kosten): wähle A (12), B (11,25) → Budget 9>8,",
+        "tausche B gegen C: $A+C$ (12 und 10) Budget 8 → $z=90$. Prüfe Bonus‑Pfad: $B+C$ (11,25 und 10) $z=75$ ohne Bonus; $A+B$ wäre $105+20=125$, aber Budget 9>",
+        "B&B: Branch auf yA:",
+        "$yA=1$ → Restbudget 3 → kann nur C (3) → $z=90$ (int, Untergrenze=",
+        "$yA=0$ → dann wähle $B+C$ (7) → $z=75$ (int). Root‑Bound z_$LP≥90$ → Gap klein; Optimum z*="
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Bounds & Fathoming",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Max‑Problem: LP‑Relaxation ist…",
+          "options": [
+            "untere Schranke",
+            "obere Schranke",
+            "keine Schranke"
+          ],
+          "answer_index": 1,
+          "rationale": "z_LP ≥ z_int.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. z_LP ≥ z_int.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein Zweig mit Bound 72 kann gefathomt werden, wenn bestes int. z*=74.",
+          "answer": true,
+          "rationale": "72<74.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 72<74.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Unzulässiger Zweig wird…",
+          "options": [
+            "weiter verzweigt",
+            "gefathomt",
+            "als Lösung genommen"
+          ],
+          "answer_index": 1,
+          "rationale": "Kein Potenzial.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Potenzial.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Branching",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Branching‑Variable wählen:",
+          "options": [
+            "am nächsten an 0/1 (fraktional)",
+            "mit kleinstem c_j",
+            "zufällig"
+          ],
+          "answer_index": 0,
+          "rationale": "Starker Split.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Starker Split.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Symmetrie kann den Baum aufblähen.",
+          "answer": true,
+          "rationale": "Vermeide äquivalente Zweige.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vermeide äquivalente Zweige.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Startheuristik liefert…",
+          "options": [
+            "Untergrenze",
+            "Obergrenze",
+            "beides"
+          ],
+          "answer_index": 0,
+          "rationale": "Feasible z* (UB/LB je nach Max/Min).",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Feasible z* (UB/LB je nach Max/Min).",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Cuts & Gap",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Gomory‑Cuts…",
+          "options": [
+            "schneiden fraktionale Lösungen ab",
+            "ändern Zielfunktion",
+            "erhöhen Integrality Gap"
+          ],
+          "answer_index": 0,
+          "rationale": "Stärken Relaxation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stärken Relaxation.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Kleiner $Gap = starke$ Relaxation.",
+          "answer": true,
+          "rationale": "Gute Bounds.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gute Bounds.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gap‑Formel (Max):",
+          "options": [
+            "(z_LP−z*)/z_LP",
+            "(z*−z_LP)/z*",
+            "(z_LP−z*)/z*"
+          ],
+          "answer_index": 0,
+          "rationale": "Standard.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Standard.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fathome einen Zweig, wenn…",
+          "options": [
+            "Bound schlechter als z*",
+            "Bound besser als z*",
+            "int. Lösung schlechter als z*"
+          ],
+          "answer_index": 0,
+          "rationale": "Kein Potenzial.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Kein Potenzial.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein int. Zweig wird immer gefathomt (keine Fraktionalität mehr).",
+          "answer": true,
+          "rationale": "Endknoten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Endknoten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Warum Warm‑Start/Heuristik?",
+          "options": [
+            "Beschleunigt Fathoming",
+            "verhindert LP‑Lösen",
+            "verschlechtert Bounds"
+          ],
+          "answer_index": 0,
+          "rationale": "Bessere Untergrenze.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bessere Untergrenze.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst B&B‑Bäume lesen/zeichnen, Bounds richtig deuten und Prüfungsaufgaben sicher lösen."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

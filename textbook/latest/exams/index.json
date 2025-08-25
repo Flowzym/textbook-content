@@ -1,0 +1,55 @@
+{
+  "version": "v20250824",
+  "chapters": [
+    {
+      "id": "M01",
+      "title": "Prüfungen M01",
+      "index": "exams/M01/index.json"
+    },
+    {
+      "id": "M02",
+      "title": "Prüfungen M02",
+      "index": "exams/M02/index.json"
+    },
+    {
+      "id": "M05",
+      "title": "Prüfungen M05",
+      "index": "exams/M05/index.json"
+    },
+    {
+      "id": "M06",
+      "title": "Prüfungen M06",
+      "index": "exams/M06/index.json"
+    },
+    {
+      "id": "M07",
+      "title": "Prüfungen M07",
+      "index": "exams/M07/index.json"
+    },
+    {
+      "id": "M08",
+      "title": "Prüfungen M08",
+      "index": "exams/M08/index.json"
+    },
+    {
+      "id": "M09",
+      "title": "Prüfungen M09",
+      "index": "exams/M09/index.json"
+    },
+    {
+      "id": "M10",
+      "title": "Prüfungen M10",
+      "index": "exams/M10/index.json"
+    },
+    {
+      "id": "M11",
+      "title": "Prüfungen M11",
+      "index": "exams/M11/index.json"
+    },
+    {
+      "id": "M12",
+      "title": "Prüfungen M12",
+      "index": "exams/M12/index.json"
+    }
+  ]
+}
