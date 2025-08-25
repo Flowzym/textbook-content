@@ -36,7 +36,7 @@
         },
         {
           "title": "E2 – Cross-Fitting Skizze",
-          "context": "K=2 Folds.",
+          "context": "$K=2$ Folds.",
           "tasks": [
             {
               "prompt": "a) Ablauf?",

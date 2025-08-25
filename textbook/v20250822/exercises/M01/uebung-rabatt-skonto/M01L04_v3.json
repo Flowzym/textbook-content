@@ -32,12 +32,12 @@
       "long": [
         {
           "title": "E1 – Break-Even",
-          "context": "Fix € 12,000, vK € 8/Stk., Preis € 14/Stk.",
+          "context": "Fix € 12,-0, vK € 8,-/Stk., Preis € 14,-/Stk.",
           "tasks": [
             {
               "prompt": "a) Schwelle?",
-              "hints": "(14−8)x=12,000",
-              "solution": "x=2,000 Stk.",
+              "hints": "$(14-8)$$x=12$,000",
+              "solution": "$x=2$,000 Stk.",
               "check": {
                 "type": "string_contains",
                 "expected": "2,000"
@@ -77,7 +77,7 @@
             "Reihenfolge der Abzüge beachten.",
             "Erst am Ende runden."
           ],
-          "solution": "Beispiel: 1,200 · 0,85 · 0,98 = 999,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "Beispiel: 1,$200 \\cdot 0$,$85 \\cdot 0$,$98 = 999$,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 1.2,
@@ -111,7 +111,7 @@
         },
         {
           "prompt": "Kontrollaufgabe: 12% von € 3,750,00?",
-          "solution": "€ 450,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "€ 450,-,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 2.0,
@@ -121,7 +121,7 @@
           "difficulty": "leicht"
         },
         {
-          "prompt": "Löse: 9x + 18 = 0",
+          "prompt": "Löse: $9x + 18 = 0$",
           "solution": "x = -2",
           "check": {
             "type": "numeric",
@@ -130,8 +130,8 @@
           "difficulty": "leicht"
         },
         {
-          "prompt": "BE bei K_fix=€ 9,000,00, p=€ 15,00, k_v=€ 12,-",
-          "solution": "x_BE = 3,000",
+          "prompt": "BE bei K_fix=€ 9,-0,00, p=€ 15,-, k_v=€ 12,-,-",
+          "solution": "x_$BE = 3$,000",
           "check": {
             "type": "numeric",
             "expected": 3000
@@ -140,7 +140,7 @@
         },
         {
           "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
-          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "solution": "P_$netto = P0$ · ∏$(1-r$_$k) \\cdot (1-s)$",
           "check": {
             "type": "string_contains",
             "expected": "1−"
@@ -152,7 +152,7 @@
         },
         {
           "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
-          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "solution": "P_$netto = P0$ · ∏$(1-r$_$k) \\cdot (1-s)$",
           "check": {
             "type": "string_contains",
             "expected": "1−"
@@ -170,12 +170,12 @@
       "long": [
         {
           "title": "F1 – Text zu Gleichung",
-          "context": "Zielgewinn € 9,000, Preis € 20,- vK € 12,- Fix € 15,-",
+          "context": "Zielgewinn € 9,-0, Preis € 20,-,- vK € 12,-,- Fix € 15,-,-",
           "tasks": [
             {
               "prompt": "a) Gleichung?",
-              "hints": "E−K=Ziel",
-              "solution": "(20x)−(15000+12x)=9000",
+              "hints": "$E-K=Ziel$",
+              "solution": "$(20x)-(15000+12x)=9000$",
               "check": {
                 "type": "string_contains",
                 "expected": "20x"
@@ -184,7 +184,7 @@
             {
               "prompt": "b) Menge?",
               "hints": "umstellen",
-              "solution": "x=3000",
+              "solution": "$x=3000$",
               "check": {
                 "type": "numeric",
                 "expected": 3000
@@ -204,7 +204,7 @@
             "Reihenfolge der Abzüge beachten.",
             "Erst am Ende runden."
           ],
-          "solution": "Beispiel: 1,200 · 0,85 · 0,98 = 999,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "Beispiel: 1,$200 \\cdot 0$,$85 \\cdot 0$,$98 = 999$,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 1.2,
@@ -238,7 +238,7 @@
         },
         {
           "prompt": "Kontrollaufgabe: 12% von € 3,750,00?",
-          "solution": "€ 450,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "€ 450,-,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 2.0,
@@ -248,7 +248,7 @@
           "difficulty": "leicht"
         },
         {
-          "prompt": "Löse: 9x + 18 = 0",
+          "prompt": "Löse: $9x + 18 = 0$",
           "solution": "x = -2",
           "check": {
             "type": "numeric",
@@ -257,8 +257,8 @@
           "difficulty": "leicht"
         },
         {
-          "prompt": "BE bei K_fix=€ 9,000,00, p=€ 15,00, k_v=€ 12,-",
-          "solution": "x_BE = 3,000",
+          "prompt": "BE bei K_fix=€ 9,-0,00, p=€ 15,-, k_v=€ 12,-,-",
+          "solution": "x_$BE = 3$,000",
           "check": {
             "type": "numeric",
             "expected": 3000
@@ -341,16 +341,16 @@
         },
         {
           "type": "single_choice",
-          "question": "K0=€ 2,000, i=5%, n=2 → K=?",
+          "question": "K0=€ 2,-0, $i=5$%, $n=2$ → K=?",
           "options": [
             "€ 2,100,00",
             "€ 2,205,00",
-            "€ 2,005,00"
+            "€ 2,-5,00"
           ],
           "answer_index": 1,
-          "rationale": "2,000·1,05^2=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "rationale": "2,$000\\cdot 1$,$0$5^2$$=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
           "difficulty": "leicht",
-          "feedback_correct": "Richtig. 2,000·1,05^2=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_correct": "Richtig. 2,$000\\cdot 1$,$0$5^2$$=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler",
           "distractor_mapping": [
             {

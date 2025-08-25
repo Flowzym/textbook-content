@@ -6,7 +6,7 @@
   "outcomes": [
     {
       "level": "Apply",
-      "text": "Gap berechnen, SA‑Parameter p=exp(−Δ/T) anwenden, Tabu‑Tenure wählen."
+      "text": "Gap berechnen, SA‑Parameter $p=exp$(−Δ/T) anwenden, Tabu‑Tenure wählen."
     },
     {
       "level": "Analyze",
@@ -20,12 +20,12 @@
       "long": [
         {
           "title": "E1 – SA‑Akzeptanz",
-          "context": "Δ=8 (Verschlechterung), T=20.",
+          "context": "Δ=8 (Verschlechterung), $T=20$.",
           "tasks": [
             {
               "prompt": "a) Akzeptanz‑Wahrscheinlichkeit?",
               "hints": [
-                "p=exp(−Δ/T)."
+                "$p=exp$(−Δ/T)."
               ],
               "solution": "p≈exp(−0,4)≈0,6703.",
               "check": {
@@ -39,14 +39,14 @@
         },
         {
           "title": "E2 – Gap gegen LP‑Bound",
-          "context": "z_heur=910; z_LP=980 (Max).",
+          "context": "z_$heur=910$; z_$LP=980$ (Max).",
           "tasks": [
             {
               "prompt": "a) Gap in %?",
               "hints": [
                 "(z_LP−z_heur)/z_LP."
               ],
-              "solution": "Gap≈(980−910)/980=7,14%.",
+              "solution": "Gap≈$(980-910)$/$980=7$,14%.",
               "check": {
                 "type": "approx",
                 "expected": 0.0714,

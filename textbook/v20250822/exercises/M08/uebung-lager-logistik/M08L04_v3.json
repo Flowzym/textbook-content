@@ -20,12 +20,12 @@
       "long": [
         {
           "title": "E1 – Sicherheitsbestand",
-          "context": "RMSE=120, L=3 Monate, z=1,65.",
+          "context": "$RMSE=120$, $L=3$ Monate, $z=1$,65.",
           "tasks": [
             {
               "prompt": "a) SS≈?",
               "hints": "z·σ·√L",
-              "solution": "≈1,65·120·√3≈343",
+              "solution": "≈1,$65\\cdot 120\\cdot \\sqrt{3}$≈343",
               "check": {
                 "type": "approx",
                 "expected": 342.94605989863766,

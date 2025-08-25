@@ -29,7 +29,7 @@
       "long": [
         {
           "title": "E1 – Vorrang & Klammern",
-          "context": "Berechne: 120 − 3·(8 − 2·5).",
+          "context": "Berechne: $120 - 3\\cdot (8 - 2\\cdot 5)$.",
           "tasks": [
             {
               "prompt": "a) Ergebnis?",
@@ -93,12 +93,12 @@
       "long": [
         {
           "title": "F1 – Fehleranalyse",
-          "context": "Rechnung: 24:3·2 wird als 24:(3·2) gerechnet.",
+          "context": "Rechnung: 24:$3\\cdot 2$ wird als 24:$(3\\cdot 2)$ gerechnet.",
           "tasks": [
             {
               "prompt": "a) Korrektur?",
               "hints": "links→rechts bei gleicher Priorität",
-              "solution": "(24:3)·2=16",
+              "solution": "$(24:3)\\cdot 2=16$",
               "check": {
                 "type": "numeric",
                 "expected": 16

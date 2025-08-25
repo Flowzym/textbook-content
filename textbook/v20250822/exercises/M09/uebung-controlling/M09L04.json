@@ -22,12 +22,12 @@
       "long": [
         {
           "title": "E1 – ARIMAX‑Forecast",
-          "context": "ŷ_t = β0 + β1·Preis + β2·Promo; β0=100, β1=−2, β2=20; Preis=15, Promo=1.",
+          "context": "ŷ_t = β0 + β$1\\cdot Preis$ + β$2\\cdot Promo$; β$0=100$, β1=−2, β$2=20$; $Preis=15$, $Promo=1$.",
           "tasks": [
             {
               "prompt": "a) ŷ_t?",
               "hints": "Einsetzen",
-              "solution": "100 − 30 + 20 = 90",
+              "solution": "$100 - 30 + 20 = 90$",
               "check": {
                 "type": "numeric",
                 "expected": 90
@@ -80,7 +80,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -92,7 +92,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -110,7 +110,7 @@
       "long": [
         {
           "title": "F1 – Szenario mit Preisänderung",
-          "context": "β1=−3, Preis steigt +2, Baseline ŷ=200.",
+          "context": "β1=−3, Preis $steigt +2$, Baseline ŷ=200.",
           "tasks": [
             {
               "prompt": "a) Effekt?",
@@ -158,7 +158,7 @@
     },
     {
       "type": "concept",
-      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Deckungsbeitrag: DB = p − k_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
     },
     {
       "type": "derivation",
@@ -233,14 +233,14 @@
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler"
         }
       ],

@@ -22,12 +22,12 @@
       "long": [
         {
           "title": "E1 – Dämpfungsfaktor",
-          "context": "Trend B_t=5, φ=0,9.",
+          "context": "Trend B_$t=5$, φ=0,9.",
           "tasks": [
             {
               "prompt": "a) Beitrag nach unendlichem Horizont?",
-              "hints": "Summe φ^h = 1/(1−φ)",
-              "solution": "≈ 5·(1/(1−0,9))=50",
+              "hints": "Summe φ^$h = 1$/(1−φ)",
+              "solution": "≈ $5\\cdot (1$/$(1-0$,9))=50",
               "check": {
                 "type": "approx",
                 "expected": 50,
@@ -81,7 +81,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -93,7 +93,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -111,7 +111,7 @@
       "long": [
         {
           "title": "F1 – Backtest Auswahl",
-          "context": "ETS(A,A_d,A) RMSE=85; SARIMA RMSE=88; beide Bias≈0.",
+          "context": "ETS(A,A_d,A) $RMSE=85$; SARIMA $RMSE=88$; beide Bias≈0.",
           "tasks": [
             {
               "prompt": "a) Wahl & Begründung?",
@@ -159,7 +159,7 @@
     },
     {
       "type": "concept",
-      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Deckungsbeitrag: DB = p − k_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
     },
     {
       "type": "derivation",
@@ -234,14 +234,14 @@
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler"
         }
       ],

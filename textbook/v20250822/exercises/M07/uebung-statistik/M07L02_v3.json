@@ -20,7 +20,7 @@
       "long": [
         {
           "title": "E1 – Gap‑Berechnung (Max)",
-          "context": "Bestes int. z*=96; LP‑Bound z_LP=108.",
+          "context": "Bestes int. z*=96; LP‑Bound z_$LP=108$.",
           "tasks": [
             {
               "prompt": "a) Gap in %?",
@@ -28,7 +28,7 @@
                 "Formel (z_LP − z*)/z_LP.",
                 "Rechne in %."
               ],
-              "solution": "Gap = (108−96)/108 = 11,11%.",
+              "solution": "$Gap = (108-96)$/$108 = 11$,11%.",
               "check": {
                 "type": "approx",
                 "expected": 0.1111,
@@ -75,15 +75,15 @@
       "long": [
         {
           "title": "F1 – Mini‑Baum dokumentieren",
-          "context": "0/1‑Rucksack: v=[60,45,30], w=[5,4,3], B=8. Greedy Start: Items 1 (12), 3 (10) → w=8, z=90 (Untergrenze). LP‑Bound Root=96.",
+          "context": "0/1‑Rucksack: v=[60,45,30], w=[5,4,3], $B=8$. Greedy Start: Items 1 (12), 3 (10) → $w=8$, $z=90$ (Untergrenze). LP‑Bound $Root=96$.",
           "tasks": [
             {
-              "prompt": "a) Starte Branch auf y2 (fraktional): Fälle y2=1 vs. y2=0 – dokumentiere Bounds/Entscheidung.",
+              "prompt": "a) Starte Branch auf y2 (fraktional): Fälle $y2=1$ vs. $y2=0$ – dokumentiere Bounds/Entscheidung.",
               "hints": [
-                "y2=1: prüfe Budget.",
-                "y2=0: vergleiche mit Startlösung."
+                "$y2=1$: prüfe Budget.",
+                "$y2=0$: vergleiche mit Startlösung."
               ],
-              "solution": "y2=1: Kombinationen überschreiten Budget außer (2,3) w=7 z=75; Bound < 90 → fathom. y2=0: beste int. bleibt z=90 → Root gap 6/96=6,25%.",
+              "solution": "$y2=1$: Kombinationen überschreiten Budget außer (2,3) $w=7$ $z=75$; Bound < 90 → fathom. $y2=0$: beste int. bleibt $z=90$ → Root gap 6/$96=6$,25%.",
               "check": {
                 "type": "string_contains",
                 "expected": "6,25"

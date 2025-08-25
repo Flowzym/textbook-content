@@ -37,7 +37,7 @@
         },
         {
           "title": "E2 – ROI-Regel",
-          "context": "Erwarteter Mehrgewinn = € 1,200/Woche; Mindest-ROI € 1,-",
+          "context": "Erwarteter Mehrgewinn = € 1,200/Woche; $Mindest-ROI$ € 1,-,-",
           "tasks": [
             {
               "prompt": "a) Entscheidung?",
@@ -55,7 +55,7 @@
       "mini": [
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -67,7 +67,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -85,11 +85,11 @@
       "long": [
         {
           "title": "F1 – Uplift-Segment",
-          "context": "Segment S1: P(B>A)=0,97, Mehrgewinn € 800/W; S2: 0,92, Mehrgewinn € 1,500/W.",
+          "context": "Segment S1: P$(B>A)=0$,97, Mehrgewinn € 800,-/W; S2: 0,92, Mehrgewinn € 1,500/W.",
           "tasks": [
             {
               "prompt": "a) Priorität?",
-              "hints": "Wertbeitrag×Evidenz",
+              "hints": "$Wertbeitrag\\times Evidenz$",
               "solution": "S2 zuerst (höherer €-Gewinn), S1 beobachten",
               "check": {
                 "type": "string_contains",
@@ -118,19 +118,19 @@
           ],
           "difficulty": "mittel",
           "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         }
       ],
       "preface_overlay": {

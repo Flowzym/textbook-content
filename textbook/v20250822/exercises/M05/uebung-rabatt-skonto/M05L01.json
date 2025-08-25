@@ -12,7 +12,7 @@
     },
     {
       "level": "Analyze",
-      "text": "Zweistufige Sensitivitäten (Preis×Menge) interpretieren und Maßnahmen ableiten."
+      "text": "Zweistufige Sensitivitäten $(Preis\\times Menge)$ interpretieren und Maßnahmen ableiten."
     }
   ],
   "blocks": [
@@ -27,11 +27,11 @@
             {
               "prompt": "a) Elastizität E_Preis bei +5%?",
               "hints": [
-                "Schritt 1: ΔGewinn = 300−240 = 60k.",
-                "Schritt 2: (ΔG/G0) / (ΔP/P0) = (60/240)/0,05.",
+                "Schritt 1: Δ$Gewinn = 300-240 = 60k$.",
+                "Schritt 2: (ΔG/G0) / $(ΔP/P0) = (60$/240)/0,05.",
                 "Schritt 3: Ergebnis runden auf eine Dezimalstelle."
               ],
-              "solution": "E_Preis = (0,25)/0,05 = 5,0.",
+              "solution": "E_$Preis = (0$,25)/0,$05 = 5$,0.",
               "check": {
                 "type": "approx",
                 "expected": 5.0,
@@ -41,10 +41,10 @@
             {
               "prompt": "b) Elastizität E_Menge bei +5%?",
               "hints": [
-                "ΔG = 36k.",
-                "Elastizität = (36/240)/0,05."
+                "Δ$G = 36k$.",
+                "Elastizitä$t = (36$/240)/0,05."
               ],
-              "solution": "E_Menge = 3,0.",
+              "solution": "E_$Menge = 3$,0.",
               "check": {
                 "type": "approx",
                 "expected": 3.0,
@@ -68,15 +68,15 @@
         },
         {
           "title": "F2 – Break‑even Preis",
-          "context": "Fixkosten 180k, vK € 62/Stk., Menge 4,500 Stk.",
+          "context": "Fixkosten 180k, vK € 62,-/Stk., Menge 4,500 Stk.",
           "tasks": [
             {
               "prompt": "a) BE‑Preis?",
               "hints": [
-                "Formel: P = vK + Fix/M.",
+                "Formel: $P = vK + Fix$/M.",
                 "Setze Zahlen ein."
               ],
-              "solution": "P = 62 + 180000/4500 = € 102,-",
+              "solution": "$P = 62 + 180000$/4500 = € 102,-,-",
               "check": {
                 "type": "approx",
                 "expected": 102.0,
@@ -84,7 +84,7 @@
               }
             },
             {
-              "prompt": "b) Sicherheitsmarge bei aktuellem Preis € 98,- relativ zum BE‑Preis?",
+              "prompt": "b) Sicherheitsmarge bei aktuellem Preis € 98,-,- relativ zum BE‑Preis?",
               "hints": [
                 "(BE−aktuell)/BE.",
                 "In % angeben."
@@ -100,7 +100,7 @@
           "difficulty": "leicht"
         },
         {
-          "title": "F3 – 2‑Faktoren‑Sensitivität (Preis×Menge)",
+          "title": "F3 – 2‑Faktoren‑Sensitivität $(Preis\\times Menge)$",
           "context": "Baseline: Gewinn 120k. Preis −5% und Menge −5% führen zu Gewinn 48k.",
           "tasks": [
             {
@@ -134,7 +134,7 @@
       "mini": [
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -146,7 +146,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -182,19 +182,19 @@
           ],
           "difficulty": "mittel",
           "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         }
       ],
       "preface_overlay": {

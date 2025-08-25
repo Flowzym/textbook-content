@@ -36,7 +36,7 @@
         },
         {
           "title": "E2 – Pre-RMSPE bewerten",
-          "context": "Pre-RMSPE=2,5%, Post-Mittelgap=3,2%.",
+          "context": "$Pre-RMSPE=2$,5%, $Post-Mittelgap=3$,2%.",
           "tasks": [
             {
               "prompt": "a) Plausibel?",
@@ -84,10 +84,10 @@
       "long": [
         {
           "title": "F1 – Placebo-in-space",
-          "context": "20 Donoren; 95%-Quantil der Placebo-Gaps=2,8%.",
+          "context": "20 Donoren; 95%-Quantil der $Placebo-Gaps=2$,8%.",
           "tasks": [
             {
-              "prompt": "a) Dein Gap=3,2% – Interpretation?",
+              "prompt": "a) Dein $Gap=3$,2% – Interpretation?",
               "hints": "über Quantil → stark",
               "solution": "robuste Evidenz",
               "check": {

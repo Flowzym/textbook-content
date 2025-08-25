@@ -20,12 +20,12 @@
       "long": [
         {
           "title": "E1 – Dämpfungsfaktor",
-          "context": "Trend B_t=5, φ=0,9.",
+          "context": "Trend B_$t=5$, φ=0,9.",
           "tasks": [
             {
               "prompt": "a) Beitrag nach unendlichem Horizont?",
-              "hints": "Summe φ^h = 1/(1−φ)",
-              "solution": "≈ 5·(1/(1−0,9))=50",
+              "hints": "Summe φ^$h = 1$/(1−φ)",
+              "solution": "≈ $5\\cdot (1$/$(1-0$,9))=50",
               "check": {
                 "type": "approx",
                 "expected": 50,
@@ -85,7 +85,7 @@
       "long": [
         {
           "title": "F1 – Backtest Auswahl",
-          "context": "ETS(A,A_d,A) RMSE=85; SARIMA RMSE=88; beide Bias≈0.",
+          "context": "ETS(A,A_d,A) $RMSE=85$; SARIMA $RMSE=88$; beide Bias≈0.",
           "tasks": [
             {
               "prompt": "a) Wahl & Begründung?",

@@ -22,12 +22,12 @@
       "long": [
         {
           "title": "E1 – DiD-Rechnung",
-          "context": "T0=100, T1=130; C0=95, C1=110.",
+          "context": "$T0=100$, $T1=130$; $C0=95$, $C1=110$.",
           "tasks": [
             {
               "prompt": "a) τ̂?",
               "hints": "ΔT−ΔC",
-              "solution": "(30)−(15)=15",
+              "solution": "$(30)-(15)=15$",
               "check": {
                 "type": "numeric",
                 "expected": 15
@@ -42,7 +42,7 @@
         },
         {
           "title": "E2 – Prozentinterpretation",
-          "context": "Basis C0=95 als Referenz.",
+          "context": "Basis $C0=95$ als Referenz.",
           "tasks": [
             {
               "prompt": "a) Effekt in % von C0?",
@@ -81,7 +81,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -93,7 +93,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -159,7 +159,7 @@
     },
     {
       "type": "concept",
-      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Deckungsbeitrag: DB = p − k_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
     },
     {
       "type": "derivation",
@@ -234,14 +234,14 @@
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler"
         }
       ],

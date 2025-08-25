@@ -82,7 +82,7 @@
       "mini": [
         {
           "prompt": "Formuliere den Stückdeckungsbeitrag (Textantwort).",
-          "solution": "DB = p − k_v",
+          "solution": "$DB = p - k$_v",
           "check": {
             "type": "string_contains",
             "expected": "p − k_v"
@@ -94,7 +94,7 @@
         },
         {
           "prompt": "Formuliere den Stückdeckungsbeitrag (Textantwort).",
-          "solution": "DB = p − k_v",
+          "solution": "$DB = p - k$_v",
           "check": {
             "type": "string_contains",
             "expected": "p − k_v"
@@ -113,13 +113,13 @@
           "type": "true_false",
           "question": "Der Deckungsbeitrag pro Stück ist p−k_v.",
           "answer": true,
-          "rationale": "DB = Stückerlös minus variable Stückkosten.",
+          "rationale": "$DB = St$ückerlös minus variable Stückkosten.",
           "covers_outcomes": [
             0
           ],
           "difficulty": "leicht",
-          "feedback_correct": "Richtig. DB = Stückerlös minus variable Stückkosten.",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_correct": "Richtig. $DB = St$ückerlös minus variable Stückkosten.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         },
         {
           "type": "true_false",
@@ -131,7 +131,7 @@
           ],
           "difficulty": "leicht",
           "feedback_correct": "Richtig. Fixkosten werden separat betrachtet.",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         }
       ],
       "preface_overlay": {

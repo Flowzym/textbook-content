@@ -20,12 +20,12 @@
       "long": [
         {
           "title": "E1 – ICC aus Varianzkomponenten",
-          "context": "σ_u^2=0,6 (zwischen Gruppen), σ^2=1,4 (innerhalb).",
+          "context": "σ_$u^2=0$,6 (zwischen Gruppen), σ^$2=1$,4 (innerhalb).",
           "tasks": [
             {
               "prompt": "a) ICC?",
-              "hints": "σ_u^2/(σ_u^2+σ^2)",
-              "solution": "0,6/2,0=0,30",
+              "hints": "σ_$u^2$/(σ_$u^2$+σ^2)",
+              "solution": "0,6/2,$0=0$,30",
               "check": {
                 "type": "approx",
                 "expected": 0.3,
@@ -37,7 +37,7 @@
         },
         {
           "title": "E2 – Random Intercept Deutung",
-          "context": "Filiale j hat u_0j=+0,8 (auf Log-Skala).",
+          "context": "Filiale j hat u_0j=+0,8 (auf $Log-Skala)$.",
           "tasks": [
             {
               "prompt": "a) Interpretation?",

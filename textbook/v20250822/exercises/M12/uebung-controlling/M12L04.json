@@ -22,7 +22,7 @@
       "long": [
         {
           "title": "E1 – F-Statistik",
-          "context": "1. Stufe F=14.",
+          "context": "1. Stufe $F=14$.",
           "tasks": [
             {
               "prompt": "a) Bewertung?",

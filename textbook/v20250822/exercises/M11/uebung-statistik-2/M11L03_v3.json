@@ -85,7 +85,7 @@
       "long": [
         {
           "title": "F1 – Reconciliation",
-          "context": "SKU1=6, SKU2=10 k€, Kategorie-Ziel=20 k€.",
+          "context": "$SKU1=6$, $SKU2=10$ k€, $Kategorie-Ziel=20$ k€.",
           "tasks": [
             {
               "prompt": "a) Konsistenz?",

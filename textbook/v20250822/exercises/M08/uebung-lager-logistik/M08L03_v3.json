@@ -52,7 +52,7 @@
             {
               "prompt": "a) Bias?",
               "hints": "Mittel der Fehler",
-              "solution": "(3−1+2)/3=1,33",
+              "solution": "$(3-1+2)$/$3=1$,33",
               "check": {
                 "type": "approx",
                 "expected": 1.3333333333333333,
@@ -96,7 +96,7 @@
       "long": [
         {
           "title": "F1 – Rolling Origin Setup",
-          "context": "60 Monate, Startfenster 24, h=1.",
+          "context": "60 Monate, Startfenster 24, $h=1$.",
           "tasks": [
             {
               "prompt": "a) Wie viele Rollschritte?",

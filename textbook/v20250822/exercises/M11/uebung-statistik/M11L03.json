@@ -111,7 +111,7 @@
       "long": [
         {
           "title": "F1 – Reconciliation",
-          "context": "SKU1=6, SKU2=10 k€, Kategorie-Ziel=20 k€.",
+          "context": "$SKU1=6$, $SKU2=10$ k€, $Kategorie-Ziel=20$ k€.",
           "tasks": [
             {
               "prompt": "a) Konsistenz?",
@@ -159,7 +159,7 @@
     },
     {
       "type": "concept",
-      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in Einheiten^2, Standardabweichung in Einheiten."
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in $Einheiten^2$, Standardabweichung in Einheiten."
     },
     {
       "type": "derivation",

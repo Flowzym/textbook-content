@@ -22,7 +22,7 @@
       "type": "concept",
       "title": "Rechen-Mix Konzept",
       "text": "- **Set E**: Break-Even konkret berechnen, Ungleichungsrichtung  \n- **Set F**: Text zu Gleichung mit gestuften Hinweisen  \n- Ziel: Sichere Anwendung in betriebswirtschaftlichen Kontexten",
-      "explanation": "\n\n**Decision-Hints:**\n- Break-even, wenn Gewinn=0: x_BE = K_fix/(p−k_v).\n- Zielgewinn mit (K_fix+G)/(p−k_v) berechnen."
+      "explanation": "\n\n**$Decision-Hints$:**\n- $Break-even$, wenn $Gewinn=0$: x_$BE = K$_fix/$(p-k$_v).\n- Zielgewinn mit (K_$fix+G)$/$(p-k$_v) berechnen."
     },
     {
       "type": "exercises",
@@ -30,12 +30,12 @@
       "long": [
         {
           "title": "E1 – Break-Even",
-          "context": "Fix € 12,000, vK € 8/Stk., Preis € 14/Stk.",
+          "context": "Fix € 12,-0, vK € 8,-/Stk., Preis € 14,-/Stk.",
           "tasks": [
             {
               "prompt": "a) Schwelle?",
-              "hints": "(14−8)x=12,000",
-              "solution": "x=2,000 Stk.",
+              "hints": "$(14-8)$$x=12$,000",
+              "solution": "$x=2$,000 Stk.",
               "check": {
                 "type": "string_contains",
                 "expected": "2,000"
@@ -67,7 +67,7 @@
       "mini": [
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -85,12 +85,12 @@
       "long": [
         {
           "title": "F1 – Text zu Gleichung",
-          "context": "Zielgewinn € 9,000, Preis € 20,- vK € 12,- Fix € 15,-",
+          "context": "Zielgewinn € 9,-0, Preis € 20,-,- vK € 12,-,- Fix € 15,-,-",
           "tasks": [
             {
               "prompt": "a) Gleichung?",
-              "hints": "E−K=Ziel",
-              "solution": "(20x)−(15000+12x)=9000",
+              "hints": "$E-K=Ziel$",
+              "solution": "$(20x)-(15000+12x)=9000$",
               "check": {
                 "type": "string_contains",
                 "expected": "20x"
@@ -99,7 +99,7 @@
             {
               "prompt": "b) Menge?",
               "hints": "umstellen",
-              "solution": "x=3000",
+              "solution": "$x=3000$",
               "check": {
                 "type": "numeric",
                 "expected": 3000
@@ -122,15 +122,15 @@
       "items": [
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         }
       ],
       "preface_overlay": {

@@ -22,7 +22,7 @@
       "long": [
         {
           "title": "E1 – AIC‑Vergleich",
-          "context": "Modell A AIC=1020; Modell B AIC=1015.",
+          "context": "Modell A $AIC=1020$; Modell B $AIC=1015$.",
           "tasks": [
             {
               "prompt": "a) Auswahl?",
@@ -42,7 +42,7 @@
         },
         {
           "title": "E2 – Forecast‑Intervall (Skizze)",
-          "context": "Standardfehler h=1: σ=12, z=1,96.",
+          "context": "Standardfehler $h=1$: σ=12, $z=1$,96.",
           "tasks": [
             {
               "prompt": "a) 95%-Intervallbreite?",
@@ -81,7 +81,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -93,7 +93,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -111,7 +111,7 @@
       "long": [
         {
           "title": "F1 – Ljung‑Box Interpretation",
-          "context": "p‑Wert=0,32 bei Lag 12.",
+          "context": "p‑$Wert=0$,32 bei Lag 12.",
           "tasks": [
             {
               "prompt": "a) Schluss?",
@@ -159,7 +159,7 @@
     },
     {
       "type": "concept",
-      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Deckungsbeitrag: DB = p − k_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
     },
     {
       "type": "derivation",
@@ -234,14 +234,14 @@
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler"
         }
       ],

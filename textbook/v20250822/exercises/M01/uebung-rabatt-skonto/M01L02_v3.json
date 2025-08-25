@@ -36,7 +36,7 @@
           "tasks": [
             {
               "prompt": "a) Zahlpreis?",
-              "hints": "1,200·0,85·0,98",
+              "hints": "1,$200\\cdot 0$,$85\\cdot 0$,98",
               "solution": "≈ € 999,60",
               "check": {
                 "type": "approx",
@@ -58,7 +58,7 @@
             {
               "prompt": "a) Ergebnis?",
               "hints": "kgV 24",
-              "solution": "(14−3)/24=11/24",
+              "solution": "$(14-3)$/$24=11$/24",
               "check": {
                 "type": "string_contains",
                 "expected": "11/24"
@@ -78,7 +78,7 @@
             "Reihenfolge der Abzüge beachten.",
             "Erst am Ende runden."
           ],
-          "solution": "Beispiel: 1,200 · 0,85 · 0,98 = 999,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "Beispiel: 1,$200 \\cdot 0$,$85 \\cdot 0$,$98 = 999$,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 1.2,
@@ -112,7 +112,7 @@
         },
         {
           "prompt": "Kontrollaufgabe: 12% von € 3,750,00?",
-          "solution": "€ 450,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "€ 450,-,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 2.0,
@@ -122,7 +122,7 @@
           "difficulty": "leicht"
         },
         {
-          "prompt": "Löse: 9x + 18 = 0",
+          "prompt": "Löse: $9x + 18 = 0$",
           "solution": "x = -2",
           "check": {
             "type": "numeric",
@@ -132,7 +132,7 @@
         },
         {
           "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
-          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "solution": "P_$netto = P0$ · ∏$(1-r$_$k) \\cdot (1-s)$",
           "check": {
             "type": "string_contains",
             "expected": "1−"
@@ -144,7 +144,7 @@
         },
         {
           "prompt": "Formuliere die Rabattkette in Faktorform (Textantwort).",
-          "solution": "P_netto = P0 · ∏(1−r_k) · (1−s)",
+          "solution": "P_$netto = P0$ · ∏$(1-r$_$k) \\cdot (1-s)$",
           "check": {
             "type": "string_contains",
             "expected": "1−"
@@ -196,7 +196,7 @@
             "Reihenfolge der Abzüge beachten.",
             "Erst am Ende runden."
           ],
-          "solution": "Beispiel: 1,200 · 0,85 · 0,98 = 999,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "Beispiel: 1,$200 \\cdot 0$,$85 \\cdot 0$,$98 = 999$,60 → € 999,60 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 1.2,
@@ -230,7 +230,7 @@
         },
         {
           "prompt": "Kontrollaufgabe: 12% von € 3,750,00?",
-          "solution": "€ 450,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution": "€ 450,-,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
           "check": {
             "type": "approx",
             "expected": 2.0,
@@ -240,7 +240,7 @@
           "difficulty": "leicht"
         },
         {
-          "prompt": "Löse: 9x + 18 = 0",
+          "prompt": "Löse: $9x + 18 = 0$",
           "solution": "x = -2",
           "check": {
             "type": "numeric",
@@ -324,16 +324,16 @@
         },
         {
           "type": "single_choice",
-          "question": "K0=€ 2,000, i=5%, n=2 → K=?",
+          "question": "K0=€ 2,-0, $i=5$%, $n=2$ → K=?",
           "options": [
             "€ 2,100,00",
             "€ 2,205,00",
-            "€ 2,005,00"
+            "€ 2,-5,00"
           ],
           "answer_index": 1,
-          "rationale": "2,000·1,05^2=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "rationale": "2,$000\\cdot 1$,$0$5^2$$=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
           "difficulty": "leicht",
-          "feedback_correct": "Richtig. 2,000·1,05^2=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_correct": "Richtig. 2,$000\\cdot 1$,$0$5^2$$=2,205. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler",
           "distractor_mapping": [
             {

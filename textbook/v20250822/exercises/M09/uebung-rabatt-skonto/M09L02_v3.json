@@ -20,7 +20,7 @@
       "long": [
         {
           "title": "E1 – AIC‑Vergleich",
-          "context": "Modell A AIC=1020; Modell B AIC=1015.",
+          "context": "Modell A $AIC=1020$; Modell B $AIC=1015$.",
           "tasks": [
             {
               "prompt": "a) Auswahl?",
@@ -36,7 +36,7 @@
         },
         {
           "title": "E2 – Forecast‑Intervall (Skizze)",
-          "context": "Standardfehler h=1: σ=12, z=1,96.",
+          "context": "Standardfehler $h=1$: σ=12, $z=1$,96.",
           "tasks": [
             {
               "prompt": "a) 95%-Intervallbreite?",
@@ -85,7 +85,7 @@
       "long": [
         {
           "title": "F1 – Ljung‑Box Interpretation",
-          "context": "p‑Wert=0,32 bei Lag 12.",
+          "context": "p‑$Wert=0$,32 bei Lag 12.",
           "tasks": [
             {
               "prompt": "a) Schluss?",

@@ -22,7 +22,7 @@
       "long": [
         {
           "title": "E1 – Differenzordnung",
-          "context": "Reihe mit linearem Trend und jährlicher Saison (m=12).",
+          "context": "Reihe mit linearem Trend und jährlicher Saison $(m=12)$.",
           "tasks": [
             {
               "prompt": "a) Welche Differenzen zuerst?",

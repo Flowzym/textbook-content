@@ -12,7 +12,7 @@
     },
     {
       "level": "Analyze",
-      "text": "Konsistenz (p‑Summe=1, Korrelationen) prüfen und robuste Empfehlung ableiten."
+      "text": "Konsistenz (p‑$Summe=1$, Korrelationen) prüfen und robuste Empfehlung ableiten."
     }
   ],
   "blocks": [
@@ -22,15 +22,15 @@
       "long": [
         {
           "title": "F1 – E[NPV] & Varianz",
-          "context": "Szenarien: Down (p=0,2, NPV=−12k), Base (p=0,5, +18k), Up (p=0,3, +42k).",
+          "context": "Szenarien: Down $(p=0$,2, NPV=−12k), Base $(p=0$,5, +18k), Up $(p=0$,3, +42k).",
           "tasks": [
             {
               "prompt": "a) E[NPV]?",
               "hints": [
-                "Σ p·NPV.",
-                "0,2·(−12)+0,5·18+0,3·42"
+                "Σ $p\\cdot NPV$.",
+                "0,$2\\cdot (-12)+0$,$5\\cdot 18+0$,$3\\cdot 42$"
               ],
-              "solution": "E = −2,4 + 9 + 12,6 = +19,2k.",
+              "solution": "E = −2,$4 + 9 + 12$,6 = +19,2k.",
               "check": {
                 "type": "approx",
                 "expected": 19200,
@@ -40,10 +40,10 @@
             {
               "prompt": "b) Varianz?",
               "hints": [
-                "Σ p·(NPV−E)^2.",
+                "Σ $p\\cdot (NPV-E)^2$.",
                 "Rechne in k€ und multipliziere am Ende."
               ],
-              "solution": "Var ≈ 0,2·(−31,2)^2 + 0,5·(−1,2)^2 + 0,3·(22,8)^2 ≈ 0,2·973 + 0,5·1,44 + 0,3·520 ≈ 194,6 (k€)^2.",
+              "solution": "Var ≈ 0,$2\\cdot (-31,2)^2 + 0$,$5\\cdot (-1,2)^2 + 0$,$3\\cdot (22$,$8)^2$ ≈ 0,$2\\cdot 973 + 0$,$5\\cdot 1$,$44 + 0$,$3\\cdot 520$ ≈ 194,6 $(k€)^2$.",
               "check": {
                 "type": "approx",
                 "expected": 194.6,
@@ -60,9 +60,9 @@
             {
               "prompt": "a) E[NPV]_A und E[NPV]_B?",
               "hints": [
-                "E=Σ p·NPV je Option."
+                "E=Σ $p\\cdot NPV$ je Option."
               ],
-              "solution": "E_A=0,4·(−8)+0,6·22= −3,2+13,2=+10k; E_B=0,4·(−4)+0,6·20= −1,6+12=+10,4k.",
+              "solution": "E_$A=0$,$4\\cdot (-8)+0$,$6\\cdot 22$= −3,$2+13$,2=+10k; E_$B=0$,$4\\cdot (-4)+0$,$6\\cdot 20$= −1,$6+12$=+10,4k.",
               "check": {
                 "type": "approx",
                 "expected": 10400,
@@ -93,14 +93,14 @@
               "hints": [
                 "Summe prüfen."
               ],
-              "solution": "Nein, Summe=1,1 > 1 → anpassen.",
+              "solution": "Nein, $Summe=1$,1 > 1 → anpassen.",
               "check": {
                 "type": "string_contains",
                 "expected": "Nein"
               }
             },
             {
-              "prompt": "b) Qualitative Korrelation Preis×Menge?",
+              "prompt": "b) Qualitative Korrelation $Preis\\times Menge$?",
               "hints": [
                 "Typisch negativ."
               ],

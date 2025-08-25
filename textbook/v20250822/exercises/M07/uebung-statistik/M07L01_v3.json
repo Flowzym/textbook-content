@@ -20,22 +20,22 @@
       "long": [
         {
           "title": "E1 – Obergrenze U bestimmen",
-          "context": "Produktionsmenge x (Stk) max. durch Nachfrage D=480 und Kapazität K=520; aktiviere Produktion nur bei y=1.",
+          "context": "Produktionsmenge x (Stk) max. durch Nachfrage $D=480$ und Kapazität $K=520$; aktiviere Produktion nur bei $y=1$.",
           "tasks": [
             {
-              "prompt": "a) Wähle enges U für x ≤ U·y.",
+              "prompt": "a) Wähle enges U für $x ≤ U\\cdot y$.",
               "hints": [
                 "U an physikalischer Obergrenze ausrichten.",
                 "Min(D, K) verwenden."
               ],
-              "solution": "U=480 (enger als 520).",
+              "solution": "$U=480$ (enger als 520).",
               "check": {
                 "type": "numeric",
                 "expected": 480
               }
             },
             {
-              "prompt": "b) Warum ist U=10,000 schlecht?",
+              "prompt": "b) Warum ist $U=10$,000 schlecht?",
               "hints": [
                 "Denk an LP‑Relaxation und Numerik.",
                 "Großes M/U schwächt Schranken."
@@ -51,25 +51,25 @@
         },
         {
           "title": "E2 – Mindestmenge & Fixkosten",
-          "context": "Mindestlos L=120 Stk; variable Kosten € 6/Stk; Fixkosten € 1,80",
+          "context": "Mindestlos $L=120$ Stk; variable Kosten € 6,-/Stk; Fixkosten € 1,80",
           "tasks": [
             {
               "prompt": "a) Formuliere Kopplung.",
               "hints": [
-                "Untergrenze aktivieren, wenn y=1."
+                "Untergrenze aktivieren, wenn $y=1$."
               ],
-              "solution": "x ≥ 120·y und x ≤ U·y.",
+              "solution": "$x ≥ 120\\cdot y$ und $x ≤ U\\cdot y$.",
               "check": {
                 "type": "string_contains",
-                "expected": "x ≥ 120·y"
+                "expected": "$x ≥ 120\\cdot y$"
               }
             },
             {
-              "prompt": "b) Gesamtkosten bei x=250, y=1?",
+              "prompt": "b) Gesamtkosten bei $x=250$, $y=1$?",
               "hints": [
                 "Fix + variabel."
               ],
-              "solution": "K = 1,800 + 6·250 = € 3,30",
+              "solution": "$K = 1$,$800 + 6\\cdot 250$ = € 3,30",
               "check": {
                 "type": "numeric",
                 "expected": 3300
@@ -85,13 +85,13 @@
             {
               "prompt": "a) Modellierung kurz.",
               "hints": [
-                "y_A + y_B = 1.",
-                "Budget: 300·y_A + 250·y_B ≤ 300."
+                "y_$A + y$_$B = 1$.",
+                "Budget: $300\\cdot y$_$A + 250\\cdot y$_$B ≤ 300$."
               ],
-              "solution": "max 90y_A+75y_B; y_A+y_B=1; 300y_A+250y_B≤300.",
+              "solution": "max 90y_$A+75y$_B; y_$A+y$_$B=1$; 300y_$A+250y$_$B≤300$.",
               "check": {
                 "type": "string_contains",
-                "expected": "y_A+y_B=1"
+                "expected": "y_$A+y$_$B=1$"
               }
             },
             {
@@ -100,7 +100,7 @@
                 "Prüfe Budget.",
                 "Vergleiche DB."
               ],
-              "solution": "Nur B passt ins Budget (250≤300) → DB=75. A wäre Budget=300 (zulässig) und DB=90 → **A** optimal.",
+              "solution": "Nur B passt ins Budget $(250≤300)$ → $DB=75$. A wäre $Budget=300$ (zulässig) und $DB=90$ → **A** optimal.",
               "check": {
                 "type": "string_contains",
                 "expected": "A"
@@ -143,18 +143,18 @@
       "long": [
         {
           "title": "F1 – Auswahl ‚genau k‘",
-          "context": "5 Maßnahmen, Budget für genau k=2 auswählen; Nutzen v=[40,35,25,22,18], Kosten w=[5,5,3,2,2], B=8.",
+          "context": "5 Maßnahmen, Budget für genau $k=2$ auswählen; Nutzen v=[40,35,25,22,18], Kosten w=[5,5,3,2,2], $B=8$.",
           "tasks": [
             {
               "prompt": "a) Nebenbedingungen?",
               "hints": [
-                "Zählbed.: Σ y_i = 2.",
+                "Zählbed.: Σ y_$i = 2$.",
                 "Budget: Σ w_i y_i ≤ 8."
               ],
-              "solution": "Σ y=2; Σ w y ≤ 8.",
+              "solution": "Σ $y=2$; Σ w $y ≤ 8$.",
               "check": {
                 "type": "string_contains",
-                "expected": "Σ y=2"
+                "expected": "Σ $y=2$"
               }
             },
             {
@@ -163,7 +163,7 @@
                 "Probiere 2er‑Kombinationen unter Budget.",
                 "Wähle max v."
               ],
-              "solution": "y1=1,y2=1 verletzt Budget (10). Beste zulässige: (1,4) v=62 (w=7) oder (1,5) v=58 (w=7) → **(1,4)**.",
+              "solution": "$y1=1$,$y2=1$ verletzt Budget (10). Beste zulässige: (1,4) $v=62$ $(w=7)$ oder (1,5) $v=58$ $(w=7)$ → **(1,4)**.",
               "check": {
                 "type": "string_contains",
                 "expected": "(1,4)"
@@ -174,14 +174,14 @@
         },
         {
           "title": "F2 – Indikator statt Big‑M",
-          "context": "Restriktion ax≤b nur, wenn y=1. Solver kann Indikatoren.",
+          "context": "Restriktion $ax≤b$ nur, wenn $y=1$. Solver kann Indikatoren.",
           "tasks": [
             {
               "prompt": "a) Formuliere als Indikator.",
               "hints": [
-                "Schreibe: y=1 ⇒ ax≤b."
+                "Schreibe: $y=1$ ⇒ $ax≤b$."
               ],
-              "solution": "Indikator(y=1): ax≤b.",
+              "solution": "Indikator$(y=1)$: $ax≤b$.",
               "check": {
                 "type": "string_contains",
                 "expected": "Indikator"

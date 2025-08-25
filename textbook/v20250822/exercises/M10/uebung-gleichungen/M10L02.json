@@ -22,7 +22,7 @@
       "long": [
         {
           "title": "E1 – Beta–Binomial Posterior",
-          "context": "Prior Beta(2,8), Daten: x=24 von n=100.",
+          "context": "Prior Beta(2,8), Daten: $x=24$ von $n=100$.",
           "tasks": [
             {
               "prompt": "a) Posterior?",
@@ -42,7 +42,7 @@
         },
         {
           "title": "E2 – Normal–Normal Posterior-Mean",
-          "context": "μ0=0, σ0=10; ̄y=1, σ=4, n=25 (SE=σ/√n=0,8).",
+          "context": "μ$0=0$, σ$0=10$; ̄$y=1$, σ=4, $n=25$ (SE=σ/$\\sqrt{n}=0$,8).",
           "tasks": [
             {
               "prompt": "a) μ_post näher an?",

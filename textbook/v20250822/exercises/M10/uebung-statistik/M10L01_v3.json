@@ -20,12 +20,12 @@
       "long": [
         {
           "title": "E1 – DiD-Rechnung",
-          "context": "T0=100, T1=130; C0=95, C1=110.",
+          "context": "$T0=100$, $T1=130$; $C0=95$, $C1=110$.",
           "tasks": [
             {
               "prompt": "a) τ̂?",
               "hints": "ΔT−ΔC",
-              "solution": "(30)−(15)=15",
+              "solution": "$(30)-(15)=15$",
               "check": {
                 "type": "numeric",
                 "expected": 15
@@ -36,7 +36,7 @@
         },
         {
           "title": "E2 – Prozentinterpretation",
-          "context": "Basis C0=95 als Referenz.",
+          "context": "Basis $C0=95$ als Referenz.",
           "tasks": [
             {
               "prompt": "a) Effekt in % von C0?",

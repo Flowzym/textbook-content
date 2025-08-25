@@ -22,12 +22,12 @@
       "long": [
         {
           "title": "E1 – SES Schritt",
-          "context": "L0=100, α=0,3, y1=115.",
+          "context": "$L0=100$, α=0,3, $y1=115$.",
           "tasks": [
             {
               "prompt": "a) L1?",
-              "hints": "L1=α y1 + (1−α)L0",
-              "solution": "L1=0,3·115+0,7·100=104,5",
+              "hints": "L1=α $y1 + (1$−α)L0",
+              "solution": "$L1=0$,$3\\cdot 115+0$,$7\\cdot 100=104$,5",
               "check": {
                 "type": "approx",
                 "expected": 104.5,
@@ -43,12 +43,12 @@
         },
         {
           "title": "E2 – Holt Forecast",
-          "context": "L0=100, B0=2, α=0,5, β=0,4, y1=106.",
+          "context": "$L0=100$, $B0=2$, α=0,5, β=0,4, $y1=106$.",
           "tasks": [
             {
               "prompt": "a) L1 & B1?",
               "hints": "Formeln anwenden",
-              "solution": "L1=0,5·106+0,5·102=104; B1=0,4·(104−100)+0,6·2=2",
+              "solution": "$L1=0$,$5\\cdot 106+0$,$5\\cdot 102=104$; $B1=0$,$4\\cdot (104-100)+0$,$6\\cdot 2=2$",
               "check": {
                 "type": "string_contains",
                 "expected": "104"
@@ -81,7 +81,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -93,7 +93,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -179,7 +179,7 @@
     },
     {
       "type": "concept",
-      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Deckungsbeitrag: DB = p − k_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
     },
     {
       "type": "derivation",
@@ -254,14 +254,14 @@
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "feedback_incorrect": "PLATZHALTER – typischer Fehler"
         }
       ],

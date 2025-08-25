@@ -12,7 +12,7 @@
     },
     {
       "level": "Analyze",
-      "text": "Korrelationseffekte (Preis×Menge) qualitativ/quantitativ bewerten."
+      "text": "Korrelationseffekte $(Preis\\times Menge)$ qualitativ/quantitativ bewerten."
     }
   ],
   "blocks": [
@@ -22,14 +22,14 @@
       "long": [
         {
           "title": "F1 – Triangular & PERT",
-          "context": "Preis ~ Tri(80,95,120); Kosten ~ PERT(50,58,70). Menge fix 4,100; Fix=180k.",
+          "context": "Preis ~ Tri(80,95,120); Kosten ~ PERT(50,58,70). Menge fix 4,100; $Fix=180k$.",
           "tasks": [
             {
               "prompt": "a) E[Preis]?",
               "hints": [
                 "(a+m+b)/3."
               ],
-              "solution": "E= (80+95+120)/3 = 98,33.",
+              "solution": "$E= (80+95+120)$/$3 = 98$,33.",
               "check": {
                 "type": "approx",
                 "expected": 98.333,
@@ -41,7 +41,7 @@
               "hints": [
                 "(a+4m+b)/6."
               ],
-              "solution": "E= (50+4·58+70)/6 = 58,67.",
+              "solution": "$E= (50+4\\cdot 58+70)$/$6 = 58$,67.",
               "check": {
                 "type": "approx",
                 "expected": 58.667,
@@ -51,9 +51,9 @@
             {
               "prompt": "c) Grober E[Gewinn]?",
               "hints": [
-                "(E[P]−E[K])·M − Fix."
+                "$(E[P]-E[K])\\cdot M - Fix$."
               ],
-              "solution": "(98,33−58,67)·4100 − 180000 ≈ −18,5k.",
+              "solution": "$(98,33-58,67)\\cdot 4100 - 180000$ ≈ −18,5k.",
               "check": {
                 "type": "approx",
                 "expected": -18500,
@@ -72,7 +72,7 @@
               "hints": [
                 "max(0, −P5)."
               ],
-              "solution": "VaR95=20k.",
+              "solution": "$VaR95=20k$.",
               "check": {
                 "type": "numeric",
                 "expected": 20000
@@ -115,7 +115,7 @@
       "mini": [
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -127,7 +127,7 @@
         },
         {
           "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
-          "solution": "x_BE=K_fix/(p−k_v) bzw. x=(K_fix+G)/(p−k_v)",
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
           "check": {
             "type": "string_contains",
             "expected": "p−k_v"
@@ -163,19 +163,19 @@
           ],
           "difficulty": "mittel",
           "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         },
         {
           "type": "true_false",
-          "question": "Für den Zielgewinn gilt x=(K_fix−G)/(p−k_v).",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
           "answer": false,
-          "rationale": "Richtig: x=(K_fix+G)/(p−k_v).",
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
           "covers_outcomes": [
             1
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Richtig: x=(K_fix+G)/(p−k_v).",
-          "feedback_incorrect": "Beachte: x_BE=K_fix/(p−k_v); Zielgewinn x=(K_fix+G)/(p−k_v)."
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
         }
       ],
       "preface_overlay": {

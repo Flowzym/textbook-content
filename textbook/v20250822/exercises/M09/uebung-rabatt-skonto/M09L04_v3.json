@@ -20,12 +20,12 @@
       "long": [
         {
           "title": "E1 – ARIMAX‑Forecast",
-          "context": "ŷ_t = β0 + β1·Preis + β2·Promo; β0=100, β1=−2, β2=20; Preis=15, Promo=1.",
+          "context": "ŷ_t = β0 + β$1\\cdot Preis$ + β$2\\cdot Promo$; β$0=100$, β1=−2, β$2=20$; $Preis=15$, $Promo=1$.",
           "tasks": [
             {
               "prompt": "a) ŷ_t?",
               "hints": "Einsetzen",
-              "solution": "100 − 30 + 20 = 90",
+              "solution": "$100 - 30 + 20 = 90$",
               "check": {
                 "type": "numeric",
                 "expected": 90
@@ -84,7 +84,7 @@
       "long": [
         {
           "title": "F1 – Szenario mit Preisänderung",
-          "context": "β1=−3, Preis steigt +2, Baseline ŷ=200.",
+          "context": "β1=−3, Preis $steigt +2$, Baseline ŷ=200.",
           "tasks": [
             {
               "prompt": "a) Effekt?",

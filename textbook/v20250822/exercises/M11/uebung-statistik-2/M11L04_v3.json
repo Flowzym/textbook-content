@@ -37,7 +37,7 @@
         },
         {
           "title": "E2 – Power grob",
-          "context": "δ=1,5%, σ=3%, Cluster G=24. Pre-Kovarianz halbiert Varianz effektiv.",
+          "context": "δ=1,5%, σ=3%, Cluster $G=24$. $Pre-Kovarianz$ halbiert Varianz effektiv.",
           "tasks": [
             {
               "prompt": "a) Trend?",
@@ -55,34 +55,34 @@
       "mini": [
         {
           "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
-          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "solution": "$K=K0\\cdot (1+i)^n$ bzw. $K0=K$/$(1+i)^n$",
           "check": {
             "type": "string_contains",
-            "expected": "(1+i)^n"
+            "expected": "$(1+i)^n$"
           },
           "covers_outcomes": [
             0
           ],
           "difficulty": "leicht",
           "steps": [
-            "K=K0·(1+i)^n bzw.",
-            "K0=K/(1+i)^n"
+            "$K=K0\\cdot (1+i)^n$ bzw.",
+            "$K0=K$/$(1+i)^n$"
           ]
         },
         {
           "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
-          "solution": "K=K0·(1+i)^n bzw. K0=K/(1+i)^n",
+          "solution": "$K=K0\\cdot (1+i)^n$ bzw. $K0=K$/$(1+i)^n$",
           "check": {
             "type": "string_contains",
-            "expected": "(1+i)^n"
+            "expected": "$(1+i)^n$"
           },
           "covers_outcomes": [
             1
           ],
           "difficulty": "leicht",
           "steps": [
-            "K=K0·(1+i)^n bzw.",
-            "K0=K/(1+i)^n"
+            "$K=K0\\cdot (1+i)^n$ bzw.",
+            "$K0=K$/$(1+i)^n$"
           ]
         }
       ]
@@ -118,19 +118,19 @@
       "items": [
         {
           "type": "true_false",
-          "question": "Beim Abzinsen teilt man durch (1+i)^n.",
+          "question": "Beim Abzinsen teilt man durch $(1+i)^n$.",
           "answer": true,
-          "rationale": "Barwertberechnung nutzt Division durch (1+i)^n.",
+          "rationale": "Barwertberechnung nutzt Division durch $(1+i)^n$.",
           "covers_outcomes": [
             0
           ],
           "difficulty": "mittel",
-          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch (1+i)^n.",
-          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "feedback_incorrect": "Beachte: Zinseszins: $K=K0\\cdot (1+i)^n$; Abzinsung: $K0=K$/$(1+i)^n$."
         },
         {
           "type": "true_false",
-          "question": "Zinseszins ohne Wiederanlage nutzt K=K0·(1+i)^n.",
+          "question": "Zinseszins ohne Wiederanlage nutzt $K=K0\\cdot (1+i)^n$.",
           "answer": true,
           "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
           "covers_outcomes": [
@@ -138,7 +138,7 @@
           ],
           "difficulty": "mittel",
           "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
-          "feedback_incorrect": "Beachte: Zinseszins: K=K0·(1+i)^n; Abzinsung: K0=K/(1+i)^n."
+          "feedback_incorrect": "Beachte: Zinseszins: $K=K0\\cdot (1+i)^n$; Abzinsung: $K0=K$/$(1+i)^n$."
         }
       ],
       "preface_overlay": {
