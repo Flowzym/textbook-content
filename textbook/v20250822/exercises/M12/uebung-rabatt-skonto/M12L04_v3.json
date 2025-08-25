@@ -1,0 +1,143 @@
+{
+  "id": "M12L04",
+  "title": "Instrumentalvariablen – 2SLS, DMLIV/DeepIV & LATE (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "reading_time_min": 8,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "long": [
+        {
+          "title": "E1 – F-Statistik",
+          "context": "1. Stufe $F=14$.",
+          "tasks": [
+            {
+              "prompt": "a) Bewertung?",
+              "hints": ">10 gut",
+              "solution": "Instrument ausreichend stark",
+              "check": {
+                "type": "string_contains",
+                "expected": "stark"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – LATE-Interpretation",
+          "context": "Preis-Elasticität −1,1 via IV.",
+          "tasks": [
+            {
+              "prompt": "a) Für wen?",
+              "hints": "Complier",
+              "solution": "gilt für Complier, nicht ATE",
+              "check": {
+                "type": "string_contains",
+                "expected": "Complier"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "long": [
+        {
+          "title": "F1 – Exclusion diskutieren",
+          "context": "Instrument: exogene Kostenänderung.",
+          "tasks": [
+            {
+              "prompt": "a) Gefahr?",
+              "hints": "direkter Einfluss auf Y?",
+              "solution": "prüfe, ob Kosten nicht direkt Nachfrage ändern (nur über Preis)",
+              "check": {
+                "type": "string_contains",
+                "expected": "direkt"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation."
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "kurz"
+}

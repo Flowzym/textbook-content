@@ -1,0 +1,18 @@
+{
+  "chapter": {
+    "id": "M10",
+    "title": "Übungen M10"
+  },
+  "sections": [
+    {
+      "id": "uebung-gleichungen",
+      "title": "Causal Impact & Bayesian Forecasting (v3) – Prüfungsset E/F",
+      "file": "exercises/M10/uebung-gleichungen/module.json"
+    },
+    {
+      "id": "uebung-statistik",
+      "title": "Causal Impact & Bayesian Forecasting (v3) – Prüfungsset E/F",
+      "file": "exercises/M10/uebung-statistik/module.json"
+    }
+  ]
+}
