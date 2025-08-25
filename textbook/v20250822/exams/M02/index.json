@@ -1,0 +1,13 @@
+{
+  "chapter": {
+    "id": "M02",
+    "title": "Prüfungen M02"
+  },
+  "sections": [
+    {
+      "id": "pruefung-zinseszins",
+      "title": "Pruefung Zinseszins",
+      "file": "exams/M02/pruefung-zinseszins/module.json"
+    }
+  ]
+}

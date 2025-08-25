@@ -1,0 +1,271 @@
+{
+  "id": "M09L04",
+  "title": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v2: Prüfungssets A–D)",
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M09L04"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte ARIMAX & Hierarchien abfragen."
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ARIMAX benötigt…",
+          "options": [
+            "keine X‑Prognosen",
+            "exogene X‑Prognosen",
+            "nur saisonale Dummies"
+          ],
+          "answer_index": 1,
+          "rationale": "X in der Zukunft.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. X in der Zukunft.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Preis als Regressor wirkt meist negativ auf Nachfrage.",
+          "answer": true,
+          "rationale": "Elastizität < 0.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Elastizität < 0.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Promotion‑Dummies modellieren…",
+          "options": [
+            "Trend",
+            "Impulse/Fenster",
+            "Saison"
+          ],
+          "answer_index": 1,
+          "rationale": "Aktionen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Aktionen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Feature‑Engineering umfasst NICHT:",
+          "options": [
+            "Feiertage & Vor/Nachlauf",
+            "Multikollinearität prüfen",
+            "Random Noise als Feature"
+          ],
+          "answer_index": 2,
+          "rationale": "Kein Rauschen als Feature.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Rauschen als Feature.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "X‑Variablen müssen planbar oder prognostizierbar sein.",
+          "answer": true,
+          "rationale": "Sonst Scheinpräzision.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sonst Scheinpräzision.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Dynamische Regression:",
+          "options": [
+            "y=β$X + ARIMA$‑Fehler",
+            "nur ARIMA",
+            "nur Regression"
+          ],
+          "answer_index": 0,
+          "rationale": "Fehlerprozess ARIMA.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fehlerprozess ARIMA.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Hierarchie‑Reconciliation Ziel:",
+          "options": [
+            "Inkonsistenz erzeugen",
+            "Konsistenz zwischen Ebenen",
+            "nur Top‑down verteilen"
+          ],
+          "answer_index": 1,
+          "rationale": "Kohärenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kohärenz.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Bottom‑up summiert SKUs zur Kategorie.",
+          "answer": true,
+          "rationale": "Aggregation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Aggregation.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Kombinationen der Forecasts:",
+          "options": [
+            "immer schlechter",
+            "oft robuster",
+            "unnötig"
+          ],
+          "answer_index": 1,
+          "rationale": "Diversifikation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Diversifikation.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxisfalle:",
+          "options": [
+            "bewegliche Feiertage falsch datiert",
+            "Residuen geprüft",
+            "Szenarien gebaut"
+          ],
+          "answer_index": 0,
+          "rationale": "Kalenderlogik.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kalenderlogik.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei ARIMAX ohne X‑Forecast ist ein echter Zukunfts‑Forecast nicht möglich.",
+          "answer": true,
+          "rationale": "X erforderlich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. X erforderlich.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Kommunikation:",
+          "options": [
+            "Annahmen zu X explizit machen",
+            "X verbergen",
+            "keine Intervalle berichten"
+          ],
+          "answer_index": 0,
+          "rationale": "Transparenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Transparenz.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken ARIMAX & Hierarchien: Begriffe, Methoden, Diagnose und Praxis ab."
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich"
+}

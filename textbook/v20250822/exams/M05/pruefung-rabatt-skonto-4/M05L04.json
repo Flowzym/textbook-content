@@ -1,0 +1,307 @@
+{
+  "id": "M05L04",
+  "title": "Risikobudget, Stresstests & Reporting – Entscheidungen unter Unsicherheit",
+  "reading_time_min": 13,
+  "prerequisites": [
+    "M05L03"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Begriffe: Risikobudget, Stresstest, Sensitivität, Hedging, Risikomaß (VaR, CVaR)."
+    },
+    {
+      "level": "Understand",
+      "text": "Risk‑Adjusted Decision‑Making: NPV, EAA und Verteilung kombinieren."
+    },
+    {
+      "level": "Apply",
+      "text": "Stresstests entwerfen, Break‑even‑Abstände quantifizieren, Maßnahmenkatalog ableiten."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Trade‑offs zwischen Rendite und Risiko argumentieren; Berichte adressatengerecht aufbereiten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Analyse allein genügt nicht – **Steuerung** ist das Ziel. Wir definieren **Risikobudgets**, testen extreme Annahmen\nund übersetzen Ergebnisse in **Management‑Reports** (klar, knapp, entscheidungsorientiert)."
+    },
+    {
+      "type": "concept",
+      "title": "Risikomaße & Budgets",
+      "text": "- **VaR_95**: Verlust, der mit 95% nicht überschritten wird.  \n- **CVaR_95** (Expected Shortfall): durchschnittlicher Verlust **jenseits** des VaR.  \n- **Risikobudget**: zulässiger VaR/CVaR (z. B. max 25k Verlust bei 95%).  \n- **Maßnahmen**: vermeiden, vermindern, verteilen (Versicherung/Sharing), akzeptieren.",
+      "explanation": "\n\n**Decision-Hints:**\n- Lineare Gleichungen isolieren: gleiche Operation auf beiden Seiten.\n- Klammern zuerst auflösen, dann nach x umstellen."
+    },
+    {
+      "type": "visual",
+      "title": "ASCII – Risiko/Ertrag‑Front",
+      "ascii": "Ertrag ↑\n   •  B\n   •\nA •\n    Risiko →",
+      "caption": "Vergleiche Alternativen auf der Risiko‑Ertrags‑Ebene (z. B. E[NPV] vs. VaR).\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Vergleiche Alternativen auf der Risiko‑Ertrags‑Ebene (z. B. E[NPV] vs. VaR).\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Stresstest & Risikobudget",
+      "text": "Simulation ergab: E[NPV]=+20k; VaR95=−15k; CVaR95=−24k. Risikobudget: max VaR95=−12k.  \n→ Maßnahmen: Preis‑Floor, variable Kosten durch Indexklausel koppeln, Fixkosten reduzieren, Hedging. Ziel: VaR95 ≤ −12k.",
+      "steps": [
+        "Simulation ergab: E[NPV]=+20k; VaR95=−15k; CVaR95=−24k. Risikobudget: max VaR95=−12k",
+        "→ Maßnahmen: Preis‑Floor, variable Kosten durch Indexklausel koppeln, Fixkosten reduzieren, Hedging. Ziel: VaR95 ≤ −12k"
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Break‑even‑Abstand",
+      "text": "Aktueller Preis € 90,-,- BE‑Preis € 104,70  \na) Relativer Abstand? b) Was bedeutet das fürs Pricing‑Risiko?",
+      "solution": [
+        "(104,7−90)/104,7≈14%",
+        "niedrige Sicherheitsmarge → priorisiere Preissicherung/Vertrieb"
+      ],
+      "steps": [
+        "Aktueller Preis € 90,-,- BE‑Preis € 104,-,",
+        "a) Relativer Abstand? b) Was bedeutet das fürs Pricing‑Risiko?"
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "CVaR vs. VaR: welches strenger?",
+          "hint": "CVaR",
+          "solution": "durchschnittlicher Verlust im Tail",
+          "check": {
+            "type": "string_contains",
+            "expected": "Tail"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Wenn Risikobudget max VaR95=−10k und Dein VaR95=−14k?",
+          "hint": "Maßnahmen ableiten",
+          "solution": "Risiko reduzieren bis ≤−10k",
+          "check": {
+            "type": "string_contains",
+            "expected": "reduzieren"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Stresstest definieren: zwei Treiber nennen.",
+          "hint": "Preis↓, Menge↓ (gleichzeitig)",
+          "solution": "Kombination extremer, aber plausibler Werte",
+          "check": {
+            "type": "string_contains",
+            "expected": "extremer"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "Praxis – Risk‑Adjusted Entscheidung",
+          "context": "Alternative A: E[NPV]=+28k, VaR95=−22k. Alternative B: E[NPV]=+23k, VaR95=−10k. Budget: max VaR95=−15k.",
+          "subtasks": [
+            {
+              "text": "Budgetprüfung."
+            },
+            {
+              "text": "Empfehlung (quantitativ)."
+            },
+            {
+              "text": "Welche Maßnahmen würden A budgetfähig machen?"
+            }
+          ],
+          "hints": [
+            "A überschreitet Budget; B innerhalb.",
+            "B bevorzugen oder A entschärfen.",
+            "A entschärfen: Kostenvariabilisierung, Hedging, Preis‑Floors."
+          ],
+          "solutions": [
+            "B wählen oder A mit Maßnahmen",
+            "Budget eingehalten",
+            "Maßnahmenliste"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "VaR",
+                "Budget",
+                "Empfehlung"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "B wählen oder A mit Maßnahmen",
+            "Budget eingehalten",
+            "Maßnahmenliste"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Nur E[NPV] betrachtet; Risikobudget ignoriert.",
+        "Stresstests unrealistisch (zu mild/zu extrem).",
+        "Berichte ohne klare Management‑Botschaft."
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "CVaR misst…",
+          "options": [
+            "Quantilschwelle",
+            "Durchschnitt jenseits des VaR",
+            "Standardabweichung"
+          ],
+          "answer_index": 1,
+          "rationale": "Tail‑Loss.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Tail‑Loss.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein Projekt mit höherem E[NPV] ist immer vorzuziehen.",
+          "answer": false,
+          "rationale": "Risikobudget kann verletzt werden.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Risikobudget kann verletzt werden.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Maßnahme **verringert** VaR typischerweise?",
+          "options": [
+            "Fixkosten erhöhen",
+            "Preis‑Floor/Absicherung",
+            "mehr Leverage"
+          ],
+          "answer_index": 1,
+          "rationale": "Downside begrenzen.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Downside begrenzen.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            3
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du führst Stresstests durch, setzt Risikobudgets und formulierst klare, risikoadjustierte Empfehlungen."
+    },
+    {
+      "type": "outlook",
+      "text": "Optional: Vertiefung Datenqualität & Forecast‑Bias, Regressions‑Treiber, Copulas/Korrelationen."
+    }
+  ],
+  "reading_time_band": "normal"
+}
