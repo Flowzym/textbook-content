@@ -1,0 +1,88 @@
+{
+  "id": "M05",
+  "title": "Unsicherheit & Risikomodellierung – Prüfungsset F (v4)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Unsicherheit & Risikomodellierung – Prüfungsset F (v4)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Unsicherheit & Risikomodellierung – Prüfungsset F (v4)"
+        }
+      ]
+    }
+  ],
+  "description": "Zusätzliche prüfungsnahe Rechenaufgaben mit gestuften Hinweisen (Set F) für alle vier Lessons.",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Zusätzliche prüfungsnahe Rechenaufgaben mit gestuften Hinweisen (Set F) für alle vier Lessons.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zusätzliche prüfungsnahe Rechenaufgaben mit gestuften Hinweisen (Set F) für alle vier Lessons."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M05L01",
+      "title": "Unsicherheit & Sensitivitätsanalyse – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Unsicherheit & Sensitivitätsanalyse – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)"
+        }
+      ]
+    },
+    {
+      "id": "M05L02",
+      "title": "Szenarioanalyse & Entscheidungsbäume – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Szenarioanalyse & Entscheidungsbäume – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)"
+        }
+      ]
+    },
+    {
+      "id": "M05L03",
+      "title": "Monte‑Carlo – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Monte‑Carlo – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)"
+        }
+      ]
+    },
+    {
+      "id": "M05L04",
+      "title": "Risikobudget, Stresstests & Reporting – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Risikobudget, Stresstests & Reporting – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)"
+        }
+      ]
+    }
+  ],
+  "version": "v4",
+  "updated_at": "2025-08-17T09:13:34.861544",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

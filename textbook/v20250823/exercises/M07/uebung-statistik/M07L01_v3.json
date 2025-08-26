@@ -1,0 +1,908 @@
+{
+  "id": "M07L01",
+  "title": "Ganzzahlige Modelle I – Prüfungsset E/F (Rechen‑Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Ganzzahlige Modelle I – Prüfungsset E/F (Rechen‑Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ganzzahlige Modelle I – Prüfungsset E/F (Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 18,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Big‑M/Indikator sauber parameterisieren; Mindest-/Höchstmengen und Auswahlbedingungen numerisch lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Big‑M/Indikator sauber parameterisieren; Mindest-/Höchstmengen und Auswahlbedingungen numerisch lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Starke vs. schwache Formulierungen anhand von U/M‑Wahl und Relaxationslücke beurteilen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Starke vs. schwache Formulierungen anhand von U/M‑Wahl und Relaxationslücke beurteilen."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Big‑M & Kopplung (Rechen‑Mix)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Big‑M & Kopplung (Rechen‑Mix)"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – Obergrenze U bestimmen",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – Obergrenze U bestimmen"
+            }
+          ],
+          "context": "Produktionsmenge x (Stk) max. durch Nachfrage $D=480$ und Kapazität $K=520$; aktiviere Produktion nur bei $y=1$.",
+          "tasks": [
+            {
+              "prompt": "a) Wähle enges U für $x ≤ U\\cdot y$.",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Wähle enges U für "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "x ≤ U\\cdot y"
+                },
+                {
+                  "t": "text",
+                  "text": "."
+                }
+              ],
+              "hints": [
+                "U an physikalischer Obergrenze ausrichten.",
+                "Min(D, K) verwenden."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "U an physikalischer Obergrenze ausrichten."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Min(D, K) verwenden."
+                    }
+                  ]
+                }
+              ],
+              "solution": "$U=480$ (enger als 520).",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "U=480"
+                },
+                {
+                  "t": "text",
+                  "text": " (enger als 520)."
+                }
+              ],
+              "check": {
+                "type": "numeric",
+                "expected": 480
+              }
+            },
+            {
+              "prompt": "b) Warum ist $U=10$,000 schlecht?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Warum ist "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "U=10"
+                },
+                {
+                  "t": "text",
+                  "text": ",000 schlecht?"
+                }
+              ],
+              "hints": [
+                "Denk an LP‑Relaxation und Numerik.",
+                "Großes M/U schwächt Schranken."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Denk an LP‑Relaxation und Numerik."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Großes M/U schwächt Schranken."
+                    }
+                  ]
+                }
+              ],
+              "solution": "Schwache Relaxation, numerisch instabiler Simplex.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Schwache Relaxation, numerisch instabiler Simplex."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Relaxation"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Mindestmenge & Fixkosten",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – Mindestmenge & Fixkosten"
+            }
+          ],
+          "context": "Mindestlos $L=120$ Stk; variable Kosten € 6,-/Stk; Fixkosten € 1,80",
+          "tasks": [
+            {
+              "prompt": "a) Formuliere Kopplung.",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Formuliere Kopplung."
+                }
+              ],
+              "hints": [
+                "Untergrenze aktivieren, wenn $y=1$."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Untergrenze aktivieren, wenn "
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "y=1"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ],
+              "solution": "$x ≥ 120\\cdot y$ und $x ≤ U\\cdot y$.",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x ≥ 120\\cdot y"
+                },
+                {
+                  "t": "text",
+                  "text": " und "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "x ≤ U\\cdot y"
+                },
+                {
+                  "t": "text",
+                  "text": "."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "$x ≥ 120\\cdot y$"
+              }
+            },
+            {
+              "prompt": "b) Gesamtkosten bei $x=250$, $y=1$?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Gesamtkosten bei "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "x=250"
+                },
+                {
+                  "t": "text",
+                  "text": ", "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y=1"
+                },
+                {
+                  "t": "text",
+                  "text": "?"
+                }
+              ],
+              "hints": [
+                "Fix + variabel."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Fix + variabel."
+                    }
+                  ]
+                }
+              ],
+              "solution": "$K = 1$,$800 + 6\\cdot 250$ = € 3,30",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K = 1"
+                },
+                {
+                  "t": "text",
+                  "text": ","
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "800 + 6\\cdot 250"
+                },
+                {
+                  "t": "text",
+                  "text": " = € 3,30"
+                }
+              ],
+              "check": {
+                "type": "numeric",
+                "expected": 3300
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E3 – Entweder‑oder‑Projektwahl",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E3 – Entweder‑oder‑Projektwahl"
+            }
+          ],
+          "context": "Projekte A/B: Kapital 300/250, DB 90/75, Budget 300. Genau eines wählen.",
+          "tasks": [
+            {
+              "prompt": "a) Modellierung kurz.",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Modellierung kurz."
+                }
+              ],
+              "hints": [
+                "y_$A + y$_$B = 1$.",
+                "Budget: $300\\cdot y$_$A + 250\\cdot y$_$B ≤ 300$."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "y_"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "A + y"
+                    },
+                    {
+                      "t": "text",
+                      "text": "_"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "B = 1"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Budget: "
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "300\\cdot y"
+                    },
+                    {
+                      "t": "text",
+                      "text": "_"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "A + 250\\cdot y"
+                    },
+                    {
+                      "t": "text",
+                      "text": "_"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "B ≤ 300"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ],
+              "solution": "max 90y_$A+75y$_B; y_$A+y$_$B=1$; 300y_$A+250y$_$B≤300$.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "max 90y_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "A+75y"
+                },
+                {
+                  "t": "text",
+                  "text": "_B; y_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "A+y"
+                },
+                {
+                  "t": "text",
+                  "text": "_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "B=1"
+                },
+                {
+                  "t": "text",
+                  "text": "; 300y_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "A+250y"
+                },
+                {
+                  "t": "text",
+                  "text": "_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "B≤300"
+                },
+                {
+                  "t": "text",
+                  "text": "."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "y_$A+y$_$B=1$"
+              }
+            },
+            {
+              "prompt": "b) Welche Wahl ist zulässig & besser?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Welche Wahl ist zulässig & besser?"
+                }
+              ],
+              "hints": [
+                "Prüfe Budget.",
+                "Vergleiche DB."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Prüfe Budget."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Vergleiche DB."
+                    }
+                  ]
+                }
+              ],
+              "solution": "Nur B passt ins Budget $(250≤300)$ → $DB=75$. A wäre $Budget=300$ (zulässig) und $DB=90$ → **A** optimal.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Nur B passt ins Budget "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(250≤300)"
+                },
+                {
+                  "t": "text",
+                  "text": " → "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "DB=75"
+                },
+                {
+                  "t": "text",
+                  "text": ". A wäre "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "Budget=300"
+                },
+                {
+                  "t": "text",
+                  "text": " (zulässig) und "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "DB=90"
+                },
+                {
+                  "t": "text",
+                  "text": " → **A** optimal."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "A"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Logik & starke Formulierungen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Logik & starke Formulierungen"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Auswahl ‚genau k‘",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Auswahl ‚genau k‘"
+            }
+          ],
+          "context": "5 Maßnahmen, Budget für genau $k=2$ auswählen; Nutzen v=[40,35,25,22,18], Kosten w=[5,5,3,2,2], $B=8$.",
+          "tasks": [
+            {
+              "prompt": "a) Nebenbedingungen?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Nebenbedingungen?"
+                }
+              ],
+              "hints": [
+                "Zählbed.: Σ y_$i = 2$.",
+                "Budget: Σ w_i y_i ≤ 8."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Zählbed.: Σ y_"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "i = 2"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Budget: Σ w_i y_i ≤ 8."
+                    }
+                  ]
+                }
+              ],
+              "solution": "Σ $y=2$; Σ w $y ≤ 8$.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Σ "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y=2"
+                },
+                {
+                  "t": "text",
+                  "text": "; Σ w "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y ≤ 8"
+                },
+                {
+                  "t": "text",
+                  "text": "."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Σ $y=2$"
+              }
+            },
+            {
+              "prompt": "b) Beste Kombination?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Beste Kombination?"
+                }
+              ],
+              "hints": [
+                "Probiere 2er‑Kombinationen unter Budget.",
+                "Wähle max v."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Probiere 2er‑Kombinationen unter Budget."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Wähle max v."
+                    }
+                  ]
+                }
+              ],
+              "solution": "$y1=1$,$y2=1$ verletzt Budget (10). Beste zulässige: (1,4) $v=62$ $(w=7)$ oder (1,5) $v=58$ $(w=7)$ → **(1,4)**.",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "y1=1"
+                },
+                {
+                  "t": "text",
+                  "text": ","
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y2=1"
+                },
+                {
+                  "t": "text",
+                  "text": " verletzt Budget (10). Beste zulässige: (1,4) "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "v=62"
+                },
+                {
+                  "t": "text",
+                  "text": " "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(w=7)"
+                },
+                {
+                  "t": "text",
+                  "text": " oder (1,5) "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "v=58"
+                },
+                {
+                  "t": "text",
+                  "text": " "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(w=7)"
+                },
+                {
+                  "t": "text",
+                  "text": " → **(1,4)**."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "(1,4)"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F2 – Indikator statt Big‑M",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F2 – Indikator statt Big‑M"
+            }
+          ],
+          "context": "Restriktion $ax≤b$ nur, wenn $y=1$. Solver kann Indikatoren.",
+          "tasks": [
+            {
+              "prompt": "a) Formuliere als Indikator.",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Formuliere als Indikator."
+                }
+              ],
+              "hints": [
+                "Schreibe: $y=1$ ⇒ $ax≤b$."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Schreibe: "
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "y=1"
+                    },
+                    {
+                      "t": "text",
+                      "text": " ⇒ "
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "ax≤b"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ],
+              "solution": "Indikator$(y=1)$: $ax≤b$.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Indikator"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(y=1)"
+                },
+                {
+                  "t": "text",
+                  "text": ": "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "ax≤b"
+                },
+                {
+                  "t": "text",
+                  "text": "."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Indikator"
+              }
+            },
+            {
+              "prompt": "b) Vorteil gegenüber Big‑M?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Vorteil gegenüber Big‑M?"
+                }
+              ],
+              "hints": [
+                "Numerische Stabilität, stärkere Relaxation."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Numerische Stabilität, stärkere Relaxation."
+                    }
+                  ]
+                }
+              ],
+              "solution": "Stabiler und enger als großes M.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Stabiler und enger als großes M."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Stabil"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "normal",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

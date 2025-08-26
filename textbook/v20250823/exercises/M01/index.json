@@ -1,0 +1,51 @@
+{
+  "chapter": {
+    "id": "M01",
+    "title": "Übungen M01",
+    "title_segments": [
+      {
+        "t": "text",
+        "text": "Übungen M01"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "uebung-rabatt-skonto",
+      "title": "Grundlagen – Zahlen, Rechnen, Algebra (v3) – Prüfungsset E/F",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Grundlagen – Zahlen, Rechnen, Algebra (v3) – Prüfungsset E/F"
+        }
+      ],
+      "file": "exercises/M01/uebung-rabatt-skonto/module.json"
+    },
+    {
+      "id": "uebung-rabatt-skonto-2",
+      "title": "Grundlagen – Zahlen, Rechnen, Algebra (v3) – Prüfungsset E/F",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Grundlagen – Zahlen, Rechnen, Algebra (v3) – Prüfungsset E/F"
+        }
+      ],
+      "file": "exercises/M01/uebung-rabatt-skonto-2/module.json"
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

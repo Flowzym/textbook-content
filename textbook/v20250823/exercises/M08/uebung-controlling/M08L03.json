@@ -1,0 +1,710 @@
+{
+  "id": "M08L03",
+  "title": "Zeitreihen III – Forecastgüte & Backtesting (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zeitreihen III – Forecastgüte & Backtesting (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen III – Forecastgüte & Backtesting (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 45,
+  "prerequisites": [
+    "M08L03"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M08L03"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen lösen (Parameterwahl, Metrikberechnung, Backtests).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben mit Hinweisen lösen (Parameterwahl, Metrikberechnung, Backtests)."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und typische Fallen vermeiden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ergebnisse interpretieren und typische Fallen vermeiden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Rechen‑Mix"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – MAE/RMSE",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – MAE/RMSE"
+            }
+          ],
+          "context": "Fehler e=[2, −1, 0, 5].",
+          "tasks": [
+            {
+              "prompt": "a) MAE?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) MAE?"
+                }
+              ],
+              "hints": "Durchschnitt |e|",
+              "solution": "2,0",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "2,0"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 2.0,
+                "tol": 0.01
+              }
+            },
+            {
+              "prompt": "b) RMSE?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) RMSE?"
+                }
+              ],
+              "hints": "√Durchschnitt e²",
+              "solution": "≈2,74",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "≈2,74"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 2.7386127875258306,
+                "tol": 0.02
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Bias",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – Bias"
+            }
+          ],
+          "context": "y−ŷ=[+3, −1, +2].",
+          "tasks": [
+            {
+              "prompt": "a) Bias?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Bias?"
+                }
+              ],
+              "hints": "Mittel der Fehler",
+              "solution": "$(3-1+2)$/$3=1$,33",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "(3-1+2)"
+                },
+                {
+                  "t": "text",
+                  "text": "/"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "3=1"
+                },
+                {
+                  "t": "text",
+                  "text": ",33"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 1.3333333333333333,
+                "tol": 0.01
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Gestufte Hinweise"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Rolling Origin Setup",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Rolling Origin Setup"
+            }
+          ],
+          "context": "60 Monate, Startfenster 24, $h=1$.",
+          "tasks": [
+            {
+              "prompt": "a) Wie viele Rollschritte?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Wie viele Rollschritte?"
+                }
+              ],
+              "hints": "Von 25 bis 60 → 36 Schritte",
+              "solution": "36",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "36"
+                }
+              ],
+              "check": {
+                "type": "numeric",
+                "expected": 36
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du beherrschst praktische Rechnungen und Interpretationen für dieses Thema.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Du beherrschst praktische Rechnungen und Interpretationen für dieses Thema."
+        }
+      ]
+    },
+    {
+      "type": "introduction",
+      "text": "PLATZHALTER – Einführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Einführung folgt."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- Deckungsbeitrag: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "DB = p - k"
+        },
+        {
+          "t": "text",
+          "text": "_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Worked Example"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] …"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] …"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Fading Example"
+          }
+        ],
+        "steps": [
+          "…"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "…"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "PLATZHALTER – Aussage",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aussage"
+            }
+          ],
+          "answer": true,
+          "rationale": "PLATZHALTER – Begründung | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. PLATZHALTER – Begründung | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

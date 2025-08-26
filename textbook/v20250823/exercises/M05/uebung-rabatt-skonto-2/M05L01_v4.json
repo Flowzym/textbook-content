@@ -1,0 +1,708 @@
+{
+  "id": "M05L01",
+  "title": "Unsicherheit & Sensitivitätsanalyse – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Unsicherheit & Sensitivitätsanalyse – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Unsicherheit & Sensitivitätsanalyse – Prüfungsset F (Rechen‑Mix, gestufte Hinweise)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 40,
+  "prerequisites": [
+    "M05L01"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M05L01"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben zu Elastizität, Tornado‑Ranking, Break‑even (Preis/Menge) sicher lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben zu Elastizität, Tornado‑Ranking, Break‑even (Preis/Menge) sicher lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Zweistufige Sensitivitäten $(Preis\\times Menge)$ interpretieren und Maßnahmen ableiten.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zweistufige Sensitivitäten "
+        },
+        {
+          "t": "math_inline",
+          "tex": "(Preis\\times Menge)"
+        },
+        {
+          "t": "text",
+          "text": " interpretieren und Maßnahmen ableiten."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Rechen‑Mix (mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Rechen‑Mix (mit gestuften Hinweisen)"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Elastizität & Tornado",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Elastizität & Tornado"
+            }
+          ],
+          "context": "Baseline: Gewinn 240k. Preis +5% → Gewinn 300k; Preis −5% → 180k. Menge ±5% führt zu 240k±36k.",
+          "tasks": [
+            {
+              "prompt": "a) Elastizität E_Preis bei +5%?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Elastizität E_Preis bei +5%?"
+                }
+              ],
+              "hints": [
+                "Schritt 1: Δ$Gewinn = 300-240 = 60k$.",
+                "Schritt 2: (ΔG/G0) / $(ΔP/P0) = (60$/240)/0,05.",
+                "Schritt 3: Ergebnis runden auf eine Dezimalstelle."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Schritt 1: Δ"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "Gewinn = 300-240 = 60k"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Schritt 2: (ΔG/G0) / "
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "(ΔP/P0) = (60"
+                    },
+                    {
+                      "t": "text",
+                      "text": "/240)/0,05."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Schritt 3: Ergebnis runden auf eine Dezimalstelle."
+                    }
+                  ]
+                }
+              ],
+              "solution": "E_$Preis = (0$,25)/0,$05 = 5$,0.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "E_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "Preis = (0"
+                },
+                {
+                  "t": "text",
+                  "text": ",25)/0,"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "05 = 5"
+                },
+                {
+                  "t": "text",
+                  "text": ",0."
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 5.0,
+                "tol": 0.01
+              }
+            },
+            {
+              "prompt": "b) Elastizität E_Menge bei +5%?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Elastizität E_Menge bei +5%?"
+                }
+              ],
+              "hints": [
+                "Δ$G = 36k$.",
+                "Elastizitä$t = (36$/240)/0,05."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Δ"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "G = 36k"
+                    },
+                    {
+                      "t": "text",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Elastizitä"
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "t = (36"
+                    },
+                    {
+                      "t": "text",
+                      "text": "/240)/0,05."
+                    }
+                  ]
+                }
+              ],
+              "solution": "E_$Menge = 3$,0.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "E_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "Menge = 3"
+                },
+                {
+                  "t": "text",
+                  "text": ",0."
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 3.0,
+                "tol": 0.01
+              }
+            },
+            {
+              "prompt": "c) Tornado: welcher Treiber oben?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "c) Tornado: welcher Treiber oben?"
+                }
+              ],
+              "hints": [
+                "Vergleiche |ΔG| bei ±5%.",
+                "Größerer Balken zuerst."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Vergleiche |ΔG| bei ±5%."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Größerer Balken zuerst."
+                    }
+                  ]
+                }
+              ],
+              "solution": "Preis (|Δ|=60k) vor Menge (36k).",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Preis (|Δ|=60k) vor Menge (36k)."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Preis"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F2 – Break‑even Preis",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F2 – Break‑even Preis"
+            }
+          ],
+          "context": "Fixkosten 180k, vK € 62,-/Stk., Menge 4,500 Stk.",
+          "tasks": [
+            {
+              "prompt": "a) BE‑Preis?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) BE‑Preis?"
+                }
+              ],
+              "hints": [
+                "Formel: $P = vK + Fix$/M.",
+                "Setze Zahlen ein."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Formel: "
+                    },
+                    {
+                      "t": "math_inline",
+                      "tex": "P = vK + Fix"
+                    },
+                    {
+                      "t": "text",
+                      "text": "/M."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Setze Zahlen ein."
+                    }
+                  ]
+                }
+              ],
+              "solution": "$P = 62 + 180000$/4500 = € 102,-,-",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "P = 62 + 180000"
+                },
+                {
+                  "t": "text",
+                  "text": "/4500 = € 102,-,-"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 102.0,
+                "tol": 0.1
+              }
+            },
+            {
+              "prompt": "b) Sicherheitsmarge bei aktuellem Preis € 98,-,- relativ zum BE‑Preis?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Sicherheitsmarge bei aktuellem Preis € 98,-,- relativ zum BE‑Preis?"
+                }
+              ],
+              "hints": [
+                "(BE−aktuell)/BE.",
+                "In % angeben."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "(BE−aktuell)/BE."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "In % angeben."
+                    }
+                  ]
+                }
+              ],
+              "solution": "(102−98)/102 ≈ 3,9%.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "(102−98)/102 ≈ 3,9%."
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 0.0392,
+                "tol": 0.002
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "F3 – 2‑Faktoren‑Sensitivität $(Preis\\times Menge)$",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F3 – 2‑Faktoren‑Sensitivität "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(Preis\\times Menge)"
+            }
+          ],
+          "context": "Baseline: Gewinn 120k. Preis −5% und Menge −5% führen zu Gewinn 48k.",
+          "tasks": [
+            {
+              "prompt": "a) ΔGewinn absolut?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) ΔGewinn absolut?"
+                }
+              ],
+              "hints": [
+                "48−120.",
+                "Achte auf Vorzeichen."
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "48−120."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Achte auf Vorzeichen."
+                    }
+                  ]
+                }
+              ],
+              "solution": "ΔG = −72k.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "ΔG = −72k."
+                }
+              ],
+              "check": {
+                "type": "numeric",
+                "expected": -72000
+              }
+            },
+            {
+              "prompt": "b) Handlungsempfehlung kurz?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "b) Handlungsempfehlung kurz?"
+                }
+              ],
+              "hints": [
+                "Denke an Preisstaffeln/Vertrieb.",
+                "Fixkosten flexibilisieren?"
+              ],
+              "hints_segments": [
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Denke an Preisstaffeln/Vertrieb."
+                    }
+                  ]
+                },
+                {
+                  "segments": [
+                    {
+                      "t": "text",
+                      "text": "Fixkosten flexibilisieren?"
+                    }
+                  ]
+                }
+              ],
+              "solution": "Preisdifferenzierung & Vertriebsschwerpunkt; Kostenvariabilisierung prüfen.",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Preisdifferenzierung & Vertriebsschwerpunkt; Kostenvariabilisierung prüfen."
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Preis"
+              }
+            }
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
