@@ -1,0 +1,961 @@
+{
+  "id": "M11L04",
+  "title": "Geo-Experimente & Interferenz (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Geo-Experimente & Interferenz (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Geo-Experimente & Interferenz (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M11L04"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M11L04"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Geo-Design abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Geo-Design abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Cluster-Randomisierung hilft…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Cluster-Randomisierung hilft…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Interferenz zu verringern",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Interferenz zu verringern"
+                }
+              ]
+            },
+            {
+              "text": "Bias zu erhöhen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Bias zu erhöhen"
+                }
+              ]
+            },
+            {
+              "text": "nichts",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nichts"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Design-Vorteil. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Design-Vorteil. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Guardrails sind KPIs, die nicht verschlechtern dürfen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Guardrails sind KPIs, die nicht verschlechtern dürfen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Sicherungsmechanismus. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sicherungsmechanismus. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Randomization Inference basiert auf…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Randomization Inference basiert auf…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Permutation der Zuweisung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Permutation der Zuweisung"
+                }
+              ]
+            },
+            {
+              "text": "Normalverteilung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Normalverteilung"
+                }
+              ]
+            },
+            {
+              "text": "ARIMA",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ARIMA"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Exakte Inferenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Exakte Inferenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Standardabweichung ist die Wurzel aus der Varianz."
+            }
+          ],
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert."
+            }
+          ],
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Power verbessert durch…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Power verbessert durch…"
+            }
+          ],
+          "options": [
+            {
+              "text": "mehr Cluster/geringere Varianz/stärkerer Effekt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "mehr Cluster/geringere Varianz/stärkerer Effekt"
+                }
+              ]
+            },
+            {
+              "text": "weniger Cluster",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "weniger Cluster"
+                }
+              ]
+            },
+            {
+              "text": "höhere Varianz",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "höhere Varianz"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Daumenregel. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Daumenregel. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Stratifizierung vor Randomisierung ist sinnvoll.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Stratifizierung vor Randomisierung ist sinnvoll."
+            }
+          ],
+          "answer": true,
+          "rationale": "Balance verbessern. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Balance verbessern. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Auswertung kann…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Auswertung kann…"
+            }
+          ],
+          "options": [
+            {
+              "text": "DiD/SC/BSTS je nach Daten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "DiD/SC/BSTS je nach Daten"
+                }
+              ]
+            },
+            {
+              "text": "nur Mittelwertvergleich",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Mittelwertvergleich"
+                }
+              ]
+            },
+            {
+              "text": "nur p-Wert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur p-Wert"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Kontextabhängig. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kontextabhängig. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei Interferenz…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei Interferenz…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Pufferzonen/Design anpassen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Pufferzonen/Design anpassen"
+                }
+              ]
+            },
+            {
+              "text": "ignorieren",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ignorieren"
+                }
+              ]
+            },
+            {
+              "text": "nur ROI rechnen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur ROI rechnen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Bias reduzieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bias reduzieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Vorab definierte Stopping-Regeln verhindern Bias.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Vorab definierte Stopping-Regeln verhindern Bias."
+            }
+          ],
+          "answer": true,
+          "rationale": "Governance. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Governance. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Berichte neben Effektgröße…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Berichte neben Effektgröße…"
+            }
+          ],
+          "options": [
+            {
+              "text": "nur p-Wert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur p-Wert"
+                }
+              ]
+            },
+            {
+              "text": "Intervalle & ROI",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Intervalle & ROI"
+                }
+              ]
+            },
+            {
+              "text": "nur ROI",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur ROI"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Entscheidungsrelevant. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Entscheidungsrelevant. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Falle:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Falle:"
+            }
+          ],
+          "options": [
+            {
+              "text": "keine Guardrails",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Guardrails"
+                }
+              ]
+            },
+            {
+              "text": "Stratifizierung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Stratifizierung"
+                }
+              ]
+            },
+            {
+              "text": "Monitoring",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Monitoring"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Risiko. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Risiko. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Permutationstest ist bei kleinen n nützlich.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Permutationstest ist bei kleinen n nützlich."
+            }
+          ],
+          "answer": true,
+          "rationale": "Exakt/robust. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Exakt/robust. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Dokumentiere…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Dokumentiere…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Design, Randomisierung, Regeln",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Design, Randomisierung, Regeln"
+                }
+              ]
+            },
+            {
+              "text": "nur Ergebnis",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Ergebnis"
+                }
+              ]
+            },
+            {
+              "text": "nichts",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nichts"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Transparenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Transparenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Geo-Design: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Geo-Design: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "introduction",
+      "text": "PLATZHALTER – Einführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Einführung folgt."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in $Einheiten^2$, Standardabweichung in Einheiten.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Einheiten^2"
+        },
+        {
+          "t": "text",
+          "text": ", Standardabweichung in Einheiten."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Worked Example"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] …"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] …"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Fading Example"
+          }
+        ],
+        "steps": [
+          "…"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "…"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini 1",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 1"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini 2",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 2"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "PLATZHALTER – Aufgabe",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aufgabe"
+            }
+          ],
+          "hints": [
+            "…"
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "…"
+                }
+              ]
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

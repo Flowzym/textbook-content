@@ -1,0 +1,88 @@
+{
+  "id": "M08",
+  "title": "Zeitreihen & Forecasting (v2) – Prüfungssets A–D",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zeitreihen & Forecasting (v2) – Prüfungssets A–D",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen & Forecasting (v2) – Prüfungssets A–D"
+        }
+      ]
+    }
+  ],
+  "description": "Zusätzliche Quiz-Blöcke A–D für alle Lessons (Grundlagen, Methoden, Gütemaße, Praxis).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Zusätzliche Quiz-Blöcke A–D für alle Lessons (Grundlagen, Methoden, Gütemaße, Praxis).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zusätzliche Quiz-Blöcke A–D für alle Lessons (Grundlagen, Methoden, Gütemaße, Praxis)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M08L01",
+      "title": "Zeitreihen I – Grundlagen, Visualisierung & Komponenten (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen I – Grundlagen, Visualisierung & Komponenten (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M08L02",
+      "title": "Zeitreihen II – Glättung: MA, SES, Holt, Holt‑Winters (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen II – Glättung: MA, SES, Holt, Holt‑Winters (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M08L03",
+      "title": "Zeitreihen III – Forecastgüte & Backtesting (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen III – Forecastgüte & Backtesting (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M08L04",
+      "title": "Zeitreihen IV – Praxisfälle & Kombinationen (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen IV – Praxisfälle & Kombinationen (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "version": "v2",
+  "updated_at": "2025-08-17T09:45:50.741271",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

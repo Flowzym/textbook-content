@@ -1,0 +1,1735 @@
+{
+  "id": "M07L02",
+  "title": "Ganzzahlige Modelle II – Branch‑and‑Bound (v2: Walkthroughs + Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Ganzzahlige Modelle II – Branch‑and‑Bound (v2: Walkthroughs + Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ganzzahlige Modelle II – Branch‑and‑Bound (v2: Walkthroughs + Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 110,
+  "prerequisites": [
+    "M07L02"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M07L02"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Bounds, Branching‑Regeln, Fathoming, Integrality Gap.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Bounds, Branching‑Regeln, Fathoming, Integrality Gap."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "B&B‑Bäume skizzieren, Bounds vergleichen, Abschneidekriterien korrekt anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "B&B‑Bäume skizzieren, Bounds vergleichen, Abschneidekriterien korrekt anwenden."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Schnittideen qualitativ bewerten; Heuristik‑Startlösungen als Untergrenze nutzen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schnittideen qualitativ bewerten; Heuristik‑Startlösungen als Untergrenze nutzen."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Zwei ausführliche Walkthroughs mit ASCII‑Bäumen + vier Prüfungssets.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zwei ausführliche Walkthroughs mit ASCII‑Bäumen + vier Prüfungssets."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "walkthrough",
+      "title": "Walkthrough 1 – 0/1‑Rucksack $(Budget=6)$",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Walkthrough 1 – 0/1‑Rucksack "
+        },
+        {
+          "t": "math_inline",
+          "tex": "(Budget=6)"
+        }
+      ],
+      "text": "Daten: DB=[50,40,35], Kosten=[4,3,3], y∈{0,1}. Ziel: max Σ $DB\\cdot y$, Σ $Kosten\\cdot y ≤ 6$.\nRoot‑LP (Relaxation): $y1=1$, $y2=2$/3, $y3=0$ → z_$LP=50+26$,$7=76$,7 (obere Schranke).\nBranch auf y2:\n  $y2=1$  → Budget 7>6 → unzulässig (fathom).\n  $y2=0$  → verbleibend 2 → $y3=0$; zulässig, $z=50$ → beste int. Lösung z*=50 (Untergrenze).\nBranch auf y3 vom Root (alternativ):\n  $y3=1$  → LP mit $y3=1$, $y1=1$ nicht möglich $(4+3$>6), prüfe Kombinationen → $y1=0$,$y2=1$,$z=40$; $y1=0$,$y2=0$,$z=35$ ⇒ bester Pfad $z=40$ < 50 (fathom).\nErgebnis: z*=50, Bound z_$LP=76$,7 → Gap≈(76,$7-50)$/76,7≈35% (vor Cuts/weitere Branches).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Daten: DB=[50,40,35], Kosten=[4,3,3], y∈{0,1}. Ziel: max Σ "
+        },
+        {
+          "t": "math_inline",
+          "tex": "DB\\cdot y"
+        },
+        {
+          "t": "text",
+          "text": ", Σ "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Kosten\\cdot y ≤ 6"
+        },
+        {
+          "t": "text",
+          "text": ".\nRoot‑LP (Relaxation): "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1=1"
+        },
+        {
+          "t": "text",
+          "text": ", "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=2"
+        },
+        {
+          "t": "text",
+          "text": "/3, "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y3=0"
+        },
+        {
+          "t": "text",
+          "text": " → z_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "LP=50+26"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "7=76"
+        },
+        {
+          "t": "text",
+          "text": ",7 (obere Schranke).\nBranch auf y2:\n  "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=1"
+        },
+        {
+          "t": "text",
+          "text": "  → Budget 7>6 → unzulässig (fathom).\n  "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=0"
+        },
+        {
+          "t": "text",
+          "text": "  → verbleibend 2 → "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y3=0"
+        },
+        {
+          "t": "text",
+          "text": "; zulässig, "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=50"
+        },
+        {
+          "t": "text",
+          "text": " → beste int. Lösung z*=50 (Untergrenze).\nBranch auf y3 vom Root (alternativ):\n  "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y3=1"
+        },
+        {
+          "t": "text",
+          "text": "  → LP mit "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y3=1"
+        },
+        {
+          "t": "text",
+          "text": ", "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1=1"
+        },
+        {
+          "t": "text",
+          "text": " nicht möglich "
+        },
+        {
+          "t": "math_inline",
+          "tex": "(4+3"
+        },
+        {
+          "t": "text",
+          "text": ">6), prüfe Kombinationen → "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1=0"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=1"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=40"
+        },
+        {
+          "t": "text",
+          "text": "; "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1=0"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=0"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=35"
+        },
+        {
+          "t": "text",
+          "text": " ⇒ bester Pfad "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=40"
+        },
+        {
+          "t": "text",
+          "text": " < 50 (fathom).\nErgebnis: z*=50, Bound z_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "LP=76"
+        },
+        {
+          "t": "text",
+          "text": ",7 → Gap≈(76,"
+        },
+        {
+          "t": "math_inline",
+          "tex": "7-50)"
+        },
+        {
+          "t": "text",
+          "text": "/76,7≈35% (vor Cuts/weitere Branches)."
+        }
+      ],
+      "steps": [
+        "Daten: DB=[50,40,35], Kosten=[4,3,3], y∈{0,1}. Ziel: max Σ $DB\\cdot y$, Σ $Kosten\\cdot y$ ≤",
+        "Root‑LP (Relaxation): $y1=1$, $y2=2$/3, $y3=0$ → z_$LP=50+26$,$7=76$,7 (obere Schranke",
+        "Branch auf y2:",
+        "$y2=1$  → Budget 7>6 → unzulässig (fathom",
+        "$y2=0$  → verbleibend 2 → $y3=0$; zulässig, $z=50$ → beste int. Lösung z*=50 (Untergrenze",
+        "Branch auf y3 vom Root (alternativ):",
+        "$y3=1$  → LP mit $y3=1$, $y1=1$ nicht möglich $(4+3$>6), prüfe Kombinationen → $y1=0$,$y2=1$,$z=40$; $y1=0$,$y2=0$,$z=35$ → bester Pfad $z=40$ < 50 (fathom",
+        "Ergebnis: z*=50, Bound z_$LP=76$,7 → Gap≈(76,$7-50)$/76,7≈35% (vor Cuts/weitere Branches"
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Daten: DB=[50,40,35], Kosten=[4,3,3], y∈{0,1}. Ziel: max Σ "
+            },
+            {
+              "t": "math_inline",
+              "tex": "DB\\cdot y"
+            },
+            {
+              "t": "text",
+              "text": ", Σ "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Kosten\\cdot y"
+            },
+            {
+              "t": "text",
+              "text": " ≤"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Root‑LP (Relaxation): "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y1=1"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y2=2"
+            },
+            {
+              "t": "text",
+              "text": "/3, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y3=0"
+            },
+            {
+              "t": "text",
+              "text": " → z_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "LP=50+26"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "7=76"
+            },
+            {
+              "t": "text",
+              "text": ",7 (obere Schranke"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Branch auf y2:"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "math_inline",
+              "tex": "y2=1"
+            },
+            {
+              "t": "text",
+              "text": "  → Budget 7>6 → unzulässig (fathom"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "math_inline",
+              "tex": "y2=0"
+            },
+            {
+              "t": "text",
+              "text": "  → verbleibend 2 → "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y3=0"
+            },
+            {
+              "t": "text",
+              "text": "; zulässig, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=50"
+            },
+            {
+              "t": "text",
+              "text": " → beste int. Lösung z*=50 (Untergrenze"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Branch auf y3 vom Root (alternativ):"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "math_inline",
+              "tex": "y3=1"
+            },
+            {
+              "t": "text",
+              "text": "  → LP mit "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y3=1"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y1=1"
+            },
+            {
+              "t": "text",
+              "text": " nicht möglich "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(4+3"
+            },
+            {
+              "t": "text",
+              "text": ">6), prüfe Kombinationen → "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y1=0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "y2=1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=40"
+            },
+            {
+              "t": "text",
+              "text": "; "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y1=0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "y2=0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=35"
+            },
+            {
+              "t": "text",
+              "text": " → bester Pfad "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=40"
+            },
+            {
+              "t": "text",
+              "text": " < 50 (fathom"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Ergebnis: z*=50, Bound z_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "LP=76"
+            },
+            {
+              "t": "text",
+              "text": ",7 → Gap≈(76,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "7-50)"
+            },
+            {
+              "t": "text",
+              "text": "/76,7≈35% (vor Cuts/weitere Branches"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "ASCII‑B&B‑Baum (Walkthrough 1)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "ASCII‑B&B‑Baum (Walkthrough 1)"
+        }
+      ],
+      "ascii": "[Root] z_$LP=76$,7\n    /           \\\n $y2=1$         $y2=0$  $(z=50$ int)\ninfeas         |\n             fathom $(best=50)$",
+      "caption": "Fathoming durch Unzulässigkeit bzw. schlechteren Bound.",
+      "alt_text": "ASCII-Visual: Fathoming durch Unzulässigkeit bzw. schlechteren Bound. — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: Fathoming durch Unzulässigkeit bzw. schlechteren Bound. — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "walkthrough",
+      "title": "Walkthrough 2 – Auswahl mit Bonus (klein)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Walkthrough 2 – Auswahl mit Bonus (klein)"
+        }
+      ],
+      "text": "Projekte A,B,C: DB=[60,45,30], Kosten=[5,4,3], Budget 8. Bonus 20, wenn A und B gemeinsam (z_$AB=1$ ⇒ $yA=yB=1)$.\nRoot‑LP liefert z_LP≈? (fraktional). Startheuristik (Greedy nach DB/Kosten): wähle A (12), B (11,25) → Budget 9>8,\ntausche B gegen C: $A+C$ (12 und 10) Budget 8 → $z=90$. Prüfe Bonus‑Pfad: $B+C$ (11,25 und 10) $z=75$ ohne Bonus; $A+B$ wäre $105+20=125$, aber Budget 9>8.\nB&B: Branch auf yA:\n  $yA=1$ → Restbudget 3 → kann nur C (3) → $z=90$ (int, $Untergrenze=90)$.\n  $yA=0$ → dann wähle $B+C$ (7) → $z=75$ (int). Root‑Bound z_$LP≥90$ ⇒ Gap klein; Optimum z*=90.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Projekte A,B,C: DB=[60,45,30], Kosten=[5,4,3], Budget 8. Bonus 20, wenn A und B gemeinsam (z_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "AB=1"
+        },
+        {
+          "t": "text",
+          "text": " ⇒ "
+        },
+        {
+          "t": "math_inline",
+          "tex": "yA=yB=1)"
+        },
+        {
+          "t": "text",
+          "text": ".\nRoot‑LP liefert z_LP≈? (fraktional). Startheuristik (Greedy nach DB/Kosten): wähle A (12), B (11,25) → Budget 9>8,\ntausche B gegen C: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "A+C"
+        },
+        {
+          "t": "text",
+          "text": " (12 und 10) Budget 8 → "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=90"
+        },
+        {
+          "t": "text",
+          "text": ". Prüfe Bonus‑Pfad: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "B+C"
+        },
+        {
+          "t": "text",
+          "text": " (11,25 und 10) "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=75"
+        },
+        {
+          "t": "text",
+          "text": " ohne Bonus; "
+        },
+        {
+          "t": "math_inline",
+          "tex": "A+B"
+        },
+        {
+          "t": "text",
+          "text": " wäre "
+        },
+        {
+          "t": "math_inline",
+          "tex": "105+20=125"
+        },
+        {
+          "t": "text",
+          "text": ", aber Budget 9>8.\nB&B: Branch auf yA:\n  "
+        },
+        {
+          "t": "math_inline",
+          "tex": "yA=1"
+        },
+        {
+          "t": "text",
+          "text": " → Restbudget 3 → kann nur C (3) → "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=90"
+        },
+        {
+          "t": "text",
+          "text": " (int, "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Untergrenze=90)"
+        },
+        {
+          "t": "text",
+          "text": ".\n  "
+        },
+        {
+          "t": "math_inline",
+          "tex": "yA=0"
+        },
+        {
+          "t": "text",
+          "text": " → dann wähle "
+        },
+        {
+          "t": "math_inline",
+          "tex": "B+C"
+        },
+        {
+          "t": "text",
+          "text": " (7) → "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=75"
+        },
+        {
+          "t": "text",
+          "text": " (int). Root‑Bound z_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "LP≥90"
+        },
+        {
+          "t": "text",
+          "text": " ⇒ Gap klein; Optimum z*=90."
+        }
+      ],
+      "steps": [
+        "Projekte A,B,C: DB=[60,45,30], Kosten=[5,4,3], Budget 8. Bonus 20, wenn A und B gemeinsam (z_$AB=1$ → $yA=yB$=",
+        "Root‑LP liefert z_LP≈? (fraktional). Startheuristik (Greedy nach DB/Kosten): wähle A (12), B (11,25) → Budget 9>8,",
+        "tausche B gegen C: $A+C$ (12 und 10) Budget 8 → $z=90$. Prüfe Bonus‑Pfad: $B+C$ (11,25 und 10) $z=75$ ohne Bonus; $A+B$ wäre $105+20=125$, aber Budget 9>",
+        "B&B: Branch auf yA:",
+        "$yA=1$ → Restbudget 3 → kann nur C (3) → $z=90$ (int, Untergrenze=",
+        "$yA=0$ → dann wähle $B+C$ (7) → $z=75$ (int). Root‑Bound z_$LP≥90$ → Gap klein; Optimum z*="
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Projekte A,B,C: DB=[60,45,30], Kosten=[5,4,3], Budget 8. Bonus 20, wenn A und B gemeinsam (z_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "AB=1"
+            },
+            {
+              "t": "text",
+              "text": " → "
+            },
+            {
+              "t": "math_inline",
+              "tex": "yA=yB"
+            },
+            {
+              "t": "text",
+              "text": "="
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Root‑LP liefert z_LP≈? (fraktional). Startheuristik (Greedy nach DB/Kosten): wähle A (12), B (11,25) → Budget 9>8,"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "tausche B gegen C: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "A+C"
+            },
+            {
+              "t": "text",
+              "text": " (12 und 10) Budget 8 → "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=90"
+            },
+            {
+              "t": "text",
+              "text": ". Prüfe Bonus‑Pfad: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "B+C"
+            },
+            {
+              "t": "text",
+              "text": " (11,25 und 10) "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=75"
+            },
+            {
+              "t": "text",
+              "text": " ohne Bonus; "
+            },
+            {
+              "t": "math_inline",
+              "tex": "A+B"
+            },
+            {
+              "t": "text",
+              "text": " wäre "
+            },
+            {
+              "t": "math_inline",
+              "tex": "105+20=125"
+            },
+            {
+              "t": "text",
+              "text": ", aber Budget 9>"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "B&B: Branch auf yA:"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "math_inline",
+              "tex": "yA=1"
+            },
+            {
+              "t": "text",
+              "text": " → Restbudget 3 → kann nur C (3) → "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=90"
+            },
+            {
+              "t": "text",
+              "text": " (int, Untergrenze="
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "math_inline",
+              "tex": "yA=0"
+            },
+            {
+              "t": "text",
+              "text": " → dann wähle "
+            },
+            {
+              "t": "math_inline",
+              "tex": "B+C"
+            },
+            {
+              "t": "text",
+              "text": " (7) → "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=75"
+            },
+            {
+              "t": "text",
+              "text": " (int). Root‑Bound z_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "LP≥90"
+            },
+            {
+              "t": "text",
+              "text": " → Gap klein; Optimum z*="
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Bounds & Fathoming",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Bounds & Fathoming"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Max‑Problem: LP‑Relaxation ist…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Max‑Problem: LP‑Relaxation ist…"
+            }
+          ],
+          "options": [
+            {
+              "text": "untere Schranke",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "untere Schranke"
+                }
+              ]
+            },
+            {
+              "text": "obere Schranke",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "obere Schranke"
+                }
+              ]
+            },
+            {
+              "text": "keine Schranke",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Schranke"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "z_LP ≥ z_int. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. z_LP ≥ z_int. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Ein Zweig mit Bound 72 kann gefathomt werden, wenn bestes int. z*=74.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Ein Zweig mit Bound 72 kann gefathomt werden, wenn bestes int. z*=74."
+            }
+          ],
+          "answer": true,
+          "rationale": "72<74. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 72<74. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Unzulässiger Zweig wird…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Unzulässiger Zweig wird…"
+            }
+          ],
+          "options": [
+            {
+              "text": "weiter verzweigt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "weiter verzweigt"
+                }
+              ]
+            },
+            {
+              "text": "gefathomt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "gefathomt"
+                }
+              ]
+            },
+            {
+              "text": "als Lösung genommen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "als Lösung genommen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Kein Potenzial. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Potenzial. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Branching",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Branching"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Branching‑Variable wählen:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Branching‑Variable wählen:"
+            }
+          ],
+          "options": [
+            {
+              "text": "am nächsten an 0/1 (fraktional)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "am nächsten an 0/1 (fraktional)"
+                }
+              ]
+            },
+            {
+              "text": "mit kleinstem c_j",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "mit kleinstem c_j"
+                }
+              ]
+            },
+            {
+              "text": "zufällig",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "zufällig"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Starker Split. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Starker Split. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Symmetrie kann den Baum aufblähen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Symmetrie kann den Baum aufblähen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Vermeide äquivalente Zweige. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vermeide äquivalente Zweige. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Startheuristik liefert…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Startheuristik liefert…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Untergrenze",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Untergrenze"
+                }
+              ]
+            },
+            {
+              "text": "Obergrenze",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Obergrenze"
+                }
+              ]
+            },
+            {
+              "text": "beides",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beides"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Feasible z* (UB/LB je nach Max/Min). | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Feasible z* (UB/LB je nach Max/Min). | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Cuts & Gap",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Cuts & Gap"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Gomory‑Cuts…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Gomory‑Cuts…"
+            }
+          ],
+          "options": [
+            {
+              "text": "schneiden fraktionale Lösungen ab",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "schneiden fraktionale Lösungen ab"
+                }
+              ]
+            },
+            {
+              "text": "ändern Zielfunktion",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ändern Zielfunktion"
+                }
+              ]
+            },
+            {
+              "text": "erhöhen Integrality Gap",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "erhöhen Integrality Gap"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Stärken Relaxation. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stärken Relaxation. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Kleiner $Gap = starke$ Relaxation.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Kleiner "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Gap = starke"
+            },
+            {
+              "t": "text",
+              "text": " Relaxation."
+            }
+          ],
+          "answer": true,
+          "rationale": "Gute Bounds. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gute Bounds. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Gap‑Formel (Max):",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Gap‑Formel (Max):"
+            }
+          ],
+          "options": [
+            {
+              "text": "(z_LP−z*)/z_LP",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "(z_LP−z*)/z_LP"
+                }
+              ]
+            },
+            {
+              "text": "(z*−z_LP)/z*",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "(z*−z_LP)/z*"
+                }
+              ]
+            },
+            {
+              "text": "(z_LP−z*)/z*",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "(z_LP−z*)/z*"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Standard. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Standard. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fathome einen Zweig, wenn…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Fathome einen Zweig, wenn…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Bound schlechter als z*",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Bound schlechter als z*"
+                }
+              ]
+            },
+            {
+              "text": "Bound besser als z*",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Bound besser als z*"
+                }
+              ]
+            },
+            {
+              "text": "int. Lösung schlechter als z*",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "int. Lösung schlechter als z*"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Kein Potenzial. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Kein Potenzial. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Ein int. Zweig wird immer gefathomt (keine Fraktionalität mehr).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Ein int. Zweig wird immer gefathomt (keine Fraktionalität mehr)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Endknoten. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Endknoten. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Warum Warm‑Start/Heuristik?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Warum Warm‑Start/Heuristik?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Beschleunigt Fathoming",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Beschleunigt Fathoming"
+                }
+              ]
+            },
+            {
+              "text": "verhindert LP‑Lösen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "verhindert LP‑Lösen"
+                }
+              ]
+            },
+            {
+              "text": "verschlechtert Bounds",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "verschlechtert Bounds"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Bessere Untergrenze. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bessere Untergrenze. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst B&B‑Bäume lesen/zeichnen, Bounds richtig deuten und Prüfungsaufgaben sicher lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Du kannst B&B‑Bäume lesen/zeichnen, Bounds richtig deuten und Prüfungsaufgaben sicher lösen."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Lineare Gleichungen isolieren: gleiche Operation auf beiden Seiten.\n- Klammern zuerst auflösen, dann nach x umstellen.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Lineare Gleichungen isolieren: gleiche Operation auf beiden Seiten.\n- Klammern zuerst auflösen, dann nach x umstellen."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini 1",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 1"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini 2",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 2"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "PLATZHALTER – Aufgabe",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aufgabe"
+            }
+          ],
+          "hints": [
+            "…"
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "…"
+                }
+              ]
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

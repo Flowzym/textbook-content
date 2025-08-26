@@ -1,0 +1,650 @@
+{
+  "id": "M11L01",
+  "title": "SC I – Prinzip, Donor, Placebos (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "SC I – Prinzip, Donor, Placebos (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "SC I – Prinzip, Donor, Placebos (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M11L01"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M11L01"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Synthetische Kontrolle abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Synthetische Kontrolle abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wozu dient der Donor-Pool?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wozu dient der Donor-Pool?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Counterfactual aus mehreren Einheiten bilden",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Counterfactual aus mehreren Einheiten bilden"
+                }
+              ]
+            },
+            {
+              "text": "nur Varianz schätzen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Varianz schätzen"
+                }
+              ]
+            },
+            {
+              "text": "Post-Perioden definieren",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Post-Perioden definieren"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Konvexe Mischung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konvexe Mischung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "SC-Gewichte sind nichtnegativ und summieren zu 1.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "SC-Gewichte sind nichtnegativ und summieren zu 1."
+            }
+          ],
+          "answer": true,
+          "rationale": "Konvexe Kombination.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Konvexe Kombination.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "RMSPE bewertet…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "RMSPE bewertet…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Pre-Fit-Fehler",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Pre-Fit-Fehler"
+                }
+              ]
+            },
+            {
+              "text": "Post-Gap",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Post-Gap"
+                }
+              ]
+            },
+            {
+              "text": "Kovarianz",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Kovarianz"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Passgüte im Pre.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Passgüte im Pre.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Standardabweichung ist die Wurzel aus der Varianz."
+            }
+          ],
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert."
+            }
+          ],
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Gap definiert als…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Gap definiert als…"
+            }
+          ],
+          "options": [
+            {
+              "text": "ŷ_syn − y",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ŷ_syn − y"
+                }
+              ]
+            },
+            {
+              "text": "y − ŷ_syn",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "y − ŷ_syn"
+                }
+              ]
+            },
+            {
+              "text": "y + ŷ_syn",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "y + ŷ_syn"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Differenz tatsächlich minus synthetisch.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Differenz tatsächlich minus synthetisch.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein großer Post-Gap ist nur aussagekräftig bei gutem Pre-Fit.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Ein großer Post-Gap ist nur aussagekräftig bei gutem Pre-Fit."
+            }
+          ],
+          "answer": true,
+          "rationale": "Sonst Schein-Effekt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sonst Schein-Effekt.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Placebo-in-space bedeutet…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Placebo-in-space bedeutet…"
+            }
+          ],
+          "options": [
+            {
+              "text": "falsches t0",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "falsches t0"
+                }
+              ]
+            },
+            {
+              "text": "so tun als wären andere Einheiten behandelt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "so tun als wären andere Einheiten behandelt"
+                }
+              ]
+            },
+            {
+              "text": "Bootstrap",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Bootstrap"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Inference über Vergleichsverteilung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Inference über Vergleichsverteilung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Kovariaten-Balance prüft…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Kovariaten-Balance prüft…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Gleichheit wichtiger Merkmale im Pre",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Gleichheit wichtiger Merkmale im Pre"
+                }
+              ]
+            },
+            {
+              "text": "nur Mittelwerte im Post",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Mittelwerte im Post"
+                }
+              ]
+            },
+            {
+              "text": "nur Varianz",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Varianz"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Balance-Tabelle.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Balance-Tabelle.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Leakage im Donor-Pool kann Effekte verzerren.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Leakage im Donor-Pool kann Effekte verzerren."
+            }
+          ],
+          "answer": true,
+          "rationale": "Indirekte Betroffenheit vermeiden.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Indirekte Betroffenheit vermeiden.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "In-time-Placebo ist…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "In-time-Placebo ist…"
+            }
+          ],
+          "options": [
+            {
+              "text": "falsches t0 in derselben Einheit",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "falsches t0 in derselben Einheit"
+                }
+              ]
+            },
+            {
+              "text": "andere Einheit behandeln",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "andere Einheit behandeln"
+                }
+              ]
+            },
+            {
+              "text": "Permutation der Gewichte",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Permutation der Gewichte"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Robustheit über Zeit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Robustheit über Zeit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Falle:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Falle:"
+            }
+          ],
+          "options": [
+            {
+              "text": "zu kurzes Pre-Fenster",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "zu kurzes Pre-Fenster"
+                }
+              ]
+            },
+            {
+              "text": "Balance prüfen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Balance prüfen"
+                }
+              ]
+            },
+            {
+              "text": "Placebos berichten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Placebos berichten"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Instabile Gewichte.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Instabile Gewichte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Negative Gewichte sind in klassischer SC nicht zulässig.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Negative Gewichte sind in klassischer SC nicht zulässig."
+            }
+          ],
+          "answer": true,
+          "rationale": "Nichtnegativitätsrestriktion.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nichtnegativitätsrestriktion.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Dokumentiere immer…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Dokumentiere immer…"
+            }
+          ],
+          "options": [
+            {
+              "text": "nur Punktwert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Punktwert"
+                }
+              ]
+            },
+            {
+              "text": "Pre-RMSPE, Gap, Placebos",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Pre-RMSPE, Gap, Placebos"
+                }
+              ]
+            },
+            {
+              "text": "nur ROI",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur ROI"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Reproduzierbarkeit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Reproduzierbarkeit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Synthetische Kontrolle: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Synthetische Kontrolle: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

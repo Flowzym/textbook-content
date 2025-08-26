@@ -1,0 +1,824 @@
+{
+  "id": "M01L04_v2",
+  "title": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Lineare Gleichungen & Ungleichungen – Textaufgaben im Controlling (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 14,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Lineare (Un-)Gleichungen abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Lineare (Un-)Gleichungen abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft Gleichungen & Ungleichungen mit gezielten Prüfungssets A–D. Focus auf Äquivalenzumformungen, Break-Even und Textaufgaben.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Diese Lesson vertieft Gleichungen & Ungleichungen mit gezielten Prüfungssets A–D. Focus auf Äquivalenzumformungen, Break-Even und Textaufgaben."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Prüfungssets-Übersicht",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungssets-Übersicht"
+        }
+      ],
+      "text": "- **Set A**: Grundlagen (Gleichung lösen, Ungleichungsrichtung, lineare Funktion)  \n- **Set B**: Methoden/Regeln (Systeme, Äquivalenz, Break-Even)  \n- **Set C**: Diagnose/Fehler (Richtungsumkehr, Einheiten, Umformungen)  \n- **Set D**: Praxis & Fallen (Gewinnziel, Systeme grafisch, Struktur)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "- **Set A**: Grundlagen (Gleichung lösen, Ungleichungsrichtung, lineare Funktion)  \n- **Set B**: Methoden/Regeln (Systeme, Äquivalenz, Break-Even)  \n- **Set C**: Diagnose/Fehler (Richtungsumkehr, Einheiten, Umformungen)  \n- **Set D**: Praxis & Fallen (Gewinnziel, Systeme grafisch, Struktur)"
+        }
+      ],
+      "explanation": "\n\n**$Decision-Hints$:**\n- $Break-even$, wenn $Gewinn=0$: x_$BE = K$_fix/$(p-k$_v).\n- Zielgewinn mit (K_$fix+G)$/$(p-k$_v) berechnen.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Break-even"
+        },
+        {
+          "t": "text",
+          "text": ", wenn "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Gewinn=0"
+        },
+        {
+          "t": "text",
+          "text": ": x_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "BE = K"
+        },
+        {
+          "t": "text",
+          "text": "_fix/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(p-k"
+        },
+        {
+          "t": "text",
+          "text": "_v).\n- Zielgewinn mit (K_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "fix+G)"
+        },
+        {
+          "t": "text",
+          "text": "/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(p-k"
+        },
+        {
+          "t": "text",
+          "text": "_v) berechnen."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Löse: $3x-7=2x+5$",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Löse: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "3x-7=2x+5"
+            }
+          ],
+          "options": [
+            {
+              "text": "$x=12$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x=12"
+                }
+              ]
+            },
+            {
+              "text": "x=−12",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "x=−12"
+                }
+              ]
+            },
+            {
+              "text": "$x=4$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x=4"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "x nach links, Zahlen nach rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. x nach links, Zahlen nach rechts.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Multiplikation einer Ungleichung mit −1 kehrt sich die Richtung um.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei Multiplikation einer Ungleichung mit −1 kehrt sich die Richtung um."
+            }
+          ],
+          "answer": true,
+          "rationale": "Regel für Ungleichungen.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Regel für Ungleichungen.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Lineare Funktion $y=a\\cdot x+b$: a ist…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Funktion "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y=a\\cdot x+b"
+            },
+            {
+              "t": "text",
+              "text": ": a ist…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Steigung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Steigung"
+                }
+              ]
+            },
+            {
+              "text": "Achsenabschnitt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Achsenabschnitt"
+                }
+              ]
+            },
+            {
+              "text": "Produkt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Produkt"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Definition.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Regeln",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Regeln"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "System lösen: $x+y=110$, $2x+3y=280$",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "System lösen: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x+y=110"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2x+3y=280"
+            }
+          ],
+          "options": [
+            {
+              "text": "$x=50$,$y=60$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x=50"
+                },
+                {
+                  "t": "text",
+                  "text": ","
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y=60"
+                }
+              ]
+            },
+            {
+              "text": "$x=60$,$y=50$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x=60"
+                },
+                {
+                  "t": "text",
+                  "text": ","
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y=50"
+                }
+              ]
+            },
+            {
+              "text": "$x=40$,$y=70$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x=40"
+                },
+                {
+                  "t": "text",
+                  "text": ","
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "y=70"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Eliminieren/Einsetzen.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Eliminieren/Einsetzen.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Äquivalenzumformungen erhalten die Lösungsmenge.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen erhalten die Lösungsmenge."
+            }
+          ],
+          "answer": true,
+          "rationale": "Gültige Schritte.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gültige Schritte.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Break-Even bei Preis 14, vK 8, Fix 12,000:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Break-Even bei Preis 14, vK 8, Fix 12,000:"
+            }
+          ],
+          "options": [
+            {
+              "text": "2,000 Stk.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "2,000 Stk."
+                }
+              ]
+            },
+            {
+              "text": "1,500 Stk.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "1,500 Stk."
+                }
+              ]
+            },
+            {
+              "text": "2,500 Stk.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "2,500 Stk."
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "$(14-8)$$x=12$,000.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. $(14-8)$$x=12$,000.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Fehler",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Fehler"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fehlerdiagnose: 5−2x≥11 ⇒ −2x≥6 ⇒ x≥−3",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Fehlerdiagnose: 5−2x≥11 ⇒ −2x≥6 ⇒ x≥−3"
+            }
+          ],
+          "options": [
+            {
+              "text": "korrekt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "korrekt"
+                }
+              ]
+            },
+            {
+              "text": "Richtung falsch, x≤−3",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Richtung falsch, x≤−3"
+                }
+              ]
+            },
+            {
+              "text": "x=−3",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "x=−3"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Bei Division durch −2 kehrt Richtung um.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bei Division durch −2 kehrt Richtung um.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Textaufgaben sind Einheiten wichtig.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei Textaufgaben sind Einheiten wichtig."
+            }
+          ],
+          "answer": true,
+          "rationale": "Plausibilität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Plausibilität.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Umformung ist unzulässig?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Umformung ist unzulässig?"
+            }
+          ],
+          "options": [
+            {
+              "text": "beide Seiten +3",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beide Seiten +3"
+                }
+              ]
+            },
+            {
+              "text": "beide $Seiten \\cdot 0$",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beide "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "Seiten \\cdot 0"
+                }
+              ]
+            },
+            {
+              "text": "beide Seiten /2",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beide Seiten /2"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Multiplikation mit 0 zerstört Information.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Multiplikation mit 0 zerstört Information.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: Gewinnziel € 9,-,- bei Preis € 20,-,- vK € 12,-,- Fix € 15,-,- Menge?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Praxis: Gewinnziel € 9,-,- bei Preis € 20,-,- vK € 12,-,- Fix € 15,-,- Menge?"
+            }
+          ],
+          "options": [
+            {
+              "text": "3,000",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "3,000"
+                }
+              ]
+            },
+            {
+              "text": "2,500",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "2,500"
+                }
+              ]
+            },
+            {
+              "text": "3,500",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "3,500"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "$(20-12)$$x-15$,$000=9$,000.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. $(20-12)$$x-15$,$000=9$,000.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Systemen hilft grafische Kontrolle der Schnittpunkte.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei Systemen hilft grafische Kontrolle der Schnittpunkte."
+            }
+          ],
+          "answer": true,
+          "rationale": "Visuelle Plausibilität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Visuelle Plausibilität.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Sinnvolle Reihenfolge?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Sinnvolle Reihenfolge?"
+            }
+          ],
+          "options": [
+            {
+              "text": "planlos umstellen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "planlos umstellen"
+                }
+              ]
+            },
+            {
+              "text": "Variablen definieren → Gleichung bilden → lösen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Variablen definieren → Gleichung bilden → lösen"
+                }
+              ]
+            },
+            {
+              "text": "nur raten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur raten"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Struktur.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Struktur.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Lineare (Un-)Gleichungen: Begriffe, Regeln, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Lineare (Un-)Gleichungen: Begriffe, Regeln, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "normal",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

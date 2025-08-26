@@ -1,0 +1,51 @@
+{
+  "chapter": {
+    "id": "M12",
+    "title": "Prüfungen M12",
+    "title_segments": [
+      {
+        "t": "text",
+        "text": "Prüfungen M12"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "pruefung-gleichungen",
+      "title": "Mixed Models & Causal ML (v2) – Prüfungssets A–D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Mixed Models & Causal ML (v2) – Prüfungssets A–D"
+        }
+      ],
+      "file": "exams/M12/pruefung-gleichungen/module.json"
+    },
+    {
+      "id": "pruefung-gleichungen-2",
+      "title": "Mixed Models & Causal ML (v2) – Prüfungssets A–D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Mixed Models & Causal ML (v2) – Prüfungssets A–D"
+        }
+      ],
+      "file": "exams/M12/pruefung-gleichungen-2/module.json"
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

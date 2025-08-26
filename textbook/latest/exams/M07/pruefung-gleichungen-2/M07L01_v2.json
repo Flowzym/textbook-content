@@ -1,0 +1,736 @@
+{
+  "id": "M07L01",
+  "title": "Ganzzahlige Modelle I – Binär/Ganzzahl, Big‑M & Logik (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Ganzzahlige Modelle I – Binär/Ganzzahl, Big‑M & Logik (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ganzzahlige Modelle I – Binär/Ganzzahl, Big‑M & Logik (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 98,
+  "prerequisites": [
+    "M07L01"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M07L01"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Big‑M/Indikator, Auswahl‑ und Mengenlogiken fehlerfrei formulieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Big‑M/Indikator, Auswahl‑ und Mengenlogiken fehlerfrei formulieren."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Fixkosten, Mindestmengen, Entweder‑oder, Mindestens/Höchstens‑k modellieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Fixkosten, Mindestmengen, Entweder‑oder, Mindestens/Höchstens‑k modellieren."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Numerisch sinnvolle M/U finden; schwache vs. starke Formulierungen unterscheiden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Numerisch sinnvolle M/U finden; schwache vs. starke Formulierungen unterscheiden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Prüfungsnahe Vertiefung: du übst die wichtigsten Logik‑Patterns mit A–D‑Sets.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsnahe Vertiefung: du übst die wichtigsten Logik‑Patterns mit A–D‑Sets."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Korrekte Kopplung Produktion x an Binär y?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Korrekte Kopplung Produktion x an Binär y?"
+            }
+          ],
+          "options": [
+            {
+              "text": "$x ≥ U\\cdot y$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x ≥ U\\cdot y"
+                }
+              ]
+            },
+            {
+              "text": "$x ≤ U\\cdot y$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x ≤ U\\cdot y"
+                }
+              ]
+            },
+            {
+              "text": "$x = U\\cdot y$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x = U\\cdot y"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Obergrenze bindet.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Obergrenze bindet.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Indikatorrestriktionen ersetzen Big‑M, wenn verfügbar.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Indikatorrestriktionen ersetzen Big‑M, wenn verfügbar."
+            }
+          ],
+          "answer": true,
+          "rationale": "Stabiler.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stabiler.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Genau eine Strategie S1/S2 wählen:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Genau eine Strategie S1/S2 wählen:"
+            }
+          ],
+          "options": [
+            {
+              "text": "y1+y2≥1",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "y1+y2≥1"
+                }
+              ]
+            },
+            {
+              "text": "$y1+y2=1$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "y1+y2=1"
+                }
+              ]
+            },
+            {
+              "text": "y1+y2≤1",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "y1+y2≤1"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Exakt eine.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Exakt eine.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Big‑M & Mindestmengen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Big‑M & Mindestmengen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wenn‑dann $ax≤b$ nur, wenn $y=1$:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wenn‑dann "
+            },
+            {
+              "t": "math_inline",
+              "tex": "ax≤b"
+            },
+            {
+              "t": "text",
+              "text": " nur, wenn "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y=1"
+            },
+            {
+              "t": "text",
+              "text": ":"
+            }
+          ],
+          "options": [
+            {
+              "text": "ax ≤ b + M(1−y)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ax ≤ b + M(1−y)"
+                }
+              ]
+            },
+            {
+              "text": "ax ≤ b − M(1−y)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ax ≤ b − M(1−y)"
+                }
+              ]
+            },
+            {
+              "text": "ax ≥ b − M(1−y)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ax ≥ b − M(1−y)"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Standard‑Form.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Standard‑Form.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "M zu groß → schwache Relaxation & numerische Probleme.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "M zu groß → schwache Relaxation & numerische Probleme."
+            }
+          ],
+          "answer": true,
+          "rationale": "Wähle enges U/M.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wähle enges U/M.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Mindestmenge aktivieren:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Mindestmenge aktivieren:"
+            }
+          ],
+          "options": [
+            {
+              "text": "$x ≥ L\\cdot y$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x ≥ L\\cdot y"
+                }
+              ]
+            },
+            {
+              "text": "$x ≤ L\\cdot y$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x ≤ L\\cdot y"
+                }
+              ]
+            },
+            {
+              "text": "$x = L\\cdot y$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "x = L\\cdot y"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Untergrenze.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Untergrenze.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Auswahl & Zählbedingungen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Auswahl & Zählbedingungen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Mindestens k aus n:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Mindestens k aus n:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Σy_i ≥ k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σy_i ≥ k"
+                }
+              ]
+            },
+            {
+              "text": "Σy_i ≤ k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σy_i ≤ k"
+                }
+              ]
+            },
+            {
+              "text": "Σy_$i = k$",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σy_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "i = k"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Lower bound.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Lower bound.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Höchstens k aus n: Σy_i ≤ k.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Höchstens k aus n: Σy_i ≤ k."
+            }
+          ],
+          "answer": true,
+          "rationale": "Upper bound.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Upper bound.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Genau k aus n:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Genau k aus n:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Σy_i ≥ k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σy_i ≥ k"
+                }
+              ]
+            },
+            {
+              "text": "Σy_i ≤ k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σy_i ≤ k"
+                }
+              ]
+            },
+            {
+              "text": "Σy_$i = k$",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σy_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "i = k"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "Equality.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Equality.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Modellqualität",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Modellqualität"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Stärkere Formulierung erreicht man oft durch…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Stärkere Formulierung erreicht man oft durch…"
+            }
+          ],
+          "options": [
+            {
+              "text": "kleineres U/M",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "kleineres U/M"
+                }
+              ]
+            },
+            {
+              "text": "größeres M",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "größeres M"
+                }
+              ]
+            },
+            {
+              "text": "weniger Nebenbedingungen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "weniger Nebenbedingungen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Strengere Schranken.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Strengere Schranken.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Preprocessing (Dominanz) kann Variablen fixieren.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Preprocessing (Dominanz) kann Variablen fixieren."
+            }
+          ],
+          "answer": true,
+          "rationale": "Modell schrumpft.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Modell schrumpft.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche ist **kein** Binär‑Pattern?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche ist **kein** Binär‑Pattern?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Fixkosten‑Kopplung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Fixkosten‑Kopplung"
+                }
+              ]
+            },
+            {
+              "text": "Entweder‑oder",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Entweder‑oder"
+                }
+              ]
+            },
+            {
+              "text": "Normalverteilung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Normalverteilung"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "Nicht linear/kompatibel hier.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Nicht linear/kompatibel hier.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D prüfen deine Modellierungssicherheit in Big‑M/Indikator‑ und Auswahl‑Logiken.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D prüfen deine Modellierungssicherheit in Big‑M/Indikator‑ und Auswahl‑Logiken."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
