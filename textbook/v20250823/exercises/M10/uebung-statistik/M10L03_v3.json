@@ -1,0 +1,292 @@
+{
+  "id": "M10L03",
+  "title": "Causal Impact (BSTS) – Pre/Post & Effektschätzung (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Causal Impact (BSTS) – Pre/Post & Effektschätzung (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Causal Impact (BSTS) – Pre/Post & Effektschätzung (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 8,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ergebnisse interpretieren und dokumentieren."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Rechen‑Mix"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – Kumulativer Effekt",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – Kumulativer Effekt"
+            }
+          ],
+          "context": "Punkt-Effekte in Post: [3, 4, 2, 5, 1] (in k€).",
+          "tasks": [
+            {
+              "prompt": "a) Summe?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Summe?"
+                }
+              ],
+              "hints": "addieren",
+              "solution": "15 k€",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "15 k€"
+                }
+              ],
+              "check": {
+                "type": "numeric",
+                "expected": 15
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – P(Effekt>0)",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – P(Effekt>0)"
+            }
+          ],
+          "context": "Posterior zieht 9,000 von 10,000 Draws >0.",
+          "tasks": [
+            {
+              "prompt": "a) Wahrscheinlichkeit?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Wahrscheinlichkeit?"
+                }
+              ],
+              "hints": "Zählung/Anteil",
+              "solution": "0,9",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "0,9"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 0.9,
+                "tol": 0.001
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Gestufte Hinweise"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Kontrolle wählen",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Kontrolle wählen"
+            }
+          ],
+          "context": "Fünf Kandidaten, Korrelationskoeffizienten im Pre: [0,82, 0,75, 0,30, 0,55, 0,88].",
+          "tasks": [
+            {
+              "prompt": "a) Wähle 2–3?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Wähle 2–3?"
+                }
+              ],
+              "hints": "höchste Korrelation, keine Betroffenheit",
+              "solution": "z. B. 0,88 & 0,82 & 0,75",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "z. B. 0,88 & 0,82 & 0,75"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "0,88"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "E/F festigen die numerische Routine und Interpretation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "kurz",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
