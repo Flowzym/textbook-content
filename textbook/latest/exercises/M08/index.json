@@ -1,0 +1,51 @@
+{
+  "chapter": {
+    "id": "M08",
+    "title": "Übungen M08",
+    "title_segments": [
+      {
+        "t": "text",
+        "text": "Übungen M08"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "uebung-controlling",
+      "title": "Zeitreihen & Forecasting (v3) – Prüfungsset E/F",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen & Forecasting (v3) – Prüfungsset E/F"
+        }
+      ],
+      "file": "exercises/M08/uebung-controlling/module.json"
+    },
+    {
+      "id": "uebung-lager-logistik",
+      "title": "Zeitreihen & Forecasting (v3) – Prüfungsset E/F",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen & Forecasting (v3) – Prüfungsset E/F"
+        }
+      ],
+      "file": "exercises/M08/uebung-lager-logistik/module.json"
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

@@ -1,0 +1,579 @@
+{
+  "id": "M12L01",
+  "title": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 46,
+  "prerequisites": [
+    "M12L01"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M12L01"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ergebnisse interpretieren und dokumentieren."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Rechen‑Mix"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – ICC aus Varianzkomponenten",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – ICC aus Varianzkomponenten"
+            }
+          ],
+          "context": "σ_$u^2=0$,6 (zwischen Gruppen), σ^$2=1$,4 (innerhalb).",
+          "tasks": [
+            {
+              "prompt": "a) ICC?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) ICC?"
+                }
+              ],
+              "hints": "σ_$u^2$/(σ_$u^2$+σ^2)",
+              "solution": "0,6/2,$0=0$,30",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "0,6/2,"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "0=0"
+                },
+                {
+                  "t": "text",
+                  "text": ",30"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 0.3,
+                "tol": 1e-06
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Random Intercept Deutung",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – Random Intercept Deutung"
+            }
+          ],
+          "context": "Filiale j hat u_0j=+0,8 (auf $Log-Skala)$.",
+          "tasks": [
+            {
+              "prompt": "a) Interpretation?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Interpretation?"
+                }
+              ],
+              "hints": "Niveau höher als Durchschnitt",
+              "solution": "etwa 0,8 Einheiten höher (exp auf Originalskala)",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "etwa 0,8 Einheiten höher (exp auf Originalskala)"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "höher"
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Gestufte Hinweise"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – GLMM Entscheidung",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – GLMM Entscheidung"
+            }
+          ],
+          "context": "Ziel: Retourenquote (0–1) je Filiale; starke Heterogenität zwischen Filialen.",
+          "tasks": [
+            {
+              "prompt": "a) Modellwahl?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Modellwahl?"
+                }
+              ],
+              "hints": "logit-Link, Random Intercepts",
+              "solution": "GLMM (binomial, logit) mit Random Intercepts",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "GLMM (binomial, logit) mit Random Intercepts"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "GLMM"
+              }
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "E/F festigen die numerische Routine und Interpretation."
+        }
+      ]
+    },
+    {
+      "type": "introduction",
+      "text": "PLATZHALTER – Einführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Einführung folgt."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in $Einheiten^2$, Standardabweichung in Einheiten.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- Lageparameter wählen: Mittelwert robust? → ggf. Median nutzen.\n- Streuung: Varianz in "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Einheiten^2"
+        },
+        {
+          "t": "text",
+          "text": ", Standardabweichung in Einheiten."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Worked Example"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] …"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] …"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Fading Example"
+          }
+        ],
+        "steps": [
+          "…"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "…"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "PLATZHALTER – Aussage",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aussage"
+            }
+          ],
+          "answer": true,
+          "rationale": "PLATZHALTER – Begründung | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. PLATZHALTER – Begründung | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

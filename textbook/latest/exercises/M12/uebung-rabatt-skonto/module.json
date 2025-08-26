@@ -1,0 +1,88 @@
+{
+  "id": "M12",
+  "title": "Mixed Models & Causal ML (v3) – Prüfungsset E/F",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Mixed Models & Causal ML (v3) – Prüfungsset E/F",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Mixed Models & Causal ML (v3) – Prüfungsset E/F"
+        }
+      ]
+    }
+  ],
+  "description": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (LMM/GLMM, DML, Uplift, IV/DMLIV).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (LMM/GLMM, DML, Uplift, IV/DMLIV).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (LMM/GLMM, DML, Uplift, IV/DMLIV)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M12L01",
+      "title": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M12L02",
+      "title": "Double Machine Learning – Orthogonalisierung & Cross-Fitting (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Double Machine Learning – Orthogonalisierung & Cross-Fitting (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M12L03",
+      "title": "Uplift-Modelle – T/S/X/DR & Policy (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Uplift-Modelle – T/S/X/DR & Policy (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M12L04",
+      "title": "Instrumentalvariablen – 2SLS, DMLIV/DeepIV & LATE (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Instrumentalvariablen – 2SLS, DMLIV/DeepIV & LATE (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "version": "v3",
+  "updated_at": "2025-08-17T10:13:13.037288",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

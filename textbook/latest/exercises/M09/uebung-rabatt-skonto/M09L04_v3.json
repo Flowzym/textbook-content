@@ -1,0 +1,291 @@
+{
+  "id": "M09L04",
+  "title": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 9,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ergebnisse interpretieren und dokumentieren."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Rechen‑Mix"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – ARIMAX‑Forecast",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – ARIMAX‑Forecast"
+            }
+          ],
+          "context": "ŷ_t = β0 + β$1\\cdot Preis$ + β$2\\cdot Promo$; β$0=100$, β1=−2, β$2=20$; $Preis=15$, $Promo=1$.",
+          "tasks": [
+            {
+              "prompt": "a) ŷ_t?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) ŷ_t?"
+                }
+              ],
+              "hints": "Einsetzen",
+              "solution": "$100 - 30 + 20 = 90$",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "100 - 30 + 20 = 90"
+                }
+              ],
+              "check": {
+                "type": "numeric",
+                "expected": 90
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Reconciliation Skizze",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – Reconciliation Skizze"
+            }
+          ],
+          "context": "SKU‑Summe 980, Kategorie‑Ziel 1,000.",
+          "tasks": [
+            {
+              "prompt": "a) einfache Anpassung?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) einfache Anpassung?"
+                }
+              ],
+              "hints": "proportional verteilen",
+              "solution": "+20 über SKUs",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "+20 über SKUs"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "20"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Gestufte Hinweise"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Szenario mit Preisänderung",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Szenario mit Preisänderung"
+            }
+          ],
+          "context": "β1=−3, Preis $steigt +2$, Baseline ŷ=200.",
+          "tasks": [
+            {
+              "prompt": "a) Effekt?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Effekt?"
+                }
+              ],
+              "hints": "Δŷ=β1·ΔPreis",
+              "solution": "Δŷ=−6 → neuer Forecast 194",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Δŷ=−6 → neuer Forecast 194"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "194"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "E/F festigen die numerische Routine und Interpretation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "kurz",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

@@ -1,0 +1,506 @@
+{
+  "id": "M01L03_v3",
+  "title": "Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Potenzen & Wurzeln – Rechengesetze, Notation, Wachstum & Zinsen (v3: Prüfungsset E/F – Rechen-Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 21,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ergebnisse interpretieren und dokumentieren."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft Potenzen & Wurzeln mit praxisnahen Rechenaufgaben (Sets E/F). Fokus auf Zinseszins-Berechnung, wissenschaftliche Notation und Potenzgesetze.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Diese Lesson vertieft Potenzen & Wurzeln mit praxisnahen Rechenaufgaben (Sets E/F). Fokus auf Zinseszins-Berechnung, wissenschaftliche Notation und Potenzgesetze."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Rechen-Mix Konzept",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Rechen-Mix Konzept"
+        }
+      ],
+      "text": "- **Set E**: Zinseszins konkret berechnen, wissenschaftliche Notation anwenden  \n- **Set F**: Potenzgesetze mit gestuften Hinweisen  \n- Ziel: Sichere Anwendung in Finanz-Kontexten",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "- **Set E**: Zinseszins konkret berechnen, wissenschaftliche Notation anwenden  \n- **Set F**: Potenzgesetze mit gestuften Hinweisen  \n- Ziel: Sichere Anwendung in Finanz-Kontexten"
+        }
+      ],
+      "explanation": "\n\n**$Decision-Hints$:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: $K = K0\\cdot (1+i)^n$.\n- Abzinsen bei Barwertaufgaben: $K0 = K$/$(1+i)^n$.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "K = K0\\cdot (1+i)^n"
+        },
+        {
+          "t": "text",
+          "text": ".\n- Abzinsen bei Barwertaufgaben: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "K0 = K"
+        },
+        {
+          "t": "text",
+          "text": "/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(1+i)^n"
+        },
+        {
+          "t": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen-Mix",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Rechen-Mix"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – Zinseszins",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – Zinseszins"
+            }
+          ],
+          "context": "K0=€ 5,-0, $i=4$% p.a., $n=5$ Jahre.",
+          "tasks": [
+            {
+              "prompt": "a) Endwert?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Endwert?"
+                }
+              ],
+              "hints": "$K=K0\\cdot (1+i)^n$",
+              "solution": "≈ € 6,08",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "≈ € 6,08"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 6083.26,
+                "tol": 1
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Notation",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – Notation"
+            }
+          ],
+          "context": "Schreibe 0,00035 in wissenschaftlicher Notation.",
+          "tasks": [
+            {
+              "prompt": "a) Ergebnis?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Ergebnis?"
+                }
+              ],
+              "hints": "Komma 4 Stellen",
+              "solution": "3,$5\\cdot 10$^−4",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "3,"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "5\\cdot 10"
+                },
+                {
+                  "t": "text",
+                  "text": "^−4"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "10^−4"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort)."
+            }
+          ],
+          "solution": "$K=K0\\cdot (1+i)^n$ bzw. $K0=K$/$(1+i)^n$",
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "K=K0\\cdot (1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": " bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "K0=K"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "$(1+i)^n$"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "$K=K0\\cdot (1+i)^n$ bzw.",
+            "$K0=K$/$(1+i)^n$"
+          ],
+          "steps_segments": [
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K=K0\\cdot (1+i)^n"
+                },
+                {
+                  "t": "text",
+                  "text": " bzw."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K0=K"
+                },
+                {
+                  "t": "text",
+                  "text": "/"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(1+i)^n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort)."
+            }
+          ],
+          "solution": "$K=K0\\cdot (1+i)^n$ bzw. $K0=K$/$(1+i)^n$",
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "K=K0\\cdot (1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": " bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "K0=K"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "$(1+i)^n$"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "$K=K0\\cdot (1+i)^n$ bzw.",
+            "$K0=K$/$(1+i)^n$"
+          ],
+          "steps_segments": [
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K=K0\\cdot (1+i)^n"
+                },
+                {
+                  "t": "text",
+                  "text": " bzw."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K0=K"
+                },
+                {
+                  "t": "text",
+                  "text": "/"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(1+i)^n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Gestufte Hinweise"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Potenzgesetze anwenden",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Potenzgesetze anwenden"
+            }
+          ],
+          "context": "Vereinfache: ($3^2$·$3^4$)/$($3^3$) \\cdot ($5^2$)^2$.",
+          "tasks": [
+            {
+              "prompt": "a) Ergebnis?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Ergebnis?"
+                }
+              ],
+              "hints": "Exponenten addieren/subtrahieren",
+              "solution": "$3^(2+4-3)$·$5^4$=$3^3$·$5^4$",
+              "solution_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "3^(2+4-3)"
+                },
+                {
+                  "t": "text",
+                  "text": "·"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "5^4"
+                },
+                {
+                  "t": "text",
+                  "text": "="
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "3^3"
+                },
+                {
+                  "t": "text",
+                  "text": "·"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "5^4"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "$5^4$"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "E/F festigen die numerische Routine und Interpretation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch $(1+i)^n$.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Abzinsen teilt man durch "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ],
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "feedback_incorrect": "Beachte: Zinseszins: $K=K0\\cdot (1+i)^n$; Abzinsung: $K0=K$/$(1+i)^n$."
+        },
+        {
+          "type": "true_false",
+          "question": "Zinseszins ohne Wiederanlage nutzt $K=K0\\cdot (1+i)^n$.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Zinseszins ohne Wiederanlage nutzt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "K=K0\\cdot (1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ],
+          "answer": true,
+          "rationale": "Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Mit Wiederanlage: Multiplikation pro Periode (1+i).",
+          "feedback_incorrect": "Beachte: Zinseszins: $K=K0\\cdot (1+i)^n$; Abzinsung: $K0=K$/$(1+i)^n$."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
