@@ -1,0 +1,650 @@
+{
+  "id": "M09L01",
+  "title": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M09L01"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M09L01"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Identifikation & Stationarität abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Identifikation & Stationarität abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Stationarität (schwach) bedeutet…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Stationarität (schwach) bedeutet…"
+            }
+          ],
+          "options": [
+            {
+              "text": "konstantes Mittel/Varianz, Kovarianz nur vom Lag",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "konstantes Mittel/Varianz, Kovarianz nur vom Lag"
+                }
+              ]
+            },
+            {
+              "text": "keine Autokorrelation",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Autokorrelation"
+                }
+              ]
+            },
+            {
+              "text": "immer Trend vorhanden",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer Trend vorhanden"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Differenzieren (1.) hilft, lineare Trends zu entfernen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Differenzieren (1.) hilft, lineare Trends zu entfernen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Δy_$t = y$_$t - y$_{$t-1$}.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Δy_$t = y$_$t - y$_{$t-1$}.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "ACF/PACF‑Heuristik für AR(1)?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "ACF/PACF‑Heuristik für AR(1)?"
+            }
+          ],
+          "options": [
+            {
+              "text": "ACF schneidet nach Lag 1 ab",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ACF schneidet nach Lag 1 ab"
+                }
+              ]
+            },
+            {
+              "text": "PACF schneidet nach Lag 1 ab",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "PACF schneidet nach Lag 1 ab"
+                }
+              ]
+            },
+            {
+              "text": "beide schneiden ab",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beide schneiden ab"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Daumenregel.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Daumenregel.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "MA(q) Muster:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "MA(q) Muster:"
+            }
+          ],
+          "options": [
+            {
+              "text": "ACF fällt langsam, PACF schneidet nach q ab",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ACF fällt langsam, PACF schneidet nach q ab"
+                }
+              ]
+            },
+            {
+              "text": "ACF schneidet nach q ab, PACF fällt langsam",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ACF schneidet nach q ab, PACF fällt langsam"
+                }
+              ]
+            },
+            {
+              "text": "beide fallen langsam",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beide fallen langsam"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Heuristik.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Heuristik.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "White Noise hat ρ(k)≈0 für k>0.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "White Noise hat ρ(k)≈0 für k>0."
+            }
+          ],
+          "answer": true,
+          "rationale": "Per Definition.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Per Definition.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Zu hohe Differenzordnung führt zu…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Zu hohe Differenzordnung führt zu…"
+            }
+          ],
+          "options": [
+            {
+              "text": "besseren Forecasts",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "besseren Forecasts"
+                }
+              ]
+            },
+            {
+              "text": "Rauschen/Überdifferenzierung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Rauschen/Überdifferenzierung"
+                }
+              ]
+            },
+            {
+              "text": "keinem Effekt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keinem Effekt"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Signalverlust.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Signalverlust.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Saisonale Differenz Δ_m entfernt…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Saisonale Differenz Δ_m entfernt…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Trend",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Trend"
+                }
+              ]
+            },
+            {
+              "text": "Saison von Periode m",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Saison von Periode m"
+                }
+              ]
+            },
+            {
+              "text": "Varianz",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Varianz"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Wiederkehrendes Muster.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wiederkehrendes Muster.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Box‑Cox/Log hilft bei varianzhomogenität.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Box‑Cox/Log hilft bei varianzhomogenität."
+            }
+          ],
+          "answer": true,
+          "rationale": "Stabilisierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stabilisierung.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "PACF stark bei Lag 2, sonst 0; ACF langsam abklingend →",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "PACF stark bei Lag 2, sonst 0; ACF langsam abklingend →"
+            }
+          ],
+          "options": [
+            {
+              "text": "MA(2)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "MA(2)"
+                }
+              ]
+            },
+            {
+              "text": "AR(2)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "AR(2)"
+                }
+              ]
+            },
+            {
+              "text": "ARMA(1,1)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ARMA(1,1)"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "PACF‑Cut‑Off.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. PACF‑Cut‑Off.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Diagnose nach Transformation/Differenz:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Diagnose nach Transformation/Differenz:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Plot, ACF/PACF der transformierten Reihe",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Plot, ACF/PACF der transformierten Reihe"
+                }
+              ]
+            },
+            {
+              "text": "nur Zielfunktion prüfen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Zielfunktion prüfen"
+                }
+              ]
+            },
+            {
+              "text": "immer gleich AR(1) nehmen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer gleich AR(1) nehmen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Workflow.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Workflow.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "ACF‑Konfidenzgrenzen helfen, Signifikanz zu beurteilen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "ACF‑Konfidenzgrenzen helfen, Signifikanz zu beurteilen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Statistische Prüfung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Statistische Prüfung.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Praktische Falle:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Praktische Falle:"
+            }
+          ],
+          "options": [
+            {
+              "text": "MAPE auf differenzierter Skala falsch interpretiert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "MAPE auf differenzierter Skala falsch interpretiert"
+                }
+              ]
+            },
+            {
+              "text": "AIC korrekt verglichen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "AIC korrekt verglichen"
+                }
+              ]
+            },
+            {
+              "text": "Residuen geprüft",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Residuen geprüft"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Zurücktransformieren!",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zurücktransformieren!",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Identifikation & Stationarität: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Identifikation & Stationarität: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

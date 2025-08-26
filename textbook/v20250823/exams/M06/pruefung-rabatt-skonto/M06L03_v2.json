@@ -1,0 +1,1233 @@
+{
+  "id": "M06L03",
+  "title": "Lineare Optimierung III – Dualität (v2: Prüfungssets A–D & CO₂‑Schattenpreise)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Lineare Optimierung III – Dualität (v2: Prüfungssets A–D & CO₂‑Schattenpreise)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Lineare Optimierung III – Dualität (v2: Prüfungssets A–D & CO₂‑Schattenpreise)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 16,
+  "prerequisites": [
+    "M06L02"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M06L02"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Understand",
+      "text": "Dualbildung sicher; Komplementarität anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Dualbildung sicher; Komplementarität anwenden."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Schattenpreise wirtschaftlich interpretieren (inkl. Umwelt‑Constraint).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schattenpreise wirtschaftlich interpretieren (inkl. Umwelt‑Constraint)."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Sensitivität auf RHS/c und reduzierte Kosten erklären.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Sensitivität auf RHS/c und reduzierte Kosten erklären."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Wir erweitern Dualität um **CO₂‑Budgetrestriktionen** und üben mit Quiz‑Sets A–D.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Wir erweitern Dualität um **CO₂‑Budgetrestriktionen** und üben mit Quiz‑Sets A–D."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – CO₂‑Budget als Nebenbedingung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Worked – CO₂‑Budget als Nebenbedingung"
+        }
+      ],
+      "text": "Produktmix mit Emissionen e_$A=4$ kg, e_$B=2$ kg je Stück. CO₂‑Budget $B=20$ kg.  \nLP: max $z=30x$_$A+20x$_B s.t. …, **4x_$A+2x$_$B ≤ 20$**, $x≥0$.  \nIm Optimum: y_CO2 ist der **Schattenpreis** des Budgets (€/kg). y_CO2>0 nur, wenn Budget **bindet**.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Produktmix mit Emissionen e_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "A=4"
+        },
+        {
+          "t": "text",
+          "text": " kg, e_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "B=2"
+        },
+        {
+          "t": "text",
+          "text": " kg je Stück. CO₂‑Budget "
+        },
+        {
+          "t": "math_inline",
+          "tex": "B=20"
+        },
+        {
+          "t": "text",
+          "text": " kg.  \nLP: max "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=30x"
+        },
+        {
+          "t": "text",
+          "text": "_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "A+20x"
+        },
+        {
+          "t": "text",
+          "text": "_B s.t. …, **4x_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "A+2x"
+        },
+        {
+          "t": "text",
+          "text": "_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "B ≤ 20"
+        },
+        {
+          "t": "text",
+          "text": "**, "
+        },
+        {
+          "t": "math_inline",
+          "tex": "x≥0"
+        },
+        {
+          "t": "text",
+          "text": ".  \nIm Optimum: y_CO2 ist der **Schattenpreis** des Budgets (€/kg). y_CO2>0 nur, wenn Budget **bindet**."
+        }
+      ],
+      "steps": [
+        "Produktmix mit Emissionen e_$A=4$ kg, e_$B=2$ kg je Stück. CO₂‑Budget $B=20$ kg",
+        "LP: max $z=30x$_$A+20x$_B s.t. …, **4x_$A+2x$_$B ≤ 20$**, x≥",
+        "Im Optimum: y_CO2 ist der **Schattenpreis** des Budgets (€/kg). y_CO2>0 nur, wenn Budget **bindet"
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Produktmix mit Emissionen e_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "A=4"
+            },
+            {
+              "t": "text",
+              "text": " kg, e_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "B=2"
+            },
+            {
+              "t": "text",
+              "text": " kg je Stück. CO₂‑Budget "
+            },
+            {
+              "t": "math_inline",
+              "tex": "B=20"
+            },
+            {
+              "t": "text",
+              "text": " kg"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "LP: max "
+            },
+            {
+              "t": "math_inline",
+              "tex": "z=30x"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "A+20x"
+            },
+            {
+              "t": "text",
+              "text": "_B s.t. …, **4x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "A+2x"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "B ≤ 20"
+            },
+            {
+              "t": "text",
+              "text": "**, x≥"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Im Optimum: y_CO2 ist der **Schattenpreis** des Budgets (€/kg). y_CO2>0 nur, wenn Budget **bindet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Worked – Dual interpretieren",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Worked – Dual interpretieren"
+        }
+      ],
+      "text": "Dual enthält y_$CO2 ≥ 0$; bei Bindung gilt in Aᵗ$y ≥ c$: $4\\cdot y$_CO2 + … ≥ 30; $2\\cdot y$_CO2 + … ≥ 20.  \n**Interpretation**: Wenn y_CO2=€ 6,-/kg, erhö$ht +1$ kg CO₂‑Budget den maximalen Deckungsbeitrag um € 6,-,- (innerhalb Gültigkeitsbereichs).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Dual enthält y_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "CO2 ≥ 0"
+        },
+        {
+          "t": "text",
+          "text": "; bei Bindung gilt in Aᵗ"
+        },
+        {
+          "t": "math_inline",
+          "tex": "y ≥ c"
+        },
+        {
+          "t": "text",
+          "text": ": "
+        },
+        {
+          "t": "math_inline",
+          "tex": "4\\cdot y"
+        },
+        {
+          "t": "text",
+          "text": "_CO2 + … ≥ 30; "
+        },
+        {
+          "t": "math_inline",
+          "tex": "2\\cdot y"
+        },
+        {
+          "t": "text",
+          "text": "_CO2 + … ≥ 20.  \n**Interpretation**: Wenn y_CO2=€ 6,-/kg, erhö"
+        },
+        {
+          "t": "math_inline",
+          "tex": "ht +1"
+        },
+        {
+          "t": "text",
+          "text": " kg CO₂‑Budget den maximalen Deckungsbeitrag um € 6,-,- (innerhalb Gültigkeitsbereichs)."
+        }
+      ],
+      "steps": [
+        "Dual enthält y_$CO2 ≥ 0$; bei Bindung gilt in Aᵗ$y ≥ c$: $4\\cdot y$_CO2 + … ≥ 30; $2\\cdot y$_CO2 + … ≥",
+        "Interpretation**: Wenn y_CO2=€ 6,-/kg, erhö$ht +1$ kg CO₂‑Budget den maximalen Deckungsbeitrag um € 6,-,- (innerhalb Gültigkeitsbereichs"
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Dual enthält y_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "CO2 ≥ 0"
+            },
+            {
+              "t": "text",
+              "text": "; bei Bindung gilt in Aᵗ"
+            },
+            {
+              "t": "math_inline",
+              "tex": "y ≥ c"
+            },
+            {
+              "t": "text",
+              "text": ": "
+            },
+            {
+              "t": "math_inline",
+              "tex": "4\\cdot y"
+            },
+            {
+              "t": "text",
+              "text": "_CO2 + … ≥ 30; "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2\\cdot y"
+            },
+            {
+              "t": "text",
+              "text": "_CO2 + … ≥"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Interpretation**: Wenn y_CO2=€ 6,-/kg, erhö"
+            },
+            {
+              "t": "math_inline",
+              "tex": "ht +1"
+            },
+            {
+              "t": "text",
+              "text": " kg CO₂‑Budget den maximalen Deckungsbeitrag um € 6,-,- (innerhalb Gültigkeitsbereichs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "long": [
+        {
+          "title": "Praxis – Zertifikatspreis ableiten",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "Praxis – Zertifikatspreis ableiten"
+            }
+          ],
+          "context": "Du darfst CO₂‑Zertifikate zukaufen. Marktpreis 5–€ 7,-/kg. Interner Schattenpreis y_CO2 variiert mit Output.",
+          "subtasks": [
+            {
+              "text": "Berechne Entscheidung: Kaufen, wenn Marktpreis < y_CO2.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Berechne Entscheidung: Kaufen, wenn Marktpreis < y_CO2."
+                }
+              ]
+            },
+            {
+              "text": "Erkläre Gültigkeitsbereich (Basiswechsel).",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Erkläre Gültigkeitsbereich (Basiswechsel)."
+                }
+              ]
+            },
+            {
+              "text": "Sensitivität B ±2 kg.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Sensitivität B ±2 kg."
+                }
+              ]
+            }
+          ],
+          "hints": [
+            "Ja, wenn 5<y_CO2.",
+            "Nur solange die aktuelle Basis gilt.",
+            "Δz≈y_CO2·ΔB."
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Ja, wenn 5<y_CO2."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Nur solange die aktuelle Basis gilt."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Δz≈y_CO2·ΔB."
+                }
+              ]
+            }
+          ],
+          "solutions": [
+            "Entscheidungsregel",
+            "Bereich erläutert",
+            "Δz gezeigt"
+          ],
+          "checks": [
+            {
+              "type": "free_form",
+              "keywords": [
+                "Schattenpreis",
+                "Zertifikat",
+                "Budget"
+              ]
+            }
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "Entscheidungsregel",
+            "Bereich erläutert",
+            "Δz gezeigt"
+          ],
+          "steps_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Entscheidungsregel"
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Bereich erläutert"
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Δz gezeigt"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Dual zu max cᵗx s.t. Ax≤b, x≥0?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Dual zu max cᵗx s.t. Ax≤b, x≥0?"
+            }
+          ],
+          "options": [
+            {
+              "text": "min bᵗy s.t. Aᵗy≥c, y≥0",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "min bᵗy s.t. Aᵗy≥c, y≥0"
+                }
+              ]
+            },
+            {
+              "text": "min bᵗy s.t. Aᵗy≤c",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "min bᵗy s.t. Aᵗy≤c"
+                }
+              ]
+            },
+            {
+              "text": "max bᵗy s.t. Aᵗy≥c",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "max bᵗy s.t. Aᵗy≥c"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Schema.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Schema.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "y_i>0 nur, wenn Restriktion i bindet.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "y_i>0 nur, wenn Restriktion i bindet."
+            }
+          ],
+          "answer": true,
+          "rationale": "Komplementarität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Komplementarität.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "CO₂‑Budget ist typ. eine…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "CO₂‑Budget ist typ. eine…"
+            }
+          ],
+          "options": [
+            {
+              "text": "≥‑Bedingung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "≥‑Bedingung"
+                }
+              ]
+            },
+            {
+              "text": "≤‑Bedingung",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "≤‑Bedingung"
+                }
+              ]
+            },
+            {
+              "text": "=",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "="
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Verbrauch ≤ Budget.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verbrauch ≤ Budget.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "y_CO2 misst…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "y_CO2 misst…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Kosten je kg CO₂ im Markt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Kosten je kg CO₂ im Markt"
+                }
+              ]
+            },
+            {
+              "text": "Grenzwertschöpfung je kg Budget",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Grenzwertschöpfung je kg Budget"
+                }
+              ]
+            },
+            {
+              "text": "Mittelwert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Mittelwert"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Schattenpreis.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Schattenpreis.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Wenn Budget locker, dann y_$CO2=0$.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wenn Budget locker, dann y_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "CO2=0"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ],
+          "answer": true,
+          "rationale": "Kein Engpass.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Engpass.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Reduzierte Kosten r_$j = c$_$j - (A$ᵗy)_j sind im Optimum (max)…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Reduzierte Kosten r_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "j = c"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "j - (A"
+            },
+            {
+              "t": "text",
+              "text": "ᵗy)_j sind im Optimum (max)…"
+            }
+          ],
+          "options": [
+            {
+              "text": "≥0",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "≥0"
+                }
+              ]
+            },
+            {
+              "text": "≤0 (Nichtbasis)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "≤0 (Nichtbasis)"
+                }
+              ]
+            },
+            {
+              "text": "beliebig",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beliebig"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Kriterium.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Kriterium.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Erhöht sich B um Δ, dann gilt näherungsweise…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Erhöht sich B um Δ, dann gilt näherungsweise…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Δz≈y_CO2·Δ",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Δz≈y_CO2·Δ"
+                }
+              ]
+            },
+            {
+              "text": "Δz≈0",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Δz≈0"
+                }
+              ]
+            },
+            {
+              "text": "Δz≈Δ²",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Δz≈Δ²"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Linear im Bereich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Linear im Bereich.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Schattenpreise gelten global ohne Einschränkung.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Schattenpreise gelten global ohne Einschränkung."
+            }
+          ],
+          "answer": false,
+          "rationale": "Nur solange Basis konstant.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nur solange Basis konstant.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wie prüfst du Bindung einer Restriktion?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wie prüfst du Bindung einer Restriktion?"
+            }
+          ],
+          "options": [
+            {
+              "text": "$Slack=0$?",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "Slack=0"
+                },
+                {
+                  "t": "text",
+                  "text": "?"
+                }
+              ]
+            },
+            {
+              "text": "c̄=0?",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "c̄=0?"
+                }
+              ]
+            },
+            {
+              "text": "RHS groß?",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "RHS groß?"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "$Slack=0$ bindet.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. $Slack=0$ bindet.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Zertifikate kaufen, wenn…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Zertifikate kaufen, wenn…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Marktpreis < y_CO2",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Marktpreis < y_CO2"
+                }
+              ]
+            },
+            {
+              "text": "Marktpreis > y_CO2",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Marktpreis > y_CO2"
+                }
+              ]
+            },
+            {
+              "text": "egal",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "egal"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Arbitrage‑Logik.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Arbitrage‑Logik.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "CO₂‑Budget führt immer zu MILP.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "CO₂‑Budget führt immer zu MILP."
+            }
+          ],
+          "answer": false,
+          "rationale": "Linear möglich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Linear möglich.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Wenn r_j<0 für Produkt j, dann…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wenn r_j<0 für Produkt j, dann…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Produkt in Basis aufnehmen lohnt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Produkt in Basis aufnehmen lohnt"
+                }
+              ]
+            },
+            {
+              "text": "verwerfen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "verwerfen"
+                }
+              ]
+            },
+            {
+              "text": "keine Aussage",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Aussage"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Verbesserung möglich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verbesserung möglich.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        "Dualzeichen verwechselt (≥/≤).",
+        "Schattenpreise außerhalb Gültigkeitsbereichs extrapoliert.",
+        "r_j mit DB verwechselt."
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "Du interpretierst CO₂‑Budgets über Dualvariablen und setzt Schattenpreise operativ ein.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Du interpretierst CO₂‑Budgets über Dualvariablen und setzt Schattenpreise operativ ein."
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "In L04 bauen wir das CO₂‑Budget in Transport/Produktionsplanung ein.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "In L04 bauen wir das CO₂‑Budget in Transport/Produktionsplanung ein."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "normal",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

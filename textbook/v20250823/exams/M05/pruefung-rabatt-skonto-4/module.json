@@ -1,0 +1,30 @@
+{
+  "id": "M05",
+  "lessons": [
+    {
+      "id": "M05L04",
+      "title": "Risikobudget, Stresstests & Reporting – Entscheidungen unter Unsicherheit",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Risikobudget, Stresstests & Reporting – Entscheidungen unter Unsicherheit"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
