@@ -1,0 +1,953 @@
+{
+  "id": "M09L04",
+  "title": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M09L04"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M09L04"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte ARIMAX & Hierarchien abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte ARIMAX & Hierarchien abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ARIMAX benötigt…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "ARIMAX benötigt…"
+            }
+          ],
+          "options": [
+            {
+              "text": "keine X‑Prognosen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine X‑Prognosen"
+                }
+              ]
+            },
+            {
+              "text": "exogene X‑Prognosen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "exogene X‑Prognosen"
+                }
+              ]
+            },
+            {
+              "text": "nur saisonale Dummies",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur saisonale Dummies"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "X in der Zukunft. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. X in der Zukunft. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Preis als Regressor wirkt meist negativ auf Nachfrage.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Preis als Regressor wirkt meist negativ auf Nachfrage."
+            }
+          ],
+          "answer": true,
+          "rationale": "Elastizität < 0. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Elastizität < 0. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Promotion‑Dummies modellieren…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Promotion‑Dummies modellieren…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Trend",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Trend"
+                }
+              ]
+            },
+            {
+              "text": "Impulse/Fenster",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Impulse/Fenster"
+                }
+              ]
+            },
+            {
+              "text": "Saison",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Saison"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Aktionen. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Aktionen. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Feature‑Engineering umfasst NICHT:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Feature‑Engineering umfasst NICHT:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Feiertage & Vor/Nachlauf",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Feiertage & Vor/Nachlauf"
+                }
+              ]
+            },
+            {
+              "text": "Multikollinearität prüfen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Multikollinearität prüfen"
+                }
+              ]
+            },
+            {
+              "text": "Random Noise als Feature",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Random Noise als Feature"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "Kein Rauschen als Feature. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kein Rauschen als Feature. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "X‑Variablen müssen planbar oder prognostizierbar sein.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "X‑Variablen müssen planbar oder prognostizierbar sein."
+            }
+          ],
+          "answer": true,
+          "rationale": "Sonst Scheinpräzision. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Sonst Scheinpräzision. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Dynamische Regression:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Dynamische Regression:"
+            }
+          ],
+          "options": [
+            {
+              "text": "y=β$X + ARIMA$‑Fehler",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "y=β"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "X + ARIMA"
+                },
+                {
+                  "t": "text",
+                  "text": "‑Fehler"
+                }
+              ]
+            },
+            {
+              "text": "nur ARIMA",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur ARIMA"
+                }
+              ]
+            },
+            {
+              "text": "nur Regression",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Regression"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Fehlerprozess ARIMA. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fehlerprozess ARIMA. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Hierarchie‑Reconciliation Ziel:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Hierarchie‑Reconciliation Ziel:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Inkonsistenz erzeugen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Inkonsistenz erzeugen"
+                }
+              ]
+            },
+            {
+              "text": "Konsistenz zwischen Ebenen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Konsistenz zwischen Ebenen"
+                }
+              ]
+            },
+            {
+              "text": "nur Top‑down verteilen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Top‑down verteilen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Kohärenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kohärenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bottom‑up summiert SKUs zur Kategorie.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bottom‑up summiert SKUs zur Kategorie."
+            }
+          ],
+          "answer": true,
+          "rationale": "Aggregation. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Aggregation. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Kombinationen der Forecasts:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Kombinationen der Forecasts:"
+            }
+          ],
+          "options": [
+            {
+              "text": "immer schlechter",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer schlechter"
+                }
+              ]
+            },
+            {
+              "text": "oft robuster",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "oft robuster"
+                }
+              ]
+            },
+            {
+              "text": "unnötig",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "unnötig"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Diversifikation. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Diversifikation. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxisfalle:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Praxisfalle:"
+            }
+          ],
+          "options": [
+            {
+              "text": "bewegliche Feiertage falsch datiert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "bewegliche Feiertage falsch datiert"
+                }
+              ]
+            },
+            {
+              "text": "Residuen geprüft",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Residuen geprüft"
+                }
+              ]
+            },
+            {
+              "text": "Szenarien gebaut",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Szenarien gebaut"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Kalenderlogik. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kalenderlogik. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei ARIMAX ohne X‑Forecast ist ein echter Zukunfts‑Forecast nicht möglich.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei ARIMAX ohne X‑Forecast ist ein echter Zukunfts‑Forecast nicht möglich."
+            }
+          ],
+          "answer": true,
+          "rationale": "X erforderlich. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. X erforderlich. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Kommunikation:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Kommunikation:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Annahmen zu X explizit machen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Annahmen zu X explizit machen"
+                }
+              ]
+            },
+            {
+              "text": "X verbergen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "X verbergen"
+                }
+              ]
+            },
+            {
+              "text": "keine Intervalle berichten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Intervalle berichten"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Transparenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Transparenz. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken ARIMAX & Hierarchien: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken ARIMAX & Hierarchien: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "introduction",
+      "text": "PLATZHALTER – Einführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Einführung folgt."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Lineare Gleichungen isolieren: gleiche Operation auf beiden Seiten.\n- Klammern zuerst auflösen, dann nach x umstellen.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**Decision-Hints:**\n- Lineare Gleichungen isolieren: gleiche Operation auf beiden Seiten.\n- Klammern zuerst auflösen, dann nach x umstellen."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Worked Example"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] …"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] …"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Fading Example"
+          }
+        ],
+        "steps": [
+          "…"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "…"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini 1",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 1"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini 2",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 2"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": [
+        {
+          "title": "PLATZHALTER – Aufgabe",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aufgabe"
+            }
+          ],
+          "hints": [
+            "…"
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "…"
+                }
+              ]
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

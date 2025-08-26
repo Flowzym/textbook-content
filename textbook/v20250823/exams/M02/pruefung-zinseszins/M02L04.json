@@ -1,0 +1,1901 @@
+{
+  "id": "M02L04",
+  "title": "Zinszeiten & Zinsmethoden (inkl. Schaltjahr)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zinszeiten & Zinsmethoden (inkl. Schaltjahr)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zinszeiten & Zinsmethoden (inkl. Schaltjahr)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 70,
+  "prerequisites": [
+    "M02L03"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M02L03"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "30/360 (deutsch), act/360, act/365, act/act nennen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "30/360 (deutsch), act/360, act/365, act/act nennen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Zeitanteile t und Zinsen für verschiedene Konventionen berechnen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitanteile t und Zinsen für verschiedene Konventionen berechnen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Schaltjahreffekt und methodische Unterschiede begründen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schaltjahreffekt und methodische Unterschiede begründen."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Konventionen bestimmen t. Unterschiedliche Branchen/Verträge nutzen unterschiedliche Regeln.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Konventionen bestimmen t. Unterschiedliche Branchen/Verträge nutzen unterschiedliche Regeln."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Überblick",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Überblick"
+        }
+      ],
+      "text": "30/360 (deutsch): jeder Monat 30 Tage, Jahr 360; act/360: tatsächliche Tage/360; act/365: tatsächliche Tage/365; act/act: tatsächliche Tage/tatsächliches Jahr.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "30/360 (deutsch): jeder Monat 30 Tage, Jahr 360; act/360: tatsächliche Tage/360; act/365: tatsächliche Tage/365; act/act: tatsächliche Tage/tatsächliches Jahr."
+        }
+      ],
+      "explanation": "\n\n**Zinseszins:** $K=K0\\cdot (1+i)^n$. **Abzinsung:** $K0=K$/$(1+i)^n$.\n\n**$Decision-Hints$:**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: $K = K0\\cdot (1+i)^n$.\n- Abzinsen bei Barwertaufgaben: $K0 = K$/$(1+i)^n$.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "\n\n**Zinseszins:** "
+        },
+        {
+          "t": "math_inline",
+          "tex": "K=K0\\cdot (1+i)^n"
+        },
+        {
+          "t": "text",
+          "text": ". **Abzinsung:** "
+        },
+        {
+          "t": "math_inline",
+          "tex": "K0=K"
+        },
+        {
+          "t": "text",
+          "text": "/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(1+i)^n"
+        },
+        {
+          "t": "text",
+          "text": ".\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- Zinseszins anwenden, wenn Zins auf Zins anfällt: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "K = K0\\cdot (1+i)^n"
+        },
+        {
+          "t": "text",
+          "text": ".\n- Abzinsen bei Barwertaufgaben: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "K0 = K"
+        },
+        {
+          "t": "text",
+          "text": "/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(1+i)^n"
+        },
+        {
+          "t": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Vergleich (kein Schaltjahr) 17,01.–12,03.",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Vergleich (kein Schaltjahr) 17,01.–12,03."
+        }
+      ],
+      "text": "$K0=20$,000, $p=5$% → 30/360: $t=55$/360 → € 152,78; act/360: 54/360 → € 150,-; act/365: 54/365 → € 147,95",
+      "text_segments": [
+        {
+          "t": "math_inline",
+          "tex": "K0=20"
+        },
+        {
+          "t": "text",
+          "text": ",000, "
+        },
+        {
+          "t": "math_inline",
+          "tex": "p=5"
+        },
+        {
+          "t": "text",
+          "text": "% → 30/360: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "t=55"
+        },
+        {
+          "t": "text",
+          "text": "/360 → € 152,78; act/360: 54/360 → € 150,-; act/365: 54/365 → € 147,95"
+        }
+      ],
+      "worked": {
+        "title": "Endwert",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Endwert"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] K0=€ 5,-0,00, $i=4$%, $n=5$ ⇒ 5,$000 \\cdot 1$,$0$4^5$$ = 6,083,26 → € 6,083,26"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] K0=€ 5,-0,00, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "i=4"
+              },
+              {
+                "t": "text",
+                "text": "%, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "n=5"
+              },
+              {
+                "t": "text",
+                "text": " ⇒ 5,"
+              },
+              {
+                "t": "math_inline",
+                "tex": "000 \\cdot 1"
+              },
+              {
+                "t": "text",
+                "text": ","
+              },
+              {
+                "t": "math_inline",
+                "tex": "0"
+              },
+              {
+                "t": "text",
+                "text": "4^5$$ = 6,083,26 → € 6,083,26"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "Barwert",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Barwert"
+          }
+        ],
+        "steps": [
+          "K=€ 10,-0,00, $i=3$%, $n=4$ ⇒ 10,000 / 1,$0$3^4$$ = 8,888,49 → € 8,888,49"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "K=€ 10,-0,00, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "i=3"
+              },
+              {
+                "t": "text",
+                "text": "%, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "n=4"
+              },
+              {
+                "t": "text",
+                "text": " ⇒ 10,000 / 1,"
+              },
+              {
+                "t": "math_inline",
+                "tex": "0"
+              },
+              {
+                "t": "text",
+                "text": "3^4$$ = 8,888,49 → € 8,888,49"
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        "$K0=20$,000, $p=5$%",
+        "30/360: $t=55$/360",
+        "€ 152,78; act/360: 54/360",
+        "€ 150,-; act/365: 54/365",
+        "€ 147,95"
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "math_inline",
+              "tex": "K0=20"
+            },
+            {
+              "t": "text",
+              "text": ",000, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "p=5"
+            },
+            {
+              "t": "text",
+              "text": "%"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "30/360: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "t=55"
+            },
+            {
+              "t": "text",
+              "text": "/360"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "€ 152,78; act/360: 54/360"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "€ 150,-; act/365: 54/365"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "€ 147,95"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "worked",
+      "title": "Schaltjahr 2024 – 28,02.–01,03.",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Schaltjahr 2024 – 28,02.–01,03."
+        }
+      ],
+      "text": "Tage: act/$act = 2$/366 (29,02. zählt), act/$365 = 2$/365, act/$360 = 2$/360, 30/$360 = 2$/360 (Monatsenden vereinheitlicht).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Tage: act/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "act = 2"
+        },
+        {
+          "t": "text",
+          "text": "/366 (29,02. zählt), act/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "365 = 2"
+        },
+        {
+          "t": "text",
+          "text": "/365, act/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "360 = 2"
+        },
+        {
+          "t": "text",
+          "text": "/360, 30/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "360 = 2"
+        },
+        {
+          "t": "text",
+          "text": "/360 (Monatsenden vereinheitlicht)."
+        }
+      ],
+      "worked": {
+        "title": "Endwert",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Endwert"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] K0=€ 5,-0,00, $i=4$%, $n=5$ ⇒ 5,$000 \\cdot 1$,$0$4^5$$ = 6,083,26 → € 6,083,26"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] K0=€ 5,-0,00, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "i=4"
+              },
+              {
+                "t": "text",
+                "text": "%, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "n=5"
+              },
+              {
+                "t": "text",
+                "text": " ⇒ 5,"
+              },
+              {
+                "t": "math_inline",
+                "tex": "000 \\cdot 1"
+              },
+              {
+                "t": "text",
+                "text": ","
+              },
+              {
+                "t": "math_inline",
+                "tex": "0"
+              },
+              {
+                "t": "text",
+                "text": "4^5$$ = 6,083,26 → € 6,083,26"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "Barwert",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Barwert"
+          }
+        ],
+        "steps": [
+          "K=€ 10,-0,00, $i=3$%, $n=4$ ⇒ 10,000 / 1,$0$3^4$$ = 8,888,49 → € 8,888,49"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "K=€ 10,-0,00, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "i=3"
+              },
+              {
+                "t": "text",
+                "text": "%, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "n=4"
+              },
+              {
+                "t": "text",
+                "text": " ⇒ 10,000 / 1,"
+              },
+              {
+                "t": "math_inline",
+                "tex": "0"
+              },
+              {
+                "t": "text",
+                "text": "3^4$$ = 8,888,49 → € 8,888,49"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "visual",
+      "title": "Tageszähler (ASCII)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Tageszähler (ASCII)"
+        }
+      ],
+      "ascii": "Zeitraum: 25,02.2024 – 15,04.2024  (Schaltjahr)\n30/360: $(30-25)+30+15 = 50$\nact/360: $(29-25)+31+15 = 50$  → Basis 360\nact/365: 50/365\nact/act: 50/366",
+      "caption": "Schaltjahr beeinflusst den Nenner bei act/act.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen.",
+      "alt_text": "ASCII-Visual: Schaltjahr beeinflusst den Nenner bei act/act.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: Schaltjahr beeinflusst den Nenner bei act/act.\n\nHinweis: Bitte Achsen (x/y), Einheiten und Legende ergänzen. — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "fading",
+      "title": "Fading – Tage zählen (Schaltjahr)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Fading – Tage zählen (Schaltjahr)"
+        }
+      ],
+      "text": "Zeitraum 10,02.2024–05,03.2024.\n1) Tage 30/360 = __\n2) Tage act/act = __ (Schaltjahr)\n3) t act/act = __",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitraum 10,02.2024–05,03.2024.\n1) Tage 30/360 = __\n2) Tage act/act = __ (Schaltjahr)\n3) t act/act = __"
+        }
+      ],
+      "solution": [
+        "$(30-10)+5=25$",
+        "$20+5=25$",
+        "25/366≈0,0683"
+      ],
+      "worked": {
+        "title": "Endwert",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Endwert"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] K0=€ 5,-0,00, $i=4$%, $n=5$ ⇒ 5,$000 \\cdot 1$,$0$4^5$$ = 6,083,26 → € 6,083,26"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] K0=€ 5,-0,00, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "i=4"
+              },
+              {
+                "t": "text",
+                "text": "%, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "n=5"
+              },
+              {
+                "t": "text",
+                "text": " ⇒ 5,"
+              },
+              {
+                "t": "math_inline",
+                "tex": "000 \\cdot 1"
+              },
+              {
+                "t": "text",
+                "text": ","
+              },
+              {
+                "t": "math_inline",
+                "tex": "0"
+              },
+              {
+                "t": "text",
+                "text": "4^5$$ = 6,083,26 → € 6,083,26"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "Barwert",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Barwert"
+          }
+        ],
+        "steps": [
+          "K=€ 10,-0,00, $i=3$%, $n=4$ ⇒ 10,000 / 1,$0$3^4$$ = 8,888,49 → € 8,888,49"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "K=€ 10,-0,00, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "i=3"
+              },
+              {
+                "t": "text",
+                "text": "%, "
+              },
+              {
+                "t": "math_inline",
+                "tex": "n=4"
+              },
+              {
+                "t": "text",
+                "text": " ⇒ 10,000 / 1,"
+              },
+              {
+                "t": "math_inline",
+                "tex": "0"
+              },
+              {
+                "t": "text",
+                "text": "3^4$$ = 8,888,49 → € 8,888,49"
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        "Zeitraum 10,02.2024–05,",
+        "Tage 30/360 = __",
+        "Tage act/act = __ (Schaltjahr",
+        "t act/act = __"
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Zeitraum 10,02.2024–05,"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Tage 30/360 = __"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Tage act/act = __ (Schaltjahr"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "t act/act = __"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "t bei 40 Tagen, act/360",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "t bei 40 Tagen, act/360"
+            }
+          ],
+          "hint": "40/360",
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "40/360"
+            }
+          ],
+          "solution": "≈0,1111",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "≈0,1111"
+            }
+          ],
+          "check": {
+            "type": "approx",
+            "expected": 0.1111,
+            "tolerance": 0.05,
+            "expr": "0.1111"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Zinsen: $K0=5000$, $p=4$%, $t=73$/365",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Zinsen: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "K0=5000"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "p=4"
+            },
+            {
+              "t": "text",
+              "text": "%, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "t=73"
+            },
+            {
+              "t": "text",
+              "text": "/365"
+            }
+          ],
+          "hint": "$Z=K0\\cdot p\\cdot t$",
+          "hint_segments": [
+            {
+              "t": "math_inline",
+              "tex": "Z=K0\\cdot p\\cdot t"
+            }
+          ],
+          "solution": "≈€ 40,-,- (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "≈€ 40,-,- (Einheit: €, gerundet auf 2 Dezimalstellen.)"
+            }
+          ],
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Welche Methode liefert bei Schaltjahr das kleinste t für 50 Tage?",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Welche Methode liefert bei Schaltjahr das kleinste t für 50 Tage?"
+            }
+          ],
+          "hint": "act/act",
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "act/act"
+            }
+          ],
+          "solution": "act/act (Nenner 366)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "act/act (Nenner 366)"
+            }
+          ],
+          "check": {
+            "type": "free_form",
+            "keywords": [
+              "act/act"
+            ]
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "1,$0$3^4$$ − 1 = ?",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "1,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "0"
+            },
+            {
+              "t": "text",
+              "text": "3^4$$ − 1 = ?"
+            }
+          ],
+          "solution": "0,12550881",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "0,12550881"
+            }
+          ],
+          "check": {
+            "type": "approx",
+            "expected": 0.12550881,
+            "tolerance": 0.05,
+            "expr": "0.12550881"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "K bei K0=€ 2,-0,00, $i=2$%, $n=2$",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "K bei K0=€ 2,-0,00, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "i=2"
+            },
+            {
+              "t": "text",
+              "text": "%, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "n=2"
+            }
+          ],
+          "solution": "€ 2,080,80 (Einheit: €, gerundet auf 2 Dezimalstellen.)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 2,080,80 (Einheit: €, gerundet auf 2 Dezimalstellen.)"
+            }
+          ],
+          "check": {
+            "type": "approx",
+            "expected": 2.0,
+            "tolerance": 0.05,
+            "expr": "2"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort)."
+            }
+          ],
+          "solution": "$K=K0\\cdot (1+i)^n$ bzw. $K0=K$/$(1+i)^n$",
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "K=K0\\cdot (1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": " bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "K0=K"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "$(1+i)^n$"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "$K=K0\\cdot (1+i)^n$ bzw.",
+            "$K0=K$/$(1+i)^n$"
+          ],
+          "steps_segments": [
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K=K0\\cdot (1+i)^n"
+                },
+                {
+                  "t": "text",
+                  "text": " bzw."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K0=K"
+                },
+                {
+                  "t": "text",
+                  "text": "/"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(1+i)^n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prompt": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Notiere die Abzinsungs- bzw. Zinseszinsformel (Textantwort)."
+            }
+          ],
+          "solution": "$K=K0\\cdot (1+i)^n$ bzw. $K0=K$/$(1+i)^n$",
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "K=K0\\cdot (1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": " bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "K0=K"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "$(1+i)^n$"
+          },
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "$K=K0\\cdot (1+i)^n$ bzw.",
+            "$K0=K$/$(1+i)^n$"
+          ],
+          "steps_segments": [
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K=K0\\cdot (1+i)^n"
+                },
+                {
+                  "t": "text",
+                  "text": " bzw."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "K0=K"
+                },
+                {
+                  "t": "text",
+                  "text": "/"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "(1+i)^n"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "long": [
+        {
+          "title": "Bankfall – Vertragsprüfung (Schaltjahr)",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "Bankfall – Vertragsprüfung (Schaltjahr)"
+            }
+          ],
+          "context": "Vertrag: act/360. Kunde rechnet mit act/act. K0=€ 25,-0, $p=6$%, 80 Tage **in 2024**.",
+          "subtasks": [
+            {
+              "text": "Berechne Z act/360 und act/act.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Berechne Z act/360 und act/act."
+                }
+              ]
+            },
+            {
+              "text": "Erkläre die Differenz.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Erkläre die Differenz."
+                }
+              ]
+            },
+            {
+              "text": "Formuliere eine klare Vertragsklausel.",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Formuliere eine klare Vertragsklausel."
+                }
+              ]
+            }
+          ],
+          "hints": [
+            "act/360: $t=80$/360; act/act: $t=80$/366.",
+            "Jahresbasis unterschiedlich; Schaltjahr senkt act/act-Zinsen.",
+            "„Zinsen werden auf Basis act/360 berechnet.“"
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "act/360: "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "t=80"
+                },
+                {
+                  "t": "text",
+                  "text": "/360; act/act: "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "t=80"
+                },
+                {
+                  "t": "text",
+                  "text": "/366."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Jahresbasis unterschiedlich; Schaltjahr senkt act/act-Zinsen."
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "„Zinsen werden auf Basis act/360 berechnet.“"
+                }
+              ]
+            }
+          ],
+          "solutions": [
+            "≈€ 333,33",
+            "≈€ 327,87",
+            "Klausel formuliert."
+          ],
+          "checks": [
+            {
+              "type": "approx",
+              "expected": 333.33,
+              "tolerance": 0.5,
+              "expr": "333.33"
+            },
+            {
+              "type": "approx",
+              "expected": 333.33,
+              "tolerance": 0.5,
+              "expr": "333.33"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "steps": [
+            "≈€ 333,33",
+            "≈€ 327,87",
+            "Klausel formuliert."
+          ],
+          "steps_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "≈€ 333,33"
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "≈€ 327,87"
+                }
+              ]
+            },
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "Klausel formuliert."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei 30/360 hat jeder Monat…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei 30/360 hat jeder Monat…"
+            }
+          ],
+          "options": [
+            {
+              "text": "30 Tage",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "30 Tage"
+                }
+              ]
+            },
+            {
+              "text": "tatsächliche Tage",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "tatsächliche Tage"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Definition. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "act/act berücksichtigt Schaltjahre.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "act/act berücksichtigt Schaltjahre."
+            }
+          ],
+          "answer": true,
+          "rationale": "Ja. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ja. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Zeitanteil 90 Tage act/360?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Zeitanteil 90 Tage act/360?"
+            }
+          ],
+          "options": [
+            {
+              "text": "0,25",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "0,25"
+                }
+              ]
+            },
+            {
+              "text": "0,2466",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "0,2466"
+                }
+              ]
+            },
+            {
+              "text": "0,219",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "0,219"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "90/$360=0$,25. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 90/$360=0$,25. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch $(1+i)^n$.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Abzinsen teilt man durch "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ],
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Abzinsen teilt man durch $(1+i)^n$.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Abzinsen teilt man durch "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1+i)^n"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ],
+          "answer": true,
+          "rationale": "Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "covers_outcomes": [
+            2
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Barwertberechnung nutzt Division durch $(1+i)^n$.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Methode liefert i. d. R. höhere Z bei gleichem p?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Methode liefert i. d. R. höhere Z bei gleichem p?"
+            }
+          ],
+          "options": [
+            {
+              "text": "30/360",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "30/360"
+                }
+              ]
+            },
+            {
+              "text": "act/365",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "act/365"
+                }
+              ]
+            },
+            {
+              "text": "act/act",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "act/act"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Größere t im Schnitt. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Größere t im Schnitt. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei act/365 ist die Jahresbasis 365.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei act/365 ist die Jahresbasis 365."
+            }
+          ],
+          "answer": true,
+          "rationale": "Definition. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Definition. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Bei 54 Tagen act/365 ist t≈…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei 54 Tagen act/365 ist t≈…"
+            }
+          ],
+          "options": [
+            {
+              "text": "0,1479",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "0,1479"
+                }
+              ]
+            },
+            {
+              "text": "0,1500",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "0,1500"
+                }
+              ]
+            },
+            {
+              "text": "0,1356",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "0,1356"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "54/365≈0,1479. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 54/365≈0,1479. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Zinszeit 17,01.–12,03. (kein Schaltjahr), act/360: Tage?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Zinszeit 17,01.–12,03. (kein Schaltjahr), act/360: Tage?"
+            }
+          ],
+          "options": [
+            {
+              "text": "54",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "54"
+                }
+              ]
+            },
+            {
+              "text": "55",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "55"
+                }
+              ]
+            },
+            {
+              "text": "56",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "56"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "14 $jan + 28$ $feb + 12$ $mar = 54$. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 14 $jan + 28$ $feb + 12$ $mar = 54$. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "30/360 setzt den 31. auf den 30. des Monats.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "30/360 setzt den 31. auf den 30. des Monats."
+            }
+          ],
+          "answer": true,
+          "rationale": "Vereinheitlichung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vereinheitlichung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Angabe gehört **nicht** zur Day-Count-Konvention?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Angabe gehört **nicht** zur Day-Count-Konvention?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Jahresbasis",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Jahresbasis"
+                }
+              ]
+            },
+            {
+              "text": "Tageszählregel",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Tageszählregel"
+                }
+              ]
+            },
+            {
+              "text": "Zinssatz p",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Zinssatz p"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "p ist unabhängig. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. p ist unabhängig. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Schaltjahr 2024: 01,02.–01,03. act/act: t=?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Schaltjahr 2024: 01,02.–01,03. act/act: t=?"
+            }
+          ],
+          "options": [
+            {
+              "text": "28/366",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "28/366"
+                }
+              ]
+            },
+            {
+              "text": "29/366",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "29/366"
+                }
+              ]
+            },
+            {
+              "text": "30/366",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "30/366"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Februar hat 29 Tage. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Februar hat 29 Tage. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "single_choice",
+          "question": "act/365 vs. act/act für 50 Tage in 2024: Verhältnis t_act/act / t_act/365?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "act/365 vs. act/act für 50 Tage in 2024: Verhältnis t_act/act / t_act/365?"
+            }
+          ],
+          "options": [
+            {
+              "text": "365/366",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "365/366"
+                }
+              ]
+            },
+            {
+              "text": "366/365",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "366/365"
+                }
+              ]
+            },
+            {
+              "text": "≈1",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "≈1"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Kleiner wegen größerem Nenner. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Kleiner wegen größerem Nenner. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bei act/360 ist Schaltjahr irrelevant.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei act/360 ist Schaltjahr irrelevant."
+            }
+          ],
+          "answer": true,
+          "rationale": "Nenner fix 360. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nenner fix 360. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Methode ist in vielen Bankverträgen üblich?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Methode ist in vielen Bankverträgen üblich?"
+            }
+          ],
+          "options": [
+            {
+              "text": "act/360",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "act/360"
+                }
+              ]
+            },
+            {
+              "text": "act/365",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "act/365"
+                }
+              ]
+            },
+            {
+              "text": "act/act",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "act/act"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Branchenspezifisch oft act/360 in EU. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Branchenspezifisch oft act/360 in EU. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du kannst Day-Count-Methoden inkl. Schaltjahr sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Du kannst Day-Count-Methoden inkl. Schaltjahr sicher anwenden."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

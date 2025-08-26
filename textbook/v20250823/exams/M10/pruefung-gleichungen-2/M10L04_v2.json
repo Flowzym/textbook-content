@@ -1,0 +1,754 @@
+{
+  "id": "M10L04",
+  "title": "Experimente & Uplift – Bayes-A/B & Sequentiell (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Experimente & Uplift – Bayes-A/B & Sequentiell (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Experimente & Uplift – Bayes-A/B & Sequentiell (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M10L04"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M10L04"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Bayes-A/B & Uplift abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Bayes-A/B & Uplift abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bayes-A/B berichtet…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bayes-A/B berichtet…"
+            }
+          ],
+          "options": [
+            {
+              "text": "p-Wert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "p-Wert"
+                }
+              ]
+            },
+            {
+              "text": "P(B>A)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "P(B>A)"
+                }
+              ]
+            },
+            {
+              "text": "nur Mittelwert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Mittelwert"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Direkte Entscheidungsgröße.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Direkte Entscheidungsgröße.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Sequentielles Testen erfordert vorher definierte Stopping-Regeln.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Sequentielles Testen erfordert vorher definierte Stopping-Regeln."
+            }
+          ],
+          "answer": true,
+          "rationale": "Governance.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Governance.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Uplift meint…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Uplift meint…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Gesamteffekt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Gesamteffekt"
+                }
+              ]
+            },
+            {
+              "text": "Zusatzwirkung durch Treatment",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Zusatzwirkung durch Treatment"
+                }
+              ]
+            },
+            {
+              "text": "Varianz",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Varianz"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Inkrementeller Nutzen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Inkrementeller Nutzen.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Entscheidungsschwelle sinnvoll:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Entscheidungsschwelle sinnvoll:"
+            }
+          ],
+          "options": [
+            {
+              "text": "nur P(B>A)>0,95",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur P(B>A)>0,95"
+                }
+              ]
+            },
+            {
+              "text": "nur ROI-Schwelle",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur ROI-Schwelle"
+                }
+              ]
+            },
+            {
+              "text": "beides: Wahrscheinlichkeit & Wertbeitrag",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "beides: Wahrscheinlichkeit & Wertbeitrag"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "Wirtschaftlichkeit + Evidenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wirtschaftlichkeit + Evidenz.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Hierarchisches Pooling stabilisiert Segment-Schätzungen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Hierarchisches Pooling stabilisiert Segment-Schätzungen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Partial Pooling.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Partial Pooling.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Segmentierung nur, wenn…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Segmentierung nur, wenn…"
+            }
+          ],
+          "options": [
+            {
+              "text": "ausreichende Power vorliegt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ausreichende Power vorliegt"
+                }
+              ]
+            },
+            {
+              "text": "immer",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer"
+                }
+              ]
+            },
+            {
+              "text": "nie",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nie"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Stichprobengröße beachten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stichprobengröße beachten.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Beta–Binomial Posterior für Conversion:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beta–Binomial Posterior für Conversion:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Beta(α+x, β+n−x)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Beta(α+x, β+n−x)"
+                }
+              ]
+            },
+            {
+              "text": "Normal(μ,σ)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Normal(μ,σ)"
+                }
+              ]
+            },
+            {
+              "text": "Gamma(k,θ)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Gamma(k,θ)"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Konjugat.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Konjugat.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Priors können Erfahrungswissen (z. B. übliche Lift-Spanne) kodieren.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Priors können Erfahrungswissen (z. B. übliche Lift-Spanne) kodieren."
+            }
+          ],
+          "answer": true,
+          "rationale": "Informative Priors.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Informative Priors.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Fehlerquelle:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Fehlerquelle:"
+            }
+          ],
+          "options": [
+            {
+              "text": "P(B>A) ignoriert ROI",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "P(B>A) ignoriert ROI"
+                }
+              ]
+            },
+            {
+              "text": "Segmentgrößen beachtet",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Segmentgrößen beachtet"
+                }
+              ]
+            },
+            {
+              "text": "Stop-Regel festgelegt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Stop-Regel festgelegt"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Wertbezug fehlt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Wertbezug fehlt.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Bei knapper Evidenz…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei knapper Evidenz…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Test abbrechen & B ausrollen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Test abbrechen & B ausrollen"
+                }
+              ]
+            },
+            {
+              "text": "weiter testen oder mehr Daten sammeln",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "weiter testen oder mehr Daten sammeln"
+                }
+              ]
+            },
+            {
+              "text": "alles verwerfen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "alles verwerfen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Evidenz ausbauen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Evidenz ausbauen.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Uplift-Ziel ist Budgetallokation auf Gruppen mit höchstem erwarteten Mehrgewinn.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Uplift-Ziel ist Budgetallokation auf Gruppen mit höchstem erwarteten Mehrgewinn."
+            }
+          ],
+          "answer": true,
+          "rationale": "Optimierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Optimierung.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Sequentielle Anpassung der Regeln während des Tests ist…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Sequentielle Anpassung der Regeln während des Tests ist…"
+            }
+          ],
+          "options": [
+            {
+              "text": "okay",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "okay"
+                }
+              ]
+            },
+            {
+              "text": "riskant (Bias)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "riskant (Bias)"
+                }
+              ]
+            },
+            {
+              "text": "empfohlen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "empfohlen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Bias-Gefahr.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bias-Gefahr.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Bayes-A/B & Uplift: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Bayes-A/B & Uplift: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
