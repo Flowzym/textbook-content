@@ -1,0 +1,1549 @@
+{
+  "id": "M02L02",
+  "title": "Lehrtext – Prozentarten: Rabatt, Skonto, MwSt (AT: 10/13/20%) – Sequentielle Berechnungen für Einsteiger",
+  "reading_time_min": 50,
+  "prerequisites": [
+    "M02L01"
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Ich kann die Begriffe Rabatt, Skonto und Mehrwertsteuer definieren und ihre unterschiedlichen Bezugsgrößen nennen."
+    },
+    {
+      "level": "Understand",
+      "text": "Ich verstehe, warum Prozentänderungen nacheinander als Faktoren multipliziert werden müssen und nicht addiert werden dürfen."
+    },
+    {
+      "level": "Apply",
+      "text": "Ich kann komplexe Preisketten (Rabatt → Skonto → MwSt) schrittweise und korrekt berechnen."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ich kann die österreichischen MwSt-Sätze (10%/13%/20%) korrekt zuordnen und gemischte Rechnungen durchführen."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Ich kann beurteilen, welche Reihenfolge bei Preisnachlässen für den Kunden am günstigsten ist."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "segments": [
+        {
+          "t": "text",
+          "text": "In dieser Lektion meisterst du komplexe Preisberechnungen wie ein Profi. Du verstehst, warum Rabatt zuerst kommt, dann Skonto, und wie Mehrwertsteuer dazukommt. Mit der Faktorenmethode rechnest du sicher und schnell – auch wenn mehrere Prozentsätze nacheinander angewendet werden. Am Ende erkennst du die typischen Fallen beim Addieren von Prozenten und vermeidest sie."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Wofür brauche ich das? – Der perfekte Einkauf",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Wofür brauche ich das? – Der perfekte Einkauf"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Stell dir vor, du kaufst eine Jacke für € 200,-,-. Im Geschäft bekommst du 20% Kundenrabatt. An der Kasse sagst du: 'Ich zahle sofort bar' und erhältst 3% Skonto. Zu Hause rechnest du die österreichische Mehrwertsteuer von 20% aus dem Bruttopreis heraus."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Viele denken fälschlicherweise: '20% + 3% = 23% Gesamtrabatt'. Aber das stimmt nicht! Das Skonto bezieht sich auf den bereits rabattierten Preis, nicht auf den ursprünglichen Preis."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Diese Situation zeigt, warum wir Prozentänderungen als Faktorenkette behandeln müssen: € 200,-,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "80 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",97 = € 155,20. Nur so rechnen wir korrekt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die große Idee – Prozentänderungen stapeln sich",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Die große Idee – Prozentänderungen stapeln sich"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Wenn mehrere Prozentänderungen nacheinander passieren, wirkt jede auf das bereits veränderte Ergebnis. Das ist wie bei russischen Matroschka-Puppen: Jede Puppe steckt in der nächstgrößeren."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Jede Prozentänderung wird zu einem Faktor: +15% wird "
+            },
+            {
+              "t": "math_inline",
+              "tex": "zu \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ",15, -20% wird "
+            },
+            {
+              "t": "math_inline",
+              "tex": "zu \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",80. Diese Faktoren multiplizieren wir der Reihe nach."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Die Reihenfolge ist meist durch die Geschäftspraxis festgelegt: Erst Rabatt (Preisnachlass), dann Skonto (Zahlungsnachlass), dann Steuern. Aber aufgepasst: Die Reihenfolge kann das Endergebnis beeinflussen!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Faktorenkette visualisiert",
+      "image": "assets/M02L02_factor_chain.png",
+      "src": "assets/M02L02_factor_chain.png",
+      "alt_text": "Kettendarstellung mit Startpreis € 200,-,-, Faktoren 0,80 und 0,97, Endergebnis € 155,20",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Eine Kette zeigt: € 200,-,- → ×0,80 (Rabatt) → € 160,-,- → ×0,97 (Skonto) → € 155,20. Jeder Faktor wirkt auf das aktuelle Ergebnis, nicht auf den Startpreis."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Rabatt verstehen – der klassische Preisnachlass",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Rabatt verstehen – der klassische Preisnachlass"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Rabatt ist ein Preisnachlass, der vom Listenpreis abgezogen wird. Er wird meist in Prozent angegeben: '20% Rabatt' bedeutet, du zahlst nur noch 80% des ursprünglichen Preises."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Rabatt wird immer vom Bruttobetrag (inklusive MwSt) berechnet, es sei denn, es ist ausdrücklich anders vereinbart."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Faktor für Rabatt: Bei p% Rabatt multiplizierst du mit dem Faktor (1 - p/100). Bei 20% Rabatt ist der Faktor 0,80."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Rabatt-Balkendiagramm",
+      "image": "assets/M02L02_discount_bar.png",
+      "src": "assets/M02L02_discount_bar.png",
+      "alt_text": "Horizontaler Balken € 200,-,-, 20% rot durchgestrichen, 80% blau als Zahlbetrag",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Ein Balken zeigt € 200,-,- als Gesamtlänge. 20% (€ 40,-,-) sind rot durchgestrichen für Rabatt. 80% (€ 160,-,-) bleiben blau als zu zahlender Betrag."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Skonto verstehen – der Zahlungsnachlass",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Skonto verstehen – der Zahlungsnachlass"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Skonto ist ein zusätzlicher Nachlass für schnelle oder bar bezahlte Rechnungen. Typische Formulierung: '3% Skonto bei Zahlung binnen 14 Tagen'."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Wichtig: Skonto bezieht sich auf den bereits rabattierten Preis, nicht auf den ursprünglichen Listenpreis. Das ist der häufigste Denkfehler."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Faktor für Skonto: Bei p% Skonto multiplizierst du mit (1 - p/100). Bei 3% Skonto ist der Faktor 0,97."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Skonto nach Rabatt",
+      "image": "assets/M02L02_skonto_flow.png",
+      "src": "assets/M02L02_skonto_flow.png",
+      "alt_text": "Flussdiagramm mit drei Boxen und Pfeilen, zeigt sequentielle Preisreduktion",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Flussdiagramm: € 200,-,- → Rabatt 20% → € 160,-,- → Skonto 3% → € 155,20. Das Skonto von € 4,80 bezieht sich nur auf die € 160,-,-, nicht auf die ursprünglichen € 200,-,-."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mehrwertsteuer (MwSt) in Österreich – die drei Sätze",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Mehrwertsteuer (MwSt) in Österreich – die drei Sätze"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "In Österreich gibt es drei MwSt-Sätze: 20% (Normalsatz für die meisten Waren), 13% (reduziert, z.B. Kulturgüter) und 10% (stark reduziert, z.B. Grundnahrungsmittel, Medikamente)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "MwSt wird auf den Nettopreis aufgeschlagen: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Netto \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "20 = Brutto"
+            },
+            {
+              "t": "text",
+              "text": " bei 20% MwSt. Rückwärts: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Brutto \\div 1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "20 = Netto"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "In Geschäften siehst du meist Bruttopreise. Für Rechnungen an Unternehmen wird oft Netto + MwSt ausgewiesen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Österreichische MwSt-Sätze Übersicht",
+      "image": "assets/M02L02_austrian_vat.png",
+      "src": "assets/M02L02_austrian_vat.png",
+      "alt_text": "Drei Säulendiagramm für österreichische MwSt-Sätze mit Produktbeispielen",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Drei Säulen zeigen die MwSt-Sätze: 10% (Lebensmittel, Medikamente), 13% (Kultur, Tourismus), 20% (Standard). Mit typischen Beispielen pro Kategorie."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Schritt-für-Schritt: Die Standard-Preiskette",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Schritt-für-Schritt: Die Standard-Preiskette"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 1: Identifiziere alle Prozentänderungen und ihre Reihenfolge. Standard: 1. Rabatt, 2. Skonto, 3. MwSt-Behandlung."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 2: Wandle jeden Prozentsatz in einen Faktor um. Reduktion um p%: Faktor (1-p/100). Erhöhung um p%: Faktor (1+p/100)."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 3: Multipliziere die Faktoren der Reihe nach mit dem Startpreis. Jeder Schritt wirkt auf das aktuelle Ergebnis."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 4: Prüfe das Ergebnis auf Plausibilität. Ist es teurer oder billiger als erwartet? Stimmen die Größenordnungen?"
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "left"
+      }
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Die komplette Jacken-Rechnung ausführlich",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Beispiel A – Die komplette Jacken-Rechnung ausführlich"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Situation: Jacke € 200,-,-, 20% Kundenrabatt, 3% Skonto bei Barzahlung. Wie viel zahlst du?"
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 1: Reihenfolge festlegen: 1. Rabatt, 2. Skonto."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 2: Faktoren bestimmen: Rabatt 20% → Faktor 0,80. Skonto 3% → Faktor 0,97."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 3: Rechnung: € 200,-,- × 0,80 = € 160,-,- (nach Rabatt). € 160,-,- × 0,97 = € 155,20 (nach Skonto)."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "weniger",
+            "right": "22"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 4: Plausibilität: Statt € 200,-,- zahlst du € 155,20. Das sind € 44,80 ,4% Gesamtersparnis (nicht 23%!)."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Probe: € 200,-,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "80 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",97 = € 200,-,- × 0,776 = € 155,20 ✓"
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "left"
+      }
+    },
+    {
+      "type": "visual",
+      "title": "Komplettrechnung Schritt für Schritt",
+      "image": "assets/M02L02_complete_calculation.png",
+      "src": "assets/M02L02_complete_calculation.png",
+      "alt_text": "Taschenrechner-Simulation mit korrekter Faktorenrechnung vs. falsche Prozentaddition",
+      "content_segments": [
+        {
+          "t": "math_inline",
+          "tex": "Taschenrechner-Display"
+        },
+        {
+          "t": "text",
+          "text": " zeigt jeden Schritt: 200 → ×0.80 → 160 → ×0.97 → 155.20. Daneben die falsche Addition: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "200 \\times 0"
+        },
+        {
+          "t": "text",
+          "text": "."
+        },
+        {
+          "t": "math_inline",
+          "tex": "77 = 154"
+        },
+        {
+          "t": "text",
+          "text": " (zu niedrig)."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – MwSt aus Bruttopreis herausrechnen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Beispiel B – MwSt aus Bruttopreis herausrechnen"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Situation: Du kaufst Bücher für € 120,-,- (Bruttopreis) und willst wissen, wie viel davon MwSt (13% in Österreich) ist."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "MwSt",
+            "right": "Nettopreis \\times 1"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 1: Verstehen, was gegeben ist: € 120,-,- = % ,13."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 2: Nettopreis berechnen: Nettopreis = € 120,-,- ÷ 1,13 ≈ € 106,19."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 3: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "MwSt-Betrag"
+            },
+            {
+              "t": "text",
+              "text": ": € 120,-,- - € 106,19 = € 13,81."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 4: Probe: € 106,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "19 \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ",13 ≈ € 120,-,- ✓. Von € 120,-,- sind € 13,81 Mehrwertsteuer."
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "left"
+      }
+    },
+    {
+      "type": "visual",
+      "title": "MwSt herausrechnen visualisiert",
+      "image": "assets/M02L02_vat_extraction.png",
+      "src": "assets/M02L02_vat_extraction.png",
+      "alt_text": "Kreisdiagramm € 120,-,- aufgeteilt in Netto und MwSt-Anteile mit Rechenweg",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Kreisdiagramm zeigt € 120,-,- Bruttopreis: € 106,19 Netto (blau) + € 13,81 MwSt (rot). Pfeil zeigt Berechnung "
+        },
+        {
+          "t": "math_inline",
+          "tex": "120 \\div 1"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "13 = 106"
+        },
+        {
+          "t": "text",
+          "text": ",19."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Gemischte MwSt-Sätze – der Einkaufskorb",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Gemischte MwSt-Sätze – der Einkaufskorb"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "In der Praxis kaufst du oft Waren mit verschiedenen MwSt-Sätzen: Lebensmittel 10%, Bücher 13%, Elektronik 20%. Jede Position wird separat berechnet."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Beispiel Einkaufskorb: Brot € 5,-,- "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(netto) + 10"
+            },
+            {
+              "t": "text",
+              "text": "% = € 5,50. Buch € 15,-,- "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(netto) + 13"
+            },
+            {
+              "t": "text",
+              "text": "% = € 16,95. Handy € 100,-,- "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(netto) + 20"
+            },
+            {
+              "t": "text",
+              "text": "% = € 120,-,-."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Gesamtrechnung: € 5,50 + € 16,95 + € 120,-,- = € 142,45 brutto. Davon MwSt: € 0,50 + € 1,95 + € 20,-,- = € 22,45."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Einkaufskorb mit gemischten MwSt-Sätzen",
+      "image": "assets/M02L02_mixed_vat_basket.png",
+      "src": "assets/M02L02_mixed_vat_basket.png",
+      "alt_text": "Kassenbon mit drei Positionen, verschiedene MwSt-Sätze, Gesamtsummen am Ende",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Kassenbon-Simulation: Brot € 5,-,-+10%, Buch € 15,-,-+13%, Handy € 100,-,-+20%. Summe netto € 120,-,-, MwSt € 22,45, brutto € 142,45."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel C – Komplexer B2B-Fall mit allem",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Beispiel C – Komplexer B2B-Fall mit allem"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Situation: Unternehmen kauft Software für € 100,-0,- (netto). 15% Mengenrabatt, 2% Skonto, dazu 20% MwSt. Welcher Endbetrag?"
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 1: Reihenfolge: Rabatt und Skonto auf Netto, dann MwSt drauf."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 2: Rabatt: € 100,-0,- × 0,85 = € 850,-,-. Skonto: € 850,-,- × 0,98 = € 833,-,- (netto)."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 3: MwSt: € 833,-,- × 1,20 = € 999,60 (brutto)."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 4: Alternative Rechnung: € 100,-0,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "85 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "98 \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ",20 = € 999,60."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Antwort: Das Unternehmen zahlt € 999,60 brutto. Davon sind € 166,60 MwSt."
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "left"
+      }
+    },
+    {
+      "type": "concept",
+      "title": "Reihenfolge-Effekte – wann es einen Unterschied macht",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Reihenfolge-Effekte – wann es einen Unterschied macht"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "In der Regel ist die Reihenfolge Rabatt → Skonto → MwSt festgelegt. Aber manchmal gibt es Spielraum, und die Reihenfolge beeinflusst das Ergebnis."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Beispiel: Bei € 100,-0,-, 10% Rabatt und 5% Skonto. Rabatt zuerst: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "1000 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "90 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",95 = € 855,-,-. Skonto zuerst: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "1000 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "95 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",90 = € 855,-,-. Hier ist es gleich!"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aber aufgepasst: Bei unterschiedlichen Bezugsgrößen (z.B. Rabatt auf brutto, Skonto auf netto) kann die Reihenfolge sehr wohl einen Unterschied machen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Reihenfolge-Vergleich",
+      "image": "assets/M02L02_order_comparison.png",
+      "src": "assets/M02L02_order_comparison.png",
+      "alt_text": "Flussdiagramm mit zwei parallelen Berechnungspfaden, beide führen zum selben Ergebnis",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Zwei Pfade von € 100,-0,-: Pfad A (Rabatt→Skonto) und Pfad B (Skonto→Rabatt) führen beide zu € 855,-,-. Bei gleichen Bezugsgrößen ist die Reihenfolge egal."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Häufige Fallen und Gegenstrategien",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Häufige Fallen und Gegenstrategien"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Falle 1 – Prozente addieren: '20% + 3% = 23% Rabatt' ist falsch. Richtig: 20% und 3% als separate Faktoren behandeln (0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "80 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",97)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Falle 2 – Falsche Bezugsgröße: Skonto immer auf den bereits rabattierten Preis, nicht auf den ursprünglichen Preis."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Falle 3 – MwSt-Satz verwechseln: In Österreich 10%/13%/20% je nach Warengruppe. Bei Unsicherheit nachschlagen."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Falle 4 – Reihenfolge vertauschen: Standard ist Rabatt → Skonto → MwSt. Bei Abweichungen aufmerksam lesen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Häufige Fallen visualisiert",
+      "image": "assets/M02L02_common_mistakes.png",
+      "src": "assets/M02L02_common_mistakes.png",
+      "alt_text": "Vierteilige Fehlerübersicht mit falschen Rechnungen links und korrekten Versionen rechts",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Vier Fehlerbeispiele: Prozente addiert (falsch € 154,-,- vs. richtig € 155,20), falsche Bezugsgröße, falscher MwSt-Satz, vertauschte Reihenfolge."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kurz (Aufwärmen)",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "€ 150,-,- mit 25% Rabatt. Wie viel zahlst du?",
+          "hint": "25% Rabatt bedeutet Faktor 0,75",
+          "solution": "€ 150,-,- × 0,75 = € 112,50",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "€ 150,-,- mit 25% Rabatt. Wie viel zahlst du?"
+            }
+          ],
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "25% Rabatt bedeutet Faktor 0,75"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 150,-,- × 0,75 = € 112,50"
+            }
+          ]
+        },
+        {
+          "id": "E2",
+          "stem": "Nach 20% Rabatt kostet etwas € 80,-,-. Wie viel war der ursprüngliche Preis?",
+          "hint": "€ 80,-,- entsprechen 80% des ursprünglichen Preises",
+          "solution": "€ 80,-,- ÷ 0,80 = € 100,-,- ursprünglich",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Nach 20% Rabatt kostet etwas € 80,-,-. Wie viel war der ursprüngliche Preis?"
+            }
+          ],
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "€ 80,-,- entsprechen 80% des ursprünglichen Preises"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 80,-,- ÷ 0,80 = € 100,-,- ursprünglich"
+            }
+          ]
+        },
+        {
+          "id": "E3",
+          "stem": "Aus einem Bruttopreis von € 60,-,- soll die 20% MwSt herausgerechnet werden. Wie viel ist netto?",
+          "hint": "€ 60,-,- = $Netto \\times 1$,20",
+          "solution": "€ 60,-,- ÷ 1,20 = € 50,-,- netto. MwSt = € 10,-,-",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Aus einem Bruttopreis von € 60,-,- soll die 20% MwSt herausgerechnet werden. Wie viel ist netto?"
+            }
+          ],
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "€ 60,-,- = "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Netto \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ",20"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 60,-,- ÷ 1,20 = € 50,-,- netto. MwSt = € 10,-,-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kern (Können)",
+      "items": [
+        {
+          "id": "E4",
+          "stem": "Ein Artikel kostet € 240,-,-. Du bekommst 18% Rabatt und 2,5% Skonto. Endpreis?",
+          "solution": "€ 240,-,- × 0,$82 \\times 0$,975 = € 191,70",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Ein Artikel kostet € 240,-,-. Du bekommst 18% Rabatt und 2,5% Skonto. Endpreis?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 240,-,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "82 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",975 = € 191,70"
+            }
+          ]
+        },
+        {
+          "id": "E5",
+          "stem": "Restaurant-Rechnung: € 45,-,- netto + 20% MwSt. Du gibst 10% Trinkgeld (auf brutto). Gesamtbetrag?",
+          "solution": "Brutto: € 45,-,- × 1,20 = € 54,-,-. Mit Trinkgeld: € 54,-,- × 1,10 = € 59,40",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Restaurant-Rechnung: € 45,-,- netto + 20% MwSt. Du gibst 10% Trinkgeld (auf brutto). Gesamtbetrag?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Brutto: € 45,-,- × 1,20 = € 54,-,-. Mit Trinkgeld: € 54,-,- × 1,10 = € 59,40"
+            }
+          ]
+        },
+        {
+          "id": "E6",
+          "stem": "Einkaufskorb: Buch € 20,-,- (13% MwSt), Schokolade € 5,-,- (20% MwSt). Gesamtbetrag brutto?",
+          "solution": "Buch: € 20,-,- × 1,13 = € 22,60. Schokolade: € 5,-,- × 1,20 = € 6,-,-. Total: € 28,60",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Einkaufskorb: Buch € 20,-,- (13% MwSt), Schokolade € 5,-,- (20% MwSt). Gesamtbetrag brutto?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Buch: € 20,-,- × 1,13 = € 22,60. Schokolade: € 5,-,- × 1,20 = € 6,-,-. Total: € 28,60"
+            }
+          ]
+        },
+        {
+          "id": "E7",
+          "stem": "B2B-Rechnung: € 500,-,- netto, 12% Rabatt, 3% Skonto, 20% MwSt. Endsumme?",
+          "solution": "€ 500,-,- × 0,$88 \\times 0$,$97 \\times 1$,20 = € 513,12 brutto",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "B2B-Rechnung: € 500,-,- netto, 12% Rabatt, 3% Skonto, 20% MwSt. Endsumme?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 500,-,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "88 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "97 \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ",20 = € 513,12 brutto"
+            }
+          ]
+        },
+        {
+          "id": "E8",
+          "stem": "Du zahlst € 156,-,- für einen Artikel (nach 20% Rabatt und 2% Skonto). Ursprünglicher Preis?",
+          "solution": "€ 156,-,- ÷ (0,$80 \\times 0$,98) = € 156,-,- ÷ 0,784 = € 199,49 ursprünglich",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Du zahlst € 156,-,- für einen Artikel (nach 20% Rabatt und 2% Skonto). Ursprünglicher Preis?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "€ 156,-,- ÷ (0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "80 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",98) = € 156,-,- ÷ 0,784 = € 199,49 ursprünglich"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Challenge (Transfer)",
+      "items": [
+        {
+          "id": "E9",
+          "stem": "Vergleiche zwei Angebote: A) € 100,-0,- mit 20% Rabatt. B) € 100,-0,- mit 12% Rabatt und 10% Skonto. Welches ist günstiger?",
+          "solution": "A: € 100,-0,- × 0,80 = € 800,-,-. B: € 100,-0,- × 0,$88 \\times 0$,90 = € 792,-,-. Angebot B ist um € 8,-,- günstiger.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Vergleiche zwei Angebote: A) € 100,-0,- mit 20% Rabatt. B) € 100,-0,- mit 12% Rabatt und 10% Skonto. Welches ist günstiger?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "A: € 100,-0,- × 0,80 = € 800,-,-. B: € 100,-0,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "88 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",90 = € 792,-,-. Angebot B ist um € 8,-,- günstiger."
+            }
+          ]
+        },
+        {
+          "id": "E10",
+          "stem": "Österreichischer Onlineshop: Laptop € 800,-,- netto (20% MwSt), 5% Rabatt, 2% Skonto, € 15,-,- Versand (20% MwSt). Gesamtbetrag?",
+          "solution": "Laptop: € 800,-,- × 0,$95 \\times 0$,$98 \\times 1$,20 = € 893,76. Versand: € 15,-,- × 1,20 = € 18,-,-. Total: € 911,76",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Österreichischer Onlineshop: Laptop € 800,-,- netto (20% MwSt), 5% Rabatt, 2% Skonto, € 15,-,- Versand (20% MwSt). Gesamtbetrag?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Laptop: € 800,-,- × 0,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "95 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "98 \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ",20 = € 893,76. Versand: € 15,-,- × 1,20 = € 18,-,-. Total: € 911,76"
+            }
+          ]
+        },
+        {
+          "id": "E11",
+          "stem": "Ein Preis steigt um 10% und wird dann um 10% gesenkt. Ist er höher, niedriger oder gleich dem ursprünglichen Preis?",
+          "solution": "Faktor: 1,$10 \\times 0$,$90 = 0$,99. Der Endpreis ist 1% niedriger als ursprünglich.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Ein Preis steigt um 10% und wird dann um 10% gesenkt. Ist er höher, niedriger oder gleich dem ursprünglichen Preis?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Faktor: 1,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "10 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "90 = 0"
+            },
+            {
+              "t": "text",
+              "text": ",99. Der Endpreis ist 1% niedriger als ursprünglich."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mini-Projekt – Österreichisches Café-Management",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Mini-Projekt – Österreichisches Café-Management"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Du leitest ein Café in Wien. Heute analysierst du verschiedene Umsatzszenarien mit österreichischen MwSt-Sätzen:"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Verkäufe heute: Kaffee 120 Tassen à € 3,-,- (netto, 20% MwSt), Kuchen 45 Stück à € 4,-,- (netto, 13% MwSt), Zeitungen 15 Stück à € 2,-,- (netto, 10% MwSt)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Ein Stammkunde bekommt 5% Rabatt auf alles. Ein Caterer zahlt bei Abnahme von >€ 200,-,- zusätzlich 2% Skonto."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 1: Berechne den normalen Tagesumsatz (brutto)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 2: Der Stammkunde kauft 5 Kaffee und 3 Kuchen. Was zahlt er?"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 3: Der Caterer bestellt 50 Kaffee und 20 Kuchen für ein Event. Endpreis?"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 1: Kaffee 120×€ 3,-,-×1,20=€ 432,-,-, Kuchen 45×€ 4,-,-×1,13=€ 203,40, Zeitungen 15×€ 2,-,-×1,10=€ 33,-,-. Total: € 668,40"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 2: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(5\\times € 3,-,-+3\\times € 4,-,-)\\times 1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "15\\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",95 = € 27,-,-×1,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "15\\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",95 = € 29,51 (gerundet, da gemischte MwSt schwierig)"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 3: Wert: 50×€ 3,-,-×1,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "20+20"
+            },
+            {
+              "t": "text",
+              "text": "×€ 4,-,-×1,13=€ 180,-,-+€ 90,40=€ 270,40. Mit Rabatten: € 270,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "40\\times 0"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "95\\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",98=€ 252,17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Café-Umsatzanalyse Dashboard",
+      "image": "assets/M02L02_cafe_analysis.png",
+      "src": "assets/M02L02_cafe_analysis.png",
+      "alt_text": "Café-Dashboard mit Umsatzaufschlüsselung, MwSt-Kreisdiagramm und Kundenrechnungen",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Dashboard zeigt Tagesumsatz nach Produktgruppen, MwSt-Anteile und Spezialkundenrechnungen. Kreisdiagramm für MwSt-Verteilung 10%/13%/20%."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Zusammenfassung & Spickzettel",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zusammenfassung & Spickzettel"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Prozentänderungen "
+            },
+            {
+              "t": "math_inline",
+              "tex": "nacheinander = Faktorenkette"
+            },
+            {
+              "t": "text",
+              "text": ". Nie Prozente addieren!"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Standard-Reihenfolge: Rabatt → Skonto → MwSt. Jeder Schritt wirkt auf das aktuelle Ergebnis."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Österreichische MwSt: 10% (Grundbedarf), 13% (Kultur), 20% (Standard)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Brutto → Netto: durch (1 + MwSt-Satz) teilen. Netto → Brutto: mit (1 + MwSt-Satz) multiplizieren."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Bei Zweifeln: Schritt für Schritt rechnen und Zwischenergebnisse prüfen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Formel-Spickzettel Prozentarten",
+      "image": "assets/M02L02_formula_sheet.png",
+      "src": "assets/M02L02_formula_sheet.png",
+      "alt_text": "Formelsammlung mit Faktortabelle, MwSt-Sätzen und Berechnungsschemas",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Übersichtstafel: Faktor-Umrechnungen (±p% → Faktor), österreichische MwSt-Sätze, Standard-Preiskette, Rückrechnungsformeln."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Selbstcheck – 3 Fragen zur Reflexion",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Selbstcheck – 3 Fragen zur Reflexion"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Frage 1: Warum darf ich Prozente nicht einfach addieren? Antwort: Weil sich jeder weitere Prozentsatz auf das bereits veränderte Ergebnis bezieht, nicht auf den Startpreis. € 20,-,- Rabatt von € 100,-,-, dann € 3,-,- Skonto von € 80,-,- ≠ € 23,-,- von € 100,-,-."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Frage 2: Wie erkenne ich die richtige Reihenfolge bei Preisänderungen? Antwort: Standard ist Rabatt (Preisnachlass) → Skonto (Zahlungsnachlass) → MwSt (Steuer). In Verträgen genau lesen!"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Frage 3: Wie rechne ich MwSt korrekt heraus? Antwort: Bruttopreis durch "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(1 + MwSt-Satz)"
+            },
+            {
+              "t": "text",
+              "text": " teilen. Bei 20% MwSt: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Brutto \\div 1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "20 = Netto"
+            },
+            {
+              "t": "text",
+              "text": ". Niemals einfach 20% vom Brutto abziehen!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Ausblick & Verknüpfungen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Ausblick & Verknüpfungen"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Als Nächstes lohnt sich der Sprung zur Zinsrechnung – dort wendest du die Faktorenmethode auf zeitabhängige Prozentänderungen an."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Das knüpft direkt an: Zinsen sind Prozentaufschläge über die Zeit. Bei Zinseszins multiplizierst du Faktoren über mehrere Perioden."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "In höheren Modulen lernst du Finanzmodelle, wo du komplexe Faktorenketten über Jahre rechnest – alles baut auf diesem Grundverständnis auf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M02/M02L02.JSON",
+        "note": "baseline"
+      }
+    ],
+    "versionTag": "v20250824-austria-focus-expansion",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 3,
+      "blocks_after": 24
+    },
+    "deep_enriched": true,
+    "deep_version": "maximum-depth-v1",
+    "assets_count": 11,
+    "target_audience": "absolute_beginners",
+    "special_focus": "austrian_vat_rates",
+    "compat": {
+      "added_src_for_visuals": true
+    },
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  },
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Lehrtext – Prozentarten: Rabatt, Skonto, MwSt (AT: 10/13/20%) – Sequentielle Berechnungen für Einsteiger"
+    }
+  ]
+}
