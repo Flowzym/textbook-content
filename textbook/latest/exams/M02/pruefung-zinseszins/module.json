@@ -1,0 +1,30 @@
+{
+  "id": "M02",
+  "lessons": [
+    {
+      "id": "M02L04",
+      "title": "Zinszeiten & Zinsmethoden (inkl. Schaltjahr)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zinszeiten & Zinsmethoden (inkl. Schaltjahr)"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

@@ -1,0 +1,650 @@
+{
+  "id": "M11L03",
+  "title": "Panel-BSTS & Hierarchien (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Panel-BSTS & Hierarchien (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Panel-BSTS & Hierarchien (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M11L03"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M11L03"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Panel-BSTS abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Panel-BSTS abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Panel-BSTS kombiniert…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Panel-BSTS kombiniert…"
+            }
+          ],
+          "options": [
+            {
+              "text": "gemeinsame + einheitsspezifische Komponenten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "gemeinsame + einheitsspezifische Komponenten"
+                }
+              ]
+            },
+            {
+              "text": "nur gemeinsame",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur gemeinsame"
+                }
+              ]
+            },
+            {
+              "text": "nur spezifische",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur spezifische"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Hierarchie.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Hierarchie.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Pooling hilft kleinen Einheiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Pooling hilft kleinen Einheiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Stabilisierung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stabilisierung.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Spillover meint…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Spillover meint…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Beeinflussung nicht behandelter Einheiten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Beeinflussung nicht behandelter Einheiten"
+                }
+              ]
+            },
+            {
+              "text": "nur Rauschen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Rauschen"
+                }
+              ]
+            },
+            {
+              "text": "immer 0",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer 0"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Interferenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Interferenz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Standardabweichung ist die Wurzel aus der Varianz."
+            }
+          ],
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert."
+            }
+          ],
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Counterfactual je Einheit stammt aus…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Counterfactual je Einheit stammt aus…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Posterior-Prognose",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Posterior-Prognose"
+                }
+              ]
+            },
+            {
+              "text": "naivem Mittel",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "naivem Mittel"
+                }
+              ]
+            },
+            {
+              "text": "Zufall",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Zufall"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Bayesianisch.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bayesianisch.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Reconciliation macht Summen über Ebenen konsistent.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Reconciliation macht Summen über Ebenen konsistent."
+            }
+          ],
+          "answer": true,
+          "rationale": "Hierarchie-Kohärenz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Hierarchie-Kohärenz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gute Regressoren…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Gute Regressoren…"
+            }
+          ],
+          "options": [
+            {
+              "text": "post-betroffen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "post-betroffen"
+                }
+              ]
+            },
+            {
+              "text": "hoch korreliert im Pre & unbeeinflusst im Post",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "hoch korreliert im Pre & unbeeinflusst im Post"
+                }
+              ]
+            },
+            {
+              "text": "egal",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "egal"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Qualität.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Qualität.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Spillover-Check nutzt…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Spillover-Check nutzt…"
+            }
+          ],
+          "options": [
+            {
+              "text": "räumliche/zeitliche Nachbarschaft",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "räumliche/zeitliche Nachbarschaft"
+                }
+              ]
+            },
+            {
+              "text": "zufällige Kontrolle",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "zufällige Kontrolle"
+                }
+              ]
+            },
+            {
+              "text": "nur p-Wert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur p-Wert"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Domänenlogik + Daten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Domänenlogik + Daten.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Gemeinsame Saison kann Varianz reduzieren.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Gemeinsame Saison kann Varianz reduzieren."
+            }
+          ],
+          "answer": true,
+          "rationale": "Besserer Fit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Besserer Fit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Berichte…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Berichte…"
+            }
+          ],
+          "options": [
+            {
+              "text": "nur Punktwert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Punktwert"
+                }
+              ]
+            },
+            {
+              "text": "Posterior-Intervalle & P(Effekt>0)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Posterior-Intervalle & P(Effekt>0)"
+                }
+              ]
+            },
+            {
+              "text": "nichts",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nichts"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Unsicherheit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Unsicherheit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Falle:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Falle:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Hierarchie nicht reconciliert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Hierarchie nicht reconciliert"
+                }
+              ]
+            },
+            {
+              "text": "Spillover geprüft",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Spillover geprüft"
+                }
+              ]
+            },
+            {
+              "text": "gemeinsame Komponenten modelliert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "gemeinsame Komponenten modelliert"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Widersprüche.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Widersprüche.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Panel-BSTS erlaubt Effekte je Einheit UND gesamt.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Panel-BSTS erlaubt Effekte je Einheit UND gesamt."
+            }
+          ],
+          "answer": true,
+          "rationale": "Mehrskalig.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Mehrskalig.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Bei starken Spillovern…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei starken Spillovern…"
+            }
+          ],
+          "options": [
+            {
+              "text": "betroffene Kontrollen entfernen/markieren",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "betroffene Kontrollen entfernen/markieren"
+                }
+              ]
+            },
+            {
+              "text": "ignorieren",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ignorieren"
+                }
+              ]
+            },
+            {
+              "text": "nur Mittelwerte berichten",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Mittelwerte berichten"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Robustheit.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Robustheit.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Panel-BSTS: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Panel-BSTS: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

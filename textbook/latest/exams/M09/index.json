@@ -1,0 +1,51 @@
+{
+  "chapter": {
+    "id": "M09",
+    "title": "Prüfungen M09",
+    "title_segments": [
+      {
+        "t": "text",
+        "text": "Prüfungen M09"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "pruefung-gleichungen",
+      "title": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D"
+        }
+      ],
+      "file": "exams/M09/pruefung-gleichungen/module.json"
+    },
+    {
+      "id": "pruefung-rabatt-skonto",
+      "title": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D"
+        }
+      ],
+      "file": "exams/M09/pruefung-rabatt-skonto/module.json"
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

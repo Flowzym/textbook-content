@@ -1,0 +1,542 @@
+{
+  "id": "M05L01",
+  "title": "Unsicherheit & Sensitivitätsanalyse – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Unsicherheit & Sensitivitätsanalyse – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Unsicherheit & Sensitivitätsanalyse – Prüfungsfokus (v3, Feintuning + Prüfungsset E)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 12,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Evaluate",
+      "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "text": "Feintuning: klare Einheiten, Prozent vs. Prozentpunkte, strukturierte Tornado‑Interpretation.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Feintuning: klare Einheiten, Prozent vs. Prozentpunkte, strukturierte Tornado‑Interpretation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset E",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Elastizität $E = (ΔNPV/NPV)$/(Δx/x). Wenn ΔNPV=+3k $bei +5$% Menge und NPV0=+12k, dann E≈?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Elastizität "
+            },
+            {
+              "t": "math_inline",
+              "tex": "E = (ΔNPV/NPV)"
+            },
+            {
+              "t": "text",
+              "text": "/(Δx/x). Wenn ΔNPV=+3k "
+            },
+            {
+              "t": "math_inline",
+              "tex": "bei +5"
+            },
+            {
+              "t": "text",
+              "text": "% Menge und NPV0=+12k, dann E≈?"
+            }
+          ],
+          "options": [
+            {
+              "text": "3",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "3"
+                }
+              ]
+            },
+            {
+              "text": "5",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "5"
+                }
+              ]
+            },
+            {
+              "text": "6",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "6"
+                }
+              ]
+            },
+            {
+              "text": "5,0",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "5,0"
+                }
+              ]
+            }
+          ],
+          "answer_index": 3,
+          "rationale": "(3000/12000)/$(0,05)=0$,25/0,$05=5$.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. (3000/12000)/$(0,05)=0$,25/0,$05=5$.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Tornado steht der Treiber mit **kleinstem** Einfluss oben.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Tornado steht der Treiber mit **kleinstem** Einfluss oben."
+            }
+          ],
+          "answer": false,
+          "rationale": "Größter Einfluss oben.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Größter Einfluss oben.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "$Break-even-Preis$ bei vK=€ 62,-,- $Menge=3$,500, $Fix=140k$?",
+          "question_segments": [
+            {
+              "t": "math_inline",
+              "tex": "Break-even-Preis"
+            },
+            {
+              "t": "text",
+              "text": " bei vK=€ 62,-,- "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Menge=3"
+            },
+            {
+              "t": "text",
+              "text": ",500, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Fix=140k"
+            },
+            {
+              "t": "text",
+              "text": "?"
+            }
+          ],
+          "options": [
+            {
+              "text": "€ 102,-,-",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "€ 102,-,-"
+                }
+              ]
+            },
+            {
+              "text": "€ 99,-,-",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "€ 99,-,-"
+                }
+              ]
+            },
+            {
+              "text": "102,0–€ 102,50",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "102,0–€ 102,50"
+                }
+              ]
+            },
+            {
+              "text": "€ 88,-,-",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "€ 88,-,-"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "$P=62+140000$/3500≈$62+40$=€ 102,-,-",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. $P=62+140000$/3500≈$62+40$=€ 102,-,-",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "$Einheiten-Check$: Deckungsbeitrag pro Stü$ck \\times Menge$ ergibt…",
+          "question_segments": [
+            {
+              "t": "math_inline",
+              "tex": "Einheiten-Check"
+            },
+            {
+              "t": "text",
+              "text": ": Deckungsbeitrag pro Stü"
+            },
+            {
+              "t": "math_inline",
+              "tex": "ck \\times Menge"
+            },
+            {
+              "t": "text",
+              "text": " ergibt…"
+            }
+          ],
+          "options": [
+            {
+              "text": "€/Stk",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "€/Stk"
+                }
+              ]
+            },
+            {
+              "text": "Stück",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Stück"
+                }
+              ]
+            },
+            {
+              "text": "€",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "€"
+                }
+              ]
+            },
+            {
+              "text": "%",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "%"
+                }
+              ]
+            }
+          ],
+          "answer_index": 2,
+          "rationale": "€ als Zielgröße.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. € als Zielgröße.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Prozentpunkte und Prozent sind identisch.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Prozentpunkte und Prozent sind identisch."
+            }
+          ],
+          "answer": false,
+          "rationale": "Nicht verwechseln (z. B. 5%-Punkte vs. 5%).",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nicht verwechseln (z. B. 5%-Punkte vs. 5%).",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Bei 2‑Faktoren‑Raster $Preis\\times Menge$, riskantester Quadrant ist typ. …",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei 2‑Faktoren‑Raster "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Preis\\times Menge"
+            },
+            {
+              "t": "text",
+              "text": ", riskantester Quadrant ist typ. …"
+            }
+          ],
+          "options": [
+            {
+              "text": "Preis↓ & Menge↓",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Preis↓ & Menge↓"
+                }
+              ]
+            },
+            {
+              "text": "Preis↑ & Menge↑",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Preis↑ & Menge↑"
+                }
+              ]
+            },
+            {
+              "text": "Preis↑ & Menge↓",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Preis↑ & Menge↓"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Beide Treiber gegen dich.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Beide Treiber gegen dich.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "single_choice",
+          "question": "Break‑even‑Menge bei $P=95$, $vK=60$, $Fix=210k$",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Break‑even‑Menge bei "
+            },
+            {
+              "t": "math_inline",
+              "tex": "P=95"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "vK=60"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Fix=210k"
+            }
+          ],
+          "options": [
+            {
+              "text": "6,000",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "6,000"
+                }
+              ]
+            },
+            {
+              "text": "5,500",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "5,500"
+                }
+              ]
+            },
+            {
+              "text": "4,500",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "4,500"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "210k/$(95-60)=210k$/$35=6000$.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. 210k/$(95-60)=210k$/$35=6000$.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Lagerwertberichtigungen zählen als variable Kosten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lagerwertberichtigungen zählen als variable Kosten."
+            }
+          ],
+          "answer": false,
+          "rationale": "Einmaliger Bewertungseffekt, nicht variable Stückkosten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Einmaliger Bewertungseffekt, nicht variable Stückkosten.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "Beachte: x_$BE=K$_fix/$(p-k$_v); Zielgewinn $x=(K$_$fix+G)$/$(p-k$_v)."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "normal",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

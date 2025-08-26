@@ -1,0 +1,88 @@
+{
+  "id": "M12",
+  "title": "Mixed Models & Causal ML (v2) – Prüfungssets A–D",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Mixed Models & Causal ML (v2) – Prüfungssets A–D",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Mixed Models & Causal ML (v2) – Prüfungssets A–D"
+        }
+      ]
+    }
+  ],
+  "description": "Zusätzliche Quiz-Blöcke A–D in allen Lessons (LMM/GLMM, DML, Uplift, IV/DMLIV).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Zusätzliche Quiz-Blöcke A–D in allen Lessons (LMM/GLMM, DML, Uplift, IV/DMLIV).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zusätzliche Quiz-Blöcke A–D in allen Lessons (LMM/GLMM, DML, Uplift, IV/DMLIV)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M12L01",
+      "title": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Gemischte Modelle I – Random/Fixed, ICC & Shrinkage (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M12L02",
+      "title": "Double Machine Learning – Orthogonalisierung & Cross-Fitting (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Double Machine Learning – Orthogonalisierung & Cross-Fitting (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M12L03",
+      "title": "Uplift-Modelle – T/S/X/DR & Policy (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Uplift-Modelle – T/S/X/DR & Policy (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M12L04",
+      "title": "Instrumentalvariablen – 2SLS, DMLIV/DeepIV & LATE (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Instrumentalvariablen – 2SLS, DMLIV/DeepIV & LATE (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "version": "v2",
+  "updated_at": "2025-08-17T10:13:13.031329",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
