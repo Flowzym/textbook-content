@@ -1,0 +1,51 @@
+{
+  "chapter": {
+    "id": "M10",
+    "title": "Prüfungen M10",
+    "title_segments": [
+      {
+        "t": "text",
+        "text": "Prüfungen M10"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "pruefung-gleichungen",
+      "title": "Causal Impact & Bayesian Forecasting (v2) – Prüfungssets A–D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Causal Impact & Bayesian Forecasting (v2) – Prüfungssets A–D"
+        }
+      ],
+      "file": "exams/M10/pruefung-gleichungen/module.json"
+    },
+    {
+      "id": "pruefung-gleichungen-2",
+      "title": "Causal Impact & Bayesian Forecasting (v2) – Prüfungssets A–D",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Causal Impact & Bayesian Forecasting (v2) – Prüfungssets A–D"
+        }
+      ],
+      "file": "exams/M10/pruefung-gleichungen-2/module.json"
+    }
+  ],
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
