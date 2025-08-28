@@ -1,0 +1,292 @@
+{
+  "id": "M11L02",
+  "title": "SC II – Staggered & Matrix-Ideen (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "SC II – Staggered & Matrix-Ideen (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "SC II – Staggered & Matrix-Ideen (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 8,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "Rechenaufgaben mit Hinweisen (E/F) lösen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechenaufgaben mit Hinweisen (E/F) lösen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Ergebnisse interpretieren und dokumentieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ergebnisse interpretieren und dokumentieren."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "exercises",
+      "title": "Prüfungsset E – Rechen‑Mix",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E – Rechen‑Mix"
+        }
+      ],
+      "long": [
+        {
+          "title": "E1 – Event-Study Knoten",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E1 – Event-Study Knoten"
+            }
+          ],
+          "context": "Leads [-3,-2,-1]≈[0,1,0] %, Lags [+1,+2,+3]=[2,3,1] %.",
+          "tasks": [
+            {
+              "prompt": "a) Vortrends ok?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Vortrends ok?"
+                }
+              ],
+              "hints": "Leads≈0",
+              "solution": "Ja, plausibel",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "Ja, plausibel"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "ok"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "title": "E2 – Kohortenaggregation",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "E2 – Kohortenaggregation"
+            }
+          ],
+          "context": "Drei Wellen mit Lag+2 Effekten [1,4,2] %.",
+          "tasks": [
+            {
+              "prompt": "a) Mittel?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Mittel?"
+                }
+              ],
+              "hints": "(1+4+2)/3",
+              "solution": "≈2,33%",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "≈2,33%"
+                }
+              ],
+              "check": {
+                "type": "approx",
+                "expected": 2.3333333333333335,
+                "tol": 0.001
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "title": "Prüfungsset F – Gestufte Hinweise",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset F – Gestufte Hinweise"
+        }
+      ],
+      "long": [
+        {
+          "title": "F1 – Matrix-Completion Auswahl",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "F1 – Matrix-Completion Auswahl"
+            }
+          ],
+          "context": "Rangannahme: 2–3 Faktoren erklären 85% Varianz.",
+          "tasks": [
+            {
+              "prompt": "a) Erwartung?",
+              "prompt_segments": [
+                {
+                  "t": "text",
+                  "text": "a) Erwartung?"
+                }
+              ],
+              "hints": "rekonstr. Counterfactual stabil",
+              "solution": "ja, wenn Brüche modelliert",
+              "solution_segments": [
+                {
+                  "t": "text",
+                  "text": "ja, wenn Brüche modelliert"
+                }
+              ],
+              "check": {
+                "type": "string_contains",
+                "expected": "Counterfactual"
+              }
+            }
+          ],
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "text": "E/F festigen die numerische Routine und Interpretation.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "E/F festigen die numerische Routine und Interpretation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "items": [
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beim Umstellen kommt die Punkt-vor-Strich-Regel nicht zum Tragen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Zuerst Klammern auflösen, Punkt-vor-Strich beachten.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    }
+  ],
+  "reading_time_band": "kurz",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

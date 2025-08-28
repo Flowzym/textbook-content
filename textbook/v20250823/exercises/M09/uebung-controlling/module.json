@@ -1,0 +1,88 @@
+{
+  "id": "M09",
+  "title": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v3) – Prüfungsset E/F",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v3) – Prüfungsset E/F",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v3) – Prüfungsset E/F"
+        }
+      ]
+    }
+  ],
+  "description": "Rechen‑Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (ARIMA/ETS/ARIMAX).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Rechen‑Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (ARIMA/ETS/ARIMAX).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechen‑Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (ARIMA/ETS/ARIMAX)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M09L01",
+      "title": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M09L02",
+      "title": "ARIMA & SARIMA – Schätzen, Auswahl (AIC/BIC), Diagnose (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "ARIMA & SARIMA – Schätzen, Auswahl (AIC/BIC), Diagnose (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M09L03",
+      "title": "ETS – State Space, Damped Trend, Auswahl (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "ETS – State Space, Damped Trend, Auswahl (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M09L04",
+      "title": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "version": "v3",
+  "updated_at": "2025-08-17T09:48:53.647878",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "M02",
+  "title": "Prozent- & einfache Zinsrechnung",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Prozent- & einfache Zinsrechnung",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Prozent- & einfache Zinsrechnung"
+        }
+      ]
+    }
+  ],
+  "description": "Prozentrechnung systematisch beherrschen und lineare Verzinsung sicher anwenden (inkl. Zinszeiten).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Prozentrechnung systematisch beherrschen und lineare Verzinsung sicher anwenden (inkl. Zinszeiten).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Prozentrechnung systematisch beherrschen und lineare Verzinsung sicher anwenden (inkl. Zinszeiten)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M02L01",
+      "title": "Prozentrechnung – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prozentrechnung – Grundlagen"
+        }
+      ]
+    },
+    {
+      "id": "M02L02",
+      "title": "Prozentarten: Rabatt, Skonto, MwSt, Auf-/Abschlag",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prozentarten: Rabatt, Skonto, MwSt, Auf-/Abschlag"
+        }
+      ]
+    },
+    {
+      "id": "M02L03",
+      "title": "Einfache Verzinsung (linear)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Einfache Verzinsung (linear)"
+        }
+      ]
+    },
+    {
+      "id": "M02L04",
+      "title": "Zinszeiten & Zinsmethoden",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zinszeiten & Zinsmethoden"
+        }
+      ]
+    }
+  ],
+  "created_at": "2025-08-17T08:21:26.052943",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
