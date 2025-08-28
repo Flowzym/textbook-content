@@ -1,0 +1,1736 @@
+{
+  "id": "M01L01",
+  "title": "Lehrtext – Grundlagen: Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge für Einsteiger",
+  "reading_time_min": 40,
+  "prerequisites": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Ich kann die Zahlbereiche (ℕ, ℤ, ℚ, ℝ) definieren und ihre Beziehungen zueinander erklären."
+    },
+    {
+      "level": "Understand",
+      "text": "Ich verstehe die Rechenregeln (Kommutativ, Assoziativ, Distributiv) und kann begründen, warum die Reihenfolge 'Klammern–Punkt–Strich' wichtig ist."
+    },
+    {
+      "level": "Apply",
+      "text": "Ich kann komplexe Rechenausdrücke korrekt berechnen und dabei alle Regeln systematisch anwenden."
+    },
+    {
+      "level": "Analyze",
+      "text": "Ich erkenne Fehlerquellen in Berechnungen und kann typische Denkfallen identifizieren und vermeiden."
+    },
+    {
+      "level": "Evaluate",
+      "text": "Ich kann beurteilen, ob Rechenergebnisse plausibel sind und verschiedene Lösungsansätze bewerten."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "segments": [
+        {
+          "t": "text",
+          "text": "In dieser grundlegenden Lektion baust du ein sicheres Fundament in Zahlen und Rechnen auf. Du lernst die verschiedenen Zahlbereiche kennen, verstehst warum Rechenregeln existieren und wendest die korrekte Reihenfolge bei komplexen Berechnungen an. Jeder Schritt wird in ganzen Sätzen erklärt, damit du ihn sicher auf neue Situationen übertragen kannst."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Wofür brauche ich das? – Der Kassenfehler im Supermarkt",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Wofür brauche ich das? – Der Kassenfehler im Supermarkt"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Stell dir vor, du arbeitest an der Kasse eines Supermarkts. Ein Kunde kauft 3 Äpfel zu je € 0,50, dazu 2 Brote zu je € 1,20 und bekommt 10% Rabatt auf alles. Ohne die richtige Reihenfolge beim Rechnen machst du Fehler, die dem Geschäft Geld kosten."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Die falsche Reihenfolge: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "3 \\times 0{,}50 + 2 \\times 1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "20 - 10"
+            },
+            {
+              "t": "text",
+              "text": "% = 1,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "50 + 2{,}40 - 0"
+            },
+            {
+              "t": "text",
+              "text": ",10 = € 3,80. Aber das ist völlig falsch! Die 10% beziehen sich auf die Gesamtsumme, nicht nur auf € 0,10."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Diese Situation zeigt, warum wir klare Rechenregeln brauchen: Erst Multiplikation, dann Addition, dann Prozentrechnung auf das Gesamtergebnis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die große Idee – Zahlen haben Ordnung und Regeln",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Die große Idee – Zahlen haben Ordnung und Regeln"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Zahlen sind nicht chaotisch – sie folgen einer strengen Hierarchie. Natürliche Zahlen (1, 2, 3...) sind die Grundlage, darauf bauen alle anderen auf."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Rechenregeln sind keine Willkür, sondern entstehen aus der Logik der Zahlen selbst. Das Kommutativgesetz "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(3 + 5 = 5 + 3)"
+            },
+            {
+              "t": "text",
+              "text": " funktioniert, weil Addition bedeutet 'zusammenfügen' – und die Reihenfolge beim Zusammenfügen ist egal."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Die Punkt-vor-Strich-Regel gibt es, weil Multiplikation eine 'stärkere' Operation ist als Addition – sie bindet die Zahlen enger zusammen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Zahlbereiche als Zwiebelschalen",
+      "image": "assets/M01L01_number_sets.png",
+      "src": "assets/M01L01_number_sets.png",
+      "alt_text": "Konzentrische Kreise zeigen die Einbettung der Zahlbereiche ineinander",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Die Grafik zeigt die Zahlbereiche wie Zwiebelschalen: ℕ (natürliche Zahlen) im Kern, dann ℤ (ganze Zahlen), ℚ (rationale Zahlen), und ℝ (reelle Zahlen) als äußerste Schale. Jeder Bereich enthält alle inneren."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die Zahlbereiche verstehen – eine Reise durch die Mathematik",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Die Zahlbereiche verstehen – eine Reise durch die Mathematik"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Natürliche Zahlen ℕ = {1, 2, 3, 4, ...}: Das sind die Zahlen zum Zählen. Ein Kind lernt sie zuerst. Damit kannst du zählen, aber nicht rechnen wenn das Ergebnis kleiner wird."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Ganze Zahlen ℤ = {..., -2, -1, 0, 1, 2, ...}: Wir fügen die Null und negative Zahlen hinzu. Jetzt können wir subtrahieren, ohne dass unmögliche Ergebnisse entstehen."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Rationale Zahlen ℚ = {a/b | a,b ∈ ℤ, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "b ≠ 0"
+            },
+            {
+              "t": "text",
+              "text": "}: Alle Brüche. Jetzt können wir teilen und erhalten trotzdem eine Zahl. 1/3, 2/5, -7/4 gehören dazu."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Reelle Zahlen ℝ: Alle rationalen Zahlen plus irrationale wie π, √2, e. Damit können wir Längen, Flächen und Kurven vollständig beschreiben."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Zahlenstrahl mit allen Bereichen",
+      "image": "assets/M01L01_number_line.png",
+      "src": "assets/M01L01_number_line.png",
+      "alt_text": "Horizontaler Zahlenstrahl von -5 bis 5 mit farbcodierten Zahlentypen",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Der Zahlenstrahl zeigt verschiedene Zahlentypen: Natürliche Zahlen als blaue Punkte, ganze Zahlen als rote Punkte, rationale Zahlen als grüne Striche (Brüche), irrationale als goldene Punkte (π, √2)."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Die Rechengesetze Schritt für Schritt verstehen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Die Rechengesetze Schritt für Schritt verstehen"
+        }
+      ],
+      "steps": [
+        {
+          "eq": {
+            "left": "a + b",
+            "right": "b + a"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Kommutativgesetz (Vertauschungsgesetz):  und . Addition und Multiplikation kann man vertauschen, Subtraktion und Division nicht."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "(a + b) + c",
+            "right": "a + (b + c)"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Assoziativgesetz (Verbindungsgesetz):  und . Bei mehreren gleichen Operationen ist die Klammerung egal."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "a \\times (b + c)",
+            "right": "a \\times b + a \\times c"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Distributivgesetz (Verteilungsgesetz): . Multiplikation verteilt sich über Addition und Subtraktion."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Diese Gesetze sind nicht willkürlich – sie folgen aus der Definition der Operationen und machen Mathematik vorhersagbar und zuverlässig."
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "aligned"
+      }
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel A – Rechengesetze in Aktion (ausführlich)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Beispiel A – Rechengesetze in Aktion (ausführlich)"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe: Vereinfache "
+            },
+            {
+              "t": "math_inline",
+              "tex": "5 \\times (3 + 7)"
+            },
+            {
+              "t": "text",
+              "text": " und zeige, dass das Distributivgesetz funktioniert."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "5 \\times (3 + 7)",
+            "right": "5 \\times 10 = 50"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Weg 1 – Klammer zuerst: ."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "5 \\times (3 + 7)",
+            "right": "5 \\times 3 + 5 \\times 7 = 15 + 35 = 50"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Weg 2 – Distributivgesetz: ."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Beide Wege führen zum gleichen Ergebnis. Das Distributivgesetz ist kein Trick, sondern eine mathematische Wahrheit."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Warum funktioniert das? "
+            },
+            {
+              "t": "math_inline",
+              "tex": "5 \\times (3 + 7)"
+            },
+            {
+              "t": "text",
+              "text": " bedeutet 'nimm fünfmal die Summe von 3 und 7'. Das ist dasselbe wie 'nimm fünfmal 3 und fünfmal 7, dann addiere'."
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "aligned"
+      }
+    },
+    {
+      "type": "visual",
+      "title": "Distributivgesetz visualisiert",
+      "image": "assets/M01L01_distributive.png",
+      "src": "assets/M01L01_distributive.png",
+      "alt_text": "Rechteckdiagramm demonstriert Distributivgesetz durch Aufteilung in zwei Teilrechtecke",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Ein Rechteck zeigt "
+        },
+        {
+          "t": "math_inline",
+          "tex": "5 \\times (3 + 7)"
+        },
+        {
+          "t": "text",
+          "text": ": 5 Reihen mit je 10 Punkten. Dasselbe Rechteck aufgeteilt: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "5 \\times 3"
+        },
+        {
+          "t": "text",
+          "text": " "
+        },
+        {
+          "t": "math_inline",
+          "tex": "(linker Teil) + 5 \\times 7"
+        },
+        {
+          "t": "text",
+          "text": " (rechter Teil). Beide Darstellungen haben 50 Punkte."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Die Reihenfolge der Operationen – warum Punkt vor Strich?",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Die Reihenfolge der Operationen – warum Punkt vor Strich?"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Die Reihenfolge ist: 1. Klammern, 2. Potenzen, 3. Multiplikation und Division (von links nach rechts), 4. Addition und Subtraktion (von links nach rechts)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Warum diese Reihenfolge? Multiplikation bedeutet 'mehrfache Addition'. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + 3 \\times 4"
+            },
+            {
+              "t": "text",
+              "text": " heißt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + (4 + 4 + 4)"
+            },
+            {
+              "t": "text",
+              "text": ", nicht "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(2 + 3) \\times 4"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Ohne diese Regel wäre Mathematik mehrdeutig: Würde "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + 3 \\times 4"
+            },
+            {
+              "t": "text",
+              "text": " gleich 14 oder 20 bedeuten? Mit der Regel ist es eindeutig: 14."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Operationen-Hierarchie",
+      "image": "assets/M01L01_order_hierarchy.png",
+      "src": "assets/M01L01_order_hierarchy.png",
+      "alt_text": "Pyramidendiagramm mit vier Ebenen der mathematischen Operationspriorität",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Pyramide zeigt die Operationshierarchie: Klammern an der Spitze (stärkste Bindung), dann Potenzen, dann Punkt-Operationen, unten Strich-Operationen (schwächste Bindung)."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel B – Komplexer Ausdruck systematisch gelöst",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Beispiel B – Komplexer Ausdruck systematisch gelöst"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "24 \\div 4 \\times 3 + (15 - 3 \\times 2)"
+            },
+            {
+              "t": "text",
+              "text": "² - 8. Ich erkläre jeden Schritt einzeln."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "3 \\times 2",
+            "right": "6"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 1 – Innerste Klammer zuerst: , also wird  zu ."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Jetzt haben wir: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "24 \\div 4 \\times 3 + 9"
+            },
+            {
+              "t": "text",
+              "text": "² - 8."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 2 – Potenz: 9² = 81. Jetzt: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "24 \\div 4 \\times 3 + 81 - 8"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "24 \\div 4",
+            "right": "6"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 3 –  von links nach rechts: , dann ."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Jetzt haben wir: 18 + 81 - 8."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "18 + 81",
+            "right": "99"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 4 –  von links nach rechts: , dann ."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Ergebnis: 91. Probe durch Einsetzen bestätigt das Ergebnis."
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "aligned"
+      }
+    },
+    {
+      "type": "visual",
+      "title": "Schritt-für-Schritt Auflösung",
+      "image": "assets/M01L01_step_by_step.png",
+      "src": "assets/M01L01_step_by_step.png",
+      "alt_text": "Fünfzeiliges Berechnungsschema mit farbcodierten Rechenschritten",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Fünf Zeilen zeigen die schrittweise Vereinfachung des komplexen Ausdrucks. Jeder Schritt ist farblich markiert: rot für Klammern, blau für Potenzen, grün für Punkt, orange für Strich."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Negative Zahlen – das Vorzeichen-Chaos vermeiden",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Negative Zahlen – das Vorzeichen-Chaos vermeiden"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Negative Zahlen sind nicht 'schlechte' Zahlen, sondern Zahlen mit einer Richtung. Auf dem Zahlenstrahl gehen sie nach links."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Vorzeichenregeln: Plus mal "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Plus = Plus"
+            },
+            {
+              "t": "text",
+              "text": ", Minus mal "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Minus = Plus"
+            },
+            {
+              "t": "text",
+              "text": ", Plus mal "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Minus = Minus"
+            },
+            {
+              "t": "text",
+              "text": ", Minus mal "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Plus = Minus"
+            },
+            {
+              "t": "text",
+              "text": ". Merksatz: 'Gleiche Vorzeichen geben Plus.'"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Beim Subtrahieren negativer Zahlen: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "a - (-b) = a + b"
+            },
+            {
+              "t": "text",
+              "text": ". 'Minus Minus wird Plus'. Das ist keine willkürliche Regel, sondern folgt aus der Definition der Subtraktion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Vorzeichenregeln-Tabelle",
+      "image": "assets/M01L01_sign_rules.png",
+      "src": "assets/M01L01_sign_rules.png",
+      "alt_text": "Vorzeichentabelle mit grün-roten Feldern für positive und negative Ergebnisse",
+      "content_segments": [
+        {
+          "t": "math_inline",
+          "tex": "4\\times 4-Tabelle"
+        },
+        {
+          "t": "text",
+          "text": " zeigt alle Kombinationen von +/- bei Multiplikation und Division. Grüne Felder für positive Ergebnisse, rote für negative. Muster: gleiche Vorzeichen → grün, verschiedene → rot."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "title": "Beispiel C – Negative Zahlen richtig behandeln",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Beispiel C – Negative Zahlen richtig behandeln"
+        }
+      ],
+      "steps": [
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-3) \\times (5 - 8) + (-2) \\times (-4)"
+            },
+            {
+              "t": "text",
+              "text": ". Schritt für Schritt mit Vorzeichen."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 1 – Klammer auflösen: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "5 - 8"
+            },
+            {
+              "t": "text",
+              "text": " = -3. Also "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-3) \\times (-3) + (-2) \\times (-4)"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "Minus",
+            "right": "Plus)"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 2 – Multiplikationen:  = +9 (Minus mal ,  = +8."
+            }
+          ]
+        },
+        {
+          "eq": {
+            "left": "9 + 8",
+            "right": "17"
+          },
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Schritt 3 – Addition: ."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Warum ist "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-3) \\times (-3)"
+            },
+            {
+              "t": "text",
+              "text": " positiv? Denk an 'Schulden': Wenn du 3 Schulden von je € 3,-,- loswirst, gewinnst du € 9,-,-."
+            }
+          ]
+        },
+        {
+          "comment_segments": [
+            {
+              "t": "text",
+              "text": "Probe: Setze andere Zahlen ein und prüfe, ob die Vorzeichenregeln stimmen."
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "align": "aligned"
+      }
+    },
+    {
+      "type": "concept",
+      "title": "Häufige Denkfallen und wie du sie umgehst",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Häufige Denkfallen und wie du sie umgehst"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Denkfalle 1 – Punkt vor Strich vergessen: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + 3 \\times 4"
+            },
+            {
+              "t": "text",
+              "text": " ist nicht "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(2 + 3) \\times 4 = 20"
+            },
+            {
+              "t": "text",
+              "text": ", sondern "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + 12 = 14"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Denkfalle 2 – Vorzeichenfehler bei Klammern: -"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(3 - 5)"
+            },
+            {
+              "t": "text",
+              "text": " ist "
+            },
+            {
+              "t": "math_inline",
+              "tex": "nicht -3 - 5"
+            },
+            {
+              "t": "text",
+              "text": " = -8, "
+            },
+            {
+              "t": "math_inline",
+              "tex": "sondern -(-2)"
+            },
+            {
+              "t": "text",
+              "text": " = +2."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Denkfalle 3 – Division durch Null: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "5 \\div 0"
+            },
+            {
+              "t": "text",
+              "text": " ist nicht '0' oder '∞', sondern nicht definiert. Das bricht die Mathematik."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Denkfalle 4 – Kommutativgesetz bei Subtraktion: 5 - 3 ist nicht dasselbe wie 3 - 5. Subtraktion ist nicht kommutativ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Häufige Fehler visualisiert",
+      "image": "assets/M01L01_common_mistakes.png",
+      "src": "assets/M01L01_common_mistakes.png",
+      "alt_text": "Vierteilige Fehlersammlung mit falschen Rechnungen links und korrekten Versionen rechts",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Vier Beispiele zeigen typische Fehler: falsche Operationsreihenfolge, Vorzeichenfehler, Division durch Null, falsches Kommutativgesetz. Daneben die korrekten Lösungen."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kurz (Aufwärmen)",
+      "items": [
+        {
+          "id": "E1",
+          "stem": "Berechne: $15 - 3 \\times 4 + 8$",
+          "hint": "Punkt vor Strich beachten",
+          "solution": "$15 - 12 + 8 = 11$. Erst $3 \\times 4 = 12$, dann von links nach rechts.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Berechne: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "15 - 3 \\times 4 + 8"
+            }
+          ],
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "Punkt vor Strich beachten"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "15 - 12 + 8 = 11"
+            },
+            {
+              "t": "text",
+              "text": ". Erst "
+            },
+            {
+              "t": "math_inline",
+              "tex": "3 \\times 4 = 12"
+            },
+            {
+              "t": "text",
+              "text": ", dann von links nach rechts."
+            }
+          ]
+        },
+        {
+          "id": "E2",
+          "stem": "Vereinfache: $(-5) + (-3) \\times 2$",
+          "hint": "Multiplikation zuerst, dann Addition",
+          "solution": "$(-5) + (-6)$ = -11. Erst $(-3) \\times 2$ = -6, dann $(-5) + (-6)$.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Vereinfache: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-5) + (-3) \\times 2"
+            }
+          ],
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "Multiplikation zuerst, dann Addition"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "(-5) + (-6)"
+            },
+            {
+              "t": "text",
+              "text": " = -11. Erst "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-3) \\times 2"
+            },
+            {
+              "t": "text",
+              "text": " = -6, dann "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-5) + (-6)"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "id": "E3",
+          "stem": "Berechne: $4 \\times (7 - 2) \\div 2$",
+          "hint": "Klammer zuerst, dann von links nach rechts",
+          "solution": "$4 \\times 5 \\div 2 = 20 \\div 2 = 10$",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Berechne: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "4 \\times (7 - 2) \\div 2"
+            }
+          ],
+          "hint_segments": [
+            {
+              "t": "text",
+              "text": "Klammer zuerst, dann von links nach rechts"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "4 \\times 5 \\div 2 = 20 \\div 2 = 10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Kern (Können)",
+      "items": [
+        {
+          "id": "E4",
+          "stem": "Berechne: 3² + $4 \\times (8 - 5) - 12 \\div 3$",
+          "solution": "$9 + 4 \\times 3 - 4 = 9 + 12 - 4 = 17$",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Berechne: 3² + "
+            },
+            {
+              "t": "math_inline",
+              "tex": "4 \\times (8 - 5) - 12 \\div 3"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "9 + 4 \\times 3 - 4 = 9 + 12 - 4 = 17"
+            }
+          ]
+        },
+        {
+          "id": "E5",
+          "stem": "Welche Rechengesetze werden hier angewendet: $5 \\times (3 + 7) = 5 \\times 3 + 5 \\times 7$?",
+          "solution": "Distributivgesetz: Multiplikation wird über Addition verteilt.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Welche Rechengesetze werden hier angewendet: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "5 \\times (3 + 7) = 5 \\times 3 + 5 \\times 7"
+            },
+            {
+              "t": "text",
+              "text": "?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Distributivgesetz: Multiplikation wird über Addition verteilt."
+            }
+          ]
+        },
+        {
+          "id": "E6",
+          "stem": "Vereinfache: (-2)³ - $(-3) \\times 4 + 5$",
+          "solution": "$(-8) - (-12) + 5$ = -$8 + 12 + 5 = 9$",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Vereinfache: (-2)³ - "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(-3) \\times 4 + 5"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "(-8) - (-12) + 5"
+            },
+            {
+              "t": "text",
+              "text": " = -"
+            },
+            {
+              "t": "math_inline",
+              "tex": "8 + 12 + 5 = 9"
+            }
+          ]
+        },
+        {
+          "id": "E7",
+          "stem": "Prüfe, ob kommutativ: a) $15 - 8$ und $8 - 15$, b) $6 \\times 4$ und $4 \\times 6$",
+          "solution": "a) 7 ≠ -7, nicht kommutativ. b) $24 = 24$, kommutativ. Subtraktion ist nicht kommutativ, Multiplikation schon.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Prüfe, ob kommutativ: a) "
+            },
+            {
+              "t": "math_inline",
+              "tex": "15 - 8"
+            },
+            {
+              "t": "text",
+              "text": " und "
+            },
+            {
+              "t": "math_inline",
+              "tex": "8 - 15"
+            },
+            {
+              "t": "text",
+              "text": ", b) "
+            },
+            {
+              "t": "math_inline",
+              "tex": "6 \\times 4"
+            },
+            {
+              "t": "text",
+              "text": " und "
+            },
+            {
+              "t": "math_inline",
+              "tex": "4 \\times 6"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "a) 7 ≠ -7, nicht kommutativ. b) "
+            },
+            {
+              "t": "math_inline",
+              "tex": "24 = 24"
+            },
+            {
+              "t": "text",
+              "text": ", kommutativ. Subtraktion ist nicht kommutativ, Multiplikation schon."
+            }
+          ]
+        },
+        {
+          "id": "E8",
+          "stem": "Berechne: $100 - 4 \\times 5$² + $(18 - 2 \\times 7)$",
+          "solution": "$100 - 4 \\times 25 + (18 - 14) = 100 - 100 + 4 = 4$",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Berechne: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "100 - 4 \\times 5"
+            },
+            {
+              "t": "text",
+              "text": "² + "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(18 - 2 \\times 7)"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "100 - 4 \\times 25 + (18 - 14) = 100 - 100 + 4 = 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "title": "Üben – Challenge (Transfer)",
+      "items": [
+        {
+          "id": "E9",
+          "stem": "Fehlerdiagnose: Ein Schüler rechnet $2 + 3 \\times 4 = (2 + 3) \\times 4 = 20$. Was ist der Fehler und wie lautet die richtige Antwort?",
+          "solution": "Fehler: Punkt vor Strich nicht beachtet. Korrekt: $2 + 3 \\times 4 = 2 + 12 = 14$.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Fehlerdiagnose: Ein Schüler rechnet "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + 3 \\times 4 = (2 + 3) \\times 4 = 20"
+            },
+            {
+              "t": "text",
+              "text": ". Was ist der Fehler und wie lautet die richtige Antwort?"
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Fehler: Punkt vor Strich nicht beachtet. Korrekt: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 + 3 \\times 4 = 2 + 12 = 14"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "id": "E10",
+          "stem": "Zeige mit einem Beispiel, dass Subtraktion nicht assoziativ ist.",
+          "solution": "Beispiel: $(10 - 5) - 3 = 2$, aber $10 - (5 - 3) = 8$. Da $2 ≠ 8$, ist Subtraktion nicht assoziativ.",
+          "stem_segments": [
+            {
+              "t": "text",
+              "text": "Zeige mit einem Beispiel, dass Subtraktion nicht assoziativ ist."
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Beispiel: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(10 - 5) - 3 = 2"
+            },
+            {
+              "t": "text",
+              "text": ", aber "
+            },
+            {
+              "t": "math_inline",
+              "tex": "10 - (5 - 3) = 8"
+            },
+            {
+              "t": "text",
+              "text": ". Da "
+            },
+            {
+              "t": "math_inline",
+              "tex": "2 ≠ 8"
+            },
+            {
+              "t": "text",
+              "text": ", ist Subtraktion nicht assoziativ."
+            }
+          ]
+        },
+        {
+          "id": "E11",
+          "stem": "$Supermarkt-Rechnung$: 3 × € 1,$20 + 2$ × € 2,$50 - 10$% Rabatt auf alles. Berechne den Endpreis.",
+          "solution": "Gesamtpreis: € 3,60 + € 5,-,- = € 8,60. Mit 10% Rabatt: € 8,$60 \\times 0$,9 = € 7,74.",
+          "stem_segments": [
+            {
+              "t": "math_inline",
+              "tex": "Supermarkt-Rechnung"
+            },
+            {
+              "t": "text",
+              "text": ": 3 × € 1,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "20 + 2"
+            },
+            {
+              "t": "text",
+              "text": " × € 2,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "50 - 10"
+            },
+            {
+              "t": "text",
+              "text": "% Rabatt auf alles. Berechne den Endpreis."
+            }
+          ],
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Gesamtpreis: € 3,60 + € 5,-,- = € 8,60. Mit 10% Rabatt: € 8,"
+            },
+            {
+              "t": "math_inline",
+              "tex": "60 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",9 = € 7,74."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Mini-Projekt – Schulkiosk-Abrechnung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Mini-Projekt – Schulkiosk-Abrechnung"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Du hilfst beim Schulkiosk und musst die Tagesabrechnung machen. Verkauft wurden: 15 Brötchen à € 1,50, 8 Getränke à € 2,-,-, 12 Süßigkeiten à € 0,80. Am Ende des Tages gibt es 5% Personalrabatt für Lehrer."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 1: Berechne den Bruttoumsatz (ohne Rabatt)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 2: Ein Lehrer kauft 2 Brötchen und 1 Getränk. Was zahlt er mit Personalrabatt?"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 3: Erkläre die Rechenreihenfolge bei: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Kosten = 15 \\times 1{,}50 + 8 \\times 2"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "00 + 12 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",80."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Aufgabe 4: Überprüfe das Ergebnis mit dem Distributivgesetz."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 1: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "15 \\times 1{,}50 + 8 \\times 2"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "00 + 12 \\times 0{,}80 = 22"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "50 + 16{,}00 + 9"
+            },
+            {
+              "t": "text",
+              "text": ",60 = € 48,10"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 2: Lehrer: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(2 \\times 1{,}50 + 1 \\times 2"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "00) \\times 0{,}95 = 5"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "00 \\times 0"
+            },
+            {
+              "t": "text",
+              "text": ",95 = € 4,75"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 3: Erst alle Multiplikationen (Punkt), dann Additionen (Strich) von links nach rechts."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Lösung 4: Distributiv: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(15 + 8 + 12) \\times (1{,}50 + 2"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "00 + 0"
+            },
+            {
+              "t": "text",
+              "text": ",80) funktioniert NICHT, da verschiedene Preise. Distributivgesetz nur bei gleichen Faktoren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Schulkiosk-Abrechnung Dashboard",
+      "image": "assets/M01L01_school_kiosk.png",
+      "src": "assets/M01L01_school_kiosk.png",
+      "alt_text": "Abrechnungstabelle mit Produktdaten und Gesamtsummenberechnung",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Tabellarische Darstellung der Verkäufe: Produkte, Mengen, Einzelpreise, Zwischensummen. Unten Gesamtsumme und Lehrerrabatt-Berechnung. Rechenweg ist farblich markiert."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Zusammenfassung & Spickzettel",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zusammenfassung & Spickzettel"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Zahlbereiche: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Jeder Bereich erweitert die Möglichkeiten des Rechnens."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Rechengesetze: Kommutativ (vertauschen), Assoziativ (Klammern verschieben), Distributiv (Multiplikation verteilen)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Reihenfolge: Klammern → Potenzen → Punkt (×,÷) → Strich (+,-)."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Vorzeichen: Gleiche Vorzeichen → positiv, verschiedene → negativ."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Immer Probe machen und auf Plausibilität prüfen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "title": "Mathematik-Grundlagen Spickzettel",
+      "image": "assets/M01L01_cheat_sheet.png",
+      "src": "assets/M01L01_cheat_sheet.png",
+      "alt_text": "Vierteiliger Spickzettel mit allen wichtigen Grundlagen der Mathematik",
+      "content_segments": [
+        {
+          "t": "text",
+          "text": "Kompakte Übersicht: Zahlbereiche-Diagramm, Rechengesetze-Formeln, Operationsreihenfolge-Schema, Vorzeichenregeln-Tabelle. Alles auf einem Blick."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Selbstcheck – 3 Fragen zur Reflexion",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Selbstcheck – 3 Fragen zur Reflexion"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Frage 1: Warum gibt es die "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Punkt-vor-Strich-Regel"
+            },
+            {
+              "t": "text",
+              "text": "? Antwort: Weil Multiplikation eine verkürzte Addition ist. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "3 \\times 4"
+            },
+            {
+              "t": "text",
+              "text": " bedeutet "
+            },
+            {
+              "t": "math_inline",
+              "tex": "4 + 4 + 4"
+            },
+            {
+              "t": "text",
+              "text": ". Deshalb "
+            },
+            {
+              "t": "math_inline",
+              "tex": "bindet \\times st"
+            },
+            {
+              "t": "text",
+              "text": "ärker als +."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Frage 2: Wie erkenne ich, ob ein Rechengesetz anwendbar ist? Antwort: Kommutativ und Assoziativ nur "
+            },
+            {
+              "t": "math_inline",
+              "tex": "bei + und"
+            },
+            {
+              "t": "text",
+              "text": " ×. Distributiv bei × ü"
+            },
+            {
+              "t": "math_inline",
+              "tex": "ber + oder"
+            },
+            {
+              "t": "text",
+              "text": " -. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Bei - und \\div vorsichtig"
+            },
+            {
+              "t": "text",
+              "text": " sein."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Frage 3: Wie prüfe ich, ob mein Ergebnis stimmt? Antwort: Probe durch Einsetzen, Plausibilität abschätzen, Alternative Rechenwege verwenden (z.B. Distributiv), Größenordnung prüfen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Ausblick & Verknüpfungen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Ausblick & Verknüpfungen"
+        }
+      ],
+      "items": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Als Nächstes lohnt sich der Sprung zu Brüchen und Dezimalzahlen – dort wendest du diese Grundregeln auf erweiterte Zahlenformen an."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Das knüpft direkt an: Bruchrechnung folgt denselben Gesetzen, nur komplexer. Das Distributivgesetz hilft beim Kürzen und Erweitern."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "In höheren Modulen sind diese Grundlagen das Fundament für Algebra, Funktionen und Analysis. Ohne sichere Grundrechenarten geht nichts."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "sources": [
+      {
+        "source": "canonical_repo",
+        "path": "articles/M01/M01L01.JSON",
+        "note": "baseline"
+      }
+    ],
+    "versionTag": "v20250824-complete-rebuild",
+    "didactics": {
+      "steps": true,
+      "blocks_before": 5,
+      "blocks_after": 26
+    },
+    "deep_enriched": true,
+    "deep_version": "maximum-depth-v1",
+    "assets_count": 10,
+    "target_audience": "absolute_beginners",
+    "compat": {
+      "added_src_for_visuals": true
+    },
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  },
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Lehrtext – Grundlagen: Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge für Einsteiger"
+    }
+  ]
+}
