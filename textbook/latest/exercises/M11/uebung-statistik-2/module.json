@@ -1,0 +1,88 @@
+{
+  "id": "M11",
+  "title": "Synthetische Kontrolle & Panel-Kausalinferenz Advanced (v3) – Prüfungsset E/F",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Synthetische Kontrolle & Panel-Kausalinferenz Advanced (v3) – Prüfungsset E/F",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Synthetische Kontrolle & Panel-Kausalinferenz Advanced (v3) – Prüfungsset E/F"
+        }
+      ]
+    }
+  ],
+  "description": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (SC, gestaffelt/Matrix, Panel-BSTS, Geo-Experimente).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (SC, gestaffelt/Matrix, Panel-BSTS, Geo-Experimente).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Rechen-Mix mit gestuften Hinweisen (Sets E/F) in allen Lessons (SC, gestaffelt/Matrix, Panel-BSTS, Geo-Experimente)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M11L01",
+      "title": "SC I – Prinzip, Donor, Placebos (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "SC I – Prinzip, Donor, Placebos (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M11L02",
+      "title": "SC II – Staggered & Matrix-Ideen (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "SC II – Staggered & Matrix-Ideen (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M11L03",
+      "title": "Panel-BSTS & Hierarchien (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Panel-BSTS & Hierarchien (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    },
+    {
+      "id": "M11L04",
+      "title": "Geo-Experimente & Interferenz (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Geo-Experimente & Interferenz (v3: Prüfungsset E/F – Rechen‑Mix mit gestuften Hinweisen)"
+        }
+      ]
+    }
+  ],
+  "version": "v3",
+  "updated_at": "2025-08-17T10:04:30.426802",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
