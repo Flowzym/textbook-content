@@ -1,0 +1,5 @@
+{
+  "changed_files_count": 16,
+  "total_changes": 146,
+  "note": "Sanitized tex fields and merged math_inline + comma/dot + math_inline into one math_inline"
+}
