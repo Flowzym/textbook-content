@@ -1,0 +1,88 @@
+{
+  "id": "M09",
+  "title": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen – ARIMA/ETS & Ursachen‑Modelle (v2) – Prüfungssets A–D"
+        }
+      ]
+    }
+  ],
+  "description": "Zusätzliche Quiz‑Blöcke A–D in allen Lessons (Identifikation, ARIMA/SARIMA, ETS, ARIMAX/Hierarchien).",
+  "description_segments": [
+    {
+      "t": "text",
+      "text": "Zusätzliche Quiz‑Blöcke A–D in allen Lessons (Identifikation, ARIMA/SARIMA, ETS, ARIMAX/Hierarchien).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zusätzliche Quiz‑Blöcke A–D in allen Lessons (Identifikation, ARIMA/SARIMA, ETS, ARIMAX/Hierarchien)."
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "M09L01",
+      "title": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Zeitreihen V – Stationarität, ACF/PACF, AR/MA/ARMA (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M09L02",
+      "title": "ARIMA & SARIMA – Schätzen, Auswahl (AIC/BIC), Diagnose (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "ARIMA & SARIMA – Schätzen, Auswahl (AIC/BIC), Diagnose (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M09L03",
+      "title": "ETS – State Space, Damped Trend, Auswahl (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "ETS – State Space, Damped Trend, Auswahl (v2: Prüfungssets A–D)"
+        }
+      ]
+    },
+    {
+      "id": "M09L04",
+      "title": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v2: Prüfungssets A–D)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Ursachen‑Modelle & ARIMAX – Treiber & Reconciliation (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "version": "v2",
+  "updated_at": "2025-08-17T09:48:53.640984",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

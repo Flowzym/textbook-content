@@ -1,0 +1,605 @@
+{
+  "id": "M01L01_v2",
+  "title": "Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Zahlen & Grundrechnen – Zahlbereiche, Rechenregeln, Reihenfolge (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 15,
+  "prerequisites": [],
+  "prerequisites_segments": [],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Zahlbereiche & Rechenregeln abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Zahlbereiche & Rechenregeln abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Diese Lesson vertieft dein Wissen mit gezielten Prüfungssets A–D. Jedes Set fokussiert auf verschiedene Aspekte: Grundlagen, Methoden, Diagnose und Praxis.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Diese Lesson vertieft dein Wissen mit gezielten Prüfungssets A–D. Jedes Set fokussiert auf verschiedene Aspekte: Grundlagen, Methoden, Diagnose und Praxis."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Prüfungssets-Übersicht",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungssets-Übersicht"
+        }
+      ],
+      "text": "- **Set A**: Grundlagen (Zahlbereiche, Kommutativität, Reihenfolge)  \n- **Set B**: Methoden/Regeln (Distributiv, Punkt vor Strich, Vorzeichen)  \n- **Set C**: Diagnose/Fehler (Typische Fehlerquellen identifizieren)  \n- **Set D**: Praxis & Fallen (Anwendung in realen Situationen)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "- **Set A**: Grundlagen (Zahlbereiche, Kommutativität, Reihenfolge)  \n- **Set B**: Methoden/Regeln (Distributiv, Punkt vor Strich, Vorzeichen)  \n- **Set C**: Diagnose/Fehler (Typische Fehlerquellen identifizieren)  \n- **Set D**: Praxis & Fallen (Anwendung in realen Situationen)"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Reihenfolge bei 18−6:3+4?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Reihenfolge bei 18−6:3+4?"
+            }
+          ],
+          "options": [
+            {
+              "text": "(18−6):3+4",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "(18−6):3+4"
+                }
+              ]
+            },
+            {
+              "text": "18−(6:3)+4",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "18−(6:3)+4"
+                }
+              ]
+            },
+            {
+              "text": "18−6:(3+4)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "18−6:(3+4)"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Punkt vor Strich; links→rechts.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Punkt vor Strich; links→rechts."
+        },
+        {
+          "type": "true_false",
+          "question": "Kommutativgesetz gilt für Addition und Multiplikation.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Kommutativgesetz gilt für Addition und Multiplikation."
+            }
+          ],
+          "answer": true,
+          "rationale": "Nicht für Subtraktion/Division.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nicht für Subtraktion/Division."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Aussage ist korrekt?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Aussage ist korrekt?"
+            }
+          ],
+          "options": [
+            {
+              "text": "ℚ⊂ℤ",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ℚ⊂ℤ"
+                }
+              ]
+            },
+            {
+              "text": "ℤ⊂ℚ",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ℤ⊂ℚ"
+                }
+              ]
+            },
+            {
+              "text": "ℝ⊂ℚ",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ℝ⊂ℚ"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Ketteneinschluss.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ketteneinschluss."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Regeln",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Regeln"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Distributiv anwenden: $5\\cdot (x-3)$",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Distributiv anwenden: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "5\\cdot (x-3)"
+            }
+          ],
+          "options": [
+            {
+              "text": "5x−15",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "5x−15"
+                }
+              ]
+            },
+            {
+              "text": "5x−3",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "5x−3"
+                }
+              ]
+            },
+            {
+              "text": "(5x)/3",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "(5x)/3"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Ausmultiplizieren.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Ausmultiplizieren."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei 24:$3\\cdot 2$ rechnest du $(24:3)\\cdot 2$.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei 24:"
+            },
+            {
+              "t": "math_inline",
+              "tex": "3\\cdot 2"
+            },
+            {
+              "t": "text",
+              "text": " rechnest du "
+            },
+            {
+              "t": "math_inline",
+              "tex": "(24:3)\\cdot 2"
+            },
+            {
+              "t": "text",
+              "text": "."
+            }
+          ],
+          "answer": true,
+          "rationale": "Links→rechts bei gleicher Priorität.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Links→rechts bei gleicher Priorität."
+        },
+        {
+          "type": "single_choice",
+          "question": "−(a−b) entspricht…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "−(a−b) entspricht…"
+            }
+          ],
+          "options": [
+            {
+              "text": "−a−b",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "−a−b"
+                }
+              ]
+            },
+            {
+              "text": "−a+b",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "−a+b"
+                }
+              ]
+            },
+            {
+              "text": "a−b",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "a−b"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Minus vor Klammer kehrt Vorzeichen um.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Minus vor Klammer kehrt Vorzeichen um."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Fehler",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Fehler"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Fehlerdiagnose: $3-(2-5)=3-2-5$=−4. Fehler?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Fehlerdiagnose: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "3-(2-5)=3-2-5"
+            },
+            {
+              "t": "text",
+              "text": "=−4. Fehler?"
+            }
+          ],
+          "options": [
+            {
+              "text": "kein Fehler",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "kein Fehler"
+                }
+              ]
+            },
+            {
+              "text": "Minus vor Klammer falsch aufgelöst",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Minus vor Klammer falsch aufgelöst"
+                }
+              ]
+            },
+            {
+              "text": "Punkt vor Strich missachtet",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Punkt vor Strich missachtet"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Richtig: $3-(-3)=6$.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Richtig: $3-(-3)=6$."
+        },
+        {
+          "type": "true_false",
+          "question": "Division ist nicht assoziativ.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Division ist nicht assoziativ."
+            }
+          ],
+          "answer": true,
+          "rationale": "Klammern wichtig.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Klammern wichtig."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welcher Wert ist irrationale Zahl?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welcher Wert ist irrationale Zahl?"
+            }
+          ],
+          "options": [
+            {
+              "text": "3/7",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "3/7"
+                }
+              ]
+            },
+            {
+              "text": "√2",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "√2"
+                }
+              ]
+            },
+            {
+              "text": "−1,25",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "−1,25"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "√2∉ℚ.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. √2∉ℚ."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: $Bestellmenge=120-2\\cdot (15-8)$. Ergebnis?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Praxis: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Bestellmenge=120-2\\cdot (15-8)"
+            },
+            {
+              "t": "text",
+              "text": ". Ergebnis?"
+            }
+          ],
+          "options": [
+            {
+              "text": "$120-2\\cdot 7=106$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "120-2\\cdot 7=106"
+                }
+              ]
+            },
+            {
+              "text": "$120-(30-16)=106$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "120-(30-16)=106"
+                }
+              ]
+            },
+            {
+              "text": "$(120-2)\\cdot (15-8)=826$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "(120-2)\\cdot (15-8)=826"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Klammer, Punkt, Strich.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Klammer, Punkt, Strich."
+        },
+        {
+          "type": "true_false",
+          "question": "Bei Kassenchecks sind klare Klammern zentral.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bei Kassenchecks sind klare Klammern zentral."
+            }
+          ],
+          "answer": true,
+          "rationale": "Fehlervermeidung.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fehlervermeidung."
+        },
+        {
+          "type": "single_choice",
+          "question": "Gute Strategie?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Gute Strategie?"
+            }
+          ],
+          "options": [
+            {
+              "text": "alles im Kopf",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "alles im Kopf"
+                }
+              ]
+            },
+            {
+              "text": "Zwischenschritte notieren",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Zwischenschritte notieren"
+                }
+              ]
+            },
+            {
+              "text": "Regeln ignorieren",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Regeln ignorieren"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Cognitive Load senken.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Cognitive Load senken."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Zahlbereiche & Rechenregeln: Begriffe, Regeln, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Zahlbereiche & Rechenregeln: Begriffe, Regeln, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [],
+      "long": []
+    }
+  ],
+  "reading_time_band": "normal",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

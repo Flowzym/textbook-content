@@ -1,0 +1,445 @@
+{
+  "id": "M05L03",
+  "title": "Monte‑Carlo – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Monte‑Carlo – Prüfungsfokus (v3, Feintuning + Prüfungsset E)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Monte‑Carlo – Prüfungsfokus (v3, Feintuning + Prüfungsset E)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 82,
+  "prerequisites": [
+    "M05L01",
+    "M05L02",
+    "M05L03",
+    "M05L04"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M05L01"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M05L02"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M05L03"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M05L04"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Evaluate",
+      "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsnahe Aufgaben (Set E) sicher bearbeiten, typische Fehler vermeiden und Lösungen begründen."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "summary",
+      "text": "Feintuning: Auswahl geeigneter Verteilungen, Quantile & VaR/CVaR sicher interpretieren, Hedge‑Effekte.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Feintuning: Auswahl geeigneter Verteilungen, Quantile & VaR/CVaR sicher interpretieren, Hedge‑Effekte."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset E",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset E"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "E[Triangular(10,20,40)]",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "E[Triangular(10,20,40)]"
+            }
+          ],
+          "options": [
+            {
+              "text": "23,33",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "23,33"
+                }
+              ]
+            },
+            {
+              "text": "21,67",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "21,67"
+                }
+              ]
+            },
+            {
+              "text": "20,00",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "20,00"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "$(10+20+40)$/$3=23$,33.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. $(10+20+40)$/$3=23$,33.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "CVaR95 ist i. d. R. **größer** (schlimmer) als VaR95.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "CVaR95 ist i. d. R. **größer** (schlimmer) als VaR95."
+            }
+          ],
+          "answer": true,
+          "rationale": "Tail‑Durchschnitt.",
+          "difficulty": "schwer",
+          "feedback_correct": "Richtig. Tail‑Durchschnitt.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Welche Verteilung ist für strikt positive Preise geeignet?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Verteilung ist für strikt positive Preise geeignet?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Normal",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Normal"
+                }
+              ]
+            },
+            {
+              "text": "Lognormal",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Lognormal"
+                }
+              ]
+            },
+            {
+              "text": "Cauchy",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Cauchy"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Lognormal bleibt >0.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Lognormal bleibt >0.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "P5=−15k; P50=+4k; P95=+22k. VaR95 (Verlustsicht) =",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "P5=−15k; P50=+4k; P95=+22k. VaR95 (Verlustsicht) ="
+            }
+          ],
+          "options": [
+            {
+              "text": "15k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "15k"
+                }
+              ]
+            },
+            {
+              "text": "22k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "22k"
+                }
+              ]
+            },
+            {
+              "text": "4k",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "4k"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "$VaR95= max$$(0, -P5)=15k$.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. $VaR95= max$$(0, -P5)=15k$.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Negative Korrelation $Preis\\times Menge$ erhöht oft die Ergebnisstreuung.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Negative Korrelation "
+            },
+            {
+              "t": "math_inline",
+              "tex": "Preis\\times Menge"
+            },
+            {
+              "t": "text",
+              "text": " erhöht oft die Ergebnisstreuung."
+            }
+          ],
+          "answer": true,
+          "rationale": "Ungünstige Kombis wahrscheinlicher.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ungünstige Kombis wahrscheinlicher.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Partial Sensitivity bewertet…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Partial Sensitivity bewertet…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Einfluss eines Inputs innerhalb der Simulation",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Einfluss eines Inputs innerhalb der Simulation"
+                }
+              ]
+            },
+            {
+              "text": "nur linearen Trend",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur linearen Trend"
+                }
+              ]
+            },
+            {
+              "text": "Median",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Median"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "z. B. Spearman‑Rangkorrelation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. z. B. Spearman‑Rangkorrelation.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "single_choice",
+          "question": "Hedge 50% senkt typ. …",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Hedge 50% senkt typ. …"
+            }
+          ],
+          "options": [
+            {
+              "text": "VaR95",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "VaR95"
+                }
+              ]
+            },
+            {
+              "text": "Median stark",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Median stark"
+                }
+              ]
+            },
+            {
+              "text": "P95",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "P95"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Downside sinkt, Median leicht.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Downside sinkt, Median leicht.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "„Mittelwertfalle“: Nur E[NPV] kann irreführen – Quantile beachten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "„Mittelwertfalle“: Nur E[NPV] kann irreführen – Quantile beachten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verteilung zählt.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Verteilung zählt.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        },
+        {
+          "type": "true_false",
+          "question": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Lineare Gleichungen löst man durch dieselbe Operation auf beiden Seiten."
+            }
+          ],
+          "answer": true,
+          "rationale": "Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Äquivalenzumformungen: gleicher Schritt links und rechts.",
+          "feedback_incorrect": "Beachte: Äquivalenzumformungen: gleiche Operation beidseitig; Punkt-vor-Strich beachten."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "outlook",
+      "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Tipp: Simuliere eine echte Prüfung – 20 Minuten, ohne Hilfsmittel; danach Lösungen reflektieren."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne den Grundsatz zum Lösen linearer Gleichungen (Textantwort)."
+            }
+          ],
+          "solution": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "Äquivalenzumformungen: gleiche Operation auf beiden Seiten"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "Operation"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

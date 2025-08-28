@@ -1,0 +1,1436 @@
+{
+  "id": "M07L03",
+  "title": "Klassische MILP‑Probleme (v2: Walkthrough + Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Klassische MILP‑Probleme (v2: Walkthrough + Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Klassische MILP‑Probleme (v2: Walkthrough + Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 108,
+  "prerequisites": [
+    "M07L03"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M07L03"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Apply",
+      "text": "UFL/Set‑Cover/Rucksack modellieren und kleine Branch‑Skizzen anfertigen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "UFL/Set‑Cover/Rucksack modellieren und kleine Branch‑Skizzen anfertigen."
+        }
+      ]
+    },
+    {
+      "level": "Analyze",
+      "text": "Stärkere Ungleichungen (valid inequalities) und Preprocessing anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Stärkere Ungleichungen (valid inequalities) und Preprocessing anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "introduction",
+      "text": "Ein kompletter Walkthrough für Set‑Cover + A–D‑Prüfungssets zu drei Standardproblemen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Ein kompletter Walkthrough für Set‑Cover + A–D‑Prüfungssets zu drei Standardproblemen."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "subtype": "walkthrough",
+      "title": "Walkthrough – Mini‑Set‑Cover",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Walkthrough – Mini‑Set‑Cover"
+        }
+      ],
+      "text": "Elemente {1,2,3}; Sets S1={1,2}, S2={2,3}, S3={1,3}; Kosten c=[3,3,4].\nModell: min $3y1+3y2+4y3$ s.t. $y1+y3 ≥1$ (elem 1), $y1+y2 ≥1$ (2), $y2+y3 ≥1$ (3); y∈{0,1}.\nGreedy Start: wähle S1 (kostenwirksam), dann zur Deckung von 3 noch S2 oder S3 → S2 kostet 3 → Lösung $y1=1$,$y2=1$, $z=6$.\nB&B kurz: Root‑LP gibt $y1=1$, $y2=1$, $y3=0$ (int) → z*=6, Baum trivial (sofort fathom).",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Elemente {1,2,3}; Sets S1={1,2}, S2={2,3}, S3={1,3}; Kosten c=[3,3,4].\nModell: min "
+        },
+        {
+          "t": "math_inline",
+          "tex": "3y1+3y2+4y3"
+        },
+        {
+          "t": "text",
+          "text": " s.t. "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1+y3 ≥1"
+        },
+        {
+          "t": "text",
+          "text": " (elem 1), "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1+y2 ≥1"
+        },
+        {
+          "t": "text",
+          "text": " (2), "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2+y3 ≥1"
+        },
+        {
+          "t": "text",
+          "text": " (3); y∈{0,1}.\nGreedy Start: wähle S1 (kostenwirksam), dann zur Deckung von 3 noch S2 oder S3 → S2 kostet 3 → Lösung "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1=1"
+        },
+        {
+          "t": "text",
+          "text": ","
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=1"
+        },
+        {
+          "t": "text",
+          "text": ", "
+        },
+        {
+          "t": "math_inline",
+          "tex": "z=6"
+        },
+        {
+          "t": "text",
+          "text": ".\nB&B kurz: Root‑LP gibt "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y1=1"
+        },
+        {
+          "t": "text",
+          "text": ", "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y2=1"
+        },
+        {
+          "t": "text",
+          "text": ", "
+        },
+        {
+          "t": "math_inline",
+          "tex": "y3=0"
+        },
+        {
+          "t": "text",
+          "text": " (int) → z*=6, Baum trivial (sofort fathom)."
+        }
+      ],
+      "worked": {
+        "title": "Break-Even",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Break-Even"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] K_fix=€ 12,-0,00, p=€ 14,-, k_v=€ 8,-,- ⇒ x_$BE=2$,000 Stk."
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] K_fix=€ 12,-0,00, p=€ 14,-, k_v=€ 8,-,- ⇒ x_"
+              },
+              {
+                "t": "math_inline",
+                "tex": "BE=2"
+              },
+              {
+                "t": "text",
+                "text": ",000 Stk."
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "Zielgewinn",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "Zielgewinn"
+          }
+        ],
+        "steps": [
+          "G=€ 9,-0,00 ⇒ $14x - (12$,$000+8x) = 9$,000 ⇒ $x = 3$,500 Stk."
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "G=€ 9,-0,00 ⇒ "
+              },
+              {
+                "t": "math_inline",
+                "tex": "14x - (12"
+              },
+              {
+                "t": "text",
+                "text": ","
+              },
+              {
+                "t": "math_inline",
+                "tex": "000+8x) = 9"
+              },
+              {
+                "t": "text",
+                "text": ",000 ⇒ "
+              },
+              {
+                "t": "math_inline",
+                "tex": "x = 3"
+              },
+              {
+                "t": "text",
+                "text": ",500 Stk."
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        "Elemente {1,2,3}; Sets S1={1,2}, S2={2,3}, S3={1,3}; Kosten c=[3,3,4]",
+        "Modell: min 3y1+3y2+4y3 s.t. y1+y3 ≥1 (elem 1), y1+y2 ≥1 (2), y2+y3 ≥1 (3); y∈{0,1}",
+        "Greedy Start: wähle S1 (kostenwirksam), dann zur Deckung von 3 noch S2 oder S3 → S2 kostet 3 → Lösung $y1=1$,$y2=1$, z=",
+        "B&B kurz: Root‑LP gibt $y1=1$, $y2=1$, $y3=0$ (int) → z*=6, Baum trivial (sofort fathom"
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Elemente {1,2,3}; Sets S1={1,2}, S2={2,3}, S3={1,3}; Kosten c=[3,3,4]"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Modell: min 3y1+3y2+4y3 s.t. y1+y3 ≥1 (elem 1), y1+y2 ≥1 (2), y2+y3 ≥1 (3); y∈{0,1}"
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "Greedy Start: wähle S1 (kostenwirksam), dann zur Deckung von 3 noch S2 oder S3 → S2 kostet 3 → Lösung "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y1=1"
+            },
+            {
+              "t": "text",
+              "text": ","
+            },
+            {
+              "t": "math_inline",
+              "tex": "y2=1"
+            },
+            {
+              "t": "text",
+              "text": ", z="
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "B&B kurz: Root‑LP gibt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y1=1"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y2=1"
+            },
+            {
+              "t": "text",
+              "text": ", "
+            },
+            {
+              "t": "math_inline",
+              "tex": "y3=0"
+            },
+            {
+              "t": "text",
+              "text": " (int) → z*=6, Baum trivial (sofort fathom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Rucksack",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Rucksack"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "0/1‑Rucksack Zielfunktion:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "0/1‑Rucksack Zielfunktion:"
+            }
+          ],
+          "options": [
+            {
+              "text": "min Σ w_i y_i",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "min Σ w_i y_i"
+                }
+              ]
+            },
+            {
+              "text": "max Σ v_i y_i",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "max Σ v_i y_i"
+                }
+              ]
+            },
+            {
+              "text": "min Σ v_i y_i",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "min Σ v_i y_i"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Werte maximieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Werte maximieren. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Dominanz: wenn w_i≤w_k und v_i≥v_k, dominiert i das Item k.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Dominanz: wenn w_i≤w_k und v_i≥v_k, dominiert i das Item k."
+            }
+          ],
+          "answer": true,
+          "rationale": "Preprocessing. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Preprocessing. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "LP‑Relaxation liefert…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "LP‑Relaxation liefert…"
+            }
+          ],
+          "options": [
+            {
+              "text": "oberen Bound (Max)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "oberen Bound (Max)"
+                }
+              ]
+            },
+            {
+              "text": "unteren Bound (Max)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "unteren Bound (Max)"
+                }
+              ]
+            },
+            {
+              "text": "keine Aussage",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Aussage"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Obere Schranke. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Obere Schranke. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Set Cover",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Set Cover"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Deckungsnebenbedingung:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Deckungsnebenbedingung:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Σ y_$j = 1$",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σ y_"
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "j = 1"
+                }
+              ]
+            },
+            {
+              "text": "Σ y_j ≥ 1 pro Element",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σ y_j ≥ 1 pro Element"
+                }
+              ]
+            },
+            {
+              "text": "Σ y_j ≤ 1",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Σ y_j ≤ 1"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Min. eine Deckung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Min. eine Deckung. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Weiche Deckungen lassen sich mit Strafkosten modellieren.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Weiche Deckungen lassen sich mit Strafkosten modellieren."
+            }
+          ],
+          "answer": true,
+          "rationale": "Penalty. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Penalty. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Stärker als Big‑M?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Stärker als Big‑M?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Cover‑Ungleichungen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Cover‑Ungleichungen"
+                }
+              ]
+            },
+            {
+              "text": "keine",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine"
+                }
+              ]
+            },
+            {
+              "text": "nur Gleichungen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Gleichungen"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Valid inequalities. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Valid inequalities. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Standort (UFL)",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Standort (UFL)"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Kopplung in UFL:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Kopplung in UFL:"
+            }
+          ],
+          "options": [
+            {
+              "text": "x_{i,j} ≤ $M\\cdot y$_j",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "x_{i,j} ≤ "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "M\\cdot y"
+                },
+                {
+                  "t": "text",
+                  "text": "_j"
+                }
+              ]
+            },
+            {
+              "text": "x_{i,j} ≥ $M\\cdot y$_j",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "x_{i,j} ≥ "
+                },
+                {
+                  "t": "math_inline",
+                  "tex": "M\\cdot y"
+                },
+                {
+                  "t": "text",
+                  "text": "_j"
+                }
+              ]
+            },
+            {
+              "text": "x_{i,j} = y_j",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "x_{i,j} = y_j"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Standard. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Standard. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Fixkosten fließen als f_j y_j in die Zielfunktion.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Fixkosten fließen als f_j y_j in die Zielfunktion."
+            }
+          ],
+          "answer": true,
+          "rationale": "Öffnungskosten. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Öffnungskosten. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Stärkere Schranke als M:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Stärkere Schranke als M:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Kapazitätsobergrenzen je j",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Kapazitätsobergrenzen je j"
+                }
+              ]
+            },
+            {
+              "text": "nichts",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nichts"
+                }
+              ]
+            },
+            {
+              "text": "zufällig",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "zufällig"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Tighter bounds. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Tighter bounds. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Gemischt",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Gemischt"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Welche Strategie verbessert Startlösungen oft?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Welche Strategie verbessert Startlösungen oft?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Random Start ohne Logik",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Random Start ohne Logik"
+                }
+              ]
+            },
+            {
+              "text": "Greedy nach Quote",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Greedy nach Quote"
+                }
+              ]
+            },
+            {
+              "text": "keine",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Gute Heuristik. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gute Heuristik. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Valid Inequalities können die optimale Lösung entfernen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Valid Inequalities können die optimale Lösung entfernen."
+            }
+          ],
+          "answer": false,
+          "rationale": "Nur fraktionale ausschließen. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Nur fraktionale ausschließen. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Wann ist Preprocessing unnötig?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wann ist Preprocessing unnötig?"
+            }
+          ],
+          "options": [
+            {
+              "text": "Wenn Modelle klein sind",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Wenn Modelle klein sind"
+                }
+              ]
+            },
+            {
+              "text": "nie – es hilft fast immer",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nie – es hilft fast immer"
+                }
+              ]
+            },
+            {
+              "text": "immer",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Fast immer nützlich. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fast immer nützlich. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "Du beherrschst Standard‑MILPs inkl. kurzer Branch‑Skizzen und stärkeren Ungleichungen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Du beherrschst Standard‑MILPs inkl. kurzer Branch‑Skizzen und stärkeren Ungleichungen."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Break-Even$:** x_$BE = K$_fix/$(p-k$_v). G$(x)=p\\cdot x - (K$_$fix + k$_$v\\cdot x)$.\n\n**$Decision-Hints$:**\n- $Break-even$, wenn $Gewinn=0$: x_$BE = K$_fix/$(p-k$_v).\n- Zielgewinn mit (K_$fix+G)$/$(p-k$_v) berechnen.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Break-Even"
+        },
+        {
+          "t": "text",
+          "text": ":** x_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "BE = K"
+        },
+        {
+          "t": "text",
+          "text": "_fix/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(p-k"
+        },
+        {
+          "t": "text",
+          "text": "_v). G"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(x)=p\\cdot x - (K"
+        },
+        {
+          "t": "text",
+          "text": "_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "fix + k"
+        },
+        {
+          "t": "text",
+          "text": "_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "v\\cdot x)"
+        },
+        {
+          "t": "text",
+          "text": ".\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Break-even"
+        },
+        {
+          "t": "text",
+          "text": ", wenn "
+        },
+        {
+          "t": "math_inline",
+          "tex": "Gewinn=0"
+        },
+        {
+          "t": "text",
+          "text": ": x_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "BE = K"
+        },
+        {
+          "t": "text",
+          "text": "_fix/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(p-k"
+        },
+        {
+          "t": "text",
+          "text": "_v).\n- Zielgewinn mit (K_"
+        },
+        {
+          "t": "math_inline",
+          "tex": "fix+G)"
+        },
+        {
+          "t": "text",
+          "text": "/"
+        },
+        {
+          "t": "math_inline",
+          "tex": "(p-k"
+        },
+        {
+          "t": "text",
+          "text": "_v) berechnen."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini 1",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 1"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini 2",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 2"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Löse: $7x - 4 = 24$",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Löse: "
+            },
+            {
+              "t": "math_inline",
+              "tex": "7x - 4 = 24"
+            }
+          ],
+          "solution": "$x=4$",
+          "solution_segments": [
+            {
+              "t": "math_inline",
+              "tex": "x=4"
+            }
+          ],
+          "check": {
+            "type": "numeric",
+            "expected": 4
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "BE bei K_fix=€ 15,-0,00, p=€ 18,-, k_v=€ 11,-,-",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "BE bei K_fix=€ 15,-0,00, p=€ 18,-, k_v=€ 11,-,-"
+            }
+          ],
+          "solution": "x_$BE=2$,142,86 ≈ 2,143",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=2"
+            },
+            {
+              "t": "text",
+              "text": ",142,86 ≈ 2,143"
+            }
+          ],
+          "check": {
+            "type": "approx",
+            "expected": 2.143,
+            "tolerance": 0.05,
+            "expr": "2.143"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "PLATZHALTER – Aufgabe",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aufgabe"
+            }
+          ],
+          "hints": [
+            "…"
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "…"
+                }
+              ]
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

@@ -1,0 +1,1065 @@
+{
+  "id": "M09L03",
+  "title": "ETS – State Space, Damped Trend, Auswahl (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "ETS – State Space, Damped Trend, Auswahl (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "ETS – State Space, Damped Trend, Auswahl (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M09L03"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M09L03"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte ETS‑Auswahl abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte ETS‑Auswahl abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "ETS steht für…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "ETS steht für…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Error, Trend, Season",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Error, Trend, Season"
+                }
+              ]
+            },
+            {
+              "text": "Exponential Trend Smoothing",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Exponential Trend Smoothing"
+                }
+              ]
+            },
+            {
+              "text": "Error, Time, Signal",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Error, Time, Signal"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Akkonym. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Akkonym. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Damped Trend reduziert Langfrist‑Extrapolation.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Damped Trend reduziert Langfrist‑Extrapolation."
+            }
+          ],
+          "answer": true,
+          "rationale": "φ<1. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. φ<1. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "ETS(A,N,N) entspricht…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "ETS(A,N,N) entspricht…"
+            }
+          ],
+          "options": [
+            {
+              "text": "SES",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "SES"
+                }
+              ]
+            },
+            {
+              "text": "Holt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Holt"
+                }
+              ]
+            },
+            {
+              "text": "Holt‑Winters",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Holt‑Winters"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Ohne Trend/Saison. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Ohne Trend/Saison. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Die Break-Even-Menge lautet K_fix/(p−k_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Break-Even-Menge lautet K_fix/(p−k_v)."
+            }
+          ],
+          "answer": true,
+          "rationale": "Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Verlustschwelle: Fixkosten durch Stückdeckungsbeitrag p−k_v.",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "true_false",
+          "question": "Für den Zielgewinn gilt $x=(K$_$fix-G)$/$(p-k$_v).",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Für den Zielgewinn gilt "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix-G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)."
+            }
+          ],
+          "answer": false,
+          "rationale": "Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Richtig: $x=(K$_$fix+G)$/$(p-k$_v).",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Wann ETS(A,A_d,A)?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Wann ETS(A,A_d,A)?"
+            }
+          ],
+          "options": [
+            {
+              "text": "starker Trend mit Dämpfung + additive Saison",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "starker Trend mit Dämpfung + additive Saison"
+                }
+              ]
+            },
+            {
+              "text": "keine Saison, schwacher Trend",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "keine Saison, schwacher Trend"
+                }
+              ]
+            },
+            {
+              "text": "nur Saison",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Saison"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Praxisnah. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Praxisnah. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Multiplikative Fehler sind problematisch bei Nullen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Multiplikative Fehler sind problematisch bei Nullen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Division durch 0/Skala. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Division durch 0/Skala. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Automatische Auswahl basiert oft auf…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Automatische Auswahl basiert oft auf…"
+            }
+          ],
+          "options": [
+            {
+              "text": "AICc/BIC",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "AICc/BIC"
+                }
+              ]
+            },
+            {
+              "text": "nur RMSE",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur RMSE"
+                }
+              ]
+            },
+            {
+              "text": "MAPE",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "MAPE"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Informationskriterien. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Informationskriterien. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Vorteil Dämpfung:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Vorteil Dämpfung:"
+            }
+          ],
+          "options": [
+            {
+              "text": "aggressivere Fernprognosen",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "aggressivere Fernprognosen"
+                }
+              ]
+            },
+            {
+              "text": "konservativere, stabilere Fernhorizonte",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "konservativere, stabilere Fernhorizonte"
+                }
+              ]
+            },
+            {
+              "text": "kein Effekt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "kein Effekt"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Realistischer. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Realistischer. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "ETS verallgemeinert Holt‑Winters als State‑Space‑Modell.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "ETS verallgemeinert Holt‑Winters als State‑Space‑Modell."
+            }
+          ],
+          "answer": true,
+          "rationale": "Rahmenwerk. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Rahmenwerk. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Additiv vs. multiplikativ in ETS richtet sich nach…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Additiv vs. multiplikativ in ETS richtet sich nach…"
+            }
+          ],
+          "options": [
+            {
+              "text": "Amplitude konstant vs. prozentual",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Amplitude konstant vs. prozentual"
+                }
+              ]
+            },
+            {
+              "text": "Zufall",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Zufall"
+                }
+              ]
+            },
+            {
+              "text": "immer multiplikativ",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer multiplikativ"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Analog HW. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Analog HW. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Vergleich ETS vs. ARIMA fair?",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Vergleich ETS vs. ARIMA fair?"
+            }
+          ],
+          "options": [
+            {
+              "text": "verschiedene Zeitfenster",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "verschiedene Zeitfenster"
+                }
+              ]
+            },
+            {
+              "text": "gleiches Fenster/Backtest",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "gleiches Fenster/Backtest"
+                }
+              ]
+            },
+            {
+              "text": "nur auf Train‑Fehler",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur auf Train‑Fehler"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Gleiche Basis. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gleiche Basis. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 0,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Bias‑Kontrolle bleibt wichtig, auch bei ETS.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Bias‑Kontrolle bleibt wichtig, auch bei ETS."
+            }
+          ],
+          "answer": true,
+          "rationale": "Systematik. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Systematik. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler"
+        },
+        {
+          "type": "single_choice",
+          "question": "Häufiger Fehler:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Häufiger Fehler:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Dämpfung ignoriert",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Dämpfung ignoriert"
+                }
+              ]
+            },
+            {
+              "text": "Residuen geprüft",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Residuen geprüft"
+                }
+              ]
+            },
+            {
+              "text": "AICc genutzt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "AICc genutzt"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Fernhorizont zu optimistisch. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Fernhorizont zu optimistisch. | Typische Fehler: PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler; PLATZHALTER – typischer Fehler",
+          "feedback_incorrect": "PLATZHALTER – typischer Fehler",
+          "distractor_mapping": [
+            {
+              "index": 1,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            },
+            {
+              "index": 2,
+              "mistake": "PLATZHALTER – typischer Fehler",
+              "mistake_tag": "misc"
+            }
+          ]
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken ETS‑Auswahl: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken ETS‑Auswahl: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "introduction",
+      "text": "PLATZHALTER – Einführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Einführung folgt."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "explanation": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**$Decision-Hints$:**\n- Deckungsbeitrag: $DB = p - k$_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel.",
+      "explanation_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Konzeptdarstellung folgt.\n\n**"
+        },
+        {
+          "t": "math_inline",
+          "tex": "Decision-Hints"
+        },
+        {
+          "t": "text",
+          "text": ":**\n- Deckungsbeitrag: "
+        },
+        {
+          "t": "math_inline",
+          "tex": "DB = p - k"
+        },
+        {
+          "t": "text",
+          "text": "_v; Fixkosten separat betrachten.\n- Kostenarten klar trennen: fix vs. variabel."
+        }
+      ]
+    },
+    {
+      "type": "derivation",
+      "steps": [
+        "PLATZHALTER – Herleitung folgt."
+      ],
+      "steps_segments": [
+        {
+          "segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Herleitung folgt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "ascii": "[PLATZHALTER – Visual folgt]",
+      "caption": "PLATZHALTER",
+      "alt_text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten.",
+      "alt_text_segments": [
+        {
+          "t": "text",
+          "text": "ASCII-Visual: PLATZHALTER — Achsen x/y, Einheiten und Legende beachten."
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "worked": {
+        "title": "PLATZHALTER – Worked Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Worked Example"
+          }
+        ],
+        "steps": [
+          "[Schritt 1] …"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "[Schritt 1] …"
+              }
+            ]
+          }
+        ]
+      },
+      "fading": {
+        "title": "PLATZHALTER – Fading Example",
+        "title_segments": [
+          {
+            "t": "text",
+            "text": "PLATZHALTER – Fading Example"
+          }
+        ],
+        "steps": [
+          "…"
+        ],
+        "steps_segments": [
+          {
+            "segments": [
+              {
+                "t": "text",
+                "text": "…"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "PLATZHALTER – Mini 1",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 1"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "PLATZHALTER – Mini 2",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Mini 2"
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "mittel"
+        },
+        {
+          "prompt": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Gib die Break-Even- bzw. Zielgewinnformel an (Textantwort)."
+            }
+          ],
+          "solution": "x_$BE=K$_fix/$(p-k$_v) bzw. $x=(K$_$fix+G)$/$(p-k$_v)",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "x_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "BE=K"
+            },
+            {
+              "t": "text",
+              "text": "_fix/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v) bzw. "
+            },
+            {
+              "t": "math_inline",
+              "tex": "x=(K"
+            },
+            {
+              "t": "text",
+              "text": "_"
+            },
+            {
+              "t": "math_inline",
+              "tex": "fix+G)"
+            },
+            {
+              "t": "text",
+              "text": "/"
+            },
+            {
+              "t": "math_inline",
+              "tex": "(p-k"
+            },
+            {
+              "t": "text",
+              "text": "_v)"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "p−k_v"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "mittel"
+        }
+      ],
+      "long": [
+        {
+          "title": "PLATZHALTER – Aufgabe",
+          "title_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER – Aufgabe"
+            }
+          ],
+          "hints": [
+            "…"
+          ],
+          "hints_segments": [
+            {
+              "segments": [
+                {
+                  "t": "text",
+                  "text": "…"
+                }
+              ]
+            }
+          ],
+          "solution": "PLATZHALTER",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "PLATZHALTER"
+            }
+          ],
+          "check": {
+            "type": "free_form"
+          },
+          "difficulty": "leicht"
+        }
+      ]
+    },
+    {
+      "type": "common_mistakes",
+      "items": [
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        },
+        {
+          "mistake": "PLATZHALTER – typischer Fehler",
+          "fix": "PLATZHALTER – Gegenstrategie",
+          "mistake_tag": "misc"
+        }
+      ]
+    },
+    {
+      "type": "outlook",
+      "text": "PLATZHALTER – Transfer/Weiterführung folgt.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "PLATZHALTER – Transfer/Weiterführung folgt."
+        }
+      ]
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}

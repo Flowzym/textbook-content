@@ -1,0 +1,650 @@
+{
+  "id": "M10L02",
+  "title": "Bayesianische Grundlagen – Prior, Posterior & Credible (v2: Prüfungssets A–D)",
+  "title_segments": [
+    {
+      "t": "text",
+      "text": "Bayesianische Grundlagen – Prior, Posterior & Credible (v2: Prüfungssets A–D)",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Bayesianische Grundlagen – Prior, Posterior & Credible (v2: Prüfungssets A–D)"
+        }
+      ]
+    }
+  ],
+  "reading_time_min": 36,
+  "prerequisites": [
+    "M10L02"
+  ],
+  "prerequisites_segments": [
+    {
+      "segments": [
+        {
+          "t": "text",
+          "text": "M10L02"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "level": "Remember",
+      "text": "Schlüsselkonzepte Bayes-Grundlagen abfragen.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Schlüsselkonzepte Bayes-Grundlagen abfragen."
+        }
+      ]
+    },
+    {
+      "level": "Apply",
+      "text": "Regeln/Heuristiken sicher anwenden.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "Regeln/Heuristiken sicher anwenden."
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz",
+      "title": "Prüfungsset A – Grundlagen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset A – Grundlagen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Posterior ist proportional zu…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Posterior ist proportional zu…"
+            }
+          ],
+          "options": [
+            {
+              "text": "$Prior\\times Likelihood$",
+              "text_segments": [
+                {
+                  "t": "math_inline",
+                  "tex": "Prior\\times Likelihood"
+                }
+              ]
+            },
+            {
+              "text": "Prior−Likelihood",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Prior−Likelihood"
+                }
+              ]
+            },
+            {
+              "text": "Likelihood/Prior",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Likelihood/Prior"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Bayes-Regel.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bayes-Regel.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Credible Interval hat direkte Wahrscheinlichkeitsbedeutung für Parameter.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Credible Interval hat direkte Wahrscheinlichkeitsbedeutung für Parameter."
+            }
+          ],
+          "answer": true,
+          "rationale": "Bayesianische Interpretation.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Bayesianische Interpretation.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Konjugiertes Paar für Anteile:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Konjugiertes Paar für Anteile:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Beta–Binomial",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Beta–Binomial"
+                }
+              ]
+            },
+            {
+              "text": "Normal–Poisson",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Normal–Poisson"
+                }
+              ]
+            },
+            {
+              "text": "Gamma–Binomial",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Gamma–Binomial"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Standardfall.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Standardfall.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Die Standardabweichung ist die Wurzel aus der Varianz.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Die Standardabweichung ist die Wurzel aus der Varianz."
+            }
+          ],
+          "answer": true,
+          "rationale": "σ = √Varianz.",
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. σ = √Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Der Median ist robuster gegenüber Ausreißern als der Mittelwert."
+            }
+          ],
+          "answer": true,
+          "rationale": "Median reagiert weniger auf Extremwerte.",
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Median reagiert weniger auf Extremwerte.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset B – Methoden/Modelle",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset B – Methoden/Modelle"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Normal–Normal: Posterior-Mean ist…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Normal–Normal: Posterior-Mean ist…"
+            }
+          ],
+          "options": [
+            {
+              "text": "ungewichtetes Mittel",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "ungewichtetes Mittel"
+                }
+              ]
+            },
+            {
+              "text": "gewichtet nach Präzision",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "gewichtet nach Präzision"
+                }
+              ]
+            },
+            {
+              "text": "nur Prior",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nur Prior"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Gewichte ∝ 1/Varianz.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Gewichte ∝ 1/Varianz.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Ein informativer Prior kann kleine Stichproben stabilisieren.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Ein informativer Prior kann kleine Stichproben stabilisieren."
+            }
+          ],
+          "answer": true,
+          "rationale": "Vorwissen einbeziehen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Vorwissen einbeziehen.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Hierarchische Modelle bewirken…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Hierarchische Modelle bewirken…"
+            }
+          ],
+          "options": [
+            {
+              "text": "kein Effekt",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "kein Effekt"
+                }
+              ]
+            },
+            {
+              "text": "Shrinkage (Partial Pooling)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Shrinkage (Partial Pooling)"
+                }
+              ]
+            },
+            {
+              "text": "immer größere Varianz",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer größere Varianz"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Pooling über Einheiten.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Pooling über Einheiten.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset C – Diagnose/Validierung",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset C – Diagnose/Validierung"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Unterschied Credible vs. Konfidenzintervall:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Unterschied Credible vs. Konfidenzintervall:"
+            }
+          ],
+          "options": [
+            {
+              "text": "Parameter-Wahrscheinlichkeit vs. Verfahren über Stichproben",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Parameter-Wahrscheinlichkeit vs. Verfahren über Stichproben"
+                }
+              ]
+            },
+            {
+              "text": "Kein Unterschied",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Kein Unterschied"
+                }
+              ]
+            },
+            {
+              "text": "Nur numerisch anders",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "Nur numerisch anders"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Interpretationsunterschied.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Interpretationsunterschied.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Zu enger Prior kann Daten ‚überstimmen‘.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Zu enger Prior kann Daten ‚überstimmen‘."
+            }
+          ],
+          "answer": true,
+          "rationale": "Prior-Dominanz vermeiden.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Prior-Dominanz vermeiden.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Beta(α,β) Erwartungswert:",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Beta(α,β) Erwartungswert:"
+            }
+          ],
+          "options": [
+            {
+              "text": "α/(α+β)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "α/(α+β)"
+                }
+              ]
+            },
+            {
+              "text": "β/(α+α)",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "β/(α+α)"
+                }
+              ]
+            },
+            {
+              "text": "αβ",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "αβ"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Definition.",
+          "difficulty": "mittel",
+          "feedback_correct": "Richtig. Definition.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "quiz",
+      "title": "Prüfungsset D – Praxis & Fallen",
+      "title_segments": [
+        {
+          "t": "text",
+          "text": "Prüfungsset D – Praxis & Fallen"
+        }
+      ],
+      "items": [
+        {
+          "type": "single_choice",
+          "question": "Praxis: Priorwahl sollte…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Praxis: Priorwahl sollte…"
+            }
+          ],
+          "options": [
+            {
+              "text": "transparent & begründbar sein",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "transparent & begründbar sein"
+                }
+              ]
+            },
+            {
+              "text": "geheim bleiben",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "geheim bleiben"
+                }
+              ]
+            },
+            {
+              "text": "immer uninformativ sein",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "immer uninformativ sein"
+                }
+              ]
+            }
+          ],
+          "answer_index": 0,
+          "rationale": "Governance.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Governance.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "true_false",
+          "question": "Posterior lässt sich bei konjugierten Paaren analytisch berechnen.",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Posterior lässt sich bei konjugierten Paaren analytisch berechnen."
+            }
+          ],
+          "answer": true,
+          "rationale": "Einfacher Rechenweg.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Einfacher Rechenweg.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        },
+        {
+          "type": "single_choice",
+          "question": "Pooling ist sinnvoll bei…",
+          "question_segments": [
+            {
+              "t": "text",
+              "text": "Pooling ist sinnvoll bei…"
+            }
+          ],
+          "options": [
+            {
+              "text": "viel Daten je Einheit",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "viel Daten je Einheit"
+                }
+              ]
+            },
+            {
+              "text": "wenig Daten je Einheit",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "wenig Daten je Einheit"
+                }
+              ]
+            },
+            {
+              "text": "nie",
+              "text_segments": [
+                {
+                  "t": "text",
+                  "text": "nie"
+                }
+              ]
+            }
+          ],
+          "answer_index": 1,
+          "rationale": "Stabilisiert Schätzungen.",
+          "difficulty": "leicht",
+          "feedback_correct": "Richtig. Stabilisiert Schätzungen.",
+          "feedback_incorrect": "Beachte: σ = √Varianz; Median robuster als Mittelwert."
+        }
+      ],
+      "preface_overlay": {
+        "component": "ExpressiveWritingOverlay",
+        "duration_sec": 600,
+        "allow_skip": true
+      }
+    },
+    {
+      "type": "summary",
+      "text": "A–D decken Bayes-Grundlagen: Begriffe, Methoden, Diagnose und Praxis ab.",
+      "text_segments": [
+        {
+          "t": "text",
+          "text": "A–D decken Bayes-Grundlagen: Begriffe, Methoden, Diagnose und Praxis ab."
+        }
+      ]
+    },
+    {
+      "type": "exercises",
+      "mini": [
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            0
+          ],
+          "difficulty": "leicht"
+        },
+        {
+          "prompt": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort).",
+          "prompt_segments": [
+            {
+              "t": "text",
+              "text": "Nenne Beziehung zwischen Varianz und Standardabweichung (Textantwort)."
+            }
+          ],
+          "solution": "σ = √Varianz",
+          "solution_segments": [
+            {
+              "t": "text",
+              "text": "σ = √Varianz"
+            }
+          ],
+          "check": {
+            "type": "string_contains",
+            "expected": "√"
+          },
+          "covers_outcomes": [
+            1
+          ],
+          "difficulty": "leicht"
+        }
+      ],
+      "long": []
+    }
+  ],
+  "reading_time_band": "gründlich",
+  "meta": {
+    "schema_version": "mtb.v2",
+    "locale": "de-DE",
+    "math": {
+      "decimal_comma": true,
+      "macros": {
+        "\\euro": "\\text{€}"
+      }
+    },
+    "formatting": {
+      "currency": "€ {amount},-",
+      "thousand_sep": ".",
+      "decimal_sep": ","
+    }
+  }
+}
